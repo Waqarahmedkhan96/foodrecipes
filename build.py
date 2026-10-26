@@ -24,7 +24,7 @@ SP = {s["slug"]: s for s in SPICES}
 
 # Set this to the live address (for example "https://www.tastypakistan.com") to also
 # write sitemap.xml, robots.txt and canonical links. Leave empty until the domain is known.
-SITE_URL = ""
+SITE_URL = "https://tasty-pakistan.vercel.app"
 PAGES = []
 
 # Words in a recipe's ingredients that link to a spice guide.
