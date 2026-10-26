@@ -76,6 +76,12 @@ OPTIONAL = {"latin"}  # translated only where the English value needs it
 e = lambda s: html.escape(str(s), quote=True)
 
 
+def ver(path):
+    """Short content hash, so browsers fetch a file again whenever it changes."""
+    import hashlib
+    return hashlib.md5(open(os.path.join(HERE, path.lstrip("/")), "rb").read()).hexdigest()[:8]
+
+
 # ---------------------------------------------------------------- language state
 class Lang:
     """Everything that changes between languages, set by use(lang)."""
@@ -327,12 +333,12 @@ def page(path, title, desc, main, active="", image="hero_biryani", head_extra=""
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?{fonts}&display=swap">
-{ur_word}<link rel="stylesheet" href="/assets/style.css">
+{ur_word}<link rel="stylesheet" href="/assets/style.css?v={ver("assets/style.css")}">
 {head}{head_extra}</head>
 <body data-root="{L.root}">
 {body}
-<script src="{data_js}"></script>
-<script src="/assets/site.js"></script>
+<script src="{data_js}?v={ver(data_js)}"></script>
+<script src="/assets/site.js?v={ver("assets/site.js")}"></script>
 </body>
 </html>
 '''
