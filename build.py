@@ -226,6 +226,21 @@ def lang_switch(path):
       </div>'''
 
 
+def mobile_langs(path):
+    """Language block shown inside the phone menu."""
+    items = ""
+    for k in ORDER:
+        m = LANGS[k]
+        href = "/" + m["prefix"] + ("" if path == "index.html" else path)
+        cur = ' aria-current="true"' if k == L.id else ""
+        items += (f'<a class="m-lang-opt" href="{href}" hreflang="{k}" lang="{k}"{cur}>'
+                  f'<span class="flag">{ico(m["flag"])}</span><span>{e(m["native"])}</span></a>')
+    return f'''<div class="m-lang">
+        <div class="m-lang-h"><span>{e(t("lang_label"))}</span><span lang="{L.id}">{e(L.meta["native"])}</span></div>
+        <div class="m-lang-row">{items}</div>
+      </div>'''
+
+
 def header(active, path):
     R = L.root
 
@@ -242,7 +257,6 @@ def header(active, path):
       <span><b>Tasty Pakistan</b><small>by Fatma</small></span>
     </a>
     <nav class="links" id="nav" aria-label="{e(t("nav_main"))}">
-      {link("", t("home"), "home")}
       {link("recipes.html", t("recipes"), "recipes")}
       <div class="dd">
         <button class="dd-btn" type="button" aria-expanded="false" aria-controls="ddPanel">{t("categories")} {ico("i-chev")}</button>
@@ -251,6 +265,7 @@ def header(active, path):
       {link("journal.html", t("journal"), "journal")}
       {link("story.html", t("fatmas_story"), "story")}
       {link("ask.html", t("ask_fatma"), "ask")}
+      {mobile_langs(path)}
     </nav>
     <div class="bar-actions">
       {lang_switch(path)}
@@ -471,8 +486,8 @@ def build_home():
 
   <section class="about-teaser" aria-labelledby="about-title">
     <div class="arch-wrap rv">
-      <div class="arch"><img src="{img("chapati")}" alt="{e(t("roti_alt"))}" loading="lazy"></div>
-      <div class="arch-badge" aria-hidden="true">{t("fatma")}</div>
+      <div class="arch"><img src="{img("fatma_bibi")}" alt="{e(t("fatma_alt"))}" loading="lazy"></div>
+      <div class="arch-badge" aria-hidden="true">{t("fatma_full")}</div>
     </div>
     <div>
       <div class="ornament" aria-hidden="true"><i></i></div>
