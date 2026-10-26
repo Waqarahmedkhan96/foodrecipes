@@ -65,8 +65,8 @@
   "all_stories": "All stories",
   "roti_alt": "Fresh roti puffing on an iron tawa",
   "meet_fatma": "Meet Fatma",
-  "quote_family": "“Before there was a cookbook, there was a <em>family</em> who believed in my cooking.”",
-  "notebook_p": "For years, my children and friends encouraged me to share the food I loved to make. In 2009, that dream became my Pakistani cookbook: a collection of recipes prepared with love.",
+  "quote_family": "A cookbook in 2009. <em>An open kitchen today.</em>",
+  "notebook_p": "For years, my children and friends encouraged me to share my Pakistani recipes. In 2009, that dream became a published cookbook. Today, I’m sharing those recipes here, with a place for you at the table.",
   "read_story": "Read Fatma's story",
   "all": "All",
   "quick_45": "45 minutes or less",
@@ -114,7 +114,7 @@
   "also_like_h2": "You might <span class=\"gold-word\">also like</span>",
   "story_h1": "Fatma's <em>story</em>",
   "story_sub": "Sharing the flavours of Pakistan, with love, since 2009.",
-  "story_desc": "Fatma's story: a family who believed in her cooking, a Pakistani cookbook in 2009, and recipes shared with love ever since.",
+  "story_desc": "Fatma's story: a Pakistani cookbook in 2009, and a new home for its recipes today, with a place for you at the table.",
   "what_expect": "What you can expect",
   "promise_h2": "Fatma's <span class=\"gold-word\">kitchen promise</span>",
   "promise1_h": "Cooked at home",
@@ -200,7 +200,9 @@
    "ask_thanks": "Thank you, {name}. Your {topic} is with Fatma.",
    "list_sep": ", "
   },
-  "fatma": "Fatma"
+  "fatma": "Fatma",
+  "fatma_full": "Fatma Bibi",
+  "fatma_alt": "Fatma Bibi, smiling, in a green headscarf"
  },
  "da": {
   "home": "Forside",
@@ -265,8 +267,8 @@
   "all_stories": "Alle fortællinger",
   "roti_alt": "Frisk roti, der puster sig op på en tawa af støbejern",
   "meet_fatma": "Mød Fatma",
-  "quote_family": "»Før der var en kogebog, var der en <em>familie</em>, som troede på min madlavning.«",
-  "notebook_p": "I mange år opmuntrede mine børn og venner mig til at dele de retter, jeg elskede at lave. I 2009 blev drømmen til min pakistanske kogebog – en samling opskrifter, tilberedt med kærlighed.",
+  "quote_family": "Fra en kogebog i 2009 til <em>et køkken, der er åbent for alle.</em>",
+  "notebook_p": "I mange år opmuntrede mine børn og venner mig til at dele mine pakistanske opskrifter. I 2009 udkom min kogebog. I dag deler jeg opskrifterne her, og der er også en plads til dig ved bordet.",
   "read_story": "Læs Fatmas historie",
   "all": "Alle",
   "quick_45": "Højst 45 minutter",
@@ -314,7 +316,7 @@
   "also_like_h2": "Du vil måske <span class=\"gold-word\">også kunne lide</span>",
   "story_h1": "Fatmas <em>historie</em>",
   "story_sub": "Smagen af Pakistan, delt med kærlighed siden 2009.",
-  "story_desc": "Fatmas historie: en familie, der troede på hendes madlavning, en pakistansk kogebog i 2009 og opskrifter delt med kærlighed lige siden.",
+  "story_desc": "Fatmas historie: en pakistansk kogebog i 2009 og et nyt hjem til opskrifterne i dag – med en plads til dig ved bordet.",
   "what_expect": "Det kan du regne med",
   "promise_h2": "Fatmas <span class=\"gold-word\">løfte fra køkkenet</span>",
   "promise1_h": "Lavet derhjemme",
@@ -422,7 +424,10 @@
    "45 min": "45 min",
    "5 hrs": "5 timer",
    "50 min": "50 min",
-   "6 hrs": "6 timer"
+   "6 hrs": "6 timer",
+   "25 min": "25 min",
+   "30 min + chilling": "30 min + køl",
+   "1 hr 30 + chilling": "1½ time + køl"
   },
   "map_level": {
    "Easy": "Let",
@@ -442,7 +447,9 @@
    "6 naans": "6 naan",
    "6 parathas": "6 paratha",
    "8": "8 pers.",
-   "8 rotis": "8 roti"
+   "8 rotis": "8 roti",
+   "10 slices": "10 stykker",
+   "12 slices": "12 stykker"
   },
   "map_region": {
    "All of Pakistan": "Hele Pakistan",
@@ -460,11 +467,14 @@
    "Raw mango, carrot and green chilli pickle": "Syltet grøn mango, gulerod og grøn chili",
    "Red kidney bean curry": "Karry med kidneybønner",
    "Sindh": "Sindh",
-   "Sweet saffron rice": "Søde safranris"
+   "Sweet saffron rice": "Søde safranris",
+   "Danish kitchen": "Dansk køkken"
   },
   "time": "Tid",
   "serves": "Antal",
-  "level": "Niveau"
+  "level": "Niveau",
+  "fatma_full": "Fatma Bibi",
+  "fatma_alt": "Fatma Bibi, smilende, i et grønt tørklæde"
  },
  "ur": {
   "home": "صفحۂ اول",
@@ -529,8 +539,8 @@
   "all_stories": "تمام تحریریں",
   "roti_alt": "لوہے کے توے پر پھولتی ہوئی تازہ روٹی",
   "meet_fatma": "فاطمہ سے ملیے",
-  "quote_family": "”کُک بُک سے پہلے ایک <em>گھرانا</em> تھا، جسے میرے ہاتھ کے کھانوں پر یقین تھا۔“",
-  "notebook_p": "برسوں تک میرے بچے اور دوست مجھ سے کہتے رہے کہ جو کھانے میں شوق سے بناتی ہوں، وہ دوسروں تک بھی پہنچاؤں۔ 2009 میں یہ خواب میری پاکستانی کُک بُک کی صورت میں پورا ہوا: محبت سے تیار کی گئی ترکیبوں کا ایک مجموعہ۔",
+  "quote_family": "2009 میں ایک کُک بُک، <em>آج سب کے لیے کھلا کچن۔</em>",
+  "notebook_p": "برسوں تک میرے بچے اور دوست مجھ سے کہتے رہے کہ میں اپنی پاکستانی ترکیبیں دوسروں کے ساتھ بانٹوں۔ 2009 میں یہ خواب ایک چھپی ہوئی کُک بُک بن کر سامنے آیا۔ آج میں وہی ترکیبیں یہاں بانٹ رہی ہوں، اور اس دسترخوان پر آپ کی جگہ بھی ہے۔",
   "read_story": "فاطمہ کی کہانی پڑھیں",
   "all": "سب",
   "quick_45": "45 منٹ یا اس سے کم",
@@ -578,7 +588,7 @@
   "also_like_h2": "یہ بھی <span class=\"gold-word\">پسند آئیں گی</span>",
   "story_h1": "فاطمہ کی <em>کہانی</em>",
   "story_sub": "2009 سے، محبت کے ساتھ پاکستان کے ذائقے بانٹتے ہوئے۔",
-  "story_desc": "فاطمہ کی کہانی: ایک گھرانا جسے ان کے کھانوں پر یقین تھا، 2009 میں ایک پاکستانی کُک بُک، اور تب سے محبت کے ساتھ بانٹی گئی ترکیبیں۔",
+  "story_desc": "فاطمہ کی کہانی: 2009 میں ایک پاکستانی کُک بُک، اور آج اس کی ترکیبوں کا نیا گھر، جہاں دسترخوان پر آپ کی جگہ بھی ہے۔",
   "what_expect": "آپ کو کیا ملے گا",
   "promise_h2": "فاطمہ کا <span class=\"gold-word\">وعدہ</span>",
   "promise1_h": "گھر میں پکایا ہوا",
@@ -686,7 +696,10 @@
    "45 min": "45 منٹ",
    "5 hrs": "5 گھنٹے",
    "50 min": "50 منٹ",
-   "6 hrs": "6 گھنٹے"
+   "6 hrs": "6 گھنٹے",
+   "25 min": "25 منٹ",
+   "30 min + chilling": "30 منٹ + ٹھنڈا کرنا",
+   "1 hr 30 + chilling": "ڈیڑھ گھنٹہ + ٹھنڈا کرنا"
   },
   "map_level": {
    "Easy": "آسان",
@@ -706,7 +719,9 @@
    "6 naans": "6 نان",
    "6 parathas": "6 پراٹھے",
    "8": "8 افراد",
-   "8 rotis": "8 روٹیاں"
+   "8 rotis": "8 روٹیاں",
+   "10 slices": "10 ٹکڑے",
+   "12 slices": "12 ٹکڑے"
   },
   "map_region": {
    "All of Pakistan": "پورا پاکستان",
@@ -724,10 +739,13 @@
    "Raw mango, carrot and green chilli pickle": "کچے آم، گاجر اور ہری مرچ کا اچار",
    "Red kidney bean curry": "لال لوبیے کا سالن",
    "Sindh": "سندھ",
-   "Sweet saffron rice": "زعفرانی میٹھے چاول"
+   "Sweet saffron rice": "زعفرانی میٹھے چاول",
+   "Danish kitchen": "ڈنمارک کا کچن"
   },
   "time": "وقت",
   "serves": "مقدار",
-  "level": "مشکل"
+  "level": "مشکل",
+  "fatma_full": "فاطمہ بی بی",
+  "fatma_alt": "سبز دوپٹے میں مسکراتی ہوئی فاطمہ بی بی"
  }
 }
