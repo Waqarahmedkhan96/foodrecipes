@@ -1,0 +1,1352 @@
+{
+ "categories": [
+  {
+   "id": "rice",
+   "name": "Rice and pulao",
+   "icon": "i-rice",
+   "img": "chicken_pulao",
+   "desc": "Dum biryanis and gentle pulaos, layered and steamed the slow way."
+  },
+  {
+   "id": "chicken",
+   "name": "Chicken",
+   "icon": "i-drum",
+   "img": "chicken_karahi",
+   "desc": "Karahis, handis and tikka from the food streets of Lahore."
+  },
+  {
+   "id": "beef",
+   "name": "Beef",
+   "icon": "i-meat",
+   "img": "beef_karahi",
+   "desc": "Overnight nihari, beaten haleem and slow-cooked karahi."
+  },
+  {
+   "id": "mutton",
+   "name": "Mutton and lamb",
+   "icon": "i-meat",
+   "img": "dumba_karahi",
+   "desc": "Dumba karahi, slow roasts and the lamb dishes of the north-west."
+  },
+  {
+   "id": "bread",
+   "name": "Breads",
+   "icon": "i-bread",
+   "img": "roghni_naan",
+   "desc": "Naans, parathas and the everyday roti that goes with everything."
+  },
+  {
+   "id": "daal",
+   "name": "Daals",
+   "icon": "i-bowl",
+   "img": "daal_moong",
+   "desc": "Comforting lentils finished with a sizzling tarka."
+  },
+  {
+   "id": "street",
+   "name": "Street food",
+   "icon": "i-bowl",
+   "img": "chana_chaat",
+   "desc": "Tangy, crunchy chaat and the snacks of Pakistan's food streets."
+  },
+  {
+   "id": "dessert",
+   "name": "Desserts",
+   "icon": "i-sweet",
+   "img": "gulab_jamun",
+   "desc": "Mithai, kheer and the sweets of every Eid."
+  },
+  {
+   "id": "sides",
+   "name": "Sides",
+   "icon": "i-leaf",
+   "img": "raita",
+   "desc": "Raitas and achars that finish the table."
+  }
+ ],
+ "collections": [
+  {
+   "id": "ramadan",
+   "name": "Ramadan specials",
+   "img": "beef_haleem",
+   "desc": "Iftar and sehri favourites, from haleem to tikka."
+  },
+  {
+   "id": "eid",
+   "name": "Eid table",
+   "img": "sheer_khurma",
+   "desc": "Sheer khurma, biryani and the sweets for Eid day."
+  },
+  {
+   "id": "winter",
+   "name": "Winter warmers",
+   "img": "gajar_halwa",
+   "desc": "Slow, rich food for cold evenings."
+  },
+  {
+   "id": "quick",
+   "name": "Quick and easy",
+   "img": "daal_masoor",
+   "desc": "On the table in 45 minutes or less."
+  }
+ ],
+ "recipes": [
+  {
+   "id": "chicken_biryani",
+   "cat": "rice",
+   "name": "Karachi chicken biryani",
+   "region": "Sindh",
+   "time": "1 hr 30",
+   "mins": 90,
+   "level": "Medium",
+   "serves": "6",
+   "cols": [
+    "eid"
+   ],
+   "intro": "Layered, fragrant and fiery, with the potato and dried plum that make it unmistakably Karachi.",
+   "ing": [
+    "750 g bone-in chicken, curry cut",
+    "3 cups sella basmati, soaked 30 minutes",
+    "2 large onions, thinly sliced",
+    "3 tomatoes, chopped",
+    "1 cup yogurt, whisked",
+    "2 tbsp ginger-garlic paste",
+    "3 tbsp biryani masala",
+    "2 potatoes, halved",
+    "6 dried plums (aloo bukhara)",
+    "4 green chillies, a handful each of mint and coriander",
+    "Pinch of saffron in 3 tbsp warm milk",
+    "1/2 cup oil or ghee, plus whole spices: bay leaf, cloves, cardamom, cinnamon"
+   ],
+   "steps": [
+    "Fry the onions in the oil until deep golden. Lift out half for layering.",
+    "Add ginger-garlic paste and chicken; sear for 5 minutes. Stir in tomatoes, yogurt, masala, potatoes and plums. Cover and cook 25 minutes until the oil rises to the top.",
+    "Boil the rice in heavily salted water with the whole spices until three-quarters done, then drain.",
+    "Layer half the rice, all the chicken, the mint, coriander, chillies and fried onions, then the rest of the rice. Drizzle with saffron milk.",
+    "Seal the lid and cook on the lowest heat (dum) for 20 minutes. Rest 5 minutes, then fold gently from the sides."
+   ],
+   "tip": "Salt the rice water until it tastes like the sea. The rice only takes in a little."
+  },
+  {
+   "id": "beef_biryani",
+   "cat": "rice",
+   "name": "Beef biryani",
+   "region": "Karachi",
+   "time": "2 hrs 30",
+   "mins": 150,
+   "level": "Medium",
+   "serves": "8",
+   "cols": [
+    "eid"
+   ],
+   "intro": "Deep, meaty and celebratory. The biryani that turns up at every big family wedding.",
+   "ing": [
+    "1 kg boneless beef, cubed",
+    "4 cups sella basmati, soaked",
+    "3 onions, sliced and fried",
+    "4 tomatoes",
+    "1½ cups yogurt",
+    "3 tbsp ginger-garlic paste",
+    "4 tbsp biryani masala",
+    "1 tsp kewra water",
+    "Saffron milk, mint, coriander, green chillies",
+    "2/3 cup oil or ghee"
+   ],
+   "steps": [
+    "Marinate the beef in yogurt, ginger-garlic and masala for 2 hours.",
+    "Cook it with half the fried onions and the tomatoes, covered, until tender, about 75 minutes.",
+    "Parboil the rice in salted water with whole spices.",
+    "Layer rice and beef with herbs, fried onions, saffron and kewra.",
+    "Seal and steam on low for 25 minutes."
+   ],
+   "tip": "Beef needs to be fully tender before layering. It won't soften further on dum."
+  },
+  {
+   "id": "kabli_pulao",
+   "cat": "rice",
+   "name": "Kabuli pulao",
+   "region": "Khyber Pakhtunkhwa",
+   "time": "2 hrs",
+   "mins": 120,
+   "level": "Medium",
+   "serves": "6",
+   "cols": [
+    "winter"
+   ],
+   "intro": "Peshawar's gentle, golden pulao: meat cooked into its own stock, crowned with glossy carrots and raisins.",
+   "ing": [
+    "1 kg lamb or beef on the bone",
+    "3 cups sella basmati, soaked",
+    "2 onions, sliced",
+    "2 carrots, cut into matchsticks",
+    "1/2 cup raisins",
+    "1/4 cup slivered almonds",
+    "2 tsp cumin seeds",
+    "1 tsp garam masala",
+    "1 tbsp sugar",
+    "1/2 cup oil, salt to taste"
+   ],
+   "steps": [
+    "Brown the onions deeply in oil. Add the meat and sear well.",
+    "Add 8 cups water, cumin, garam masala and salt. Simmer covered for about an hour until tender.",
+    "In another pan, sauté carrots with the sugar until glossy, add raisins and almonds until the raisins puff.",
+    "Measure 4½ cups of the stock back in with the meat, bring to a boil, add the drained rice and cook until the water drops below the rice.",
+    "Scatter the carrots and raisins on top, cover tightly and steam on low for 20 minutes."
+   ],
+   "tip": "Fry the onions darker than feels right. That colour is where the pulao's golden hue comes from."
+  },
+  {
+   "id": "chicken_pulao",
+   "cat": "rice",
+   "name": "Yakhni chicken pulao",
+   "region": "Punjab",
+   "time": "1 hr 15",
+   "mins": 75,
+   "level": "Easy",
+   "serves": "5",
+   "cols": [
+    "winter"
+   ],
+   "intro": "Rice cooked in a fragrant chicken stock with whole spices. Subtle, comforting and never fussy.",
+   "ing": [
+    "750 g chicken on the bone",
+    "3 cups basmati, soaked",
+    "1 onion, sliced",
+    "Potli: 1 tbsp coriander seeds, 1 tsp fennel, 4 cloves garlic, 1 inch ginger",
+    "Whole spices: cumin, cloves, cardamom, peppercorns, bay leaf",
+    "1/2 cup yogurt",
+    "4 tbsp ghee, salt"
+   ],
+   "steps": [
+    "Simmer the chicken with the potli spices in 6 cups water for 35 minutes to make the yakhni.",
+    "Fry the onion golden in ghee with the whole spices; add the chicken pieces and yogurt.",
+    "Pour in 4½ cups strained yakhni and bring to a boil.",
+    "Add the rice, cook until the water dips below, then steam covered on low for 15 minutes."
+   ],
+   "tip": "Tie the potli spices in muslin so the stock stays clear and the rice stays white."
+  },
+  {
+   "id": "matar_pulao",
+   "cat": "rice",
+   "name": "Matar pulao",
+   "region": "Punjab",
+   "time": "45 min",
+   "mins": 45,
+   "level": "Easy",
+   "serves": "4",
+   "veg": 1,
+   "cols": [],
+   "intro": "The weeknight pulao: sweet peas, whole spices and rice that stays in perfect separate grains.",
+   "ing": [
+    "2 cups basmati, soaked 30 minutes",
+    "1½ cups peas",
+    "1 onion, sliced",
+    "1 tsp cumin seeds",
+    "Whole spices: 4 cloves, 2 cardamom, 1 bay leaf, small cinnamon stick",
+    "1 green chilli, slit",
+    "3 cups water",
+    "3 tbsp ghee, salt to taste"
+   ],
+   "steps": [
+    "Fry the onion in ghee until golden with the cumin and whole spices.",
+    "Add the peas, chilli and salt and stir for 2 minutes.",
+    "Pour in the water, bring to a rolling boil and add the drained rice.",
+    "Cook on high until the water sinks below the surface of the rice, then cover and steam on low for 15 minutes."
+   ],
+   "tip": "Leave the lid shut for the full 15 minutes. Every peek lets the steam out."
+  },
+  {
+   "id": "chicken_karahi",
+   "cat": "chicken",
+   "name": "Lahori chicken karahi",
+   "region": "Punjab",
+   "time": "45 min",
+   "mins": 45,
+   "level": "Easy",
+   "serves": "4",
+   "cols": [],
+   "intro": "No onions, no water, just tomatoes, a ferocious flame and the smell of a Lahore food street at midnight.",
+   "ing": [
+    "1 kg chicken, small pieces",
+    "6 tomatoes, halved",
+    "1/2 cup oil",
+    "1 tbsp ginger-garlic paste",
+    "1 tsp crushed red chilli",
+    "1 tsp cumin seeds, crushed",
+    "1 tsp coriander seeds, crushed",
+    "1 tsp black pepper",
+    "4 green chillies",
+    "Ginger matchsticks and fresh coriander to finish"
+   ],
+   "steps": [
+    "Heat the oil in a karahi until shimmering. Sear the chicken on high until it turns white, then add the ginger-garlic paste.",
+    "Lay the tomatoes on top skin side up, cover for 5 minutes, then pull off the skins and mash the tomatoes into the pan.",
+    "Add the crushed spices and salt and keep stirring on high (bhunai) for about 15 minutes, until the oil separates.",
+    "Finish with green chillies, black pepper, ginger and coriander."
+   ],
+   "tip": "Keep the flame high the whole way. Karahi wants fierce heat and no water."
+  },
+  {
+   "id": "shinwari_karahi",
+   "cat": "chicken",
+   "name": "Shinwari chicken karahi",
+   "region": "Khyber Pakhtunkhwa",
+   "time": "40 min",
+   "mins": 40,
+   "level": "Easy",
+   "serves": "4",
+   "cols": [
+    "eid"
+   ],
+   "intro": "The Peshawar highway classic from the Shinwari tribe: chicken seared in fat with salt and tomatoes, finished with black pepper, green chillies and ginger. No powdered spices, no onions, all flavour.",
+   "ing": [
+    "1 kg chicken, small bone-in pieces",
+    "1/2 cup ghee or animal fat (charbi), or oil",
+    "5 to 6 medium tomatoes, halved",
+    "1 tbsp ginger-garlic paste",
+    "1½ tsp salt",
+    "1½ tsp coarsely crushed black pepper",
+    "6 green chillies, halved",
+    "2 inch ginger, cut into matchsticks",
+    "Fresh coriander and lemon to serve"
+   ],
+   "steps": [
+    "Heat the ghee in a heavy karahi on high until very hot. Add the chicken and salt and sear for 6 to 8 minutes until golden on all sides.",
+    "Stir in the ginger-garlic paste for a minute, then lay the tomatoes on top, skin side up. Cover and cook for 5 minutes.",
+    "Pull off the tomato skins with tongs and mash the tomatoes into the pan.",
+    "Cook uncovered on high, stirring and scraping, for 10 to 12 minutes until the tomatoes melt into a glossy sauce and the fat separates.",
+    "Add the black pepper and green chillies, cook 2 minutes more, then finish with ginger and coriander. Serve straight from the karahi with naan and lemon."
+   ],
+   "tip": "The magic is in the fat and the flame. Keep the heat high and don't add water or powdered spices."
+  },
+  {
+   "id": "chicken_qorma",
+   "cat": "chicken",
+   "name": "Shahi chicken qorma",
+   "region": "Karachi",
+   "time": "1 hr",
+   "mins": 60,
+   "level": "Medium",
+   "serves": "6",
+   "cols": [
+    "eid"
+   ],
+   "intro": "The royal centrepiece of every Pakistani wedding and Eid dawat: chicken slow-cooked in yogurt, brown onions and whole spices, enriched with almond paste and finished with kewra.",
+   "ing": [
+    "1 kg chicken, bone-in pieces",
+    "3 medium onions, thinly sliced",
+    "3/4 cup oil or ghee",
+    "1 cup yogurt, whisked",
+    "1 tbsp ginger-garlic paste",
+    "1½ tsp red chilli powder",
+    "2 tsp coriander powder",
+    "1/2 tsp turmeric",
+    "Whole spices: 2 bay leaves, 6 cloves, 4 green cardamom, 1 black cardamom, 1 cinnamon stick",
+    "10 to 12 almonds, soaked and ground to a paste",
+    "1 tsp garam masala",
+    "A few drops of kewra water",
+    "Salt to taste",
+    "Slivered almonds, ginger matchsticks and coriander to garnish"
+   ],
+   "steps": [
+    "Fry the onions in the oil until deep golden brown. Lift them out, cool, then crush or blend with a splash of yogurt into a smooth brown-onion paste.",
+    "In the same oil, crackle the whole spices for 30 seconds. Add the chicken and ginger-garlic paste and sear for 5 minutes.",
+    "Mix the yogurt with the chilli, coriander, turmeric and salt. Add to the pan and cook on medium, stirring, until the oil starts to separate.",
+    "Stir in the brown-onion paste and almond paste with 1 cup of water. Cover and simmer on low for 20 minutes until the chicken is tender.",
+    "Sprinkle over the garam masala and kewra, cover for 5 minutes on the lowest heat (dum), then garnish with almonds, ginger and coriander. Serve with naan or sheermal."
+   ],
+   "tip": "The brown onions make the qorma. Fry them slowly to an even deep gold; if they burn, the gravy turns bitter."
+  },
+  {
+   "id": "chicken_handi",
+   "cat": "chicken",
+   "name": "Chicken handi",
+   "region": "Punjab",
+   "time": "50 min",
+   "mins": 50,
+   "level": "Easy",
+   "serves": "4",
+   "cols": [
+    "eid"
+   ],
+   "intro": "Creamy, mellow and fragrant with dried fenugreek, cooked and served in its clay pot.",
+   "ing": [
+    "750 g boneless chicken",
+    "2 onions, sliced",
+    "3 tomatoes, chopped",
+    "1 cup yogurt",
+    "1/2 cup cream",
+    "1 tbsp ginger-garlic paste",
+    "1 tsp red chilli powder, 1/2 tsp turmeric",
+    "1 tsp garam masala",
+    "1 tbsp kasuri methi",
+    "1/3 cup oil, salt to taste"
+   ],
+   "steps": [
+    "Fry the onions until light golden, then add the ginger-garlic paste and chicken.",
+    "Add tomatoes, chilli, turmeric and salt and cook down for 10 minutes.",
+    "Stir in the yogurt and cook until the oil separates.",
+    "Lower the heat, add the cream, garam masala and crushed kasuri methi, and simmer 5 minutes."
+   ],
+   "tip": "Rub the kasuri methi between your palms as it goes in. It wakes up the oils."
+  },
+  {
+   "id": "chicken_tikka",
+   "cat": "chicken",
+   "name": "Chicken tikka",
+   "region": "Punjab",
+   "time": "40 min + marinating",
+   "mins": 40,
+   "level": "Easy",
+   "serves": "4",
+   "cols": [
+    "ramadan"
+   ],
+   "intro": "Charred at the edges, tender inside, and smoked with a single piece of coal.",
+   "ing": [
+    "1 kg chicken leg pieces, deeply scored",
+    "1/2 cup thick yogurt",
+    "2 tbsp lemon juice",
+    "1 tbsp ginger-garlic paste",
+    "2 tsp Kashmiri chilli powder",
+    "1 tsp each cumin and coriander powder",
+    "1/2 tsp garam masala",
+    "2 tbsp oil, salt to taste",
+    "1 piece of charcoal, for smoking"
+   ],
+   "steps": [
+    "Mix everything except the charcoal and marinate for at least 4 hours, ideally overnight.",
+    "Roast at 230°C for 25 to 30 minutes, turning once, or grill over coals.",
+    "Heat the charcoal until glowing, set it in a small steel bowl inside the pan, drizzle with oil and cover for 3 minutes.",
+    "Serve with lemon, onion rings and green chutney."
+   ],
+   "tip": "Score right to the bone so the marinade reaches all the way through."
+  },
+  {
+   "id": "chicken_broast",
+   "cat": "chicken",
+   "name": "Full chicken broast",
+   "region": "Lahore",
+   "time": "1 hr + marinating",
+   "mins": 60,
+   "level": "Medium",
+   "serves": "4",
+   "cols": [
+    "eid"
+   ],
+   "intro": "Pakistan's favourite fried chicken: a whole bird marinated in lemon and spice, steamed until tender, then fried to a deep, crackling crust. Served with fries, garlic mayo and ketchup.",
+   "ing": [
+    "1 whole chicken (1.2 to 1.4 kg), skin on, cut into quarters",
+    "Marinade: 3 tbsp lemon juice, 1 tbsp ginger-garlic paste, 2 tsp red chilli powder, 1 tsp white pepper, 1 tsp black pepper, 1/2 tsp turmeric, 1 tsp salt, 2 tbsp vinegar",
+    "Coating: 1½ cups all-purpose flour, 1/2 cup cornflour, 1 tsp each salt, red chilli and white pepper, 1/2 tsp baking powder",
+    "1 egg beaten with 1/2 cup cold milk",
+    "Oil for deep frying",
+    "To serve: fries, garlic mayo, ketchup, onion rings and lemon"
+   ],
+   "steps": [
+    "Score the chicken deeply, rub in the marinade and refrigerate for at least 4 hours, ideally overnight.",
+    "Steam the pieces over boiling water for 20 minutes until just cooked through, then let them cool and dry for 10 minutes.",
+    "Mix the coating ingredients. Dip each piece in the egg and milk, then press firmly into the flour. Repeat once more for an extra-crunchy crust.",
+    "Heat the oil to 170°C and fry two pieces at a time for 6 to 8 minutes, turning, until deep golden.",
+    "Drain on a rack, sprinkle with chilli and salt, and serve hot with fries and dips."
+   ],
+   "tip": "Restaurants pressure-fry broast in special fryers. Never fry in a home pressure cooker; steaming first gives you the same juicy meat safely."
+  },
+  {
+   "id": "beef_nihari",
+   "cat": "beef",
+   "name": "Royal beef nihari",
+   "region": "Karachi",
+   "time": "6 hrs",
+   "mins": 360,
+   "level": "Easy",
+   "serves": "6",
+   "cols": [
+    "ramadan",
+    "winter"
+   ],
+   "intro": "Beef shank simmered overnight into a glossy, spiced stew. Finished at the table with ginger, chilli and lemon.",
+   "ing": [
+    "1.5 kg beef shank (nalli) with bones",
+    "1/2 cup ghee",
+    "2 onions, sliced",
+    "2 tbsp ginger-garlic paste",
+    "4 tbsp nihari masala",
+    "1/2 cup atta (whole-wheat flour)",
+    "10 cups water, salt to taste",
+    "To serve: ginger matchsticks, green chillies, lemon, coriander, fried onions"
+   ],
+   "steps": [
+    "Fry the onions in ghee until golden; lift out half for garnish.",
+    "Add the beef and ginger-garlic paste and sear on all sides. Stir in the masala for 2 minutes.",
+    "Add the water, bring to a boil, then cover and simmer on the lowest heat for 5 to 6 hours (or 90 minutes in a pressure cooker).",
+    "Whisk the atta into a cup of water, pour it in slowly while stirring, and simmer 20 minutes until silky.",
+    "For the tarka, heat 2 tbsp ghee with a pinch of masala and chilli, pour over and garnish."
+   ],
+   "tip": "Start it the night before. Nihari was always a dawn breakfast."
+  },
+  {
+   "id": "beef_haleem",
+   "cat": "daal",
+   "name": "Karachi beef haleem",
+   "region": "Karachi",
+   "time": "5 hrs",
+   "mins": 300,
+   "level": "Slow",
+   "serves": "8",
+   "cols": [
+    "ramadan",
+    "winter"
+   ],
+   "intro": "Wheat, five lentils and beef slow-cooked and beaten together until it pulls into long, silky strands, then crowned with crisp fried onions, ginger, green chillies and lemon. Karachi's Ramadan favourite.",
+   "ing": [
+    "750 g boneless beef",
+    "1 cup cracked wheat (daliya), soaked overnight",
+    "1/2 cup chana daal",
+    "1/4 cup each masoor, moong and urad daal",
+    "1/4 cup barley",
+    "2 onions, sliced",
+    "2 tbsp ginger-garlic paste",
+    "2 tsp red chilli, 1 tsp turmeric, 2 tsp garam masala",
+    "1/2 cup ghee, salt to taste",
+    "To serve: fried onions, ginger, green chilli, lemon, chaat masala"
+   ],
+   "steps": [
+    "Boil the wheat, barley and lentils with turmeric in plenty of water until very soft, about 90 minutes.",
+    "Separately cook the beef with onions, ginger-garlic, spices and water for about 2 hours, until it falls apart.",
+    "Combine both pots and beat with a wooden ghotna or a whisk on low heat for 30 to 45 minutes until stringy.",
+    "Serve with all the garnishes on the side."
+   ],
+   "tip": "A potato masher, then a whisk, gets you close to the ghotna's strands."
+  },
+  {
+   "id": "beef_karahi",
+   "cat": "beef",
+   "name": "Peshawari beef karahi",
+   "region": "Khyber Pakhtunkhwa",
+   "time": "1 hr",
+   "mins": 60,
+   "level": "Medium",
+   "serves": "4",
+   "cols": [
+    "eid"
+   ],
+   "intro": "Namak Mandi style: beef, tomatoes, salt and fat, cooked hard and fast. Simple and magnificent.",
+   "ing": [
+    "1 kg beef with some fat, small cubes",
+    "5 tomatoes, halved",
+    "1/3 cup animal fat or ghee",
+    "1 tbsp ginger, julienned",
+    "1 tsp black pepper, crushed",
+    "4 green chillies",
+    "Salt",
+    "Coriander to finish"
+   ],
+   "steps": [
+    "Sear the beef in very hot fat with salt until browned.",
+    "Add 1 cup water, cover and cook until tender, about 40 minutes.",
+    "Add the tomatoes, peel off the skins as they soften, and mash.",
+    "Cook on high until the fat separates; finish with pepper, ginger and chillies."
+   ],
+   "tip": "Peshawari karahi uses almost no spice. The flavour comes from good beef and patience."
+  },
+  {
+   "id": "dumba_karahi",
+   "cat": "mutton",
+   "name": "Shinwari dumba karahi",
+   "region": "Khyber Pakhtunkhwa",
+   "time": "1 hr 15",
+   "mins": 75,
+   "level": "Medium",
+   "serves": "4",
+   "cols": [
+    "eid",
+    "winter"
+   ],
+   "intro": "The pride of Peshawar's Namak Mandi: bone-in dumba (fat-tailed lamb) seared in its own fat with salt and tomatoes, then finished with black pepper, green chillies and ginger. Simple, rich and unforgettable.",
+   "ing": [
+    "1 kg dumba (lamb) on the bone, small pieces",
+    "1/3 cup dumba fat (charbi) or ghee",
+    "5 to 6 medium tomatoes, halved",
+    "1 tbsp ginger-garlic paste",
+    "1½ tsp salt",
+    "1½ tsp coarsely crushed black pepper",
+    "6 green chillies, halved",
+    "2 inch ginger, cut into matchsticks",
+    "Fresh coriander, lemon and naan to serve"
+   ],
+   "steps": [
+    "Melt the dumba fat in a heavy karahi on high heat until it renders and sizzles.",
+    "Add the lamb and salt and sear hard for 8 to 10 minutes until browned on all sides.",
+    "Stir in the ginger-garlic paste, add 1 cup of water, cover and cook on medium for 35 to 40 minutes until the meat is tender.",
+    "Lay the tomatoes on top, cover for 5 minutes, then peel off the skins and mash them into the pan.",
+    "Cook uncovered on high, stirring, until the tomatoes melt into the fat and the oil separates, about 10 minutes.",
+    "Finish with black pepper, green chillies, ginger and coriander. Serve hot from the karahi."
+   ],
+   "tip": "Shinwari karahi uses no powdered spices. Good lamb, its own fat, salt and a fierce flame are all it needs."
+  },
+  {
+   "id": "roghni_naan",
+   "cat": "bread",
+   "name": "Roghni naan",
+   "region": "Punjab",
+   "time": "2 hrs incl. rising",
+   "mins": 120,
+   "level": "Medium",
+   "serves": "6 naans",
+   "veg": 1,
+   "cols": [
+    "eid"
+   ],
+   "intro": "Soft, milky naan glazed with egg and showered with sesame and nigella seeds.",
+   "ing": [
+    "3 cups all-purpose flour",
+    "1 tsp instant yeast",
+    "1 tsp sugar, 1 tsp salt",
+    "1/2 cup warm milk",
+    "1/4 cup yogurt",
+    "2 tbsp oil",
+    "Warm water as needed",
+    "1 egg beaten with 1 tbsp milk",
+    "Sesame and nigella seeds, butter to finish"
+   ],
+   "steps": [
+    "Knead the flour, yeast, sugar, salt, milk, yogurt and oil into a soft dough, adding water as needed, for 8 minutes.",
+    "Cover and leave to rise for an hour.",
+    "Divide into 6, press each into an oval and dimple with your fingertips.",
+    "Brush with egg wash and scatter the seeds.",
+    "Bake on a very hot stone at 250°C for 6 to 8 minutes, then brush with butter."
+   ],
+   "tip": "No oven stone? Cook on a hot tawa, then hold it over the open flame to blister."
+  },
+  {
+   "id": "balochi_kaak",
+   "cat": "bread",
+   "name": "Balochi-style tandoori kaak",
+   "region": "Balochistan",
+   "time": "1 hr 30",
+   "mins": 90,
+   "level": "Medium",
+   "serves": "4–6",
+   "veg": 1,
+   "cols": [
+    "winter"
+   ],
+   "intro": "Inspired by the rustic breads of Balochistan, this golden, seeded flatbread has a beautifully browned crust and a tender centre. Fresh from the oven, it pairs wonderfully with curries, chutneys and a warm cup of chai.",
+   "ing": [
+    "3 cups all-purpose flour (maida)",
+    "1 tsp instant yeast",
+    "1 tsp sugar",
+    "1 tsp salt",
+    "2 tbsp vegetable oil or melted ghee",
+    "3/4 to 1 cup lukewarm water, as needed",
+    "2 tbsp plain yogurt",
+    "1 tbsp sesame seeds",
+    "1 tsp kalonji (nigella seeds)",
+    "Melted butter or ghee for brushing"
+   ],
+   "steps": [
+    "Prepare the dough: mix the flour, yeast, sugar and salt. Add the yogurt, oil and enough lukewarm water to make a soft dough. Knead for 8 to 10 minutes until smooth.",
+    "Let it rise: cover and rest in a warm place for 45 to 60 minutes, until noticeably expanded.",
+    "Shape the bread: divide into 2 or 3 portions. Flatten into thick rounds, press the centres slightly and score a decorative pattern. Sprinkle with sesame and kalonji.",
+    "Bake until golden: preheat the oven to 230°C. Bake on a preheated tray or pizza stone for 12 to 18 minutes, depending on thickness, until cooked through and golden brown.",
+    "Finish and serve: brush lightly with melted ghee and serve warm with chai, yogurt, chutney or your favourite curry."
+   ],
+   "tip": "Traditional Balochi kaak is cooked around heated stones or over an open fire, and the method varies by community. This oven-baked version recreates the seeded bread pictured here, not the stone-cooked original."
+  },
+  {
+   "id": "paratha",
+   "cat": "bread",
+   "name": "Lachha paratha",
+   "region": "Punjab",
+   "time": "40 min",
+   "mins": 40,
+   "level": "Medium",
+   "serves": "6 parathas",
+   "veg": 1,
+   "cols": [
+    "winter"
+   ],
+   "intro": "Flaky, layered and crisp, coiled from a pleated sheet of dough and ghee.",
+   "ing": [
+    "2 cups atta",
+    "1/2 tsp salt",
+    "Water to knead",
+    "1/4 cup ghee",
+    "Dry flour for dusting"
+   ],
+   "steps": [
+    "Knead a soft dough and rest it for 20 minutes.",
+    "Roll a thin circle, spread with ghee and dust with flour.",
+    "Pleat it like a paper fan, then coil the strip into a spiral and rest 10 minutes.",
+    "Roll gently and cook on a hot tawa with ghee until crisp on both sides.",
+    "Crush lightly between your palms to open the layers."
+   ],
+   "tip": "Resting the coil is what keeps the layers from sealing together."
+  },
+  {
+   "id": "chapati",
+   "cat": "bread",
+   "name": "Pakistani tawa roti",
+   "region": "Homestyle",
+   "time": "30 min",
+   "mins": 30,
+   "level": "Easy",
+   "serves": "8 rotis",
+   "veg": 1,
+   "cols": [],
+   "intro": "Soft, puffed whole-wheat roti. The bread of every Pakistani dinner table.",
+   "ing": [
+    "2 cups atta",
+    "3/4 cup warm water, roughly",
+    "Pinch of salt",
+    "Ghee for brushing (optional)"
+   ],
+   "steps": [
+    "Knead the atta and water into a soft dough and rest for 20 minutes.",
+    "Roll thin circles with a light dusting of flour.",
+    "Cook on a hot tawa until bubbles appear, flip, then press the edges so it puffs.",
+    "Brush with ghee and keep wrapped in a cloth."
+   ],
+   "tip": "Softer dough makes softer roti. It should feel like an earlobe."
+  },
+  {
+   "id": "daal_chana",
+   "cat": "daal",
+   "name": "Daal chana",
+   "region": "Punjab",
+   "time": "1 hr",
+   "mins": 60,
+   "level": "Easy",
+   "serves": "4",
+   "veg": 1,
+   "cols": [
+    "winter"
+   ],
+   "intro": "Split chickpeas cooked soft but whole, finished with a sizzling garlic tarka.",
+   "ing": [
+    "1 cup chana daal, soaked 1 hour",
+    "1 onion, chopped",
+    "2 tomatoes, chopped",
+    "1 tsp ginger-garlic paste",
+    "1/2 tsp turmeric, 1 tsp red chilli",
+    "Salt to taste",
+    "Tarka: 3 tbsp ghee, 1 tsp cumin, 3 dried red chillies, 4 garlic cloves sliced"
+   ],
+   "steps": [
+    "Boil the daal with turmeric until soft but holding its shape, about 40 minutes.",
+    "Fry the onion, add ginger-garlic, tomatoes, chilli and salt and cook down.",
+    "Combine and simmer 10 minutes.",
+    "Heat the ghee, crackle the cumin, chillies and garlic, and pour over the daal."
+   ],
+   "tip": "Pour the tarka on at the table so everyone hears it."
+  },
+  {
+   "id": "daal_masoor",
+   "cat": "daal",
+   "name": "Daal masoor",
+   "region": "Homestyle",
+   "time": "30 min",
+   "mins": 30,
+   "level": "Easy",
+   "serves": "4",
+   "veg": 1,
+   "cols": [],
+   "intro": "The red lentil daal of every Pakistani home, ready in half an hour.",
+   "ing": [
+    "1 cup red lentils, washed",
+    "3 cups water",
+    "1 tomato, chopped",
+    "1/2 tsp turmeric, 1 tsp red chilli",
+    "Salt to taste",
+    "Tarka: 2 tbsp ghee, 1 tsp cumin, 3 garlic cloves, 2 dried red chillies",
+    "Fresh coriander"
+   ],
+   "steps": [
+    "Boil the lentils with water, tomato, turmeric, chilli and salt for 20 minutes.",
+    "Whisk until smooth, adding a splash of water if needed.",
+    "Make the tarka and pour it over. Finish with coriander."
+   ],
+   "tip": "Serve with plain rice, a little achar and a sliced onion."
+  },
+  {
+   "id": "daal_moong",
+   "cat": "daal",
+   "name": "Moong daal",
+   "region": "Homestyle",
+   "time": "35 min",
+   "mins": 35,
+   "level": "Easy",
+   "serves": "4",
+   "veg": 1,
+   "cols": [],
+   "intro": "Yellow, gentle and quick. The daal mothers make when someone needs looking after.",
+   "ing": [
+    "1 cup split moong daal, washed",
+    "3½ cups water",
+    "1/2 tsp turmeric",
+    "1 tomato, chopped",
+    "1 green chilli",
+    "Salt",
+    "Tarka: 2 tbsp ghee, 1 tsp cumin, pinch of hing, 2 garlic cloves"
+   ],
+   "steps": [
+    "Simmer the daal with turmeric, tomato, chilli and salt for 25 minutes until soft.",
+    "Whisk lightly so it is creamy but still has texture.",
+    "Pour over the tarka and finish with coriander."
+   ],
+   "tip": "A squeeze of lemon at the end brightens the whole pot."
+  },
+  {
+   "id": "chana_chaat",
+   "cat": "street",
+   "name": "Chana chaat",
+   "region": "Karachi",
+   "time": "20 min",
+   "mins": 20,
+   "level": "Easy",
+   "serves": "4",
+   "veg": 1,
+   "cols": [
+    "ramadan"
+   ],
+   "intro": "Chickpeas tossed with onion, tomato, cucumber, tangy imli and green chutney, finished with crunchy papdi and sev. The taste of every iftar table.",
+   "ing": [
+    "2 cups boiled chickpeas (1 can, drained)",
+    "1 boiled potato, cubed",
+    "1 small red onion, finely sliced",
+    "1 tomato, diced",
+    "1/2 cucumber, diced",
+    "3 tbsp imli (tamarind) chutney",
+    "2 tbsp green chutney",
+    "1 tsp chaat masala, 1/2 tsp roasted cumin, 1/2 tsp red chilli",
+    "Juice of 1/2 lemon, salt to taste",
+    "A handful of papdi (crisp wafers) and sev",
+    "Fresh coriander"
+   ],
+   "steps": [
+    "Toss the chickpeas and potato with chaat masala, cumin, chilli, salt and lemon juice.",
+    "Fold in the onion, tomato and cucumber.",
+    "Spoon over the imli and green chutneys without stirring them in completely.",
+    "Top with crushed papdi, sev and coriander, and serve straight away."
+   ],
+   "tip": "Add the papdi and sev at the very last moment so they stay crunchy."
+  },
+  {
+   "id": "golgappay",
+   "cat": "street",
+   "name": "Golgappay",
+   "region": "Lahore",
+   "time": "40 min",
+   "mins": 40,
+   "level": "Easy",
+   "serves": "30 golgappay",
+   "veg": 1,
+   "cols": [
+    "ramadan",
+    "eid"
+   ],
+   "intro": "Crisp, hollow puris filled with spiced chickpeas and potato, then flooded with tangy imli water. Pop the whole thing in one bite.",
+   "ing": [
+    "30 golgappa puris (shop-bought or homemade)",
+    "1 cup boiled chickpeas",
+    "2 boiled potatoes, finely diced",
+    "1 small onion, finely chopped",
+    "Imli water: 1/2 cup tamarind pulp, 4 cups chilled water, 1 tsp roasted cumin, 1 tsp chaat masala, 1 tsp black salt, a handful of mint, 2 green chillies, sugar to taste",
+    "Imli chutney and green chutney to serve",
+    "Sev and fresh coriander to garnish"
+   ],
+   "steps": [
+    "Blend the mint and chillies with a little water, then mix with the tamarind pulp, chilled water, cumin, chaat masala, black salt and sugar. Chill for at least an hour.",
+    "Mix the chickpeas, potato and onion with a pinch of chaat masala and salt.",
+    "Just before serving, tap a small hole in the top of each puri with your thumb.",
+    "Fill each puri with a spoonful of the chickpea mix and a little imli chutney.",
+    "Dip into the imli water, top with sev and eat at once."
+   ],
+   "tip": "Keep the imli water ice-cold and fill the puris only when you're ready to eat, or they go soft."
+  },
+  {
+   "id": "pakora",
+   "cat": "street",
+   "name": "Mix vegetable pakora",
+   "region": "Onion, potato and spinach fritters",
+   "time": "35 min",
+   "mins": 35,
+   "level": "Easy",
+   "serves": "4",
+   "veg": 1,
+   "cols": [
+    "ramadan",
+    "quick"
+   ],
+   "intro": "Lacy, crunchy fritters of onion, potato, spinach and green chilli bound in spiced besan. The taste of Ramadan iftar and rainy afternoons, best eaten hot with green chutney, imli and a cup of chai.",
+   "ing": [
+    "2 medium onions, thinly sliced",
+    "1 medium potato, cut into thin matchsticks",
+    "1 cup spinach (palak), finely shredded",
+    "2 to 3 green chillies, finely chopped",
+    "2 tbsp fresh coriander, chopped",
+    "1 cup besan (gram flour)",
+    "2 tbsp rice flour or cornflour",
+    "1 tsp crushed red chilli",
+    "1 tsp coriander seeds, crushed",
+    "1/2 tsp ajwain (carom seeds)",
+    "1/2 tsp cumin seeds",
+    "1/4 tsp turmeric",
+    "1 tsp salt, or to taste",
+    "3 to 4 tbsp water, only if needed",
+    "Oil for deep frying",
+    "Chaat masala, green chutney and imli chutney to serve"
+   ],
+   "steps": [
+    "Put the onions, potato, spinach, green chillies and coriander in a bowl with the salt. Squeeze everything together with your hands and leave for 10 minutes so the vegetables release their moisture.",
+    "Add the besan, rice flour, crushed chilli, crushed coriander, ajwain, cumin and turmeric. Mix into a thick, sticky dough that just coats the vegetables. Add a spoonful of water only if it's too dry; it should not be a runny batter.",
+    "Heat the oil over medium heat. Test it with a small piece of dough: it should sizzle and rise to the top without browning straight away.",
+    "Drop small, loose clusters of the mixture into the oil with your fingers, leaving them rough so the edges turn lacy. Don't crowd the pan.",
+    "Leave them for a minute to set, then turn and fry for 4 to 5 minutes until deep golden and crisp all over.",
+    "Drain on a rack, sprinkle with chaat masala and serve hot with green chutney, imli and chai."
+   ],
+   "tip": "Let the vegetables' own water bind the dough. The less water you add, the crispier and less oily the pakoras will be."
+  },
+  {
+   "id": "aloo_pakora",
+   "cat": "street",
+   "name": "Crispy aloo pakora",
+   "region": "Potato fritters",
+   "time": "30 min",
+   "mins": 30,
+   "level": "Easy",
+   "serves": "4",
+   "veg": 1,
+   "cols": [
+    "ramadan",
+    "quick"
+   ],
+   "intro": "Thin potato slices dipped in a spiced besan batter and fried until golden and crackling. The iftar favourite and the perfect rainy-day snack, served hot with green chutney and imli.",
+   "ing": [
+    "3 medium potatoes, sliced 3 mm thick",
+    "1 cup besan (gram flour)",
+    "2 tbsp rice flour, for extra crunch",
+    "1 tsp red chilli powder",
+    "1/2 tsp turmeric",
+    "1 tsp crushed coriander seeds",
+    "1/2 tsp ajwain (carom seeds)",
+    "1/2 tsp chaat masala, plus extra to sprinkle",
+    "2 tbsp fresh coriander, finely chopped",
+    "1 green chilli, finely chopped",
+    "Salt to taste",
+    "3/4 cup cold water, roughly",
+    "Oil for deep frying",
+    "Green chutney and imli chutney to serve"
+   ],
+   "steps": [
+    "Soak the potato slices in cold water for 10 minutes, then drain and pat completely dry.",
+    "Whisk the besan, rice flour, spices, coriander, green chilli and salt with enough cold water to make a smooth batter that coats the back of a spoon.",
+    "Heat the oil to 175°C. Dip each slice in the batter, let the excess drip off, and slide it into the oil.",
+    "Fry in small batches for 4 to 5 minutes, turning once, until deep golden and crisp.",
+    "Drain on a rack, sprinkle with chaat masala and serve hot with green chutney and imli."
+   ],
+   "tip": "Keep the slices thin and dry, and don't crowd the pan. Too many at once drops the oil temperature and the pakoras turn soggy."
+  },
+  {
+   "id": "lal_lobia",
+   "cat": "daal",
+   "name": "Lal lobia masala",
+   "region": "Red kidney bean curry",
+   "time": "1 hr + soaking",
+   "mins": 60,
+   "level": "Easy",
+   "serves": "4",
+   "veg": 1,
+   "cols": [
+    "winter"
+   ],
+   "intro": "Red kidney beans simmered in a deep, spiced onion and tomato masala until creamy and rich. Hearty, comforting and perfect with plain rice or roti.",
+   "ing": [
+    "1½ cups dried red kidney beans (lal lobia), soaked overnight, or 2 cans, drained",
+    "1/3 cup oil",
+    "2 onions, finely chopped",
+    "3 tomatoes, chopped",
+    "1 tbsp ginger-garlic paste",
+    "1 tsp cumin seeds",
+    "1½ tsp red chilli powder",
+    "2 tsp coriander powder",
+    "1/2 tsp turmeric",
+    "1 tsp garam masala",
+    "Salt to taste",
+    "Green chillies, ginger matchsticks and coriander to garnish"
+   ],
+   "steps": [
+    "Drain the soaked beans, cover with fresh water and boil hard for 10 minutes, then simmer for 45 to 60 minutes (or 15 to 20 minutes in a pressure cooker) until soft. Keep the cooking water.",
+    "Heat the oil, crackle the cumin seeds, then fry the onions until golden brown.",
+    "Add the ginger-garlic paste, then the tomatoes, chilli, coriander, turmeric and salt. Cook (bhunai) until the tomatoes break down and the oil separates.",
+    "Add the beans with 1½ cups of their cooking water. Simmer for 15 minutes, mashing a few beans against the pot to thicken the gravy.",
+    "Stir in the garam masala and garnish with green chillies, ginger and coriander. Serve with rice or roti."
+   ],
+   "tip": "Dried kidney beans must be boiled hard for at least 10 minutes before simmering. Never cook them in a slow cooker from raw."
+  },
+  {
+   "id": "gulab_jamun",
+   "cat": "dessert",
+   "name": "Gulab jamun",
+   "region": "All of Pakistan",
+   "time": "1 hr",
+   "mins": 60,
+   "level": "Medium",
+   "serves": "20 pieces",
+   "veg": 1,
+   "cols": [
+    "eid"
+   ],
+   "intro": "Milk dumplings fried slow and deep brown, soaked in cardamom and rose syrup.",
+   "ing": [
+    "1 cup milk powder",
+    "3 tbsp all-purpose flour",
+    "1/4 tsp baking powder",
+    "1 tbsp ghee",
+    "1 egg (or 4 to 5 tbsp milk)",
+    "Syrup: 1½ cups sugar, 1½ cups water, 4 cardamom pods, 1 tsp rosewater",
+    "Oil for frying"
+   ],
+   "steps": [
+    "Simmer the sugar and water for 8 minutes, add cardamom and rosewater, and keep warm.",
+    "Mix the dry ingredients with ghee and egg into a soft dough without kneading hard.",
+    "Roll into smooth balls with no cracks.",
+    "Fry on low heat, turning, until deep brown, about 8 minutes.",
+    "Drop into the warm syrup and soak for an hour."
+   ],
+   "tip": "If the oil is too hot they brown outside and stay raw inside. Low and slow."
+  },
+  {
+   "id": "rasmalai",
+   "cat": "dessert",
+   "name": "Rasmalai",
+   "region": "All of Pakistan",
+   "time": "1 hr 30",
+   "mins": 90,
+   "level": "Medium",
+   "serves": "12 pieces",
+   "veg": 1,
+   "cols": [
+    "eid"
+   ],
+   "intro": "Soft cheese patties soaked in chilled saffron and cardamom milk. Light, elegant and festive.",
+   "ing": [
+    "2 litres full-cream milk (for chenna)",
+    "3 tbsp lemon juice",
+    "1 litre milk for the rabri",
+    "1/2 cup sugar",
+    "Saffron, 4 cardamom pods",
+    "Pistachios and almonds, sliced"
+   ],
+   "steps": [
+    "Boil 2 litres milk, curdle with lemon juice, drain and rinse the chenna; hang for 30 minutes.",
+    "Knead until smooth, shape 12 small discs.",
+    "Cook the discs in light sugar syrup for 12 minutes, covered.",
+    "Reduce 1 litre milk by a third with sugar, saffron and cardamom.",
+    "Squeeze the discs gently, soak in the milk and chill overnight."
+   ],
+   "tip": "Knead the chenna until your palm feels greasy. That is when it's ready."
+  },
+  {
+   "id": "zarda",
+   "cat": "dessert",
+   "name": "Shahi zarda",
+   "region": "Sweet saffron rice",
+   "time": "1 hr",
+   "mins": 60,
+   "level": "Medium",
+   "serves": "6",
+   "veg": 1,
+   "cols": [
+    "eid"
+   ],
+   "intro": "The jewel of every Pakistani wedding and Eid table: fragrant basmati in red, yellow, green and white, steamed with ghee, saffron and cardamom, then crowned with cherries, raisins, almonds, pistachios and silver leaf.",
+   "ing": [
+    "2 cups basmati rice, soaked 30 minutes",
+    "1¼ cups sugar",
+    "1/3 cup ghee",
+    "4 green cardamom, 4 cloves",
+    "A pinch of saffron soaked in 2 tbsp warm milk",
+    "Food colours: yellow (or orange), red and green, a few drops each",
+    "1/2 cup khoya (optional)",
+    "1/4 cup glacé cherries",
+    "1/4 cup raisins",
+    "1/4 cup almonds and pistachios, slivered",
+    "1 tsp kewra water",
+    "Edible silver leaf (warq) to decorate"
+   ],
+   "steps": [
+    "Boil the rice in plenty of water until three-quarters cooked, then drain well.",
+    "Split the rice into four portions. Mix yellow, red and green colour into three of them and leave one white.",
+    "Heat the ghee in a heavy pot, crackle the cardamom and cloves, then add the sugar with 1/4 cup water and stir until it melts into a light syrup.",
+    "Gently layer in all four colours of rice, then add the khoya, raisins, nuts and half the cherries. Fold once, very lightly, so the colours stay separate.",
+    "Drizzle over the saffron milk and kewra, cover tightly and steam on the lowest heat (dum) for 15 to 20 minutes until the syrup is absorbed.",
+    "Pile onto a platter and decorate with the rest of the cherries, nuts and silver leaf."
+   ],
+   "tip": "Fold the coloured rice with a light hand, or it turns into one muddy colour. Long, separate grains are the mark of good zarda."
+  },
+  {
+   "id": "fruit_custard",
+   "cat": "dessert",
+   "name": "Fruit trifle custard",
+   "region": "Creamy vanilla custard with fresh fruit",
+   "time": "25 min + chilling",
+   "mins": 25,
+   "level": "Easy",
+   "serves": "6",
+   "veg": 1,
+   "cols": [
+    "eid",
+    "quick"
+   ],
+   "intro": "The dessert of every Pakistani dawat and Eid table: chilled, silky vanilla custard folded with fresh banana, mango, strawberries, kiwi and grapes, then showered with pomegranate, almonds and pistachios.",
+   "ing": [
+    "1 litre full-cream milk",
+    "4 tbsp vanilla custard powder",
+    "1/2 cup sugar, or to taste",
+    "1/4 tsp cardamom powder (optional)",
+    "2 bananas, sliced",
+    "1 mango, diced",
+    "1 cup strawberries, quartered",
+    "2 kiwis, peeled and diced",
+    "1/2 cup red or green grapes, halved",
+    "1/2 cup pomegranate seeds",
+    "2 tbsp each almonds and pistachios, slivered"
+   ],
+   "steps": [
+    "Mix the custard powder with 1/2 cup of the cold milk until completely smooth.",
+    "Bring the rest of the milk to a boil with the sugar, then lower the heat.",
+    "Pour in the custard mixture in a thin stream, stirring all the time, and cook for 3 to 4 minutes until thick and glossy. Stir in the cardamom.",
+    "Press cling film onto the surface so no skin forms, cool to room temperature, then chill for at least 2 hours.",
+    "Just before serving, whisk the custard smooth and fold in the bananas, mango, strawberries, kiwi and grapes.",
+    "Top with pomegranate seeds, almonds and pistachios and serve cold."
+   ],
+   "tip": "Add the fruit only when you're ready to serve. Bananas brown and fruit juices thin the custard if they sit too long."
+  },
+  {
+   "id": "kheer",
+   "cat": "dessert",
+   "name": "Rice kheer",
+   "region": "All of Pakistan",
+   "time": "1 hr 15",
+   "mins": 75,
+   "level": "Easy",
+   "serves": "6",
+   "veg": 1,
+   "cols": [
+    "eid"
+   ],
+   "intro": "Slow-cooked rice pudding with cardamom, almonds and a breath of kewra.",
+   "ing": [
+    "1/4 cup basmati, soaked 1 hour",
+    "1 litre full-cream milk",
+    "1/2 cup sugar",
+    "4 cardamom pods, crushed",
+    "2 tbsp each almonds and pistachios, sliced",
+    "A few drops of kewra water"
+   ],
+   "steps": [
+    "Lightly crush the soaked rice.",
+    "Bring the milk to a boil, add the rice and simmer on low, stirring often, for 45 minutes until thick.",
+    "Add the sugar and cardamom and cook 10 minutes more.",
+    "Stir in the nuts and kewra and chill before serving."
+   ],
+   "tip": "Serve in clay bowls (kunnay). They soak up a little moisture and set the top."
+  },
+  {
+   "id": "gajar_halwa",
+   "cat": "dessert",
+   "name": "Gajar ka halwa",
+   "region": "Punjab",
+   "time": "1 hr 30",
+   "mins": 90,
+   "level": "Easy",
+   "serves": "6",
+   "veg": 1,
+   "cols": [
+    "winter"
+   ],
+   "intro": "Winter's red carrots cooked down in milk and ghee until jammy and rich.",
+   "ing": [
+    "1 kg red carrots, grated",
+    "1 litre milk",
+    "3/4 cup sugar",
+    "1/4 cup ghee",
+    "1/2 cup khoya",
+    "5 cardamom pods, crushed",
+    "Almonds and pistachios"
+   ],
+   "steps": [
+    "Cook the carrots in the milk, stirring, until all the milk evaporates, about 50 minutes.",
+    "Add the ghee and fry for 10 minutes.",
+    "Add the sugar and cook until it melts and is absorbed.",
+    "Stir in the khoya and cardamom, and top with nuts."
+   ],
+   "tip": "Look for the deep red winter carrots. Orange ones taste fine but the colour is not the same."
+  },
+  {
+   "id": "sheer_khurma",
+   "cat": "dessert",
+   "name": "Sheer khurma",
+   "region": "Eid morning",
+   "time": "40 min",
+   "mins": 40,
+   "level": "Easy",
+   "serves": "6",
+   "veg": 1,
+   "cols": [
+    "eid"
+   ],
+   "intro": "Vermicelli, milk and dates. The first thing served on Eid ul Fitr morning.",
+   "ing": [
+    "1 litre milk",
+    "1/2 cup fine vermicelli (seviyan)",
+    "1/3 cup sugar",
+    "6 dates, chopped",
+    "2 tbsp ghee",
+    "Almonds, pistachios, cashews and raisins",
+    "4 cardamom pods"
+   ],
+   "steps": [
+    "Fry the vermicelli in ghee until golden.",
+    "Boil the milk with cardamom for 10 minutes.",
+    "Add the vermicelli, sugar and dates and simmer for 10 minutes.",
+    "Fry the nuts and raisins in a little ghee and stir them in. Serve warm or chilled."
+   ],
+   "tip": "It thickens as it cools. Loosen with warm milk before serving guests."
+  },
+  {
+   "id": "raita",
+   "cat": "sides",
+   "name": "Zeera raita",
+   "region": "All of Pakistan",
+   "time": "10 min",
+   "mins": 10,
+   "level": "Easy",
+   "serves": "4",
+   "veg": 1,
+   "cols": [
+    "ramadan"
+   ],
+   "intro": "Cool yogurt with roasted cumin, the partner to every biryani.",
+   "ing": [
+    "2 cups yogurt",
+    "1 small onion, finely chopped",
+    "1 tomato, chopped",
+    "1/2 cucumber, chopped",
+    "1 tsp roasted cumin, crushed",
+    "Salt, mint and a pinch of chilli"
+   ],
+   "steps": [
+    "Whisk the yogurt smooth with a splash of water.",
+    "Fold in the onion, tomato and cucumber.",
+    "Season with salt and cumin and garnish with mint and chilli."
+   ],
+   "tip": "Dry-roast the cumin seeds yourself. The smell is half the raita."
+  },
+  {
+   "id": "green_chutney",
+   "cat": "sides",
+   "name": "Mint, coriander and tomato chutney",
+   "region": "Podina, sabz dhaniya aur tamatar ki chutney",
+   "time": "10 min",
+   "mins": 10,
+   "level": "Easy",
+   "serves": "4",
+   "veg": 1,
+   "cols": [
+    "ramadan"
+   ],
+   "intro": "A fresh, spicy and tangy Pakistani green chutney made with mint, fresh coriander, tomatoes, green chillies and salt. Perfect with daal chawal, biryani, pakoras, samosas, kebabs and homemade roti.",
+   "ing": [
+    "1 cup fresh mint leaves (podina), packed",
+    "1 cup fresh coriander (sabz dhaniya), with tender stems",
+    "1 medium tomato, roughly chopped",
+    "3 to 4 green chillies, to taste",
+    "1 small garlic clove (optional)",
+    "1/2 tsp cumin seeds",
+    "Juice of 1/2 lemon",
+    "Salt to taste",
+    "2 to 3 tbsp cold water"
+   ],
+   "steps": [
+    "Wash the mint and coriander well and shake dry. Pick the mint leaves off their stems.",
+    "Add the herbs, green chillies, garlic, cumin, salt and lemon juice to a blender with a splash of cold water.",
+    "Blend in short bursts until coarse, then add half the tomato and pulse a few times.",
+    "Finely chop the rest of the tomato and stir it through for texture. Taste and adjust the salt, chilli and lemon."
+   ],
+   "tip": "Use ice-cold water and short pulses so the blades don't heat the herbs. The chutney stays bright green for longer."
+  },
+  {
+   "id": "aam_achar",
+   "cat": "sides",
+   "name": "Mix aam ka achar",
+   "region": "Raw mango, carrot and green chilli pickle",
+   "time": "1 hr + 1 week",
+   "mins": 60,
+   "level": "Medium",
+   "serves": "1 large jar",
+   "veg": 1,
+   "cols": [
+    "winter"
+   ],
+   "intro": "The summer pickle of every Pakistani home: sour raw mango, sweet carrot and fiery green chillies in mustard oil with fennel, fenugreek and kalonji. A spoonful turns plain daal chawal into a feast.",
+   "ing": [
+    "1 kg raw green mangoes (keri), washed and dried",
+    "2 carrots, cut into batons",
+    "8 to 10 green chillies, slit",
+    "1½ cups mustard oil",
+    "3 tbsp salt",
+    "1 tsp turmeric",
+    "2 tbsp red chilli powder (or crushed red chilli)",
+    "2 tbsp fennel seeds (saunf), lightly crushed",
+    "1 tbsp fenugreek seeds (methi dana), lightly crushed",
+    "1 tbsp nigella seeds (kalonji)",
+    "2 tbsp yellow mustard seeds, coarsely crushed",
+    "1 tsp coriander seeds, crushed",
+    "2 tbsp vinegar"
+   ],
+   "steps": [
+    "Cut the mangoes into chunks with the skin on, discarding the soft seed. Toss with the carrots, chillies, 2 tbsp salt and the turmeric.",
+    "Spread on a clean cloth and dry in the sun, or in a very low oven, for 4 to 6 hours until the surfaces feel dry.",
+    "Heat the mustard oil until it just smokes, then let it cool until warm.",
+    "Mix all the spices and the remaining salt into the warm oil, then fold in the vegetables and vinegar so everything is coated.",
+    "Pack tightly into a clean, completely dry glass jar and pour over the remaining oil so the pickle is covered.",
+    "Keep the jar in a sunny spot and shake it once a day. It's ready in about a week and keeps for months."
+   ],
+   "tip": "Every spoon, jar and cloth must be completely dry. A single drop of water will spoil the achar, and the oil should always sit above the pickle."
+  },
+  {
+   "id": "achar",
+   "cat": "sides",
+   "name": "Mixed vegetable achar",
+   "region": "Punjab",
+   "time": "40 min + 3 days",
+   "mins": 40,
+   "level": "Easy",
+   "serves": "1 jar",
+   "veg": 1,
+   "cols": [
+    "winter"
+   ],
+   "intro": "Tangy, oily and fiery. A spoonful turns plain daal chawal into a feast.",
+   "ing": [
+    "500 g mixed carrots, cauliflower and green chillies",
+    "1 cup mustard oil",
+    "2 tbsp crushed mustard seeds",
+    "1 tbsp fennel, 1 tsp fenugreek, 1 tsp nigella",
+    "2 tbsp red chilli powder, 1 tsp turmeric",
+    "1/3 cup vinegar",
+    "Salt"
+   ],
+   "steps": [
+    "Cut the vegetables, salt them and dry in the sun or a low oven for a few hours.",
+    "Heat the mustard oil until it smokes, then cool slightly.",
+    "Mix the spices into the warm oil, then the vegetables and vinegar.",
+    "Pack into a clean jar and leave 3 days before eating."
+   ],
+   "tip": "Every spoon going into the jar must be completely dry, or the achar will spoil."
+  }
+ ]
+}
