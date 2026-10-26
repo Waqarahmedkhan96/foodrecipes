@@ -70,6 +70,8 @@ EN_JOURNAL = load("journal.json")["posts"]
 EN_SPICES = load("spices.json")["spices"]
 EN_BY_ID = {r["id"]: r for r in EN_DATA["recipes"]}
 UI = load("i18n", "ui.json")
+ANIM = load("anim.json")  # visual "from bowl to cake" stories, one page each
+CONTACT_EMAIL = "fbrr11@yahoo.com"
 MISSING = []
 OPTIONAL = {"latin"}  # translated only where the English value needs it
 
@@ -296,9 +298,9 @@ def footer(path):
       <div><h4>{t("recipes")}</h4><ul>{cats}</ul></div>
       <div><h4>{t("collections")}</h4><ul>{cols}<li><a href="{R}recipes.html#veg">{t("vegetarian")}</a></li></ul></div>
       <div><h4>{t("read")}</h4><ul><li><a href="{R}journal.html">{t("journal")}</a></li><li><a href="{R}spices.html">{t("spice_guide")}</a></li><li><a href="{R}story.html">{t("fatmas_story")}</a></li><li><a href="#subscribe">{t("sunday_letter")}</a></li></ul></div>
-      <div><h4>{t("talk")}</h4><ul><li><a href="{R}ask.html">{t("ask_fatma")}</a></li><li><a href="{R}ask.html#request">{t("recipe_requests")}</a></li><li><a href="{R}ask.html#collab">{t("collaborations")}</a></li></ul></div>
+      <div><h4>{t("talk")}</h4><ul><li><a href="{R}ask.html">{t("ask_fatma")}</a></li><li><a href="{R}ask.html#request">{t("recipe_requests")}</a></li><li><a href="{R}ask.html#collab">{t("collaborations")}</a></li><li><a href="mailto:{CONTACT_EMAIL}" dir="ltr">{CONTACT_EMAIL}</a></li></ul></div>
     </div>
-    <div class="copyline"><span>© 2026 {SITE}</span><span class="foot-langs">{langs}</span><span>{t("made_with")}</span></div>
+    <div class="copyline"><span>© 2009–2026 {SITE}</span><span class="foot-langs">{langs}</span><span>{t("made_with")}</span></div>
   </div>
 </footer>'''
 
@@ -309,7 +311,7 @@ FONTS = {
 }
 
 
-def page(path, title, desc, main, active="", image="hero_biryani", head_extra="", suffix=True, noindex=False):
+def page(path, title, desc, main, active="", image="hero_biryani", head_extra="", suffix=True, noindex=False, tail=""):
     """Write one page. `path` is the same in every language, for example recipes/zarda.html."""
     full_title = title if (title == SITE or not suffix) else f"{title} · {SITE}"
     L.pages.append(path)
@@ -354,7 +356,7 @@ def page(path, title, desc, main, active="", image="hero_biryani", head_extra=""
 {body}
 <script src="{data_js}?v={ver(data_js)}"></script>
 <script src="/assets/site.js?v={ver("assets/site.js")}"></script>
-</body>
+{tail}</body>
 </html>
 '''
     doc = doc.replace("{{root}}", L.root).replace("{{img}}", "/images/")
@@ -587,6 +589,55 @@ def spice_links(r):
     return f'<div class="spice-links"><p class="eyebrow">{t("spices_in_recipe")}</p><div>{links}</div></div>'
 
 
+def story_button(r):
+    a = ANIM.get(r["id"])
+    if not a:
+        return ""
+    return f'<a class="btn btn-gold story-btn" href="{L.root}stories/{r["id"]}.html">{ico("i-play")}{e(a["text"][L.id]["button"])}</a>'
+
+
+def build_story_page(rid, a):
+    """A separate page with the scroll animation for one recipe."""
+    R = L.root
+    r = L.by_id[rid]
+    tx = a["text"][L.id]
+    im = a["images"]
+    n = len(a["items"])
+    icons = "".join(
+        f'<figure class="fs-ic"><img src="/images/{it["img"]}" alt="" loading="lazy"><figcaption>{e(it[L.id])}</figcaption></figure>'
+        for it in a["items"])
+    steps = "".join(
+        f'<li><span class="fs-num">{i + 1}</span><div><b>{e(st[0])}</b><p><span>{e(st[1])}</span></p></div></li>'
+        for i, st in enumerate(a["steps"][L.id]))
+    c = L.cat[r["cat"]]
+    main = page_head([(t("recipes"), f"{R}recipes.html"), (r["name"], f"{R}recipes/{rid}.html"), (tx["eyebrow"], None)],
+                     tx["h1"], tx["sub"], rid, c["name"]) + f'''
+<section class="wrap fs" id="fs" aria-label="{e(tx["eyebrow"])}">
+  <div class="fs-head"><p class="eyebrow">{e(tx["eyebrow"])}</p><a class="fs-skip" href="{R}recipes/{rid}.html#ing-title">{e(tx["skip"])} {ico("i-arrow")}</a></div>
+  <div class="fs-track">
+    <div class="fs-sticky">
+      <div class="fs-copy">
+        <ol class="fs-steps">{steps}</ol>
+        <div class="fs-progress" aria-hidden="true"><i></i></div>
+        <a class="btn btn-green fs-cta" href="{R}recipes/{rid}.html">{e(tx["cta"])} {ico("i-arrow")}</a>
+      </div>
+      <div class="fs-stage" aria-hidden="true">
+        <div class="fs-ring"></div><div class="fs-glow"></div>
+        <div class="fs-bowl"><img src="/images/{im["bowl"]}" alt="" loading="lazy"></div>
+        {icons}
+        <div class="fs-scene fs-pour"><img src="/images/{im["pour"]}" alt="" loading="lazy"></div>
+        <div class="fs-scene fs-layers"><div class="fs-lw"><img src="/images/{im["backdrop"]}" alt="" loading="lazy"><img class="fs-b3" src="/images/{im["layers"]}" alt="" loading="lazy"><img class="fs-b2" src="/images/{im["layers"]}" alt="" loading="lazy"><img class="fs-b1" src="/images/{im["layers"]}" alt="" loading="lazy"></div></div>
+        <div class="fs-scene fs-final"><img src="/images/{rid}.jpg" alt="" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+  <div class="fs-back"><div><h2>{e(tx["back_h"])}</h2><p>{e(tx["back_p"])}</p></div><a class="btn btn-gold" href="{R}recipes/{rid}.html">{e(tx["cta"])} {ico("i-arrow")}</a></div>
+</section>'''
+    head = f'<link rel="stylesheet" href="/assets/story.css?v={ver("assets/story.css")}">\n'
+    tail = f'<script src="/assets/story.js?v={ver("assets/story.js")}"></script>\n'
+    page(f"stories/{rid}.html", tx["title"], tx["desc"], main, "recipes", rid, head, suffix=True, tail=tail)
+
+
 def build_recipe(r):
     R = L.root
     c = L.cat[r["cat"]]
@@ -616,6 +667,7 @@ def build_recipe(r):
         <button class="btn btn-line ink" type="button" data-save="{r["id"]}" aria-pressed="false">{ico("i-heart")}<span data-save-label>{t("save_recipe")}</span></button>
         <a class="btn btn-green" href="#method">{t("start_cooking")} {ico("i-arrow")}</a>
         <button class="btn btn-line ink" type="button" id="printBtn">{ico("i-steps")}{t("print")}</button>
+        {story_button(r)}
       </div>
     </div>
   </div>
@@ -830,6 +882,8 @@ def build_lang(lang):
     build_ask()
     build_journal()
     build_spices()
+    for rid, a in ANIM.items():
+        build_story_page(rid, a)
     build_404()
     return L.pages
 
