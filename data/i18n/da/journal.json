@@ -1,0 +1,54 @@
+{
+ "slow-art-of-ghotna": {
+  "tag": "Teknik",
+  "title": "Den langsomme kunst at bruge en ghotna",
+  "read": "6 min. læsning",
+  "summary": "Hvorfor haleem bliver pisket i en hel time – og hvordan du får de lange, silkebløde tråde uden en ghotna af træ.",
+  "lead": "Hver ramadan står der nogen i familien over haleem-gryden med en ghotna af træ og pisker, til armene værker. Det er den times arbejde, der forvandler hvede, linser og oksekød til noget silkeblødt.",
+  "body": [
+   ["h", "Hvorfor vi pisker haleem"],
+   ["p", "Haleem begynder som to gryder: bløde hvedekerner og linser i den ene og oksekød, der falder fra hinanden, i den anden. Rører du dem bare sammen, får du en tyk gryderet. Pisker du dem sammen, trævles kødfibrene ud og lægger sig om kornene, til hele gryden trækker lange tråde, når du løfter skeen. De tråde er tegnet på en vellavet haleem."],
+   ["p", "En ghotna er en tung træstamper med et rundt hoved. Med en rolig rytme af tryk og vrid knuser den kornene uden at mose dem til grød, og den river kødet i tråde i stedet for at gøre det til fars."],
+   ["h", "Uden en ghotna"],
+   ["p", "Start med en kartoffelmoser de første femten minutter for at bryde det hele ned. Skift derefter til et kraftigt ballonpiskeris, og pisk i cirkler, mens du skraber bunden, så intet brænder på. Hold varmen så lav som muligt, og tilsæt en sjat varmt vand, hver gang massen strammer til."],
+   ["p", "Lad stavblenderen blive i skuffen. Den er hurtig, men den moser kødet, og så mister du trådene helt."],
+   ["callout", "Fatmas tip", "Skiftes til at piske. Sæt en lang playliste på, send moseren rundt i køkkenet, og så går timen hurtigt."],
+   ["h", "Gøres færdig ved bordet"],
+   ["p", "Haleem er kun halvt færdig, når den kommer op af gryden. Resten sker ved bordet: en bunke sprøde stegte løg, ingefærstave, grønne chilier, chaat masala, mynte og et skvæt citron, så alle kan bygge deres egen skål."]
+  ]
+ },
+ "eid-morning-table": {
+  "tag": "Højtider",
+  "title": "Et eid-morgenbord",
+  "read": "8 min. læsning",
+  "summary": "Sheer khurma før bønnen, kebab ved middagstid. En menuplan, så du kan have tolv gæster uden at gå glip af dagen.",
+  "lead": "Eid-morgenen har sin egen rytme. Sheer khurma før bønnen, gæster midt på formiddagen og et fyldt bord til frokost. Med lidt planlægning får den, der laver maden, også lov at nyde dagen.",
+  "body": [
+   ["h", "To dage før"],
+   ["p", "Lav alt, der bliver bedre af at stå. Kyllinge-qorma smager dybere dagen efter, og gulab jamun skal have lang tid i siruppen. Hak og steg en stor portion løg, og gem dem i et lufttæt glas, så du kan pynte alt fra qorma til zarda."],
+   ["h", "Aftenen før"],
+   ["p", "Kog frugtcustarden, og stil den på køl, men gem frugten til senere. Farv og forkog risene til zarda, så de kun skal dampes om morgenen. Dæk bordet, stryg dastarkhwan-dugen, og stil serveringsskålene frem med en seddel i hver, så hjælperne ved, hvad der skal hvorhen."],
+   ["h", "Eid-morgen"],
+   ["p", "Varm sheer khurmaen først, så den er klar, når familien kommer hjem fra bønnen. Mens gæsterne kommer, damper du zardaen, lunner qormaen forsigtigt og vender frugten i custarden, lige før den kommer på bordet."],
+   ["callout", "Fatmas tip", "Hold ét kogeblus fri hele dagen til chai. På eid holder kedlen aldrig pause."],
+   ["h", "En menu til tolv"],
+   ["p", "Sheer khurma som start, derefter shahi qorma med kylling og naan, en biryani med okse- eller kyllingekød, raita og grøn chutney. Til det søde zarda og frugtcustard. Det ser overdådigt ud, men det meste er lavet i forvejen."]
+  ]
+ },
+ "coal-smoke-trick": {
+  "tag": "Spisekammeret",
+  "title": "Tricket med kulrøg",
+  "read": "4 min. læsning",
+  "summary": "Dhuanr-metoden, der giver hjemmelavet tikka og daal smagen fra en vejkantsdhaba – med ét stykke trækul.",
+  "lead": "Den røgede smag, du kender fra tikka og daal på en dhaba, kræver ikke en tandoor. Den kommer fra ét stykke glødende trækul og tre minutter under et låg. På urdu hedder det dhuanr.",
+  "body": [
+   ["h", "Det skal du bruge"],
+   ["p", "Et enkelt stykke naturligt trækul, en lille stålskål eller et stykke alufolie foldet til en lille kop, en teskefuld ghee eller olie og en gryde med et tætsluttende låg."],
+   ["h", "Sådan gør du"],
+   ["p", "Hold trækullet over gasblusset med en tang, til det gløder rødt hele vejen rundt – cirka fire minutter. Sæt stålskålen midt i den færdige ret, læg kullet i, og hæld ghee over. Så snart det begynder at ryge, lægger du låget tæt på og lader det stå i to-tre minutter. Løft låget, tag skålen op, og servér."],
+   ["callout", "Fatmas tip", "Gør det med åbent vindue og emhætten tændt, og lad aldrig glødende kul stå uden opsyn. Lad det køle helt af i vand, før du smider det ud."],
+   ["h", "Hvor det virker bedst"],
+   ["p", "Chicken tikka, fars til seekh kebab, daal masoor og chana daal tager alle røgen smukt til sig. Fine retter som kheer og yakhni-pulao har det bedst uden."]
+  ]
+ }
+}
