@@ -777,3 +777,8 @@ html[lang="ur"] .arch-badge{font-size:21px;line-height:1.6}
   .m-lang-h span:first-child{font-size:11px}
   .m-lang-h span:last-child{font-size:13px}
 }
+.rd-actions .story-btn{flex-basis:100%}
+.story-btn svg{width:18px;height:18px}
+.foot a[href^="mailto:"]{word-break:break-all}
+.contact-mail{margin-top:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 18px;border-radius:16px;background:var(--ivory-2);box-shadow:0 0 0 1px var(--line);color:var(--muted);font-size:15px}
+.contact-mail a{color:var(--green);font-weight:500}
