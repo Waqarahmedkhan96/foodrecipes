@@ -1,33 +1,45 @@
 #!/usr/bin/env python3
-"""Build the Tasty Pakistan by Fatma website.
+"""Build the Tasty Pakistan by Fatma website in English, Danish and Urdu.
 
-All recipes live in data/recipes.json and journal articles in data/journal.json.
-Run `python3 build.py` after editing either file. It writes:
+Content lives in data/:
+  recipes.json, journal.json, spices.json   English source content
+  i18n/ui.json                              interface text for every language
+  i18n/<lang>/recipes.json, journal.json, spices.json
+                                            translations, keyed by recipe id or slug
 
-  index.html, recipes.html, story.html, ask.html, journal.html
-  recipes/<recipe-id>.html   one page per recipe
-  journal/<slug>.html        one page per article
-  assets/data.js             recipe data for filtering on the recipes page
+Shared page sections live in src/ (English) and src/<lang>/ (translations).
+
+Run `python3 build.py` after editing any of these. English is written to the site
+root, Danish to da/ and Urdu to ur/, with the same file names in each:
+
+  index.html, recipes.html, story.html, ask.html, journal.html, spices.html
+  recipes/<recipe-id>.html, journal/<slug>.html, spices/<slug>.html
+  assets/data.js, assets/data.da.js, assets/data.ur.js   data for the recipe filters
+
+Run `python3 build.py --strict` to stop the build if any translation is missing.
 """
+import copy
 import html
 import json
 import os
 import re
+import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = "Tasty Pakistan by Fatma"
 
-data = json.load(open(os.path.join(HERE, "data/recipes.json"), encoding="utf-8"))
-journal = json.load(open(os.path.join(HERE, "data/journal.json"), encoding="utf-8"))["posts"]
-SPICES = json.load(open(os.path.join(HERE, "data/spices.json"), encoding="utf-8"))["spices"]
-SP = {s["slug"]: s for s in SPICES}
-
-# Set this to the live address (for example "https://www.tastypakistan.com") to also
-# write sitemap.xml, robots.txt and canonical links. Leave empty until the domain is known.
+# The live address, used for canonical links, hreflang, sitemap.xml and robots.txt.
 SITE_URL = "https://tasty-pakistan.vercel.app"
-PAGES = []
 
-# Words in a recipe's ingredients that link to a spice guide.
+# English stays at the site root. Each language has its own folder and settings.
+LANGS = {
+    "en": {"prefix": "", "dir": "ltr", "code": "EN", "flag": "flag-gb", "native": "English", "locale": "en_GB"},
+    "da": {"prefix": "da/", "dir": "ltr", "code": "DA", "flag": "flag-dk", "native": "Dansk", "locale": "da_DK"},
+    "ur": {"prefix": "ur/", "dir": "rtl", "code": "UR", "flag": "flag-pk", "native": "اردو", "locale": "ur_PK"},
+}
+ORDER = ["en", "da", "ur"]
+
+# Words in a recipe's English ingredients that link to a spice guide.
 SPICE_WORDS = {
     "haldi-turmeric": ["turmeric", "haldi"],
     "zeera-cumin": ["cumin", "zeera"],
@@ -40,20 +52,113 @@ SPICE_WORDS = {
     "adrak-ginger": ["ginger"],
     "lehsan-garlic": ["garlic"],
 }
-CATS, COLS, RECIPES = data["categories"], data["collections"], data["recipes"]
-BY_ID = {r["id"]: r for r in RECIPES}
-CAT = {c["id"]: c for c in CATS}
-COL = {c["id"]: c for c in COLS}
 
 # Home page choices: change these ids to feature different dishes.
 FEATURED = [{"id": "chicken_biryani", "img": "hero_biryani"}, {"id": "beef_nihari"}, {"id": "chicken_karahi"}, {"id": "zarda"}]
 PICKS = ["chicken_karahi", "kabli_pulao", "beef_haleem", "golgappay", "chicken_qorma", "gulab_jamun"]
 WEEK = "beef_nihari"
-POPULAR = ["Biryani", "Karahi", "Nihari", "Haleem", "Chaat", "Pakora", "Pulao", "Qorma", "Zarda", "Kheer"]
+STORY_GALLERY = ["kabli_pulao", "golgappay", "beef_nihari", "gulab_jamun", "balochi_kaak", "chicken_qorma"]
+
+
+def load(*p):
+    path = os.path.join(HERE, "data", *p)
+    return json.load(open(path, encoding="utf-8")) if os.path.exists(path) else {}
+
+
+EN_DATA = load("recipes.json")
+EN_JOURNAL = load("journal.json")["posts"]
+EN_SPICES = load("spices.json")["spices"]
+EN_BY_ID = {r["id"]: r for r in EN_DATA["recipes"]}
+UI = load("i18n", "ui.json")
+MISSING = []
+OPTIONAL = {"latin"}  # translated only where the English value needs it
 
 e = lambda s: html.escape(str(s), quote=True)
-src = lambda name: open(os.path.join(HERE, "src", name), encoding="utf-8").read()
-SPRITE = src("sprite.svg")
+
+
+# ---------------------------------------------------------------- language state
+class Lang:
+    """Everything that changes between languages, set by use(lang)."""
+
+
+L = Lang()
+
+
+def overlay(items, tr, key, fields, kind):
+    """Copy English items and replace text fields with the translation."""
+    out = []
+    for it in items:
+        it = copy.deepcopy(it)
+        t = tr.get(it[key])
+        if t is None:
+            if L.id != "en":
+                MISSING.append(f"{L.id}: {kind} {it[key]}")
+        else:
+            for f in fields:
+                if f in t:
+                    it[f] = t[f]
+                elif f in it and f not in OPTIONAL and L.id != "en":
+                    MISSING.append(f"{L.id}: {kind} {it[key]}.{f}")
+        out.append(it)
+    return out
+
+
+def use(lang):
+    L.id = lang
+    L.meta = LANGS[lang]
+    L.root = "/" + L.meta["prefix"]          # this language's home folder
+    L.ui = UI[lang]
+    tr = load("i18n", lang, "recipes.json") if lang != "en" else {}
+    L.cats = overlay(EN_DATA["categories"], tr.get("categories", {}), "id", ["name", "desc"], "category")
+    L.cols = overlay(EN_DATA["collections"], tr.get("collections", {}), "id", ["name", "desc"], "collection")
+    L.recipes = overlay(EN_DATA["recipes"], tr.get("recipes", {}), "id", ["name", "intro", "ing", "steps", "tip"], "recipe")
+    for r in L.recipes:  # short labels come from the ui maps
+        for f in ("time", "level", "serves", "region"):
+            r[f] = label(f, EN_BY_ID[r["id"]][f])
+    L.by_id = {r["id"]: r for r in L.recipes}
+    L.cat = {c["id"]: c for c in L.cats}
+    L.col = {c["id"]: c for c in L.cols}
+    jt = load("i18n", lang, "journal.json") if lang != "en" else {}
+    L.journal = overlay(EN_JOURNAL, jt, "slug", ["tag", "title", "read", "summary", "lead", "body"], "journal")
+    st = load("i18n", lang, "spices.json") if lang != "en" else {}
+    L.spices = overlay(EN_SPICES, st, "slug", ["name", "local", "latin", "title", "meta", "lead", "sections", "faq", "sources_label"], "spice")
+    for s in L.spices:
+        s.setdefault("name", s["urdu"])
+        s.setdefault("local", s["english"])
+    L.sprite = open(os.path.join(HERE, "src", "sprite.svg"), encoding="utf-8").read()
+
+
+def t(key, **kw):
+    v = L.ui.get(key)
+    if v is None:
+        if L.id != "en":
+            MISSING.append(f"{L.id}: ui {key}")
+        v = UI["en"][key]
+    return v.format(**kw) if kw else v
+
+
+def tn(key, n):
+    """A count with the right singular or plural word, for example '1 recipe'."""
+    return t(key + ("_one" if n == 1 else "_other"), n=n)
+
+
+def label(kind, value):
+    if L.id == "en":
+        return value
+    v = L.ui.get("map_" + kind, {}).get(value)
+    if v is None:
+        MISSING.append(f"{L.id}: {kind} {value!r}")
+        return value
+    return v
+
+
+def src(name):
+    p = os.path.join(HERE, "src", L.id, name)
+    if L.id == "en" or not os.path.exists(p):
+        if L.id != "en":
+            MISSING.append(f"{L.id}: template {name}")
+        p = os.path.join(HERE, "src", name)
+    return open(p, encoding="utf-8").read()
 
 
 def ico(i, cls=""):
@@ -65,6 +170,10 @@ def steam(n):
     return '<div class="steam" aria-hidden="true">' + "<i></i>" * n + "</div>"
 
 
+def img(name):
+    return f"/images/{name}.jpg"
+
+
 def quick(r):
     return r["mins"] <= 45
 
@@ -74,79 +183,133 @@ def in_col(r, cid):
 
 
 def count_cat(cid):
-    return sum(1 for r in RECIPES if r["cat"] == cid)
+    return sum(1 for r in L.recipes if r["cat"] == cid)
 
 
-def slug_text(r):
-    return " ".join([r["name"], r["region"], CAT[r["cat"]]["name"], " ".join(r["ing"])]).lower()
+def search_text(r):
+    """Words the recipe filter searches: this language plus the English names."""
+    en = EN_BY_ID[r["id"]]
+    parts = [r["name"], r["region"], L.cat[r["cat"]]["name"], " ".join(r["ing"]), en["name"], " ".join(en["ing"])]
+    return " ".join(parts).lower()
+
+
+def url(path):
+    return SITE_URL.rstrip("/") + "/" + LANGS[L.id]["prefix"] + ("" if path == "index.html" else path)
 
 
 # ---------------------------------------------------------------- layout
-def header(root, active):
+def lang_switch(path):
+    opts = ""
+    for k in ORDER:
+        m = LANGS[k]
+        on = k == L.id
+        href = "/" + m["prefix"] + ("" if path == "index.html" else path)
+        cur = ' aria-current="true"' if on else ""
+        opts += (f'<a class="lang-opt{" on" if on else ""}" href="{href}" hreflang="{k}" lang="{k}" data-lang="{k}"{cur}>'
+                 f'<span class="flag">{ico(m["flag"])}</span><span class="lang-txt"><b>{e(m["native"])}</b>'
+                 f'<small>{e(t("lang_" + k))}</small></span>{ico("i-check", "tick")}</a>')
+    me = L.meta
+    return f'''<div class="lang" id="lang">
+        <button class="lang-btn" type="button" aria-expanded="false" aria-controls="langPanel" aria-label="{e(t("lang_label"))}: {e(me["native"])}">
+          <span class="flag">{ico(me["flag"])}</span><b>{me["code"]}</b>{ico("i-chev", "car")}
+        </button>
+        <div class="lang-panel" id="langPanel">
+          <p class="lang-h">{e(t("lang_choose"))}</p>
+          {opts}
+        </div>
+      </div>'''
+
+
+def header(active, path):
+    R = L.root
+
     def link(href, label, key):
         on = ' class="on" aria-current="page"' if key == active else ""
-        return f'<a href="{root}{href}"{on}>{label}</a>'
+        return f'<a href="{R}{href}"{on}>{label}</a>'
     dd = "".join(
-        f'<a href="{root}recipes.html#{c["id"]}"><img src="{root}images/{c["img"]}.jpg" alt="" loading="lazy"><span><b>{e(c["name"])}</b><small>{count_cat(c["id"])} recipes</small></span></a>'
-        for c in CATS)
+        f'<a href="{R}recipes.html#{c["id"]}"><img src="{img(c["img"])}" alt="" loading="lazy"><span><b>{e(c["name"])}</b><small>{tn("n_recipes", count_cat(c["id"]))}</small></span></a>'
+        for c in L.cats)
     return f'''<header class="site" id="hdr">
   <div class="wrap bar">
-    <a class="brand" href="{root}index.html" aria-label="{SITE}, home">
+    <a class="brand" href="{R}" aria-label="{SITE}, {e(t("home"))}">
       <svg aria-hidden="true"><use href="#logo"/></svg>
       <span><b>Tasty Pakistan</b><small>by Fatma</small></span>
     </a>
-    <nav class="links" id="nav" aria-label="Main">
-      {link("index.html", "Home", "home")}
-      {link("recipes.html", "Recipes", "recipes")}
+    <nav class="links" id="nav" aria-label="{e(t("nav_main"))}">
+      {link("", t("home"), "home")}
+      {link("recipes.html", t("recipes"), "recipes")}
       <div class="dd">
-        <button class="dd-btn" type="button" aria-expanded="false" aria-controls="ddPanel">Categories {ico("i-chev")}</button>
-        <div class="dd-panel" id="ddPanel">{dd}<a class="dd-all" href="{root}recipes.html">View all recipes</a></div>
+        <button class="dd-btn" type="button" aria-expanded="false" aria-controls="ddPanel">{t("categories")} {ico("i-chev")}</button>
+        <div class="dd-panel" id="ddPanel">{dd}<a class="dd-all" href="{R}recipes.html">{t("view_all_recipes")}</a></div>
       </div>
-      {link("journal.html", "Journal", "journal")}
-      {link("story.html", "Fatma's story", "story")}
-      {link("ask.html", "Ask Fatma", "ask")}
+      {link("journal.html", t("journal"), "journal")}
+      {link("story.html", t("fatmas_story"), "story")}
+      {link("ask.html", t("ask_fatma"), "ask")}
     </nav>
     <div class="bar-actions">
-      <a class="ico-btn" href="{root}recipes.html#find" aria-label="Search recipes">{ico("i-search")}</a>
-      <a class="ico-btn" href="{root}recipes.html#saved" aria-label="Saved recipes">{ico("i-heart")}<span class="badge-count" hidden>0</span></a>
-      <a class="btn btn-gold" href="#subscribe">Subscribe</a>
-      <button class="ico-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">{ico("i-menu")}</button>
+      {lang_switch(path)}
+      <a class="ico-btn" href="{R}recipes.html#find" aria-label="{e(t("search_recipes"))}">{ico("i-search")}</a>
+      <a class="ico-btn" href="{R}recipes.html#saved" aria-label="{e(t("saved_recipes"))}">{ico("i-heart")}<span class="badge-count" hidden>0</span></a>
+      <a class="btn btn-gold sub-btn" href="#subscribe">{t("subscribe")}</a>
+      <button class="ico-btn menu-btn" id="menuBtn" type="button" aria-label="{e(t("open_menu"))}" aria-expanded="false" aria-controls="nav">{ico("i-menu")}</button>
     </div>
   </div>
 </header>'''
 
 
-def footer(root):
-    cats = "".join(f'<li><a href="{root}recipes.html#{c["id"]}">{e(c["name"])}</a></li>' for c in CATS)
-    cols = "".join(f'<li><a href="{root}recipes.html#col-{c["id"]}">{e(c["name"])}</a></li>' for c in COLS)
+def footer(path):
+    R = L.root
+    cats = "".join(f'<li><a href="{R}recipes.html#{c["id"]}">{e(c["name"])}</a></li>' for c in L.cats)
+    cols = "".join(f'<li><a href="{R}recipes.html#col-{c["id"]}">{e(c["name"])}</a></li>' for c in L.cols)
+    langs = "".join(
+        f'<a href="/{LANGS[k]["prefix"]}{"" if path == "index.html" else path}" hreflang="{k}" lang="{k}"{" aria-current=true" if k == L.id else ""}>{e(LANGS[k]["native"])}</a>'
+        for k in ORDER)
     return f'''<footer>
   <div class="wrap">
     <div class="foot-top">
-      <a class="brand" href="{root}index.html" aria-label="{SITE}, home"><svg aria-hidden="true"><use href="#logo"/></svg><span><b>Tasty Pakistan</b><small>by Fatma</small></span></a>
-      <p>Recipes, stories and weekly inspiration from the Pakistani home kitchen.</p>
-      <a class="btn btn-gold" href="#subscribe">Get the Sunday letter {ico("i-arrow")}</a>
+      <a class="brand" href="{R}" aria-label="{SITE}, {e(t("home"))}"><svg aria-hidden="true"><use href="#logo"/></svg><span><b>Tasty Pakistan</b><small>by Fatma</small></span></a>
+      <p>{t("foot_tagline")}</p>
+      <a class="btn btn-gold" href="#subscribe">{t("get_letter")} {ico("i-arrow")}</a>
     </div>
     <div class="foot">
-      <div><h4>Recipes</h4><ul>{cats}</ul></div>
-      <div><h4>Collections</h4><ul>{cols}<li><a href="{root}recipes.html#veg">Vegetarian</a></li></ul></div>
-      <div><h4>Read</h4><ul><li><a href="{root}journal.html">Journal</a></li><li><a href="{root}spices.html">Spice guide</a></li><li><a href="{root}story.html">Fatma's story</a></li><li><a href="#subscribe">Sunday letter</a></li></ul></div>
-      <div><h4>Talk</h4><ul><li><a href="{root}ask.html">Ask Fatma</a></li><li><a href="{root}ask.html#request">Recipe requests</a></li><li><a href="{root}ask.html#collab">Collaborations</a></li></ul></div>
+      <div><h4>{t("recipes")}</h4><ul>{cats}</ul></div>
+      <div><h4>{t("collections")}</h4><ul>{cols}<li><a href="{R}recipes.html#veg">{t("vegetarian")}</a></li></ul></div>
+      <div><h4>{t("read")}</h4><ul><li><a href="{R}journal.html">{t("journal")}</a></li><li><a href="{R}spices.html">{t("spice_guide")}</a></li><li><a href="{R}story.html">{t("fatmas_story")}</a></li><li><a href="#subscribe">{t("sunday_letter")}</a></li></ul></div>
+      <div><h4>{t("talk")}</h4><ul><li><a href="{R}ask.html">{t("ask_fatma")}</a></li><li><a href="{R}ask.html#request">{t("recipe_requests")}</a></li><li><a href="{R}ask.html#collab">{t("collaborations")}</a></li></ul></div>
     </div>
-    <div class="copyline"><span>© 2026 {SITE}</span><span>Made with ghee and patience</span></div>
+    <div class="copyline"><span>© 2026 {SITE}</span><span class="foot-langs">{langs}</span><span>{t("made_with")}</span></div>
   </div>
 </footer>'''
 
 
-def page(path, title, desc, main, active="", image="hero_biryani", head_extra="", suffix=True, root_override=None):
-    root = root_override if root_override is not None else "../" * path.count("/")
+FONTS = {
+    "base": "family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Great+Vibes",
+    "ur": "&family=Noto+Nastaliq+Urdu:wght@400;500;600",
+}
+
+
+def page(path, title, desc, main, active="", image="hero_biryani", head_extra="", suffix=True, noindex=False):
+    """Write one page. `path` is the same in every language, for example recipes/zarda.html."""
     full_title = title if (title == SITE or not suffix) else f"{title} · {SITE}"
-    PAGES.append(path)
+    L.pages.append(path)
+    head = ""
     if SITE_URL:
-        head_extra = f'<link rel="canonical" href="{SITE_URL.rstrip("/")}/{"" if path == "index.html" else path}">\n' + head_extra
-    body = (SPRITE + "\n" + header(root, active) + f'\n<main id="top">\n{main}\n</main>\n'
-            + src("sub.html") + "\n" + footer(root))
+        head += f'<link rel="canonical" href="{url(path)}">\n'
+        if not noindex:
+            for k in ORDER:
+                href = SITE_URL.rstrip("/") + "/" + LANGS[k]["prefix"] + ("" if path == "index.html" else path)
+                head += f'<link rel="alternate" hreflang="{k}" href="{href}">\n'
+            head += f'<link rel="alternate" hreflang="x-default" href="{SITE_URL.rstrip("/")}/{"" if path == "index.html" else path}">\n'
+    if noindex:
+        head += '<meta name="robots" content="noindex">\n'
+    fonts = FONTS["base"] + (FONTS["ur"] if L.id == "ur" else "")
+    # Other languages load only the Nastaliq letters for the word اردو in the language menu.
+    ur_word = "" if L.id == "ur" else '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&text=%D8%A7%D8%B1%D8%AF%D9%88&display=swap">\n'
+    data_js = "/assets/data.js" if L.id == "en" else f"/assets/data.{L.id}.js"
+    body = (L.sprite + "\n" + header(active, path) + f'\n<main id="top">\n{main}\n</main>\n'
+            + src("sub.html") + "\n" + footer(path))
     doc = f'''<!doctype html>
-<html lang="en">
+<html lang="{L.id}" dir="{L.meta["dir"]}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -155,52 +318,54 @@ def page(path, title, desc, main, active="", image="hero_biryani", head_extra=""
 <meta name="theme-color" content="#0F2F23">
 <meta property="og:title" content="{e(full_title)}">
 <meta property="og:description" content="{e(desc)}">
-<meta property="og:image" content="{(SITE_URL.rstrip("/") + "/") if SITE_URL else root}images/{image}.jpg">
+<meta property="og:image" content="{SITE_URL.rstrip("/")}/images/{image}.jpg">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="{L.meta["locale"]}">
+<meta property="og:site_name" content="{SITE}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="{root}favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Great+Vibes&display=swap">
-<link rel="stylesheet" href="{root}assets/style.css">
-{head_extra}</head>
-<body data-root="{root}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{fonts}&display=swap">
+{ur_word}<link rel="stylesheet" href="/assets/style.css">
+{head}{head_extra}</head>
+<body data-root="{L.root}">
 {body}
-<script src="{root}assets/data.js"></script>
-<script src="{root}assets/site.js"></script>
+<script src="{data_js}"></script>
+<script src="/assets/site.js"></script>
 </body>
 </html>
 '''
-    doc = doc.replace("{{root}}", root)
-    out = os.path.join(HERE, path)
+    doc = doc.replace("{{root}}", L.root).replace("{{img}}", "/images/")
+    out = os.path.join(HERE, L.meta["prefix"], path)
     os.makedirs(os.path.dirname(out), exist_ok=True)
     open(out, "w", encoding="utf-8").write(doc)
 
 
 # ---------------------------------------------------------------- pieces
-def card(r, root, rv=False):
-    c = CAT[r["cat"]]
-    veg = f'<span>{ico("i-leaf")}Veg</span>' if r.get("veg") else ""
-    return f'''<article class="card{' rv' if rv else ''}" data-id="{r["id"]}" data-cat="{r["cat"]}" data-veg="{1 if r.get("veg") else 0}" data-mins="{r["mins"]}" data-cols="{" ".join(r.get("cols", []))}" data-text="{e(slug_text(r))}">
-  <div class="media"><img src="{root}images/{r["id"]}.jpg" alt="" loading="lazy">{steam(3)}<span class="tag">{e(c["name"])}</span>
-    <button class="heart" type="button" data-save="{r["id"]}" aria-pressed="false" aria-label="Save {e(r["name"])}">{ico("i-heart")}</button></div>
+def card(r, rv=False):
+    c = L.cat[r["cat"]]
+    veg = f'<span>{ico("i-leaf")}{t("veg")}</span>' if r.get("veg") else ""
+    return f'''<article class="card{' rv' if rv else ''}" data-id="{r["id"]}" data-cat="{r["cat"]}" data-veg="{1 if r.get("veg") else 0}" data-mins="{r["mins"]}" data-cols="{" ".join(r.get("cols", []))}" data-text="{e(search_text(r))}">
+  <div class="media"><img src="{img(r["id"])}" alt="" loading="lazy">{steam(3)}<span class="tag">{e(c["name"])}</span>
+    <button class="heart" type="button" data-save="{r["id"]}" aria-pressed="false" aria-label="{e(t("save_x", name=r["name"]))}">{ico("i-heart")}</button></div>
   <div class="card-body">
     <span class="region">{e(r["region"])}</span>
-    <h3><a class="card-link" href="{root}recipes/{r["id"]}.html">{e(r["name"])}</a></h3>
+    <h3><a class="card-link" href="{L.root}recipes/{r["id"]}.html">{e(r["name"])}</a></h3>
     <span class="facts"><span>{ico("i-clock")}{e(r["time"])}</span><span>{ico("i-chef")}{e(r["level"])}</span>{veg}</span>
   </div>
 </article>'''
 
 
-def page_head(root, crumbs, title_html, sub, img, eyebrow=""):
-    cr = f'<a href="{root}index.html">Home</a>'
-    for label, href in crumbs:
-        cr += '<span aria-hidden="true">/</span>' + (f'<a href="{href}">{e(label)}</a>' if href else f'<span>{e(label)}</span>')
+def page_head(crumbs, title_html, sub, image, eyebrow=""):
+    cr = f'<a href="{L.root}">{t("home")}</a>'
+    for lbl, href in crumbs:
+        cr += '<span aria-hidden="true" class="sep">/</span>' + (f'<a href="{href}">{e(lbl)}</a>' if href else f'<span>{e(lbl)}</span>')
     eb = f'<p class="eyebrow" style="margin-top:18px">{e(eyebrow)}</p>' if eyebrow else ""
     return f'''<section class="page-head">
-  <div class="ph-img"><img src="{root}images/{img}.jpg" alt=""></div>
+  <div class="ph-img"><img src="{img(image)}" alt=""></div>
   <div class="wrap">
-    <nav class="crumbs" aria-label="Breadcrumb">{cr}</nav>
+    <nav class="crumbs" aria-label="{e(t("breadcrumb"))}">{cr}</nav>
     {eb}
     <h1>{title_html}</h1>
     <p class="ph-sub">{e(sub)}</p>
@@ -208,10 +373,10 @@ def page_head(root, crumbs, title_html, sub, img, eyebrow=""):
 </section>'''
 
 
-def post_card(p, root):
+def post_card(p):
     return f'''<article class="post rv">
-  <a class="stretch" href="{root}journal/{p["slug"]}.html">
-    <div class="media"><span class="post-tag">{e(p["tag"])}</span><img src="{root}images/{p["img"]}.jpg" alt="" loading="lazy">{steam(3)}</div>
+  <a class="stretch" href="{L.root}journal/{p["slug"]}.html">
+    <div class="media"><span class="post-tag">{e(p["tag"])}</span><img src="{img(p["img"])}" alt="" loading="lazy">{steam(3)}</div>
     <h3 style="margin-top:14px">{e(p["title"])}</h3>
   </a>
   <p>{e(p["summary"])}</p>
@@ -221,69 +386,69 @@ def post_card(p, root):
 
 # ---------------------------------------------------------------- home
 def build_home():
-    root = ""
+    R = L.root
     rail = "".join(
-        f'<a class="cat" href="recipes.html#{c["id"]}" aria-label="{e(c["name"])}, {count_cat(c["id"])} recipes"><img src="images/{c["img"]}.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>{e(c["name"])}</b><small>{count_cat(c["id"])} recipes</small></span><span class="arrow-dot">{ico("i-arrow")}</span></span></a>'
-        for c in CATS)
-    f0 = BY_ID[FEATURED[0]["id"]]
+        f'<a class="cat" href="{R}recipes.html#{c["id"]}" aria-label="{e(c["name"])}, {tn("n_recipes", count_cat(c["id"]))}"><img src="{img(c["img"])}" alt="" loading="lazy"><span class="cat-body"><span><b>{e(c["name"])}</b><small>{tn("n_recipes", count_cat(c["id"]))}</small></span><span class="arrow-dot">{ico("i-arrow")}</span></span></a>'
+        for c in L.cats)
+    f0 = L.by_id[FEATURED[0]["id"]]
     thumbs = "".join(
-        f'<button class="thumb" type="button" aria-label="Feature {e(BY_ID[f["id"]]["name"])}" aria-pressed="{str(i == 0).lower()}"><img src="images/{f.get("img", f["id"])}.jpg" alt="" loading="lazy"></button>'
+        f'<button class="thumb" type="button" aria-label="{e(t("feature_x", name=L.by_id[f["id"]]["name"]))}" aria-pressed="{str(i == 0).lower()}"><img src="{img(f.get("img", f["id"]))}" alt="" loading="lazy"></button>'
         for i, f in enumerate(FEATURED))
-    picks = "".join(card(BY_ID[i], root, rv=True) for i in PICKS)
-    w = BY_ID[WEEK]
-    posts = "".join(post_card(p, root) for p in journal[:3])
+    picks = "".join(card(L.by_id[i], rv=True) for i in PICKS)
+    w = L.by_id[WEEK]
+    posts = "".join(post_card(p) for p in L.journal[:3])
     main = src("hero.html") + f'''
 <div class="wrap home">
   <section id="categories" aria-labelledby="cat-title">
     <div class="sec-head">
-      <div><p class="eyebrow">Explore our kitchen</p><h2 id="cat-title">Flavours from <span class="gold-word">every corner</span> of Pakistan</h2></div>
-      <a class="link-more" href="recipes.html">All recipes {ico("i-arrow")}</a>
+      <div><p class="eyebrow">{t("explore_kitchen")}</p><h2 id="cat-title">{t("flavours_h2")}</h2></div>
+      <a class="link-more" href="{R}recipes.html">{t("all_recipes")} {ico("i-arrow")}</a>
     </div>
     <div class="rail-wrap">
-      <button class="rail-btn prev" type="button" id="railPrev" aria-label="Scroll categories left">{ico("i-left")}</button>
+      <button class="rail-btn prev" type="button" id="railPrev" aria-label="{e(t("scroll_left"))}">{ico("i-left")}</button>
       <div class="rail" id="rail">{rail}</div>
-      <button class="rail-btn next" type="button" id="railNext" aria-label="Scroll categories right">{ico("i-arrow")}</button>
+      <button class="rail-btn next" type="button" id="railNext" aria-label="{e(t("scroll_right"))}">{ico("i-arrow")}</button>
     </div>
   </section>
 
   <section class="featured rv" aria-labelledby="f-title" id="featured" data-ids='{json.dumps(FEATURED)}'>
     <div class="f-copy">
-      <p class="eyebrow" id="fEyebrow">Featured recipe · {e(f0["region"])}</p>
+      <p class="eyebrow" id="fEyebrow">{t("featured_recipe")} · {e(f0["region"])}</p>
       <h2 id="f-title">{e(f0["name"])}</h2>
       <p class="blurb" id="fBlurb">{e(f0["intro"])}</p>
       <div class="f-meta" id="fMeta"><span>{ico("i-clock")}{e(f0["time"])}</span><span>{ico("i-chef")}{e(f0["level"])}</span><span>{ico("i-users")}{e(f0["serves"])}</span></div>
       <div class="f-actions">
-        <a class="btn btn-gold" id="fOpen" href="recipes/{f0["id"]}.html">View recipe {ico("i-arrow")}</a>
-        <a class="btn btn-line ink" id="fCat" href="recipes.html#{f0["cat"]}">More {e(CAT[f0["cat"]]["name"].lower())}</a>
+        <a class="btn btn-gold" id="fOpen" href="{R}recipes/{f0["id"]}.html">{t("view_recipe")} {ico("i-arrow")}</a>
+        <a class="btn btn-line ink" id="fCat" href="{R}recipes.html#{f0["cat"]}">{e(t("more_x", name=L.cat[f0["cat"]]["name"].lower()))}</a>
       </div>
     </div>
     <div class="f-media">
-      <img id="fImg" src="images/{FEATURED[0].get("img", f0["id"])}.jpg" alt="{e(f0["name"])}">
+      <img id="fImg" src="{img(FEATURED[0].get("img", f0["id"]))}" alt="{e(f0["name"])}">
       {steam(4)}
-      <div class="seal" aria-hidden="true"><span>Fatma's<br>pick</span></div>
+      <div class="seal" aria-hidden="true"><span>{t("fatmas_pick_seal")}</span></div>
     </div>
-    <div class="thumbs" role="group" aria-label="Choose a featured recipe">{thumbs}</div>
+    <div class="thumbs" role="group" aria-label="{e(t("choose_featured"))}">{thumbs}</div>
   </section>
 
   <section aria-labelledby="picks-title">
     <div class="sec-head">
-      <div><p class="eyebrow">Fatma's picks</p><h2 id="picks-title">Loved at <span class="gold-word">every table</span></h2></div>
-      <a class="link-more" href="recipes.html">See all {len(RECIPES)} recipes {ico("i-arrow")}</a>
+      <div><p class="eyebrow">{t("fatmas_picks")}</p><h2 id="picks-title">{t("picks_h2")}</h2></div>
+      <a class="link-more" href="{R}recipes.html">{t("see_all_n", n=len(L.recipes))} {ico("i-arrow")}</a>
     </div>
     <div class="picks">{picks}</div>
-    <div class="center-cta"><a class="btn btn-green" href="recipes.html">Browse all recipes {ico("i-arrow")}</a></div>
+    <div class="center-cta"><a class="btn btn-green" href="{R}recipes.html">{t("browse_all")} {ico("i-arrow")}</a></div>
   </section>
 
   <section class="week rv" aria-labelledby="week-title">
-    <a class="plate" href="recipes/{w["id"]}.html" aria-label="Open {e(w["name"])}"><img src="images/{w["id"]}.jpg" alt="{e(w["name"])}" loading="lazy">{steam(4)}</a>
+    <a class="plate" href="{R}recipes/{w["id"]}.html" aria-label="{e(t("open_x", name=w["name"]))}"><img src="{img(w["id"])}" alt="{e(w["name"])}" loading="lazy">{steam(4)}</a>
     <div>
-      <p class="eyebrow">Recipe of the week</p>
+      <p class="eyebrow">{t("recipe_of_week")}</p>
       <h2 id="week-title">{e(w["name"])}</h2>
       <p class="copy">{e(w["intro"])}</p>
-      <div class="mstats"><div><b>{e(w["time"])}</b><small>Time</small></div><div><b>{e(w["serves"])}</b><small>Serves</small></div><div><b>{e(w["level"])}</b><small>Level</small></div></div>
+      <div class="mstats"><div><b>{e(w["time"])}</b><small>{t("time")}</small></div><div><b>{e(w["serves"])}</b><small>{t("serves")}</small></div><div><b>{e(w["level"])}</b><small>{t("level")}</small></div></div>
       <div class="week-actions">
-        <a class="btn btn-green" href="recipes/{w["id"]}.html">Cook it tonight {ico("i-arrow")}</a>
-        <button class="btn btn-line ink" type="button" data-save="{w["id"]}" aria-pressed="false">{ico("i-heart")}<span data-save-label>Save recipe</span></button>
+        <a class="btn btn-green" href="{R}recipes/{w["id"]}.html">{t("cook_tonight")} {ico("i-arrow")}</a>
+        <button class="btn btn-line ink" type="button" data-save="{w["id"]}" aria-pressed="false">{ico("i-heart")}<span data-save-label>{t("save_recipe")}</span></button>
       </div>
     </div>
   </section>
@@ -292,161 +457,165 @@ def build_home():
 
   <section aria-labelledby="journal-title">
     <div class="sec-head">
-      <div><p class="eyebrow">The journal</p><h2 id="journal-title">Stories from the <span class="gold-word">dastarkhwan</span></h2></div>
-      <a class="link-more" href="journal.html">All stories {ico("i-arrow")}</a>
+      <div><p class="eyebrow">{t("the_journal")}</p><h2 id="journal-title">{t("journal_h2")}</h2></div>
+      <a class="link-more" href="{R}journal.html">{t("all_stories")} {ico("i-arrow")}</a>
     </div>
     <div class="posts">{posts}</div>
   </section>
 
   <section class="about-teaser" aria-labelledby="about-title">
     <div class="arch-wrap rv">
-      <div class="arch"><img src="images/chapati.jpg" alt="Fresh roti puffing on an iron tawa" loading="lazy"></div>
-      <div class="arch-badge" aria-hidden="true">Fatma</div>
+      <div class="arch"><img src="{img("chapati")}" alt="{e(t("roti_alt"))}" loading="lazy"></div>
+      <div class="arch-badge" aria-hidden="true">{t("fatma")}</div>
     </div>
     <div>
       <div class="ornament" aria-hidden="true"><i></i></div>
-      <p class="eyebrow" id="about-title" style="margin-top:14px">Meet Fatma</p>
-      <blockquote>“Every recipe here was first cooked for <em>family</em>, long before it was written for you.”</blockquote>
-      <p class="copy">Tasty Pakistan began as a notebook of my mother's recipes, the measurements written as “a handful” and “until it smells right”. I cooked each one until I could write it down properly.</p>
-      <a class="btn btn-line ink" href="story.html">Read Fatma's story {ico("i-arrow")}</a>
+      <p class="eyebrow" id="about-title" style="margin-top:14px">{t("meet_fatma")}</p>
+      <blockquote>{t("quote_family")}</blockquote>
+      <p class="copy">{t("notebook_p")}</p>
+      <a class="btn btn-line ink" href="{R}story.html">{t("read_story")} {ico("i-arrow")}</a>
     </div>
   </section>
 </div>'''
-    page("index.html", SITE, "Heirloom Pakistani recipes, stories and weekly meal ideas from Fatma's kitchen.", main, "home")
+    page("index.html", SITE if L.id == "en" else f"{SITE} · {t('home_title')}", t("home_desc"), main, "home", suffix=False)
 
 
 # ---------------------------------------------------------------- recipes
 def build_recipes():
-    root = ""
-    chips = '<button class="chip" type="button" data-chip="all" data-go="all" aria-pressed="true">All</button>' + "".join(
-        f'<button class="chip" type="button" data-chip="{c["id"]}" data-go="{c["id"]}" aria-pressed="false">{e(c["name"])}</button>' for c in CATS)
-    cards = "".join(card(r, root) for r in RECIPES)
+    R = L.root
+    chips = f'<button class="chip" type="button" data-chip="all" data-go="all" aria-pressed="true">{t("all")}</button>' + "".join(
+        f'<button class="chip" type="button" data-chip="{c["id"]}" data-go="{c["id"]}" aria-pressed="false">{e(c["name"])}</button>' for c in L.cats)
+    cards = "".join(card(r) for r in L.recipes)
     qf = "".join(
-        f'<li><button type="button" data-qf="cat:{c["id"]}" data-go="{c["id"]}" aria-pressed="false">{ico(c["icon"], "i")}<span>{e(c["name"])}</span><span class="n">{count_cat(c["id"])}</span>{ico("i-chev", "c")}</button></li>' for c in CATS)
-    qf += f'<li><button type="button" data-qf="veg" data-go="veg" aria-pressed="false">{ico("i-leaf", "i")}<span>Vegetarian</span><span class="n">{sum(1 for r in RECIPES if r.get("veg"))}</span>{ico("i-chev", "c")}</button></li>'
-    qf += f'<li><button type="button" data-qf="quick" data-go="quick" aria-pressed="false">{ico("i-clock", "i")}<span>45 minutes or less</span><span class="n">{sum(1 for r in RECIPES if quick(r))}</span>{ico("i-chev", "c")}</button></li>'
-    qf += f'<li><button type="button" data-qf="saved" data-go="saved" aria-pressed="false">{ico("i-heart", "i")}<span>Saved recipes</span><span class="n" data-saved-n>0</span>{ico("i-chev", "c")}</button></li>'
+        f'<li><button type="button" data-qf="cat:{c["id"]}" data-go="{c["id"]}" aria-pressed="false">{ico(c["icon"], "i")}<span>{e(c["name"])}</span><span class="n">{count_cat(c["id"])}</span>{ico("i-chev", "c")}</button></li>' for c in L.cats)
+    qf += f'<li><button type="button" data-qf="veg" data-go="veg" aria-pressed="false">{ico("i-leaf", "i")}<span>{t("vegetarian")}</span><span class="n">{sum(1 for r in L.recipes if r.get("veg"))}</span>{ico("i-chev", "c")}</button></li>'
+    qf += f'<li><button type="button" data-qf="quick" data-go="quick" aria-pressed="false">{ico("i-clock", "i")}<span>{t("quick_45")}</span><span class="n">{sum(1 for r in L.recipes if quick(r))}</span>{ico("i-chev", "c")}</button></li>'
+    qf += f'<li><button type="button" data-qf="saved" data-go="saved" aria-pressed="false">{ico("i-heart", "i")}<span>{t("saved_recipes")}</span><span class="n" data-saved-n>0</span>{ico("i-chev", "c")}</button></li>'
     cols = "".join(
-        f'<button class="col" type="button" data-col="{c["id"]}" data-go="col-{c["id"]}" aria-pressed="false"><img src="images/{c["img"]}.jpg" alt="" loading="lazy"><span><b>{e(c["name"])}</b><small>{sum(1 for r in RECIPES if in_col(r, c["id"]))} recipes</small></span>{ico("i-chev")}</button>'
-        for c in COLS)
-    tags = "".join(f'<button type="button" data-go="search-{t.lower()}">{t}</button>' for t in POPULAR)
-    sp = RECIPES[0]
-    main = page_head(root, [("Recipes", None)], "All <em>recipes</em>",
-                     f"{len(RECIPES)} home-tested Pakistani recipes. Filter by category or collection, or search for a dish.", "chicken_biryani") + f'''
+        f'<button class="col" type="button" data-col="{c["id"]}" data-go="col-{c["id"]}" aria-pressed="false"><img src="{img(c["img"])}" alt="" loading="lazy"><span><b>{e(c["name"])}</b><small>{tn("n_recipes", sum(1 for r in L.recipes if in_col(r, c["id"])))}</small></span>{ico("i-chev")}</button>'
+        for c in L.cols)
+    tags = "".join(f'<button type="button" data-go="search-{e(q.lower().replace(" ", "-"))}">{e(q)}</button>' for q in L.ui["popular"])
+    sp = L.recipes[0]
+    main = page_head([(t("recipes"), None)], t("all_recipes_h1"),
+                     t("recipes_sub", n=len(L.recipes)), "chicken_biryani") + f'''
 <div class="wrap page page-main">
-  <section class="main" id="results" aria-label="Recipes" style="scroll-margin-top:96px">
+  <section class="main" id="results" aria-label="{e(t("recipes"))}" style="scroll-margin-top:96px">
     <div>
       <div class="recipes-top">
-        <div class="chips" role="group" aria-label="Filter by category">{chips}</div>
-        <label class="search" for="q"><span class="sr">Search recipes</span>{ico("i-search")}<input id="q" type="search" placeholder="Search recipes…" autocomplete="off"></label>
+        <div class="chips" role="group" aria-label="{e(t("filter_by_cat"))}">{chips}</div>
+        <label class="search" for="q"><span class="sr">{t("search_recipes")}</span>{ico("i-search")}<input id="q" type="search" placeholder="{e(t("search_ph_short"))}" autocomplete="off"></label>
       </div>
       <div id="catBanner"></div>
-      <p class="count" id="count" aria-live="polite">{len(RECIPES)} recipes</p>
+      <p class="count" id="count" aria-live="polite">{tn("n_recipes", len(L.recipes))}</p>
       <div class="grid" id="grid">{cards}</div>
       <p class="empty" id="empty" hidden></p>
     </div>
   </section>
-  <aside class="side" aria-label="Recipe shortcuts">
-    <a class="special" id="special" href="recipes/{sp["id"]}.html">
-      <img id="spImg" src="images/{sp["id"]}.jpg" alt="{e(sp["name"])}">
+  <aside class="side" aria-label="{e(t("recipe_shortcuts"))}">
+    <a class="special" id="special" href="{R}recipes/{sp["id"]}.html">
+      <img id="spImg" src="{img(sp["id"])}" alt="{e(sp["name"])}">
       {steam(3)}
-      <span class="lbl">Today's special</span>
+      <span class="lbl">{t("todays_special")}</span>
       <span class="sb"><span><h4 id="spName">{e(sp["name"])}</h4><p id="spSub">{e(sp["time"])} · {e(sp["region"])}</p></span><span class="arrow-dot">{ico("i-arrow")}</span></span>
     </a>
-    <div class="box"><h3>Quick filters</h3><ul class="qf">{qf}</ul></div>
-    <div class="box"><h3>Collections</h3><div class="cols">{cols}</div></div>
-    <div class="box"><h3>Popular searches</h3><div class="tags">{tags}</div></div>
+    <div class="box"><h3>{t("quick_filters")}</h3><ul class="qf">{qf}</ul></div>
+    <div class="box"><h3>{t("collections")}</h3><div class="cols">{cols}</div></div>
+    <div class="box"><h3>{t("popular_searches")}</h3><div class="tags">{tags}</div></div>
     <div class="side-news">
-      <p class="eyebrow">The Sunday letter</p>
-      <h3 style="margin-top:8px">Get new recipes in your inbox</h3>
-      <p>One letter a week: five dinners, one showstopper and the shopping list.</p>
+      <p class="eyebrow">{t("the_sunday_letter")}</p>
+      <h3 style="margin-top:8px">{t("side_news_h")}</h3>
+      <p>{t("side_news_p")}</p>
       <form class="inline-form" id="miniForm" novalidate>
-        <label class="sr" for="miniEmail">Email</label>
-        <input id="miniEmail" type="email" placeholder="Your email address" autocomplete="email">
-        <button type="submit" aria-label="Subscribe">{ico("i-arrow")}</button>
+        <label class="sr" for="miniEmail">{t("email")}</label>
+        <input id="miniEmail" type="email" placeholder="{e(t("your_email"))}" autocomplete="email">
+        <button type="submit" aria-label="{e(t("subscribe"))}">{ico("i-arrow")}</button>
       </form>
       <p class="mini-err" id="miniErr" aria-live="polite"></p>
     </div>
   </aside>
 </div>'''
-    page("recipes.html", "All recipes", f"Browse {len(RECIPES)} Pakistani recipes by category: biryani, karahi, daal, breads, street food and desserts.", main, "recipes", "chicken_biryani")
+    page("recipes.html", t("all_recipes_title"), t("recipes_desc", n=len(L.recipes)), main, "recipes", "chicken_biryani")
 
 
 # ---------------------------------------------------------------- recipe pages
-def serves_parts(s):
-    m = re.match(r"^(\d+)(?:\s*[–-]\s*\d+)?\s*(.*)$", s)
-    if not m or "jar" in s:
+def serves_parts(r):
+    """Base number and unit for the servings stepper, or None for jars."""
+    en = EN_BY_ID[r["id"]]["serves"]
+    if "jar" in en or not re.match(r"^\d", en):
         return None
-    return int(m.group(1)), (m.group(2) or "servings")
+    n = int(re.match(r"^(\d+)", en).group(1))
+    unit = re.sub(r"^\d+(?:\s*[–-]\s*\d+)?\s*", "", r["serves"]) or t("servings_unit")
+    return n, unit
 
 
 def related(r, n=3):
-    out = [x for x in RECIPES if x["cat"] == r["cat"] and x["id"] != r["id"]]
+    out = [x for x in L.recipes if x["cat"] == r["cat"] and x["id"] != r["id"]]
     if len(out) < n:
-        out += [x for x in RECIPES if x["id"] != r["id"] and x not in out and set(x.get("cols", [])) & set(r.get("cols", []))]
+        out += [x for x in L.recipes if x["id"] != r["id"] and x not in out and set(x.get("cols", [])) & set(r.get("cols", []))]
     if len(out) < n:
-        out += [x for x in RECIPES if x["id"] != r["id"] and x not in out]
+        out += [x for x in L.recipes if x["id"] != r["id"] and x not in out]
     return out[:n]
 
 
 def spice_links(r):
-    text = " ".join(r["ing"]).lower()
-    found = [s for s in SPICES if any(w in text for w in SPICE_WORDS[s["slug"]])]
+    text = " ".join(EN_BY_ID[r["id"]]["ing"]).lower()
+    found = [s for s in L.spices if any(w in text for w in SPICE_WORDS[s["slug"]])]
     if not found:
         return ""
-    links = "".join(f'<a href="../spices/{s["slug"]}.html"><img src="../images/{s["img"]}.jpg" alt="" loading="lazy">{e(s["urdu"])}</a>' for s in found)
-    return f'<div class="spice-links"><p class="eyebrow">Spices in this recipe</p><div>{links}</div></div>'
+    links = "".join(f'<a href="{L.root}spices/{s["slug"]}.html"><img src="{img(s["img"])}" alt="" loading="lazy">{e(s["name"])}</a>' for s in found)
+    return f'<div class="spice-links"><p class="eyebrow">{t("spices_in_recipe")}</p><div>{links}</div></div>'
 
 
 def build_recipe(r):
-    root = "../"
-    c = CAT[r["cat"]]
-    sp = serves_parts(r["serves"])
-    serv = (f'<span class="serv" id="serv" data-base="{sp[0]}" data-unit="{e(sp[1])}"><button type="button" id="servMinus" aria-label="Fewer servings">−</button><output id="servOut" aria-live="polite">{sp[0]} {e(sp[1])}</output><button type="button" id="servPlus" aria-label="More servings">+</button></span>'
+    R = L.root
+    c = L.cat[r["cat"]]
+    sp = serves_parts(r)
+    serv = (f'<span class="serv" id="serv" data-base="{sp[0]}" data-unit="{e(sp[1])}" data-to="{e(t("range_to"))}"><button type="button" id="servMinus" aria-label="{e(t("fewer_servings"))}">−</button><output id="servOut" aria-live="polite">{sp[0]} {e(sp[1])}</output><button type="button" id="servPlus" aria-label="{e(t("more_servings"))}">+</button></span>'
             if sp else f'<span class="serv"><output>{e(r["serves"])}</output></span>')
     ings = "".join(f'<li><label><input type="checkbox"><span data-ing>{e(i)}</span></label></li>' for i in r["ing"])
     steps = "".join(f'<li><button type="button" aria-pressed="false">{e(s)}</button></li>' for s in r["steps"])
-    rel = "".join(card(x, root, rv=True) for x in related(r))
+    rel = "".join(card(x, rv=True) for x in related(r))
     ld = {
         "@context": "https://schema.org", "@type": "Recipe", "name": r["name"], "description": r["intro"],
-        "image": f"images/{r['id']}.jpg", "author": {"@type": "Person", "name": "Fatma"},
-        "recipeCategory": c["name"], "recipeCuisine": "Pakistani", "recipeYield": r["serves"],
+        "image": f"{SITE_URL.rstrip('/')}/images/{r['id']}.jpg", "author": {"@type": "Person", "name": "Fatma"},
+        "inLanguage": L.id, "recipeCategory": c["name"], "recipeCuisine": t("cuisine"), "recipeYield": r["serves"],
+        "totalTime": f"PT{r['mins']}M",
         "recipeIngredient": r["ing"], "recipeInstructions": [{"@type": "HowToStep", "text": s} for s in r["steps"]],
     }
     main = f'''<div class="wrap rd">
-  <nav class="crumbs ink" aria-label="Breadcrumb"><a href="../index.html">Home</a><span aria-hidden="true">/</span><a href="../recipes.html">Recipes</a><span aria-hidden="true">/</span><a href="../recipes.html#{c["id"]}">{e(c["name"])}</a><span aria-hidden="true">/</span><span>{e(r["name"])}</span></nav>
+  <nav class="crumbs ink" aria-label="{e(t("breadcrumb"))}"><a href="{R}">{t("home")}</a><span aria-hidden="true" class="sep">/</span><a href="{R}recipes.html">{t("recipes")}</a><span aria-hidden="true" class="sep">/</span><a href="{R}recipes.html#{c["id"]}">{e(c["name"])}</a><span aria-hidden="true" class="sep">/</span><span>{e(r["name"])}</span></nav>
   <div class="rd-top" style="margin-top:26px">
-    <div class="rd-media"><img src="../images/{r["id"]}.jpg" alt="{e(r["name"])}">{steam(5)}<span class="tag">{e(c["name"])}</span></div>
+    <div class="rd-media"><img src="{img(r["id"])}" alt="{e(r["name"])}">{steam(5)}<span class="tag">{e(c["name"])}</span></div>
     <div class="rd-body">
       <p class="eyebrow">{e(c["name"])} · {e(r["region"])}</p>
       <h1>{e(r["name"])}</h1>
       <p class="intro">{e(r["intro"])}</p>
-      <div class="mstats"><div><b>{e(r["time"])}</b><small>Time</small></div><div><b>{e(r["serves"])}</b><small>Serves</small></div><div><b>{e(r["level"])}</b><small>Level</small></div></div>
+      <div class="mstats"><div><b>{e(r["time"])}</b><small>{t("time")}</small></div><div><b>{e(r["serves"])}</b><small>{t("serves")}</small></div><div><b>{e(r["level"])}</b><small>{t("level")}</small></div></div>
       <div class="rd-actions">
-        <button class="btn btn-line ink" type="button" data-save="{r["id"]}" aria-pressed="false">{ico("i-heart")}<span data-save-label>Save recipe</span></button>
-        <a class="btn btn-green" href="#method">Start cooking {ico("i-arrow")}</a>
-        <button class="btn btn-line ink" type="button" id="printBtn">{ico("i-steps")}Print</button>
+        <button class="btn btn-line ink" type="button" data-save="{r["id"]}" aria-pressed="false">{ico("i-heart")}<span data-save-label>{t("save_recipe")}</span></button>
+        <a class="btn btn-green" href="#method">{t("start_cooking")} {ico("i-arrow")}</a>
+        <button class="btn btn-line ink" type="button" id="printBtn">{ico("i-steps")}{t("print")}</button>
       </div>
     </div>
   </div>
   <div class="rd-grid">
     <aside class="rd-panel rd-ing" aria-labelledby="ing-title">
-      <h2 id="ing-title">Ingredients {serv}</h2>
+      <h2 id="ing-title">{t("ingredients")} {serv}</h2>
       <ul class="checklist">{ings}</ul>
-      <p class="hint-line">Tick ingredients off as you gather them.</p>
+      <p class="hint-line">{t("tick_hint")}</p>
     </aside>
     <section class="rd-panel" id="method" aria-labelledby="method-title" style="scroll-margin-top:96px">
-      <h2 id="method-title">Method</h2>
+      <h2 id="method-title">{t("method")}</h2>
       <ol class="method">{steps}</ol>
-      <p class="hint-line">Tap a step to mark it done.</p>
-      <div class="tipbox"><b>Fatma's tip</b>{e(r["tip"])}</div>
+      <p class="hint-line">{t("tap_hint")}</p>
+      <div class="tipbox"><b>{t("fatmas_tip")}</b>{e(r["tip"])}</div>
       {spice_links(r)}
     </section>
   </div>
 </div>
 <section class="wrap rel" aria-labelledby="rel-title">
-  <div class="sec-head"><div><p class="eyebrow">Keep cooking</p><h2 id="rel-title">You might <span class="gold-word">also like</span></h2></div>
-  <a class="link-more" href="../recipes.html#{c["id"]}">More {e(c["name"].lower())} {ico("i-arrow")}</a></div>
+  <div class="sec-head"><div><p class="eyebrow">{t("keep_cooking")}</p><h2 id="rel-title">{t("also_like_h2")}</h2></div>
+  <a class="link-more" href="{R}recipes.html#{c["id"]}">{e(t("more_x", name=c["name"].lower()))} {ico("i-arrow")}</a></div>
   <div class="picks">{rel}</div>
 </section>'''
     head = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n'
@@ -455,58 +624,47 @@ def build_recipe(r):
 
 # ---------------------------------------------------------------- story
 def build_story():
-    root = ""
+    R = L.root
     story = src("story.html").replace('<section class="story" id="story"', '<section class="story" id="story-main"')
-    gal_ids = ["kabli_pulao", "golgappay", "beef_nihari", "gulab_jamun", "balochi_kaak", "chicken_qorma"]
-    gallery = "".join(f'<a href="recipes/{i}.html"><img src="images/{i}.jpg" alt="{e(BY_ID[i]["name"])}" loading="lazy"><span>{e(BY_ID[i]["name"])}</span></a>' for i in gal_ids)
-    main = page_head(root, [("Fatma's story", None)], "Fatma's <em>story</em>",
-                     "From a notebook of handwritten family recipes to a kitchen that cooks for all of Pakistan.", "tips_spices") + story + f'''
+    gallery = "".join(f'<a href="{R}recipes/{i}.html"><img src="{img(i)}" alt="{e(L.by_id[i]["name"])}" loading="lazy"><span>{e(L.by_id[i]["name"])}</span></a>' for i in STORY_GALLERY)
+    main = page_head([(t("fatmas_story"), None)], t("story_h1"), t("story_sub"), "tips_spices") + story + f'''
 <section class="wrap" style="padding-block:24px 40px" aria-labelledby="promise-title">
-  <div class="sec-head"><div><p class="eyebrow">What you can expect</p><h2 id="promise-title">Fatma's <span class="gold-word">kitchen promise</span></h2></div></div>
+  <div class="sec-head"><div><p class="eyebrow">{t("what_expect")}</p><h2 id="promise-title">{t("promise_h2")}</h2></div></div>
   <div class="promise">
-    <div class="rv">{ico("i-pot")}<h3>Cooked at home</h3><p>Every recipe is cooked in a family kitchen with ordinary pots and an ordinary stove, so it works in yours.</p></div>
-    <div class="rv">{ico("i-steps")}<h3>Written properly</h3><p>Real measurements and timings, with the small details that grandmothers never wrote down.</p></div>
-    <div class="rv">{ico("i-map")}<h3>From every region</h3><p>Karachi street food, Lahori karahi, Peshawari pulao and Balochi breads, all on one table.</p></div>
+    <div class="rv">{ico("i-pot")}<h3>{t("promise1_h")}</h3><p>{t("promise1_p")}</p></div>
+    <div class="rv">{ico("i-steps")}<h3>{t("promise2_h")}</h3><p>{t("promise2_p")}</p></div>
+    <div class="rv">{ico("i-map")}<h3>{t("promise3_h")}</h3><p>{t("promise3_p")}</p></div>
   </div>
 </section>
 <section class="wrap story-page" style="padding-top:40px" aria-labelledby="gal-title">
-  <div class="sec-head"><div><p class="eyebrow">From Fatma's kitchen</p><h2 id="gal-title">A few <span class="gold-word">family favourites</span></h2></div><a class="link-more" href="recipes.html">All recipes {ico("i-arrow")}</a></div>
+  <div class="sec-head"><div><p class="eyebrow">{t("from_kitchen")}</p><h2 id="gal-title">{t("favourites_h2")}</h2></div><a class="link-more" href="{R}recipes.html">{t("all_recipes")} {ico("i-arrow")}</a></div>
   <div class="gallery">{gallery}</div>
-  <div class="center-cta" style="gap:12px;flex-wrap:wrap"><a class="btn btn-green" href="recipes.html">Explore the recipes {ico("i-arrow")}</a><a class="btn btn-line ink" href="ask.html">Ask Fatma a question</a></div>
+  <div class="center-cta" style="gap:12px;flex-wrap:wrap"><a class="btn btn-green" href="{R}recipes.html">{t("explore_recipes")} {ico("i-arrow")}</a><a class="btn btn-line ink" href="{R}ask.html">{t("ask_question")}</a></div>
 </section>'''
-    page("story.html", "Fatma's story", "How Tasty Pakistan began: a notebook of family recipes, cooked and written down properly.", main, "story", "tips_spices")
+    page("story.html", t("fatmas_story"), t("story_desc"), main, "story", "tips_spices")
 
 
 # ---------------------------------------------------------------- ask
 def build_ask():
-    root = ""
-    contact = src("contact.html").replace('<h2 id="contact-title">Ask Fatma</h2>', '<h2 id="contact-title">Send a note</h2>')
-    extra_faq = '''<details><summary>Can I use a pressure cooker?</summary><p>Yes, for nihari, haleem, lobia and most meat curries. Each recipe gives the pressure-cooker time where it helps.</p></details>
-        <details><summary>How spicy are the recipes?</summary><p>Home-style medium. Halve the red chilli for children, or add extra green chillies at the end if you like heat.</p></details>
-      </div>'''
-    contact = contact.replace("</details>\n      </div>", "</details>\n        " + extra_faq, 1)
-    main = page_head(root, [("Ask Fatma", None)], "Ask <em>Fatma</em>",
-                     "Questions, recipe requests and collaborations. Fatma reads every message.", "chicken_qorma") + contact
-    page("ask.html", "Ask Fatma", "Send Fatma a question about a recipe, a recipe request or a collaboration enquiry.", main, "ask", "chicken_qorma")
+    main = page_head([(t("ask_fatma"), None)], t("ask_h1"), t("ask_sub"), "chicken_qorma") + src("contact.html")
+    page("ask.html", t("ask_fatma"), t("ask_desc"), main, "ask", "chicken_qorma")
 
 
 # ---------------------------------------------------------------- journal
 def build_journal():
-    root = ""
-    posts = "".join(post_card(p, root) for p in journal)
-    spices = "".join(spice_card(s, root) for s in SPICES[:6])
-    main = page_head(root, [("Journal", None)], "The <em>journal</em>",
-                     "Techniques, celebrations and kitchen secrets from the Pakistani dastarkhwan.", "sheer_khurma") + f'''
-<section class="wrap" style="padding-block:72px 40px" aria-label="Articles">
+    R = L.root
+    posts = "".join(post_card(p) for p in L.journal)
+    spices = "".join(spice_card(s) for s in L.spices[:6])
+    main = page_head([(t("journal"), None)], t("journal_h1"), t("journal_sub"), "sheer_khurma") + f'''
+<section class="wrap" style="padding-block:72px 40px" aria-label="{e(t("articles"))}">
   <div class="posts">{posts}</div>
 </section>
 <section class="wrap" style="padding-block:40px 96px" aria-labelledby="sg-title">
-  <div class="sec-head"><div><p class="eyebrow">Spice guide</p><h2 id="sg-title">Know your <span class="gold-word">masala</span></h2></div><a class="link-more" href="spices.html">All {len(SPICES)} spices {ico("i-arrow")}</a></div>
+  <div class="sec-head"><div><p class="eyebrow">{t("spice_guide")}</p><h2 id="sg-title">{t("know_masala_h2")}</h2></div><a class="link-more" href="{R}spices.html">{t("all_n_spices", n=len(L.spices))} {ico("i-arrow")}</a></div>
   <div class="posts">{spices}</div>
 </section>'''
-    page("journal.html", "Journal", "Techniques, celebrations and kitchen secrets from Fatma's kitchen.", main, "journal", "sheer_khurma")
-    for p in journal:
-        root = "../"
+    page("journal.html", t("journal"), t("journal_desc"), main, "journal", "sheer_khurma")
+    for p in L.journal:
         body = ""
         for blk in p["body"]:
             if blk[0] == "h":
@@ -515,133 +673,159 @@ def build_journal():
                 body += f"<p>{e(blk[1])}</p>"
             elif blk[0] == "callout":
                 body += f'<div class="callout"><b>{e(blk[1])}</b>{e(blk[2])}</div>'
-        rel = "".join(card(BY_ID[i], root, rv=True) for i in p["related"][:3])
-        main = page_head(root, [("Journal", "../journal.html"), (p["title"], None)], e(p["title"]), p["summary"], p["img"], p["tag"] + " · " + p["read"]) + f'''
+        rel = "".join(card(L.by_id[i], rv=True) for i in p["related"][:3])
+        main = page_head([(t("journal"), f"{R}journal.html"), (p["title"], None)], e(p["title"]), p["summary"], p["img"], p["tag"] + " · " + p["read"]) + f'''
 <article class="wrap article">
   <p class="lead">{e(p["lead"])}</p>
-  <figure><img src="../images/{p["img"]}.jpg" alt="" loading="lazy"></figure>
+  <figure><img src="{img(p["img"])}" alt="" loading="lazy"></figure>
   {body}
 </article>
 <section class="wrap rel" aria-labelledby="rel-title">
-  <div class="sec-head"><div><p class="eyebrow">Cook from this story</p><h2 id="rel-title">Recipes to <span class="gold-word">try next</span></h2></div><a class="link-more" href="../journal.html">All stories {ico("i-arrow")}</a></div>
+  <div class="sec-head"><div><p class="eyebrow">{t("cook_from_story")}</p><h2 id="rel-title">{t("try_next_h2")}</h2></div><a class="link-more" href="{R}journal.html">{t("all_stories")} {ico("i-arrow")}</a></div>
   <div class="picks">{rel}</div>
 </section>'''
         page(f"journal/{p['slug']}.html", p["title"], p["summary"], main, "journal", p["img"])
 
 
 # ---------------------------------------------------------------- spice guide
-def spice_card(s, root):
+def spice_card(s):
     return f'''<article class="post rv">
-  <a class="stretch" href="{root}spices/{s["slug"]}.html">
-    <div class="media"><span class="post-tag">{e(s["english"])}</span><img src="{root}images/{s["img"]}.jpg" alt="{e(s["urdu"])} ({e(s["english"])})" loading="lazy"></div>
-    <h3 style="margin-top:14px">{e(s["urdu"])} <span class="gold-word">({e(s["english"].lower())})</span></h3>
+  <a class="stretch" href="{L.root}spices/{s["slug"]}.html">
+    <div class="media"><span class="post-tag">{e(s["local"])}</span><img src="{img(s["img"])}" alt="{e(s["name"])} ({e(s["local"])})" loading="lazy"></div>
+    <h3 style="margin-top:14px">{e(s["name"])} <span class="gold-word">({e(s["local"].lower())})</span></h3>
   </a>
   <p>{e(s["lead"])}</p>
-  <span class="read">Read the guide {ico("i-arrow")}</span>
+  <span class="read">{t("read_guide")} {ico("i-arrow")}</span>
 </article>'''
 
 
 def build_spices():
-    root = ""
-    cards = "".join(spice_card(s, root) for s in SPICES)
-    main = page_head(root, [("Spice guide", None)], "The spice <em>guide</em>",
-                     "What each masala is, where it comes from, why Pakistani cooks use it, and what science says about its health benefits.", "tips_spices") + f'''
-<section class="wrap" style="padding-block:64px 96px" aria-label="Spices">
+    R = L.root
+    cards = "".join(spice_card(s) for s in L.spices)
+    main = page_head([(t("spice_guide"), None)], t("spices_h1"), t("spices_sub"), "tips_spices") + f'''
+<section class="wrap" style="padding-block:64px 96px" aria-label="{e(t("spices"))}">
   <div class="posts">{cards}</div>
-  <p class="disclaimer">These guides are for cooking and general interest, not medical advice. Health findings are summarised from the sources listed in each guide. Speak to your doctor before using spices as supplements or remedies.</p>
+  <p class="disclaimer">{t("spices_disclaimer")}</p>
 </section>'''
-    page("spices.html", "Spice guide: Pakistani masala explained", "A guide to the spices of Pakistani cooking: haldi, zeera, dhaniya, lal mirch, kali mirch, elaichi, dalchini, laung, adrak and lehsan. History, uses and health benefits.", main, "journal", "tips_spices")
-    for s in SPICES:
-        root = "../"
-        body = "".join(f"<h2>{e(h)}</h2><p>{e(t)}</p>" for h, t in s["sections"])
+    page("spices.html", t("spices_title"), t("spices_desc"), main, "journal", "tips_spices")
+    for s in L.spices:
+        body = "".join(f"<h2>{e(h)}</h2><p>{e(x)}</p>" for h, x in s["sections"])
         faq = "".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in s["faq"])
-        src_list = "".join(f'<li><a href="{e(u)}" rel="noopener" target="_blank">{e(t)}</a></li>' for t, u in s["sources"])
-        rel = "".join(card(BY_ID[i], root, rv=True) for i in s["recipes"] if i in BY_ID)
-        others = "".join(f'<a href="{o["slug"]}.html"><img src="../images/{o["img"]}.jpg" alt="" loading="lazy">{e(o["urdu"])}</a>' for o in SPICES if o["slug"] != s["slug"])
-        used = ", ".join(BY_ID[i]["name"] for i in s["recipes"] if i in BY_ID)
+        labels = s.get("sources_label") or [x for x, _ in s["sources"]]
+        src_list = "".join(f'<li><a href="{e(u)}" rel="noopener" target="_blank">{e(lbl)}</a></li>' for lbl, (_, u) in zip(labels, s["sources"]))
+        rel = "".join(card(L.by_id[i], rv=True) for i in s["recipes"] if i in L.by_id)
+        others = "".join(f'<a href="{R}spices/{o["slug"]}.html"><img src="{img(o["img"])}" alt="" loading="lazy">{e(o["name"])}</a>' for o in L.spices if o["slug"] != s["slug"])
+        used = t("list_sep").join(L.by_id[i]["name"] for i in s["recipes"] if i in L.by_id)
         ld = [
             {"@context": "https://schema.org", "@type": "Article", "headline": s["title"], "description": s["meta"],
-             "image": f"images/{s['img']}.jpg", "author": {"@type": "Person", "name": "Fatma"},
-             "publisher": {"@type": "Organization", "name": SITE}, "inLanguage": "en", "about": f"{s['urdu']} ({s['english']}, {s['latin']})"},
-            {"@context": "https://schema.org", "@type": "FAQPage",
+             "image": f"{SITE_URL.rstrip('/')}/images/{s['img']}.jpg", "author": {"@type": "Person", "name": "Fatma"},
+             "publisher": {"@type": "Organization", "name": SITE}, "inLanguage": L.id, "about": f"{s['name']} ({s['local']}, {s['latin']})"},
+            {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": L.id,
              "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in s["faq"]]},
         ]
         head = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>\n' for x in ld)
-        main = page_head(root, [("Spice guide", "../spices.html"), (s["urdu"], None)],
-                         f'{e(s["urdu"])} <em>({e(s["english"].lower())})</em>', s["lead"], s["img"], "Spice guide · " + s["latin"]) + f'''
+        main = page_head([(t("spice_guide"), f"{R}spices.html"), (s["name"], None)],
+                         f'{e(s["name"])} <em>({e(s["local"].lower())})</em>', s["lead"], s["img"], t("spice_guide") + " · " + s["latin"]) + f'''
 <article class="wrap article">
   <div class="glance">
-    <div><small>Urdu name</small><b>{e(s["urdu"])}</b></div>
-    <div><small>English</small><b>{e(s["english"])}</b></div>
-    <div><small>Botanical name</small><b><i>{e(s["latin"])}</i></b></div>
-    <div><small>Try it in</small><b>{e(used)}</b></div>
+    <div><small>{t("urdu_name")}</small><b>{e(s["urdu"] if L.id != "ur" else s["name"])}</b></div>
+    <div><small>{t("local_name")}</small><b>{e(s["local"])}</b></div>
+    <div><small>{t("botanical_name")}</small><b><i lang="la">{e(s["latin"])}</i></b></div>
+    <div><small>{t("try_it_in")}</small><b>{e(used)}</b></div>
   </div>
-  <figure><img src="../images/{s["img"]}.jpg" alt="{e(s["urdu"])} ({e(s["english"])})" loading="lazy"></figure>
+  <figure><img src="{img(s["img"])}" alt="{e(s["name"])} ({e(s["local"])})" loading="lazy"></figure>
   {body}
-  <h2>Frequently asked questions</h2>
+  <h2>{t("faq_h2")}</h2>
   <div class="faq">{faq}</div>
-  <div class="sources"><h3>Sources</h3><ul>{src_list}</ul></div>
-  <p class="disclaimer">This guide is for cooking and general interest and is not medical advice. Speak to your doctor before using any spice as a supplement or remedy, especially if you are pregnant or take medicines.</p>
+  <div class="sources"><h3>{t("sources")}</h3><ul>{src_list}</ul></div>
+  <p class="disclaimer">{t("spice_disclaimer")}</p>
 </article>
 <section class="wrap rel" aria-labelledby="rel-title">
-  <div class="sec-head"><div><p class="eyebrow">Cook with {e(s["urdu"].lower())}</p><h2 id="rel-title">Recipes that <span class="gold-word">use it</span></h2></div><a class="link-more" href="../spices.html">All spices {ico("i-arrow")}</a></div>
+  <div class="sec-head"><div><p class="eyebrow">{e(t("cook_with_x", name=s["name"]))}</p><h2 id="rel-title">{t("use_it_h2")}</h2></div><a class="link-more" href="{R}spices.html">{t("all_spices")} {ico("i-arrow")}</a></div>
   <div class="picks">{rel}</div>
-  <div class="spice-links" style="margin-top:44px"><p class="eyebrow">More from the spice guide</p><div>{others}</div></div>
+  <div class="spice-links" style="margin-top:44px"><p class="eyebrow">{t("more_spice_guide")}</p><div>{others}</div></div>
 </section>'''
         page(f"spices/{s['slug']}.html", s["title"], s["meta"], main, "journal", s["img"], head, suffix=False)
 
 
 def build_404():
-    # Absolute paths so the page works at any missing URL depth on the server.
+    R = L.root
     main = f'''<section class="page-head">
-  <div class="ph-img"><img src="/images/hero_biryani.jpg" alt=""></div>
+  <div class="ph-img"><img src="{img("hero_biryani")}" alt=""></div>
   <div class="wrap">
-    <p class="eyebrow" style="margin-top:18px">Page not found</p>
-    <h1>This dish isn't <em>on the menu</em></h1>
-    <p class="ph-sub">The page you're looking for has moved or never existed. Try the recipes, or search for a dish.</p>
+    <p class="eyebrow" style="margin-top:18px">{t("nf_eyebrow")}</p>
+    <h1>{t("nf_h1")}</h1>
+    <p class="ph-sub">{t("nf_sub")}</p>
     <form class="hero-search" role="search" data-search style="margin-top:28px">
       {ico("i-search", "s")}
-      <label class="sr" for="nfQ">Search recipes</label>
-      <input id="nfQ" type="search" placeholder="Search biryani, nihari, kheer…" autocomplete="off">
-      <button type="submit" aria-label="Search">{ico("i-arrow")}</button>
+      <label class="sr" for="nfQ">{t("search_recipes")}</label>
+      <input id="nfQ" type="search" placeholder="{e(t("search_ph"))}" autocomplete="off">
+      <button type="submit" aria-label="{e(t("search"))}">{ico("i-arrow")}</button>
     </form>
-    <div class="f-actions" style="margin-top:24px"><a class="btn btn-gold" href="/index.html">Go to home</a><a class="btn btn-line" href="/recipes.html">Browse recipes</a></div>
+    <div class="f-actions" style="margin-top:24px"><a class="btn btn-gold" href="{R}">{t("go_home")}</a><a class="btn btn-line" href="{R}recipes.html">{t("browse_recipes")}</a></div>
   </div>
 </section>'''
-    page("404.html", "Page not found", "This page could not be found.", main, head_extra='<meta name="robots" content="noindex">\n', root_override="/")
-    PAGES.remove("404.html")
+    page("404.html", t("nf_eyebrow"), t("nf_desc"), main, noindex=True)
+    L.pages.remove("404.html")
 
 
-def build_sitemap():
+def build_sitemap(all_pages):
     if not SITE_URL:
         return
     base = SITE_URL.rstrip("/")
-    urls = "".join(f"<url><loc>{base}/{'' if p == 'index.html' else p}</loc></url>" for p in PAGES)
-    open(os.path.join(HERE, "sitemap.xml"), "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
+    urls = ""
+    for lang, pages in all_pages.items():
+        for p in pages:
+            loc = f"{base}/{LANGS[lang]['prefix']}{'' if p == 'index.html' else p}"
+            alts = "".join(
+                f'<xhtml:link rel="alternate" hreflang="{k}" href="{base}/{LANGS[k]["prefix"]}{"" if p == "index.html" else p}"/>'
+                for k in ORDER)
+            urls += f"<url><loc>{loc}</loc>{alts}</url>\n"
+    open(os.path.join(HERE, "sitemap.xml"), "w", encoding="utf-8").write(
+        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+        'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + urls + "</urlset>\n")
     open(os.path.join(HERE, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n")
 
 
 # ---------------------------------------------------------------- data.js
 def build_data():
     keep = ["id", "name", "cat", "region", "time", "mins", "level", "serves", "veg", "cols", "intro"]
-    payload = {"categories": CATS, "collections": COLS, "recipes": [{k: r[k] for k in keep if k in r} for r in RECIPES]}
-    open(os.path.join(HERE, "assets/data.js"), "w", encoding="utf-8").write(
-        "/* Generated by build.py from data/recipes.json. Do not edit by hand. */\nwindow.TP = " + json.dumps(payload, ensure_ascii=False) + ";\n")
+    payload = {"lang": L.id, "ui": L.ui["js"], "categories": L.cats, "collections": L.cols,
+               "recipes": [{k: r[k] for k in keep if k in r} for r in L.recipes]}
+    name = "data.js" if L.id == "en" else f"data.{L.id}.js"
+    open(os.path.join(HERE, "assets", name), "w", encoding="utf-8").write(
+        "/* Generated by build.py. Do not edit by hand. */\nwindow.TP = " + json.dumps(payload, ensure_ascii=False) + ";\n")
 
 
-if __name__ == "__main__":
-    missing = [r["id"] for r in RECIPES if not os.path.exists(os.path.join(HERE, "images", r["id"] + ".jpg"))]
-    if missing:
-        raise SystemExit("Missing photos in images/: " + ", ".join(missing))
+def build_lang(lang):
+    use(lang)
+    L.pages = []
     build_data()
     build_home()
     build_recipes()
-    for r in RECIPES:
+    for r in L.recipes:
         build_recipe(r)
     build_story()
     build_ask()
     build_journal()
     build_spices()
     build_404()
-    build_sitemap()
-    print(f"Built home, recipes, story, ask, journal, {len(RECIPES)} recipe pages, {len(journal)} articles and {len(SPICES)} spice guides.")
+    return L.pages
+
+
+if __name__ == "__main__":
+    missing = [r["id"] for r in EN_DATA["recipes"] if not os.path.exists(os.path.join(HERE, "images", r["id"] + ".jpg"))]
+    if missing:
+        raise SystemExit("Missing photos in images/: " + ", ".join(missing))
+    pages = {lang: build_lang(lang) for lang in ORDER}
+    build_sitemap(pages)
+    n = len(EN_DATA["recipes"])
+    print(f"Built {len(ORDER)} languages, each with home, recipes, story, ask, journal, {n} recipe pages, "
+          f"{len(EN_JOURNAL)} articles and {len(EN_SPICES)} spice guides.")
+    if MISSING:
+        uniq = sorted(set(MISSING))
+        print(f"{len(uniq)} missing translations (English used instead):")
+        for m in uniq[:60]:
+            print("  " + m)
+        if "--strict" in sys.argv:
+            raise SystemExit(1)
