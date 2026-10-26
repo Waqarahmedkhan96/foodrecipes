@@ -35,6 +35,14 @@
   "sides": {
    "name": "Tilbehør",
    "desc": "Raita og achar, der gør bordet komplet."
+  },
+  "breakfast": {
+   "name": "Morgenmad",
+   "desc": "Pandekager og rolige weekendmorgener – fra bananpandekager med havregryn til pandekager med smeltet ost."
+  },
+  "cakes": {
+   "name": "Kager og bagværk",
+   "desc": "Danske kager, tærter og cookies fra Fatmas køkken – alle uden alkohol."
   }
  },
  "collections": {
@@ -911,6 +919,341 @@
     "Pak det i et rent glas, og lad det stå i 3 dage, før du spiser af det."
    ],
    "tip": "Hver ske, der kommer i glasset, skal være helt tør – ellers bliver achar'en dårlig."
+  },
+  "banana_oat_pancakes": {
+   "name": "Bananpandekager med havregryn",
+   "intro": "Bløde, mættende pandekager af havregryn og modne bananer, toppet med valnødder, honning og et drys kanel.",
+   "ing": [
+    "90 g havregryn (ca. 2½ dl)",
+    "2 modne bananer",
+    "2 æg",
+    "1 dl mælk",
+    "1 tsk bagepulver",
+    "½ tsk stødt kanel",
+    "1 knivspids salt",
+    "1 spsk honning (kan undlades)",
+    "Smør eller olie til panden",
+    "Til servering: bananskiver, hakkede valnødder, honning og lidt kanel"
+   ],
+   "steps": [
+    "Blend havregrynene til et groft mel.",
+    "Kom bananer, æg, mælk, bagepulver, kanel, salt og honning i, og blend, til dejen er jævn.",
+    "Lad dejen hvile i 10 minutter, så havregrynene suger væden, og dejen bliver tykkere.",
+    "Varm en slip-let-pande op ved middelsvag varme, og pensl den med lidt smør. Hæld ca. ½ dl dej på panden pr. pandekage.",
+    "Bag dem i 2-3 minutter, til der kommer bobler, og kanterne har sat sig. Vend dem, og bag 1-2 minutter mere.",
+    "Stabl pandekagerne, og top med banan, valnødder, en stribe honning og en knivspids kanel."
+   ],
+   "tip": "Hold varmen middelsvag. Havregryn og banan bliver hurtigt brune, så de skal have blid varme for at blive bagt igennem. Jo modnere bananer, jo sødere pandekager."
+  },
+  "mozzarella_pancakes": {
+   "name": "Pandekager med mozzarella",
+   "intro": "Luftige pandekager af hvedemel med smeltet mozzarella i midten – på pakistansk vis med safranhonning, mandler og pistacienødder.",
+   "ing": [
+    "200 g hvedemel",
+    "2 spsk sukker",
+    "2 tsk bagepulver",
+    "¼ tsk salt",
+    "¼ tsk stødt kardemomme",
+    "3 dl mælk",
+    "1 æg",
+    "2 spsk smeltet smør plus ekstra til panden",
+    "150 g revet mozzarella",
+    "Safranhonning: 3 spsk honning lunet med en knivspids safran",
+    "Mandelskiver og hakkede pistacienødder til pynt"
+   ],
+   "steps": [
+    "Pisk mel, sukker, bagepulver, salt og kardemomme sammen i en skål.",
+    "Pisk mælk, æg og smeltet smør sammen i en anden skål. Hæld det i melet, og rør, lige til det er samlet – små klumper gør ikke noget. Lad dejen hvile i 5 minutter.",
+    "Varm en smurt pande op ved middelsvag varme. Hæld ca. ¾ dl dej på, drys 2-3 spsk mozzarella midt på, og dæk osten med 2 spsk dej mere.",
+    "Bag i 2-3 minutter, til der kommer bobler, og kanterne har sat sig. Vend forsigtigt, læg låg på panden, og bag 2 minutter mere, så osten smelter.",
+    "Stabl pandekagerne, dryp med safranhonning, og drys mandler og pistacienødder over. Servér med det samme, mens osten stadig trækker tråde."
+   ],
+   "tip": "Brug pizzamozzarella fra en blok, og riv den selv. Frisk mozzarella i lage afgiver vand og gør pandekagerne bløde. Låg på og lav varme får osten til at smelte, før overfladen bliver for mørk."
+  },
+  "classic_pancakes": {
+   "name": "Amerikanske pandekager",
+   "intro": "Enkle, luftige pandekager med gyldne, kniplingsagtige kanter. Den nemme weekendmorgenmad, som alle derhjemme beder om.",
+   "ing": [
+    "200 g hvedemel",
+    "2 spsk sukker",
+    "2 tsk bagepulver",
+    "½ tsk salt",
+    "3 dl mælk",
+    "1 æg",
+    "3 spsk smeltet smør plus ekstra til panden",
+    "2 tsk vaniljesukker",
+    "Til servering: honning eller sirup, smør og frisk frugt"
+   ],
+   "steps": [
+    "Pisk mel, sukker, bagepulver og salt sammen i en stor skål.",
+    "Pisk mælk, æg, smeltet smør og vaniljesukker sammen i en kande.",
+    "Hæld det våde i det tørre, og rør, lige til det er samlet. Lad dejen hvile i 5 minutter.",
+    "Varm en pande op ved middel varme, og kom lidt smør på. Hæld ca. ½ dl dej på panden pr. pandekage.",
+    "Bag i ca. 2 minutter, til der kommer bobler på oversiden, og kanterne ser tørre ud. Vend, og bag 1 minut mere, til de er gyldne.",
+    "Hold pandekagerne lune under et rent viskestykke, mens du bager resten, og servér med honning, smør og frugt."
+   ],
+   "tip": "Rør ikke for meget: Små klumper holder pandekagerne luftige. En tynd hinde smør på panden giver det gyldne, kniplingsagtige mønster."
+  },
+  "samosa": {
+   "name": "Aloo samosa",
+   "intro": "Sprød dej med små bobler, foldet om krydrede kartofler og ærter. Iftar-favoritten – bedst med grøn chutney, tamarind og en kop chai.",
+   "ing": [
+    "250 g hvedemel",
+    "½ tsk ajwain",
+    "½ tsk salt",
+    "4 spsk olie eller ghee til dejen",
+    "Ca. 1 dl koldt vand",
+    "4 mellemstore kartofler, kogt, skrællet og skåret i tern",
+    "75 g ærter",
+    "2 spsk olie til fyldet",
+    "1 tsk hele spidskommen og 1 tsk knuste korianderfrø",
+    "3 cm ingefær, finthakket, og 2 grønne chilier, hakket",
+    "1 tsk chilipulver, ½ tsk gurkemeje og ½ tsk garam masala",
+    "1 tsk chaat masala og 1 tsk knust anardana (tørrede granatæblekerner)",
+    "Salt efter smag og 2 spsk hakket frisk koriander",
+    "Olie til friturestegning",
+    "Grøn chutney, tamarindchutney og chai til servering"
+   ],
+   "steps": [
+    "Bland mel, ajwain og salt. Gnid olien ind i melet med fingerspidserne, til det holder sammen, når du klemmer det i hånden (moyan).",
+    "Tilsæt koldt vand lidt ad gangen, og ælt til en fast, glat dej. Dæk den til, og lad den hvile i 30 minutter.",
+    "Lav fyldet: Varm olien op, og lad spidskommen og korianderfrø knitre. Tilsæt ingefær, chili og ærter, og steg i 2 minutter. Rør krydderier, kartofler og salt i, mos let, tilsæt anardana og frisk koriander, og lad fyldet køle helt af.",
+    "Del dejen i 6 kugler. Rul hver kugle ud til en tynd oval, og skær den over på midten. Fold hver halvdel til et kræmmerhus, og luk den lige kant med lidt vand.",
+    "Fyld kræmmerhusene med kartoffelfyldet, og fold og tryk den øverste kant godt sammen.",
+    "Varm olien op ved svag varme (ca. 140 °C). Frituresteg samosaerne langsomt i 10-12 minutter, mens du vender dem, til skorpen er dækket af små bobler. Skru op til middel varme de sidste 2 minutter, så de bliver gyldne.",
+    "Lad dem dryppe af på en rist, og servér dem varme med grøn chutney, tamarindchutney og chai."
+   ],
+   "tip": "Frituresteg langsomt ved svag varme. I for varm olie bliver skorpen brun, før den bliver sprød, og den forbliver blød indeni. En fast dej med rigeligt olie gnedet ind giver den boblede, sprøde skorpe."
+  },
+  "samosa_chaat": {
+   "name": "Samosa chaat",
+   "intro": "Knuste samosaer under lune, krydrede kikærter, kølig yoghurt, sødsur tamarind og grøn chutney – toppet med løg, koriander og chaat masala.",
+   "ing": [
+    "4 samosaer, hjemmelavede eller købte",
+    "1 dåse kogte kikærter med 2½ dl af lagen eller vand",
+    "1 spsk olie og ½ tsk hele spidskommen",
+    "½ tsk chilipulver, 1 tsk chana masala og 1 tsk chaat masala",
+    "Salt efter smag",
+    "2½ dl kold yoghurt, pisket med en knivspids salt og sukker",
+    "3 spsk tamarindchutney (imli)",
+    "3 spsk grøn chutney",
+    "1 lille rødløg i tynde skiver",
+    "Frisk koriander, chilipulver og chaat masala til at slutte af med"
+   ],
+   "steps": [
+    "Varm olien op, og lad spidskommen knitre. Kom kikærterne i med lagen, chili, chana masala, chaat masala og salt. Lad det simre i 10 minutter, og mos nogle af kikærterne, så du får en løs sauce.",
+    "Lun samosaerne i ovnen ved 180 °C i 10 minutter, så de bliver sprøde igen.",
+    "Bræk samosaerne groft ud på et fad, og hæld de varme kikærter over.",
+    "Dryp yoghurt, tamarindchutney og grøn chutney over.",
+    "Top med løg og koriander, drys med chili og chaat masala, og servér med det samme."
+   ],
+   "tip": "Saml retten lige før I spiser, for samosaerne bliver bløde på få minutter. Kold yoghurt over varme kikærter er det allerbedste."
+  },
+  "fruit_chaat_cream": {
+   "name": "Frugtchaat med flødeskum",
+   "intro": "Frisk æble, banan, vindruer, jordbær og mango vendt i sød flødeskum med kardemomme og toppet med granatæble, mandler og pistacienødder. En kølig iftar-favorit.",
+   "ing": [
+    "2 æbler i tern med skrællen på",
+    "2 bananer i skiver",
+    "150 g grønne og røde vindruer, halveret",
+    "150 g jordbær i kvarte",
+    "150 g mango eller ananas i tern",
+    "1 dl granatæblekerner",
+    "1 spsk citronsaft",
+    "2½ dl kold piskefløde",
+    "3 spsk sødet kondenseret mælk eller 2 spsk sukker",
+    "¼ tsk stødt kardemomme",
+    "2 spsk af både mandelskiver og hakkede pistacienødder",
+    "En knivspids chaat masala eller kanel til at slutte af med (kan undlades)"
+   ],
+   "steps": [
+    "Skyl og tør frugten godt, og skær den i mundrette stykker. Vend æbler og bananer i citronsaft, så de ikke bliver brune.",
+    "Pisk den kolde fløde med kondenseret mælk og kardemomme til let skum.",
+    "Vend forsigtigt al frugten i flødeskummet, men gem lidt granatæblekerner til toppen.",
+    "Stil skålen på køl i 30 minutter.",
+    "Lige før servering drysser du granatæble, mandler, pistacienødder og en let knivspids chaat masala eller kanel over."
+   ],
+   "tip": "Tør frugten ordentligt efter skylning, for vand gør flødeskummet tyndt. Laver du den i forvejen, så vent med bananerne til lige før servering."
+  },
+  "drommekage": {
+   "name": "Drømmekage",
+   "intro": "Danmarks mest elskede bradepandekage: en let, luftig bund under et boblende lag af brun farin, smør, kokos og hakkede valnødder, der karamelliserer i en varm ovn.",
+   "ing": [
+    "3 æg",
+    "300 g sukker",
+    "2 tsk vaniljesukker",
+    "250 g hvedemel",
+    "2 tsk bagepulver",
+    "50 g smør, smeltet",
+    "2 dl mælk",
+    "Fyld: 125 g smør",
+    "Fyld: 250 g brun farin",
+    "Fyld: 75 g kokosmel og 50 g fintakkede valnødder",
+    "Fyld: 1 dl mælk"
+   ],
+   "steps": [
+    "Tænd ovnen på 200 °C, og beklæd en bradepande på ca. 25 x 35 cm med bagepapir.",
+    "Pisk æg, sukker og vaniljesukker i 5 minutter, til massen er lys og luftig.",
+    "Bland mel og bagepulver, og sigt det ned i æggemassen. Vend det forsigtigt sammen med det smeltede smør og mælken.",
+    "Hæld dejen i bradepanden, og bag kagen midt i ovnen i ca. 20 minutter, til den er gylden, og en kødnål kommer tør ud.",
+    "Smelt imens smørret til fyldet i en gryde, tilsæt brun farin, kokos, valnødder og mælk, og lad det koge op i 1 minut.",
+    "Fordel fyldet jævnt over den varme kage, skru ovnen op på 225 °C, og bag den 5 minutter mere, til fyldet bobler og karamelliserer. Lad kagen køle af i formen, og skær den i firkanter."
+   ],
+   "tip": "Spring ikke over, hvor det gælder piskningen af æg og sukker. Al luften i kagen kommer derfra, for der er meget lidt smør i dejen."
+  },
+  "citronkage": {
+   "name": "Citronkage med citroncreme",
+   "intro": "En blød, smørrig citronkage, som danskerne bager den til eftermiddagskaffen – toppet med et tykt lag blank, hjemmelavet citroncreme.",
+   "ing": [
+    "200 g blødt smør",
+    "200 g sukker",
+    "4 æg",
+    "200 g hvedemel",
+    "1½ tsk bagepulver",
+    "Fintrevet skal af 2 citroner",
+    "3 spsk citronsaft",
+    "Citroncreme: 3 æg",
+    "Citroncreme: 100 g sukker",
+    "Citroncreme: skal af 1 citron og 1 dl citronsaft (ca. 2 citroner)",
+    "Citroncreme: 75 g smør i tern"
+   ],
+   "steps": [
+    "Tænd ovnen på 175 °C, og smør og beklæd en springform på 24 cm.",
+    "Pisk smør og sukker lyst og luftigt. Pisk æggene i ét ad gangen.",
+    "Bland mel og bagepulver, og vend det i dejen sammen med citronskal og citronsaft.",
+    "Fordel dejen i formen, og bag kagen i 40-45 minutter, til den er gylden, og en kødnål kommer tør ud. Lad den køle helt af.",
+    "Lav citroncremen: Pisk æg, sukker, citronskal og citronsaft sammen i en lille gryde. Varm det forsigtigt op under konstant piskning, til cremen tykner som en vaniljecreme. Den må ikke koge.",
+    "Tag gryden af varmen, og pisk smørret i. Lad cremen køle af, fordel den i et tykt lag over den kolde kage, og stil kagen på køl i 30 minutter, før du skærer den ud."
+   ],
+   "tip": "Varm citroncremen op ved svag varme, og bliv ved med at piske. Bliver den for varm, skiller æggene – sker det, så pres den gennem en si, og den bliver glat igen."
+  },
+  "tiramisu_cake": {
+   "name": "Tiramisukage uden alkohol",
+   "intro": "Lag af kaffedyppede ladyfingers og let mascarponecreme under et tykt lag kakao. Lavet helt uden alkohol og uden rå æg.",
+   "ing": [
+    "200 g ladyfingers (savoiardi)",
+    "3 dl stærk kaffe, afkølet, med 1 spsk sukker rørt i",
+    "250 g mascarpone",
+    "3 dl kold piskefløde",
+    "75 g flormelis",
+    "2 tsk vaniljesukker",
+    "Kakaopulver til at drysse med",
+    "50 g mørk chokolade, hakket"
+   ],
+   "steps": [
+    "Pisk mascarpone, flormelis og vaniljesukker glat.",
+    "Pisk fløden til let skum, og vend den forsigtigt i mascarponen.",
+    "Dyp halvdelen af kiksene hurtigt i kaffen – ét sekund på hver side – og læg dem i et fad på ca. 20 x 30 cm.",
+    "Fordel halvdelen af cremen over kiksene. Gentag med resten af kiksene og cremen.",
+    "Dæk fadet til, og stil det på køl i mindst 6 timer – gerne natten over – så lagene sætter sig.",
+    "Lige før servering drysser du rigeligt med kakao over og strør den hakkede chokolade på."
+   ],
+   "tip": "Dyp kiksene hurtigt. De suger stadig kaffe i køleskabet, og bliver de for våde, falder kagen sammen, når du skærer i den."
+  },
+  "mango_cheesecake": {
+   "name": "Mango-cheesecake",
+   "intro": "En cremet, bagt cheesecake på en sprød kiksebund, toppet med et blankt lag mango, frisk mango og pistacienødder. En dansk kage med et pakistansk mangohjerte.",
+   "ing": [
+    "200 g digestivekiks",
+    "75 g smør, smeltet",
+    "600 g flødeost naturel (fx Philadelphia), stuetempereret",
+    "150 g sukker",
+    "3 æg",
+    "2 dl cremefraiche 18 %",
+    "2 tsk vaniljesukker",
+    "2 spsk majsstivelse",
+    "1 spsk citronsaft",
+    "Mangotop: 2½ dl mangopuré (Sindhri eller Alphonso – fra dåse er fint)",
+    "Mangotop: 2 spsk sukker, 1 spsk majsstivelse og en knivspids stødt kardemomme",
+    "1 moden mango i tern og 2 spsk hakkede pistacienødder til pynt"
+   ],
+   "steps": [
+    "Tænd ovnen på 160 °C. Knus kiksene fint, bland dem med det smeltede smør, og tryk massen ud i bunden af en springform på 24 cm. Stil den på køl, mens du laver fyldet.",
+    "Pisk flødeost og sukker glat. Pisk æggene i ét ad gangen, og derefter cremefraiche, vaniljesukker, majsstivelse og citronsaft. Pisk ikke for længe.",
+    "Hæld fyldet over bunden, og bag kagen i 50-55 minutter, til kanten har sat sig, men midten stadig dirrer en smule.",
+    "Sluk ovnen, åbn lågen en anelse, og lad kagen køle af derinde i 1 time. Stil den derefter på køl i mindst 6 timer – gerne natten over.",
+    "Lav mangotoppen: Pisk mangopuré, sukker, majsstivelse og kardemomme sammen i en gryde, og lad det simre i 2 minutter, til det er blankt og tykt. Lad det køle helt af.",
+    "Fordel mangoen over den kolde cheesecake, top med mangotern og pistacienødder, og tag kagen ud af formen lige før servering."
+   ],
+   "tip": "Lad cheesecaken køle langsomt af i ovnen. Det er pludselige temperaturskift, der får overfladen til at revne."
+  },
+  "baertaerte": {
+   "name": "Bærtærte med vaniljecreme",
+   "intro": "En sprød, smørrig dansk mørdejsbund fyldt med vaniljecreme og toppet med jordbær, hindbær, blåbær og brombær i en blank glasur. Sommer på en tallerken.",
+   "ing": [
+    "Mørdej: 200 g hvedemel",
+    "Mørdej: 100 g koldt smør i tern",
+    "Mørdej: 50 g flormelis",
+    "Mørdej: 1 æggeblomme og 1-2 spsk koldt vand",
+    "Vaniljecreme: 3 dl mælk",
+    "Vaniljecreme: 3 æggeblommer",
+    "Vaniljecreme: 50 g sukker og 2 spsk majsstivelse",
+    "Vaniljecreme: 1 vaniljestang eller 2 tsk vaniljesukker",
+    "500 g blandede bær: jordbær, hindbær, blåbær og brombær",
+    "3 spsk ribsgelé til glasur"
+   ],
+   "steps": [
+    "Smuldr mel, smør og flormelis sammen, til det ligner groft rasp. Tilsæt æggeblommen og lige netop så meget vand, at dejen samler sig. Pak den ind, og stil den på køl i 30 minutter.",
+    "Rul dejen ud, og beklæd en tærteform på 24-26 cm. Prik bunden, læg bagepapir og bagebønner i, og bag den ved 200 °C i 15 minutter. Fjern papiret, og bag 5-8 minutter mere, til bunden er gylden. Lad den køle af.",
+    "Lav vaniljecremen: Varm mælken op med den flækkede vaniljestang. Pisk æggeblommer, sukker og majsstivelse sammen, hæld den varme mælk i under piskning, kom det hele tilbage i gryden, og varm det forsigtigt op under omrøring, til cremen tykner. Lad den køle af med husholdningsfilm direkte på overfladen.",
+    "Fordel den kolde vaniljecreme i tærtebunden.",
+    "Læg bærrene ovenpå, og halvér de største jordbær.",
+    "Varm ribsgeléen op, til den er flydende, og pensl den over bærrene. Stil tærten på køl i 30 minutter før servering."
+   ],
+   "tip": "Fyld tærten så tæt på serveringen som muligt. Bunden holder sig sprød i et par timer, men bliver blød, hvis den står med cremen natten over."
+  },
+  "gulerodskage": {
+   "name": "Gulerodskage med flødeostecreme",
+   "intro": "En saftig, lunt krydret gulerodskage med valnødder og rosiner, lagt sammen og dækket med syrlig flødeostecreme – caféernes klassiker.",
+   "ing": [
+    "3 æg",
+    "250 g brun farin",
+    "2 dl neutral olie",
+    "250 g hvedemel",
+    "2 tsk bagepulver og 1 tsk natron",
+    "2 tsk stødt kanel, ½ tsk stødt ingefær og ¼ tsk stødt kardemomme",
+    "½ tsk salt",
+    "300 g gulerødder, fintrevne",
+    "75 g hakkede valnødder plus ekstra til pynt",
+    "50 g rosiner",
+    "Flødeostecreme: 300 g kold flødeost naturel",
+    "Flødeostecreme: 75 g blødt smør",
+    "Flødeostecreme: 150 g flormelis, 2 tsk vaniljesukker og 1 tsk citronsaft"
+   ],
+   "steps": [
+    "Tænd ovnen på 175 °C, og beklæd to runde forme på 20 cm.",
+    "Pisk æg og brun farin lyst, og pisk olien i.",
+    "Bland mel, bagepulver, natron, krydderier og salt, og vend det i æggemassen.",
+    "Vend gulerødder, valnødder og rosiner i. Fordel dejen i formene, og bag bundene i 30-35 minutter, til en kødnål kommer tør ud. Lad dem køle helt af.",
+    "Lav cremen: Pisk det bløde smør med flormelis og vaniljesukker, og pisk derefter den kolde flødeost og citronsaften i, lige til cremen er glat.",
+    "Læg bundene sammen med en tredjedel af cremen, dæk top og sider med resten, og pynt med valnødder og lidt revet gulerod."
+   ],
+   "tip": "Brug flødeosten direkte fra køleskabet, og pisk den kun kort. Pisker du for længe, bliver den tynd, og cremen kan ikke holde formen."
+  },
+  "chocolate_chip_cookies": {
+   "name": "Cookies med chokolade",
+   "intro": "Store, seje cookies med sprøde, gyldne kanter, smeltende stykker mørk chokolade og et drys flagesalt. Bedst med et glas kold mælk eller en kop chai.",
+   "ing": [
+    "175 g blødt smør",
+    "150 g brun farin",
+    "75 g sukker",
+    "1 æg",
+    "2 tsk vaniljesukker",
+    "275 g hvedemel",
+    "1 tsk natron",
+    "½ tsk salt",
+    "200 g mørk chokolade, groft hakket",
+    "Flagesalt til at drysse med"
+   ],
+   "steps": [
+    "Pisk smør, brun farin og sukker cremet, og pisk derefter æg og vaniljesukker i.",
+    "Bland mel, natron og salt, og rør det i, lige til dejen er samlet. Vend den hakkede chokolade i.",
+    "Dæk dejen til, og stil den på køl i mindst 1 time – eller natten over for endnu bedre smag.",
+    "Tænd ovnen på 180 °C. Rul dejen til 12 store kugler, og fordel dem med god afstand på to plader med bagepapir.",
+    "Bag dem i 10-12 minutter, til kanterne er gyldne, men midten stadig ser blød ud.",
+    "Drys med flagesalt, og lad dem ligge på pladen i 10 minutter, før du flytter dem over på en rist."
+   ],
+   "tip": "Tag dem ud, mens midten stadig ser lidt underbagt ud. De sætter sig, når de køler af, og det er det, der gør dem seje."
   }
  }
 }
