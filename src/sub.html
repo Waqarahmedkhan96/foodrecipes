@@ -1,0 +1,48 @@
+<section class="sub" id="subscribe" aria-labelledby="sub-title">
+  <div class="wrap sub-grid">
+    <div>
+      <p class="eyebrow" style="color:var(--gold)">The Sunday dastarkhwan</p>
+      <h2 id="sub-title">Delicious meal ideas, <em>every Sunday</em></h2>
+      <p class="copy">One letter a week from Fatma's kitchen. Free, and you can leave whenever you like.</p>
+      <ul class="perks">
+        <li><span class="num">1</span><div><b>A week of dinners</b><span>Five weeknight meals that share ingredients, so nothing goes to waste.</span></div></li>
+        <li><span class="num">2</span><div><b>One showstopper</b><span>A weekend recipe worth inviting people over for.</span></div></li>
+        <li><span class="num">3</span><div><b>The shopping list</b><span>Everything for the week on one list, grouped by aisle.</span></div></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <form id="subForm" novalidate>
+        <h3>Join the table</h3>
+        <p class="hint">Pick what you'd like more of.</p>
+        <div class="field">
+          <span class="legend" id="lg-int">Your favourites</span>
+          <div class="opts" role="group" aria-labelledby="lg-int">
+            <label class="opt"><input type="checkbox" name="int" value="Weeknight dinners" checked><span>Weeknight dinners</span></label>
+            <label class="opt"><input type="checkbox" name="int" value="Biryani and rice"><span>Biryani and rice</span></label>
+            <label class="opt"><input type="checkbox" name="int" value="BBQ and karahi"><span>BBQ and karahi</span></label>
+            <label class="opt"><input type="checkbox" name="int" value="Desserts and mithai"><span>Desserts and mithai</span></label>
+            <label class="opt"><input type="checkbox" name="int" value="Ramadan and Eid"><span>Ramadan and Eid</span></label>
+            <label class="opt"><input type="checkbox" name="int" value="Vegetarian"><span>Vegetarian</span></label>
+          </div>
+        </div>
+        <div class="field">
+          <span class="legend" id="lg-fr">How often</span>
+          <div class="opts" role="radiogroup" aria-labelledby="lg-fr">
+            <label class="opt"><input type="radio" name="freq" value="weekly" checked><span>Every Sunday</span></label>
+            <label class="opt"><input type="radio" name="freq" value="fortnightly"><span>Every other Sunday</span></label>
+          </div>
+        </div>
+        <div class="field"><label for="sName">First name</label><input id="sName" placeholder="Ayesha" autocomplete="given-name"></div>
+        <div class="field"><label for="sEmail">Email</label><input id="sEmail" type="email" placeholder="ayesha@example.com" autocomplete="email"><span class="err" id="sErr" aria-live="polite"></span></div>
+        <button class="btn btn-gold" type="submit">Subscribe <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <p class="fine">No spam. One email, one click to unsubscribe.</p>
+      </form>
+      <div class="done" id="subDone" hidden>
+        <div class="seal2"><svg width="34" height="34" aria-hidden="true"><use href="#i-check"/></svg></div>
+        <h3 style="color:var(--ivory)">Welcome to the table</h3>
+        <p id="subMsg" style="color:#E2D2CF"></p>
+        <button class="btn btn-line" type="button" id="subAgain" style="margin-top:22px;width:auto">Change preferences</button>
+      </div>
+    </div>
+  </div>
+</section>

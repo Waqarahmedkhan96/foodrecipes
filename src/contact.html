@@ -1,0 +1,35 @@
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow">Questions and requests</p>
+      <h2 id="contact-title">Ask Fatma</h2>
+      <p class="copy">Stuck on a recipe, looking for a dish you remember from home, or want to work together? Send a note.</p>
+      <div class="faq">
+        <details><summary>Can I swap chicken for mutton?</summary><p>Yes, in most curries and pulaos. Mutton needs roughly twice the cooking time, so add it earlier and keep the pot covered.</p></details>
+        <details><summary>Where do I find sella basmati?</summary><p>Any South Asian grocer. Sella (parboiled) rice holds its shape through dum, which is why it is the Pakistani choice for biryani and pulao.</p></details>
+        <details><summary>Do you take recipe requests?</summary><p>Always. Choose “Recipe request” in the form. The most asked-for dishes go into the Sunday letter.</p></details>
+      </div>
+    </div>
+    <div class="panel">
+      <form id="askForm" novalidate>
+        <h3>Send a query</h3>
+        <p class="hint">Fatma reads every message.</p>
+        <div class="row2">
+          <div class="field"><label for="aName">Name</label><input id="aName" placeholder="Your name" autocomplete="name"><span class="err" id="aNameErr" aria-live="polite"></span></div>
+          <div class="field"><label for="aEmail">Email</label><input id="aEmail" type="email" placeholder="you@example.com" autocomplete="email"><span class="err" id="aEmailErr" aria-live="polite"></span></div>
+        </div>
+        <div class="field"><label for="aTopic">Topic</label>
+          <select id="aTopic"><option>Question about a recipe</option><option>Recipe request</option><option>Collaboration or press</option><option>Something else</option></select>
+        </div>
+        <div class="field"><label for="aMsg">Message</label><textarea id="aMsg" placeholder="My nihari came out too thin. What did I do wrong?"></textarea><span class="err" id="aMsgErr" aria-live="polite"></span></div>
+        <button class="btn btn-green" type="submit">Send query <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </form>
+      <div class="done" id="askDone" hidden>
+        <div class="seal2" style="color:var(--green);border-color:var(--green)"><svg width="34" height="34" aria-hidden="true"><use href="#i-check"/></svg></div>
+        <h3 style="color:var(--maroon)">Message received</h3>
+        <p id="askMsg" style="color:var(--muted)"></p>
+        <button class="btn btn-line ink" type="button" id="askAgain" style="margin-top:22px;width:auto">Send another</button>
+      </div>
+    </div>
+  </div>
+</section>
