@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -10,15 +10,22 @@
 <meta property="og:description" content="Heirloom Pakistani recipes, stories and weekly meal ideas from Fatma&#x27;s kitchen.">
 <meta property="og:image" content="https://tasty-pakistan.vercel.app/images/hero_biryani.jpg">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Tasty Pakistan by Fatma">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Great+Vibes&display=swap">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&text=%D8%A7%D8%B1%D8%AF%D9%88&display=swap">
+<link rel="stylesheet" href="/assets/style.css">
 <link rel="canonical" href="https://tasty-pakistan.vercel.app/">
+<link rel="alternate" hreflang="en" href="https://tasty-pakistan.vercel.app/">
+<link rel="alternate" hreflang="da" href="https://tasty-pakistan.vercel.app/da/">
+<link rel="alternate" hreflang="ur" href="https://tasty-pakistan.vercel.app/ur/">
+<link rel="alternate" hreflang="x-default" href="https://tasty-pakistan.vercel.app/">
 </head>
-<body data-root="">
+<body data-root="/">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="logo" viewBox="-50 -50 100 100">
@@ -56,29 +63,41 @@
     <symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3.5 11h17a8.5 8.5 0 0 1-17 0z M8 18.5h8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="9" cy="8" r="1" fill="currentColor"/><circle cx="12.5" cy="7" r="1" fill="currentColor"/><circle cx="15" cy="8.5" r="1" fill="currentColor"/></symbol>
     <symbol id="i-sweet" viewBox="0 0 24 24"><circle cx="9" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="15.5" cy="11" r="3.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3 18.5h18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
     <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19 15.5A8 8 0 0 1 8.5 5a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></symbol>
+    <symbol id="flag-gb" viewBox="15 0 30 30"><clipPath id="gbClip"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#gbClip)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></symbol>
+    <symbol id="flag-dk" viewBox="3 0 28 28"><rect width="37" height="28" fill="#C8102E"/><path d="M12,0 h4 v28 h-4z M0,12 h37 v4 h-37z" fill="#fff"/></symbol>
+    <symbol id="flag-pk" viewBox="0 0 30 30"><rect width="30" height="30" fill="#01411C"/><rect width="8" height="30" fill="#fff"/><circle cx="19" cy="16" r="7.6" fill="#fff"/><circle cx="21.2" cy="13.8" r="6.6" fill="#01411C"/><path d="M22.6 9.2l.75 2.1 2.2.05-1.75 1.35.65 2.15-1.85-1.28-1.85 1.28.65-2.15-1.75-1.35 2.2-.05z" fill="#fff"/></symbol>
   </defs>
 </svg>
 <header class="site" id="hdr">
   <div class="wrap bar">
-    <a class="brand" href="index.html" aria-label="Tasty Pakistan by Fatma, home">
+    <a class="brand" href="/" aria-label="Tasty Pakistan by Fatma, Home">
       <svg aria-hidden="true"><use href="#logo"/></svg>
       <span><b>Tasty Pakistan</b><small>by Fatma</small></span>
     </a>
     <nav class="links" id="nav" aria-label="Main">
-      <a href="index.html" class="on" aria-current="page">Home</a>
-      <a href="recipes.html">Recipes</a>
+      <a href="/" class="on" aria-current="page">Home</a>
+      <a href="/recipes.html">Recipes</a>
       <div class="dd">
         <button class="dd-btn" type="button" aria-expanded="false" aria-controls="ddPanel">Categories <svg aria-hidden="true"><use href="#i-chev"/></svg></button>
-        <div class="dd-panel" id="ddPanel"><a href="recipes.html#rice"><img src="images/chicken_pulao.jpg" alt="" loading="lazy"><span><b>Rice and pulao</b><small>5 recipes</small></span></a><a href="recipes.html#chicken"><img src="images/chicken_karahi.jpg" alt="" loading="lazy"><span><b>Chicken</b><small>6 recipes</small></span></a><a href="recipes.html#beef"><img src="images/beef_karahi.jpg" alt="" loading="lazy"><span><b>Beef</b><small>2 recipes</small></span></a><a href="recipes.html#mutton"><img src="images/dumba_karahi.jpg" alt="" loading="lazy"><span><b>Mutton and lamb</b><small>1 recipes</small></span></a><a href="recipes.html#bread"><img src="images/roghni_naan.jpg" alt="" loading="lazy"><span><b>Breads</b><small>4 recipes</small></span></a><a href="recipes.html#daal"><img src="images/daal_moong.jpg" alt="" loading="lazy"><span><b>Daals</b><small>5 recipes</small></span></a><a href="recipes.html#street"><img src="images/chana_chaat.jpg" alt="" loading="lazy"><span><b>Street food</b><small>4 recipes</small></span></a><a href="recipes.html#dessert"><img src="images/gulab_jamun.jpg" alt="" loading="lazy"><span><b>Desserts</b><small>7 recipes</small></span></a><a href="recipes.html#sides"><img src="images/raita.jpg" alt="" loading="lazy"><span><b>Sides</b><small>4 recipes</small></span></a><a class="dd-all" href="recipes.html">View all recipes</a></div>
+        <div class="dd-panel" id="ddPanel"><a href="/recipes.html#rice"><img src="/images/chicken_pulao.jpg" alt="" loading="lazy"><span><b>Rice and pulao</b><small>5 recipes</small></span></a><a href="/recipes.html#chicken"><img src="/images/chicken_karahi.jpg" alt="" loading="lazy"><span><b>Chicken</b><small>6 recipes</small></span></a><a href="/recipes.html#beef"><img src="/images/beef_karahi.jpg" alt="" loading="lazy"><span><b>Beef</b><small>2 recipes</small></span></a><a href="/recipes.html#mutton"><img src="/images/dumba_karahi.jpg" alt="" loading="lazy"><span><b>Mutton and lamb</b><small>1 recipe</small></span></a><a href="/recipes.html#bread"><img src="/images/roghni_naan.jpg" alt="" loading="lazy"><span><b>Breads</b><small>4 recipes</small></span></a><a href="/recipes.html#daal"><img src="/images/daal_moong.jpg" alt="" loading="lazy"><span><b>Daals</b><small>5 recipes</small></span></a><a href="/recipes.html#street"><img src="/images/chana_chaat.jpg" alt="" loading="lazy"><span><b>Street food</b><small>4 recipes</small></span></a><a href="/recipes.html#dessert"><img src="/images/gulab_jamun.jpg" alt="" loading="lazy"><span><b>Desserts</b><small>7 recipes</small></span></a><a href="/recipes.html#sides"><img src="/images/raita.jpg" alt="" loading="lazy"><span><b>Sides</b><small>4 recipes</small></span></a><a class="dd-all" href="/recipes.html">View all recipes</a></div>
       </div>
-      <a href="journal.html">Journal</a>
-      <a href="story.html">Fatma's story</a>
-      <a href="ask.html">Ask Fatma</a>
+      <a href="/journal.html">Journal</a>
+      <a href="/story.html">Fatma's story</a>
+      <a href="/ask.html">Ask Fatma</a>
     </nav>
     <div class="bar-actions">
-      <a class="ico-btn" href="recipes.html#find" aria-label="Search recipes"><svg aria-hidden="true"><use href="#i-search"/></svg></a>
-      <a class="ico-btn" href="recipes.html#saved" aria-label="Saved recipes"><svg aria-hidden="true"><use href="#i-heart"/></svg><span class="badge-count" hidden>0</span></a>
-      <a class="btn btn-gold" href="#subscribe">Subscribe</a>
+      <div class="lang" id="lang">
+        <button class="lang-btn" type="button" aria-expanded="false" aria-controls="langPanel" aria-label="Language: English">
+          <span class="flag"><svg aria-hidden="true"><use href="#flag-gb"/></svg></span><b>EN</b><svg class="car" aria-hidden="true"><use href="#i-chev"/></svg>
+        </button>
+        <div class="lang-panel" id="langPanel">
+          <p class="lang-h">Choose language</p>
+          <a class="lang-opt on" href="/" hreflang="en" lang="en" data-lang="en" aria-current="true"><span class="flag"><svg aria-hidden="true"><use href="#flag-gb"/></svg></span><span class="lang-txt"><b>English</b><small>English · International</small></span><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg></a><a class="lang-opt" href="/da/" hreflang="da" lang="da" data-lang="da"><span class="flag"><svg aria-hidden="true"><use href="#flag-dk"/></svg></span><span class="lang-txt"><b>Dansk</b><small>Danish · Denmark</small></span><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg></a><a class="lang-opt" href="/ur/" hreflang="ur" lang="ur" data-lang="ur"><span class="flag"><svg aria-hidden="true"><use href="#flag-pk"/></svg></span><span class="lang-txt"><b>اردو</b><small>Urdu · Pakistan</small></span><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg></a>
+        </div>
+      </div>
+      <a class="ico-btn" href="/recipes.html#find" aria-label="Search recipes"><svg aria-hidden="true"><use href="#i-search"/></svg></a>
+      <a class="ico-btn" href="/recipes.html#saved" aria-label="Saved recipes"><svg aria-hidden="true"><use href="#i-heart"/></svg><span class="badge-count" hidden>0</span></a>
+      <a class="btn btn-gold sub-btn" href="#subscribe">Subscribe</a>
       <button class="ico-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
   </div>
@@ -86,7 +105,7 @@
 <main id="top">
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-media" id="heroMedia">
-    <img class="hero-img" src="images/hero_biryani.jpg" alt="Karachi chicken biryani heaped on a hammered copper platter with raita, onions and green chillies" width="1536" height="1024">
+    <img class="hero-img" src="/images/hero_biryani.jpg" alt="Karachi chicken biryani heaped on a hammered copper platter with raita, onions and green chillies" width="1536" height="1024">
   </div>
   <div class="steam" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="hero-shade"></div>
@@ -116,12 +135,12 @@
   <section id="categories" aria-labelledby="cat-title">
     <div class="sec-head">
       <div><p class="eyebrow">Explore our kitchen</p><h2 id="cat-title">Flavours from <span class="gold-word">every corner</span> of Pakistan</h2></div>
-      <a class="link-more" href="recipes.html">All recipes <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="link-more" href="/recipes.html">All recipes <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="rail-wrap">
-      <button class="rail-btn prev" type="button" id="railPrev" aria-label="Scroll categories left"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
-      <div class="rail" id="rail"><a class="cat" href="recipes.html#rice" aria-label="Rice and pulao, 5 recipes"><img src="images/chicken_pulao.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Rice and pulao</b><small>5 recipes</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a><a class="cat" href="recipes.html#chicken" aria-label="Chicken, 6 recipes"><img src="images/chicken_karahi.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Chicken</b><small>6 recipes</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a><a class="cat" href="recipes.html#beef" aria-label="Beef, 2 recipes"><img src="images/beef_karahi.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Beef</b><small>2 recipes</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a><a class="cat" href="recipes.html#mutton" aria-label="Mutton and lamb, 1 recipes"><img src="images/dumba_karahi.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Mutton and lamb</b><small>1 recipes</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a><a class="cat" href="recipes.html#bread" aria-label="Breads, 4 recipes"><img src="images/roghni_naan.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Breads</b><small>4 recipes</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a><a class="cat" href="recipes.html#daal" aria-label="Daals, 5 recipes"><img src="images/daal_moong.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Daals</b><small>5 recipes</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a><a class="cat" href="recipes.html#street" aria-label="Street food, 4 recipes"><img src="images/chana_chaat.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Street food</b><small>4 recipes</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a><a class="cat" href="recipes.html#dessert" aria-label="Desserts, 7 recipes"><img src="images/gulab_jamun.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Desserts</b><small>7 recipes</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a><a class="cat" href="recipes.html#sides" aria-label="Sides, 4 recipes"><img src="images/raita.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Sides</b><small>4 recipes</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a></div>
-      <button class="rail-btn next" type="button" id="railNext" aria-label="Scroll categories right"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      <button class="rail-btn prev" type="button" id="railPrev" aria-label="Scroll categories back"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
+      <div class="rail" id="rail"><a class="cat" href="/recipes.html#rice" aria-label="Rice and pulao, 5 recipes"><img src="/images/chicken_pulao.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Rice and pulao</b><small>5 recipes</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a><a class="cat" href="/recipes.html#chicken" aria-label="Chicken, 6 recipes"><img src="/images/chicken_karahi.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Chicken</b><small>6 recipes</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a><a class="cat" href="/recipes.html#beef" aria-label="Beef, 2 recipes"><img src="/images/beef_karahi.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Beef</b><small>2 recipes</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a><a class="cat" href="/recipes.html#mutton" aria-label="Mutton and lamb, 1 recipe"><img src="/images/dumba_karahi.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Mutton and lamb</b><small>1 recipe</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a><a class="cat" href="/recipes.html#bread" aria-label="Breads, 4 recipes"><img src="/images/roghni_naan.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Breads</b><small>4 recipes</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a><a class="cat" href="/recipes.html#daal" aria-label="Daals, 5 recipes"><img src="/images/daal_moong.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Daals</b><small>5 recipes</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a><a class="cat" href="/recipes.html#street" aria-label="Street food, 4 recipes"><img src="/images/chana_chaat.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Street food</b><small>4 recipes</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a><a class="cat" href="/recipes.html#dessert" aria-label="Desserts, 7 recipes"><img src="/images/gulab_jamun.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Desserts</b><small>7 recipes</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a><a class="cat" href="/recipes.html#sides" aria-label="Sides, 4 recipes"><img src="/images/raita.jpg" alt="" loading="lazy"><span class="cat-body"><span><b>Sides</b><small>4 recipes</small></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span></a></div>
+      <button class="rail-btn next" type="button" id="railNext" aria-label="Scroll categories forward"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
     </div>
   </section>
 
@@ -132,100 +151,100 @@
       <p class="blurb" id="fBlurb">Layered, fragrant and fiery, with the potato and dried plum that make it unmistakably Karachi.</p>
       <div class="f-meta" id="fMeta"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr 30</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span><span><svg aria-hidden="true"><use href="#i-users"/></svg>6</span></div>
       <div class="f-actions">
-        <a class="btn btn-gold" id="fOpen" href="recipes/chicken_biryani.html">View recipe <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        <a class="btn btn-line ink" id="fCat" href="recipes.html#rice">More rice and pulao</a>
+        <a class="btn btn-gold" id="fOpen" href="/recipes/chicken_biryani.html">View recipe <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-line ink" id="fCat" href="/recipes.html#rice">More rice and pulao</a>
       </div>
     </div>
     <div class="f-media">
-      <img id="fImg" src="images/hero_biryani.jpg" alt="Karachi chicken biryani">
+      <img id="fImg" src="/images/hero_biryani.jpg" alt="Karachi chicken biryani">
       <div class="steam" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
       <div class="seal" aria-hidden="true"><span>Fatma's<br>pick</span></div>
     </div>
-    <div class="thumbs" role="group" aria-label="Choose a featured recipe"><button class="thumb" type="button" aria-label="Feature Karachi chicken biryani" aria-pressed="true"><img src="images/hero_biryani.jpg" alt="" loading="lazy"></button><button class="thumb" type="button" aria-label="Feature Royal beef nihari" aria-pressed="false"><img src="images/beef_nihari.jpg" alt="" loading="lazy"></button><button class="thumb" type="button" aria-label="Feature Lahori chicken karahi" aria-pressed="false"><img src="images/chicken_karahi.jpg" alt="" loading="lazy"></button><button class="thumb" type="button" aria-label="Feature Shahi zarda" aria-pressed="false"><img src="images/zarda.jpg" alt="" loading="lazy"></button></div>
+    <div class="thumbs" role="group" aria-label="Choose a featured recipe"><button class="thumb" type="button" aria-label="Feature Karachi chicken biryani" aria-pressed="true"><img src="/images/hero_biryani.jpg" alt="" loading="lazy"></button><button class="thumb" type="button" aria-label="Feature Royal beef nihari" aria-pressed="false"><img src="/images/beef_nihari.jpg" alt="" loading="lazy"></button><button class="thumb" type="button" aria-label="Feature Lahori chicken karahi" aria-pressed="false"><img src="/images/chicken_karahi.jpg" alt="" loading="lazy"></button><button class="thumb" type="button" aria-label="Feature Shahi zarda" aria-pressed="false"><img src="/images/zarda.jpg" alt="" loading="lazy"></button></div>
   </section>
 
   <section aria-labelledby="picks-title">
     <div class="sec-head">
       <div><p class="eyebrow">Fatma's picks</p><h2 id="picks-title">Loved at <span class="gold-word">every table</span></h2></div>
-      <a class="link-more" href="recipes.html">See all 38 recipes <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="link-more" href="/recipes.html">See all 38 recipes <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
-    <div class="picks"><article class="card rv" data-id="chicken_karahi" data-cat="chicken" data-veg="0" data-mins="45" data-cols="" data-text="lahori chicken karahi punjab chicken 1 kg chicken, small pieces 6 tomatoes, halved 1/2 cup oil 1 tbsp ginger-garlic paste 1 tsp crushed red chilli 1 tsp cumin seeds, crushed 1 tsp coriander seeds, crushed 1 tsp black pepper 4 green chillies ginger matchsticks and fresh coriander to finish">
-  <div class="media"><img src="images/chicken_karahi.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Chicken</span>
+    <div class="picks"><article class="card rv" data-id="chicken_karahi" data-cat="chicken" data-veg="0" data-mins="45" data-cols="" data-text="lahori chicken karahi punjab chicken 1 kg chicken, small pieces 6 tomatoes, halved 1/2 cup oil 1 tbsp ginger-garlic paste 1 tsp crushed red chilli 1 tsp cumin seeds, crushed 1 tsp coriander seeds, crushed 1 tsp black pepper 4 green chillies ginger matchsticks and fresh coriander to finish lahori chicken karahi 1 kg chicken, small pieces 6 tomatoes, halved 1/2 cup oil 1 tbsp ginger-garlic paste 1 tsp crushed red chilli 1 tsp cumin seeds, crushed 1 tsp coriander seeds, crushed 1 tsp black pepper 4 green chillies ginger matchsticks and fresh coriander to finish">
+  <div class="media"><img src="/images/chicken_karahi.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Chicken</span>
     <button class="heart" type="button" data-save="chicken_karahi" aria-pressed="false" aria-label="Save Lahori chicken karahi"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Punjab</span>
-    <h3><a class="card-link" href="recipes/chicken_karahi.html">Lahori chicken karahi</a></h3>
+    <h3><a class="card-link" href="/recipes/chicken_karahi.html">Lahori chicken karahi</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>45 min</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span></span>
   </div>
-</article><article class="card rv" data-id="kabli_pulao" data-cat="rice" data-veg="0" data-mins="120" data-cols="winter" data-text="kabuli pulao khyber pakhtunkhwa rice and pulao 1 kg lamb or beef on the bone 3 cups sella basmati, soaked 2 onions, sliced 2 carrots, cut into matchsticks 1/2 cup raisins 1/4 cup slivered almonds 2 tsp cumin seeds 1 tsp garam masala 1 tbsp sugar 1/2 cup oil, salt to taste">
-  <div class="media"><img src="images/kabli_pulao.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Rice and pulao</span>
+</article><article class="card rv" data-id="kabli_pulao" data-cat="rice" data-veg="0" data-mins="120" data-cols="winter" data-text="kabuli pulao khyber pakhtunkhwa rice and pulao 1 kg lamb or beef on the bone 3 cups sella basmati, soaked 2 onions, sliced 2 carrots, cut into matchsticks 1/2 cup raisins 1/4 cup slivered almonds 2 tsp cumin seeds 1 tsp garam masala 1 tbsp sugar 1/2 cup oil, salt to taste kabuli pulao 1 kg lamb or beef on the bone 3 cups sella basmati, soaked 2 onions, sliced 2 carrots, cut into matchsticks 1/2 cup raisins 1/4 cup slivered almonds 2 tsp cumin seeds 1 tsp garam masala 1 tbsp sugar 1/2 cup oil, salt to taste">
+  <div class="media"><img src="/images/kabli_pulao.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Rice and pulao</span>
     <button class="heart" type="button" data-save="kabli_pulao" aria-pressed="false" aria-label="Save Kabuli pulao"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Khyber Pakhtunkhwa</span>
-    <h3><a class="card-link" href="recipes/kabli_pulao.html">Kabuli pulao</a></h3>
+    <h3><a class="card-link" href="/recipes/kabli_pulao.html">Kabuli pulao</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>2 hrs</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span></span>
   </div>
-</article><article class="card rv" data-id="beef_haleem" data-cat="daal" data-veg="0" data-mins="300" data-cols="ramadan winter" data-text="karachi beef haleem karachi daals 750 g boneless beef 1 cup cracked wheat (daliya), soaked overnight 1/2 cup chana daal 1/4 cup each masoor, moong and urad daal 1/4 cup barley 2 onions, sliced 2 tbsp ginger-garlic paste 2 tsp red chilli, 1 tsp turmeric, 2 tsp garam masala 1/2 cup ghee, salt to taste to serve: fried onions, ginger, green chilli, lemon, chaat masala">
-  <div class="media"><img src="images/beef_haleem.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Daals</span>
+</article><article class="card rv" data-id="beef_haleem" data-cat="daal" data-veg="0" data-mins="300" data-cols="ramadan winter" data-text="karachi beef haleem karachi daals 750 g boneless beef 1 cup cracked wheat (daliya), soaked overnight 1/2 cup chana daal 1/4 cup each masoor, moong and urad daal 1/4 cup barley 2 onions, sliced 2 tbsp ginger-garlic paste 2 tsp red chilli, 1 tsp turmeric, 2 tsp garam masala 1/2 cup ghee, salt to taste to serve: fried onions, ginger, green chilli, lemon, chaat masala karachi beef haleem 750 g boneless beef 1 cup cracked wheat (daliya), soaked overnight 1/2 cup chana daal 1/4 cup each masoor, moong and urad daal 1/4 cup barley 2 onions, sliced 2 tbsp ginger-garlic paste 2 tsp red chilli, 1 tsp turmeric, 2 tsp garam masala 1/2 cup ghee, salt to taste to serve: fried onions, ginger, green chilli, lemon, chaat masala">
+  <div class="media"><img src="/images/beef_haleem.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Daals</span>
     <button class="heart" type="button" data-save="beef_haleem" aria-pressed="false" aria-label="Save Karachi beef haleem"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Karachi</span>
-    <h3><a class="card-link" href="recipes/beef_haleem.html">Karachi beef haleem</a></h3>
+    <h3><a class="card-link" href="/recipes/beef_haleem.html">Karachi beef haleem</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>5 hrs</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Slow</span></span>
   </div>
-</article><article class="card rv" data-id="golgappay" data-cat="street" data-veg="1" data-mins="40" data-cols="ramadan eid" data-text="golgappay lahore street food 30 golgappa puris (shop-bought or homemade) 1 cup boiled chickpeas 2 boiled potatoes, finely diced 1 small onion, finely chopped imli water: 1/2 cup tamarind pulp, 4 cups chilled water, 1 tsp roasted cumin, 1 tsp chaat masala, 1 tsp black salt, a handful of mint, 2 green chillies, sugar to taste imli chutney and green chutney to serve sev and fresh coriander to garnish">
-  <div class="media"><img src="images/golgappay.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Street food</span>
+</article><article class="card rv" data-id="golgappay" data-cat="street" data-veg="1" data-mins="40" data-cols="ramadan eid" data-text="golgappay lahore street food 30 golgappa puris (shop-bought or homemade) 1 cup boiled chickpeas 2 boiled potatoes, finely diced 1 small onion, finely chopped imli water: 1/2 cup tamarind pulp, 4 cups chilled water, 1 tsp roasted cumin, 1 tsp chaat masala, 1 tsp black salt, a handful of mint, 2 green chillies, sugar to taste imli chutney and green chutney to serve sev and fresh coriander to garnish golgappay 30 golgappa puris (shop-bought or homemade) 1 cup boiled chickpeas 2 boiled potatoes, finely diced 1 small onion, finely chopped imli water: 1/2 cup tamarind pulp, 4 cups chilled water, 1 tsp roasted cumin, 1 tsp chaat masala, 1 tsp black salt, a handful of mint, 2 green chillies, sugar to taste imli chutney and green chutney to serve sev and fresh coriander to garnish">
+  <div class="media"><img src="/images/golgappay.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Street food</span>
     <button class="heart" type="button" data-save="golgappay" aria-pressed="false" aria-label="Save Golgappay"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Lahore</span>
-    <h3><a class="card-link" href="recipes/golgappay.html">Golgappay</a></h3>
+    <h3><a class="card-link" href="/recipes/golgappay.html">Golgappay</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>40 min</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card rv" data-id="chicken_qorma" data-cat="chicken" data-veg="0" data-mins="60" data-cols="eid" data-text="shahi chicken qorma karachi chicken 1 kg chicken, bone-in pieces 3 medium onions, thinly sliced 3/4 cup oil or ghee 1 cup yogurt, whisked 1 tbsp ginger-garlic paste 1½ tsp red chilli powder 2 tsp coriander powder 1/2 tsp turmeric whole spices: 2 bay leaves, 6 cloves, 4 green cardamom, 1 black cardamom, 1 cinnamon stick 10 to 12 almonds, soaked and ground to a paste 1 tsp garam masala a few drops of kewra water salt to taste slivered almonds, ginger matchsticks and coriander to garnish">
-  <div class="media"><img src="images/chicken_qorma.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Chicken</span>
+</article><article class="card rv" data-id="chicken_qorma" data-cat="chicken" data-veg="0" data-mins="60" data-cols="eid" data-text="shahi chicken qorma karachi chicken 1 kg chicken, bone-in pieces 3 medium onions, thinly sliced 3/4 cup oil or ghee 1 cup yogurt, whisked 1 tbsp ginger-garlic paste 1½ tsp red chilli powder 2 tsp coriander powder 1/2 tsp turmeric whole spices: 2 bay leaves, 6 cloves, 4 green cardamom, 1 black cardamom, 1 cinnamon stick 10 to 12 almonds, soaked and ground to a paste 1 tsp garam masala a few drops of kewra water salt to taste slivered almonds, ginger matchsticks and coriander to garnish shahi chicken qorma 1 kg chicken, bone-in pieces 3 medium onions, thinly sliced 3/4 cup oil or ghee 1 cup yogurt, whisked 1 tbsp ginger-garlic paste 1½ tsp red chilli powder 2 tsp coriander powder 1/2 tsp turmeric whole spices: 2 bay leaves, 6 cloves, 4 green cardamom, 1 black cardamom, 1 cinnamon stick 10 to 12 almonds, soaked and ground to a paste 1 tsp garam masala a few drops of kewra water salt to taste slivered almonds, ginger matchsticks and coriander to garnish">
+  <div class="media"><img src="/images/chicken_qorma.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Chicken</span>
     <button class="heart" type="button" data-save="chicken_qorma" aria-pressed="false" aria-label="Save Shahi chicken qorma"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Karachi</span>
-    <h3><a class="card-link" href="recipes/chicken_qorma.html">Shahi chicken qorma</a></h3>
+    <h3><a class="card-link" href="/recipes/chicken_qorma.html">Shahi chicken qorma</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span></span>
   </div>
-</article><article class="card rv" data-id="gulab_jamun" data-cat="dessert" data-veg="1" data-mins="60" data-cols="eid" data-text="gulab jamun all of pakistan desserts 1 cup milk powder 3 tbsp all-purpose flour 1/4 tsp baking powder 1 tbsp ghee 1 egg (or 4 to 5 tbsp milk) syrup: 1½ cups sugar, 1½ cups water, 4 cardamom pods, 1 tsp rosewater oil for frying">
-  <div class="media"><img src="images/gulab_jamun.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Desserts</span>
+</article><article class="card rv" data-id="gulab_jamun" data-cat="dessert" data-veg="1" data-mins="60" data-cols="eid" data-text="gulab jamun all of pakistan desserts 1 cup milk powder 3 tbsp all-purpose flour 1/4 tsp baking powder 1 tbsp ghee 1 egg (or 4 to 5 tbsp milk) syrup: 1½ cups sugar, 1½ cups water, 4 cardamom pods, 1 tsp rosewater oil for frying gulab jamun 1 cup milk powder 3 tbsp all-purpose flour 1/4 tsp baking powder 1 tbsp ghee 1 egg (or 4 to 5 tbsp milk) syrup: 1½ cups sugar, 1½ cups water, 4 cardamom pods, 1 tsp rosewater oil for frying">
+  <div class="media"><img src="/images/gulab_jamun.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Desserts</span>
     <button class="heart" type="button" data-save="gulab_jamun" aria-pressed="false" aria-label="Save Gulab jamun"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">All of Pakistan</span>
-    <h3><a class="card-link" href="recipes/gulab_jamun.html">Gulab jamun</a></h3>
+    <h3><a class="card-link" href="/recipes/gulab_jamun.html">Gulab jamun</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
 </article></div>
-    <div class="center-cta"><a class="btn btn-green" href="recipes.html">Browse all recipes <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+    <div class="center-cta"><a class="btn btn-green" href="/recipes.html">Browse all recipes <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
   </section>
 
   <section class="week rv" aria-labelledby="week-title">
-    <a class="plate" href="recipes/beef_nihari.html" aria-label="Open Royal beef nihari"><img src="images/beef_nihari.jpg" alt="Royal beef nihari" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i><i></i></div></a>
+    <a class="plate" href="/recipes/beef_nihari.html" aria-label="Open Royal beef nihari"><img src="/images/beef_nihari.jpg" alt="Royal beef nihari" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i><i></i></div></a>
     <div>
       <p class="eyebrow">Recipe of the week</p>
       <h2 id="week-title">Royal beef nihari</h2>
       <p class="copy">Beef shank simmered overnight into a glossy, spiced stew. Finished at the table with ginger, chilli and lemon.</p>
       <div class="mstats"><div><b>6 hrs</b><small>Time</small></div><div><b>6</b><small>Serves</small></div><div><b>Easy</b><small>Level</small></div></div>
       <div class="week-actions">
-        <a class="btn btn-green" href="recipes/beef_nihari.html">Cook it tonight <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-green" href="/recipes/beef_nihari.html">Cook it tonight <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <button class="btn btn-line ink" type="button" data-save="beef_nihari" aria-pressed="false"><svg aria-hidden="true"><use href="#i-heart"/></svg><span data-save-label>Save recipe</span></button>
       </div>
     </div>
   </section>
 
   <section class="tips rv" aria-labelledby="tips-title">
-      <div class="media"><img src="images/tips_spices.jpg" alt="Whole spices, dried red chillies, garlic and fresh coriander in wooden bowls"></div>
+      <div class="media"><img src="/images/tips_spices.jpg" alt="Whole spices, dried red chillies, garlic and fresh coriander in wooden bowls"></div>
       <div class="tips-body">
         <p class="eyebrow" style="color:var(--gold)">Cook better every day</p>
         <h2 id="tips-title">Tips, techniques and kitchen secrets</h2>
         <p>From whole spices to the perfect dum, learn the small things that make Pakistani food taste like home.</p>
         <div class="tip-icons">
-          <a href="spices.html"><span class="ring"><svg aria-hidden="true"><use href="#i-spice"/></svg></span>Spice guides</a>
-          <a href="journal.html"><span class="ring"><svg aria-hidden="true"><use href="#i-knife"/></svg></span>Techniques</a>
-          <a href="journal.html"><span class="ring"><svg aria-hidden="true"><use href="#i-pot"/></svg></span>Kitchen tools</a>
-          <a href="journal.html"><span class="ring"><svg aria-hidden="true"><use href="#i-jar"/></svg></span>Storage</a>
+          <a href="/spices.html"><span class="ring"><svg aria-hidden="true"><use href="#i-spice"/></svg></span>Spice guides</a>
+          <a href="/journal.html"><span class="ring"><svg aria-hidden="true"><use href="#i-knife"/></svg></span>Techniques</a>
+          <a href="/journal.html"><span class="ring"><svg aria-hidden="true"><use href="#i-pot"/></svg></span>Kitchen tools</a>
+          <a href="/journal.html"><span class="ring"><svg aria-hidden="true"><use href="#i-jar"/></svg></span>Storage</a>
         </div>
       </div>
     </section>
@@ -233,25 +252,25 @@
   <section aria-labelledby="journal-title">
     <div class="sec-head">
       <div><p class="eyebrow">The journal</p><h2 id="journal-title">Stories from the <span class="gold-word">dastarkhwan</span></h2></div>
-      <a class="link-more" href="journal.html">All stories <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="link-more" href="/journal.html">All stories <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="posts"><article class="post rv">
-  <a class="stretch" href="journal/slow-art-of-ghotna.html">
-    <div class="media"><span class="post-tag">Technique</span><img src="images/beef_haleem.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div></div>
+  <a class="stretch" href="/journal/slow-art-of-ghotna.html">
+    <div class="media"><span class="post-tag">Technique</span><img src="/images/beef_haleem.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div></div>
     <h3 style="margin-top:14px">The slow art of ghotna</h3>
   </a>
   <p>Why haleem is beaten for an hour, and how to get those long, silky strands without a wooden ghotna.</p>
   <span class="read">6 min read <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
 </article><article class="post rv">
-  <a class="stretch" href="journal/eid-morning-table.html">
-    <div class="media"><span class="post-tag">Celebrations</span><img src="images/sheer_khurma.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div></div>
+  <a class="stretch" href="/journal/eid-morning-table.html">
+    <div class="media"><span class="post-tag">Celebrations</span><img src="/images/sheer_khurma.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div></div>
     <h3 style="margin-top:14px">An Eid morning table</h3>
   </a>
   <p>Sheer khurma before prayers, kebabs by noon. A menu plan for hosting twelve without missing the day.</p>
   <span class="read">8 min read <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
 </article><article class="post rv">
-  <a class="stretch" href="journal/coal-smoke-trick.html">
-    <div class="media"><span class="post-tag">Pantry</span><img src="images/chicken_tikka.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div></div>
+  <a class="stretch" href="/journal/coal-smoke-trick.html">
+    <div class="media"><span class="post-tag">Pantry</span><img src="/images/chicken_tikka.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div></div>
     <h3 style="margin-top:14px">The coal smoke trick</h3>
   </a>
   <p>The dhuanr method that gives home-cooked tikka and daal the taste of a roadside dhaba, with one piece of charcoal.</p>
@@ -261,15 +280,15 @@
 
   <section class="about-teaser" aria-labelledby="about-title">
     <div class="arch-wrap rv">
-      <div class="arch"><img src="images/chapati.jpg" alt="Fresh roti puffing on an iron tawa" loading="lazy"></div>
+      <div class="arch"><img src="/images/chapati.jpg" alt="Fresh roti puffing on an iron tawa" loading="lazy"></div>
       <div class="arch-badge" aria-hidden="true">Fatma</div>
     </div>
     <div>
       <div class="ornament" aria-hidden="true"><i></i></div>
       <p class="eyebrow" id="about-title" style="margin-top:14px">Meet Fatma</p>
-      <blockquote>“Every recipe here was first cooked for <em>family</em>, long before it was written for you.”</blockquote>
-      <p class="copy">Tasty Pakistan began as a notebook of my mother's recipes, the measurements written as “a handful” and “until it smells right”. I cooked each one until I could write it down properly.</p>
-      <a class="btn btn-line ink" href="story.html">Read Fatma's story <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <blockquote>“Before there was a cookbook, there was a <em>family</em> who believed in my cooking.”</blockquote>
+      <p class="copy">For years, my children and friends encouraged me to share the food I loved to make. In 2009, that dream became my Pakistani cookbook: a collection of recipes prepared with love.</p>
+      <a class="btn btn-line ink" href="/story.html">Read Fatma's story <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
   </section>
 </div>
@@ -325,20 +344,20 @@
 <footer>
   <div class="wrap">
     <div class="foot-top">
-      <a class="brand" href="index.html" aria-label="Tasty Pakistan by Fatma, home"><svg aria-hidden="true"><use href="#logo"/></svg><span><b>Tasty Pakistan</b><small>by Fatma</small></span></a>
+      <a class="brand" href="/" aria-label="Tasty Pakistan by Fatma, Home"><svg aria-hidden="true"><use href="#logo"/></svg><span><b>Tasty Pakistan</b><small>by Fatma</small></span></a>
       <p>Recipes, stories and weekly inspiration from the Pakistani home kitchen.</p>
       <a class="btn btn-gold" href="#subscribe">Get the Sunday letter <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="foot">
-      <div><h4>Recipes</h4><ul><li><a href="recipes.html#rice">Rice and pulao</a></li><li><a href="recipes.html#chicken">Chicken</a></li><li><a href="recipes.html#beef">Beef</a></li><li><a href="recipes.html#mutton">Mutton and lamb</a></li><li><a href="recipes.html#bread">Breads</a></li><li><a href="recipes.html#daal">Daals</a></li><li><a href="recipes.html#street">Street food</a></li><li><a href="recipes.html#dessert">Desserts</a></li><li><a href="recipes.html#sides">Sides</a></li></ul></div>
-      <div><h4>Collections</h4><ul><li><a href="recipes.html#col-ramadan">Ramadan specials</a></li><li><a href="recipes.html#col-eid">Eid table</a></li><li><a href="recipes.html#col-winter">Winter warmers</a></li><li><a href="recipes.html#col-quick">Quick and easy</a></li><li><a href="recipes.html#veg">Vegetarian</a></li></ul></div>
-      <div><h4>Read</h4><ul><li><a href="journal.html">Journal</a></li><li><a href="spices.html">Spice guide</a></li><li><a href="story.html">Fatma's story</a></li><li><a href="#subscribe">Sunday letter</a></li></ul></div>
-      <div><h4>Talk</h4><ul><li><a href="ask.html">Ask Fatma</a></li><li><a href="ask.html#request">Recipe requests</a></li><li><a href="ask.html#collab">Collaborations</a></li></ul></div>
+      <div><h4>Recipes</h4><ul><li><a href="/recipes.html#rice">Rice and pulao</a></li><li><a href="/recipes.html#chicken">Chicken</a></li><li><a href="/recipes.html#beef">Beef</a></li><li><a href="/recipes.html#mutton">Mutton and lamb</a></li><li><a href="/recipes.html#bread">Breads</a></li><li><a href="/recipes.html#daal">Daals</a></li><li><a href="/recipes.html#street">Street food</a></li><li><a href="/recipes.html#dessert">Desserts</a></li><li><a href="/recipes.html#sides">Sides</a></li></ul></div>
+      <div><h4>Collections</h4><ul><li><a href="/recipes.html#col-ramadan">Ramadan specials</a></li><li><a href="/recipes.html#col-eid">Eid table</a></li><li><a href="/recipes.html#col-winter">Winter warmers</a></li><li><a href="/recipes.html#col-quick">Quick and easy</a></li><li><a href="/recipes.html#veg">Vegetarian</a></li></ul></div>
+      <div><h4>Read</h4><ul><li><a href="/journal.html">Journal</a></li><li><a href="/spices.html">Spice guide</a></li><li><a href="/story.html">Fatma's story</a></li><li><a href="#subscribe">Sunday letter</a></li></ul></div>
+      <div><h4>Talk</h4><ul><li><a href="/ask.html">Ask Fatma</a></li><li><a href="/ask.html#request">Recipe requests</a></li><li><a href="/ask.html#collab">Collaborations</a></li></ul></div>
     </div>
-    <div class="copyline"><span>© 2026 Tasty Pakistan by Fatma</span><span>Made with ghee and patience</span></div>
+    <div class="copyline"><span>© 2026 Tasty Pakistan by Fatma</span><span class="foot-langs"><a href="/" hreflang="en" lang="en" aria-current=true>English</a><a href="/da/" hreflang="da" lang="da">Dansk</a><a href="/ur/" hreflang="ur" lang="ur">اردو</a></span><span>Made with ghee and patience</span></div>
   </div>
 </footer>
-<script src="assets/data.js"></script>
-<script src="assets/site.js"></script>
+<script src="/assets/data.js"></script>
+<script src="/assets/site.js"></script>
 </body>
 </html>

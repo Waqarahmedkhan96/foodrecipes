@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -10,15 +10,22 @@
 <meta property="og:description" content="Browse 38 Pakistani recipes by category: biryani, karahi, daal, breads, street food and desserts.">
 <meta property="og:image" content="https://tasty-pakistan.vercel.app/images/chicken_biryani.jpg">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Tasty Pakistan by Fatma">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Great+Vibes&display=swap">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&text=%D8%A7%D8%B1%D8%AF%D9%88&display=swap">
+<link rel="stylesheet" href="/assets/style.css">
 <link rel="canonical" href="https://tasty-pakistan.vercel.app/recipes.html">
+<link rel="alternate" hreflang="en" href="https://tasty-pakistan.vercel.app/recipes.html">
+<link rel="alternate" hreflang="da" href="https://tasty-pakistan.vercel.app/da/recipes.html">
+<link rel="alternate" hreflang="ur" href="https://tasty-pakistan.vercel.app/ur/recipes.html">
+<link rel="alternate" hreflang="x-default" href="https://tasty-pakistan.vercel.app/recipes.html">
 </head>
-<body data-root="">
+<body data-root="/">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="logo" viewBox="-50 -50 100 100">
@@ -56,38 +63,50 @@
     <symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3.5 11h17a8.5 8.5 0 0 1-17 0z M8 18.5h8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="9" cy="8" r="1" fill="currentColor"/><circle cx="12.5" cy="7" r="1" fill="currentColor"/><circle cx="15" cy="8.5" r="1" fill="currentColor"/></symbol>
     <symbol id="i-sweet" viewBox="0 0 24 24"><circle cx="9" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="15.5" cy="11" r="3.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3 18.5h18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
     <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19 15.5A8 8 0 0 1 8.5 5a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></symbol>
+    <symbol id="flag-gb" viewBox="15 0 30 30"><clipPath id="gbClip"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#gbClip)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></symbol>
+    <symbol id="flag-dk" viewBox="3 0 28 28"><rect width="37" height="28" fill="#C8102E"/><path d="M12,0 h4 v28 h-4z M0,12 h37 v4 h-37z" fill="#fff"/></symbol>
+    <symbol id="flag-pk" viewBox="0 0 30 30"><rect width="30" height="30" fill="#01411C"/><rect width="8" height="30" fill="#fff"/><circle cx="19" cy="16" r="7.6" fill="#fff"/><circle cx="21.2" cy="13.8" r="6.6" fill="#01411C"/><path d="M22.6 9.2l.75 2.1 2.2.05-1.75 1.35.65 2.15-1.85-1.28-1.85 1.28.65-2.15-1.75-1.35 2.2-.05z" fill="#fff"/></symbol>
   </defs>
 </svg>
 <header class="site" id="hdr">
   <div class="wrap bar">
-    <a class="brand" href="index.html" aria-label="Tasty Pakistan by Fatma, home">
+    <a class="brand" href="/" aria-label="Tasty Pakistan by Fatma, Home">
       <svg aria-hidden="true"><use href="#logo"/></svg>
       <span><b>Tasty Pakistan</b><small>by Fatma</small></span>
     </a>
     <nav class="links" id="nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="recipes.html" class="on" aria-current="page">Recipes</a>
+      <a href="/">Home</a>
+      <a href="/recipes.html" class="on" aria-current="page">Recipes</a>
       <div class="dd">
         <button class="dd-btn" type="button" aria-expanded="false" aria-controls="ddPanel">Categories <svg aria-hidden="true"><use href="#i-chev"/></svg></button>
-        <div class="dd-panel" id="ddPanel"><a href="recipes.html#rice"><img src="images/chicken_pulao.jpg" alt="" loading="lazy"><span><b>Rice and pulao</b><small>5 recipes</small></span></a><a href="recipes.html#chicken"><img src="images/chicken_karahi.jpg" alt="" loading="lazy"><span><b>Chicken</b><small>6 recipes</small></span></a><a href="recipes.html#beef"><img src="images/beef_karahi.jpg" alt="" loading="lazy"><span><b>Beef</b><small>2 recipes</small></span></a><a href="recipes.html#mutton"><img src="images/dumba_karahi.jpg" alt="" loading="lazy"><span><b>Mutton and lamb</b><small>1 recipes</small></span></a><a href="recipes.html#bread"><img src="images/roghni_naan.jpg" alt="" loading="lazy"><span><b>Breads</b><small>4 recipes</small></span></a><a href="recipes.html#daal"><img src="images/daal_moong.jpg" alt="" loading="lazy"><span><b>Daals</b><small>5 recipes</small></span></a><a href="recipes.html#street"><img src="images/chana_chaat.jpg" alt="" loading="lazy"><span><b>Street food</b><small>4 recipes</small></span></a><a href="recipes.html#dessert"><img src="images/gulab_jamun.jpg" alt="" loading="lazy"><span><b>Desserts</b><small>7 recipes</small></span></a><a href="recipes.html#sides"><img src="images/raita.jpg" alt="" loading="lazy"><span><b>Sides</b><small>4 recipes</small></span></a><a class="dd-all" href="recipes.html">View all recipes</a></div>
+        <div class="dd-panel" id="ddPanel"><a href="/recipes.html#rice"><img src="/images/chicken_pulao.jpg" alt="" loading="lazy"><span><b>Rice and pulao</b><small>5 recipes</small></span></a><a href="/recipes.html#chicken"><img src="/images/chicken_karahi.jpg" alt="" loading="lazy"><span><b>Chicken</b><small>6 recipes</small></span></a><a href="/recipes.html#beef"><img src="/images/beef_karahi.jpg" alt="" loading="lazy"><span><b>Beef</b><small>2 recipes</small></span></a><a href="/recipes.html#mutton"><img src="/images/dumba_karahi.jpg" alt="" loading="lazy"><span><b>Mutton and lamb</b><small>1 recipe</small></span></a><a href="/recipes.html#bread"><img src="/images/roghni_naan.jpg" alt="" loading="lazy"><span><b>Breads</b><small>4 recipes</small></span></a><a href="/recipes.html#daal"><img src="/images/daal_moong.jpg" alt="" loading="lazy"><span><b>Daals</b><small>5 recipes</small></span></a><a href="/recipes.html#street"><img src="/images/chana_chaat.jpg" alt="" loading="lazy"><span><b>Street food</b><small>4 recipes</small></span></a><a href="/recipes.html#dessert"><img src="/images/gulab_jamun.jpg" alt="" loading="lazy"><span><b>Desserts</b><small>7 recipes</small></span></a><a href="/recipes.html#sides"><img src="/images/raita.jpg" alt="" loading="lazy"><span><b>Sides</b><small>4 recipes</small></span></a><a class="dd-all" href="/recipes.html">View all recipes</a></div>
       </div>
-      <a href="journal.html">Journal</a>
-      <a href="story.html">Fatma's story</a>
-      <a href="ask.html">Ask Fatma</a>
+      <a href="/journal.html">Journal</a>
+      <a href="/story.html">Fatma's story</a>
+      <a href="/ask.html">Ask Fatma</a>
     </nav>
     <div class="bar-actions">
-      <a class="ico-btn" href="recipes.html#find" aria-label="Search recipes"><svg aria-hidden="true"><use href="#i-search"/></svg></a>
-      <a class="ico-btn" href="recipes.html#saved" aria-label="Saved recipes"><svg aria-hidden="true"><use href="#i-heart"/></svg><span class="badge-count" hidden>0</span></a>
-      <a class="btn btn-gold" href="#subscribe">Subscribe</a>
+      <div class="lang" id="lang">
+        <button class="lang-btn" type="button" aria-expanded="false" aria-controls="langPanel" aria-label="Language: English">
+          <span class="flag"><svg aria-hidden="true"><use href="#flag-gb"/></svg></span><b>EN</b><svg class="car" aria-hidden="true"><use href="#i-chev"/></svg>
+        </button>
+        <div class="lang-panel" id="langPanel">
+          <p class="lang-h">Choose language</p>
+          <a class="lang-opt on" href="/recipes.html" hreflang="en" lang="en" data-lang="en" aria-current="true"><span class="flag"><svg aria-hidden="true"><use href="#flag-gb"/></svg></span><span class="lang-txt"><b>English</b><small>English · International</small></span><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg></a><a class="lang-opt" href="/da/recipes.html" hreflang="da" lang="da" data-lang="da"><span class="flag"><svg aria-hidden="true"><use href="#flag-dk"/></svg></span><span class="lang-txt"><b>Dansk</b><small>Danish · Denmark</small></span><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg></a><a class="lang-opt" href="/ur/recipes.html" hreflang="ur" lang="ur" data-lang="ur"><span class="flag"><svg aria-hidden="true"><use href="#flag-pk"/></svg></span><span class="lang-txt"><b>اردو</b><small>Urdu · Pakistan</small></span><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg></a>
+        </div>
+      </div>
+      <a class="ico-btn" href="/recipes.html#find" aria-label="Search recipes"><svg aria-hidden="true"><use href="#i-search"/></svg></a>
+      <a class="ico-btn" href="/recipes.html#saved" aria-label="Saved recipes"><svg aria-hidden="true"><use href="#i-heart"/></svg><span class="badge-count" hidden>0</span></a>
+      <a class="btn btn-gold sub-btn" href="#subscribe">Subscribe</a>
       <button class="ico-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
   </div>
 </header>
 <main id="top">
 <section class="page-head">
-  <div class="ph-img"><img src="images/chicken_biryani.jpg" alt=""></div>
+  <div class="ph-img"><img src="/images/chicken_biryani.jpg" alt=""></div>
   <div class="wrap">
-    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Recipes</span></nav>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true" class="sep">/</span><span>Recipes</span></nav>
     
     <h1>All <em>recipes</em></h1>
     <p class="ph-sub">38 home-tested Pakistani recipes. Filter by category or collection, or search for a dish.</p>
@@ -102,308 +121,308 @@
       </div>
       <div id="catBanner"></div>
       <p class="count" id="count" aria-live="polite">38 recipes</p>
-      <div class="grid" id="grid"><article class="card" data-id="chicken_biryani" data-cat="rice" data-veg="0" data-mins="90" data-cols="eid" data-text="karachi chicken biryani sindh rice and pulao 750 g bone-in chicken, curry cut 3 cups sella basmati, soaked 30 minutes 2 large onions, thinly sliced 3 tomatoes, chopped 1 cup yogurt, whisked 2 tbsp ginger-garlic paste 3 tbsp biryani masala 2 potatoes, halved 6 dried plums (aloo bukhara) 4 green chillies, a handful each of mint and coriander pinch of saffron in 3 tbsp warm milk 1/2 cup oil or ghee, plus whole spices: bay leaf, cloves, cardamom, cinnamon">
-  <div class="media"><img src="images/chicken_biryani.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Rice and pulao</span>
+      <div class="grid" id="grid"><article class="card" data-id="chicken_biryani" data-cat="rice" data-veg="0" data-mins="90" data-cols="eid" data-text="karachi chicken biryani sindh rice and pulao 750 g bone-in chicken, curry cut 3 cups sella basmati, soaked 30 minutes 2 large onions, thinly sliced 3 tomatoes, chopped 1 cup yogurt, whisked 2 tbsp ginger-garlic paste 3 tbsp biryani masala 2 potatoes, halved 6 dried plums (aloo bukhara) 4 green chillies, a handful each of mint and coriander pinch of saffron in 3 tbsp warm milk 1/2 cup oil or ghee, plus whole spices: bay leaf, cloves, cardamom, cinnamon karachi chicken biryani 750 g bone-in chicken, curry cut 3 cups sella basmati, soaked 30 minutes 2 large onions, thinly sliced 3 tomatoes, chopped 1 cup yogurt, whisked 2 tbsp ginger-garlic paste 3 tbsp biryani masala 2 potatoes, halved 6 dried plums (aloo bukhara) 4 green chillies, a handful each of mint and coriander pinch of saffron in 3 tbsp warm milk 1/2 cup oil or ghee, plus whole spices: bay leaf, cloves, cardamom, cinnamon">
+  <div class="media"><img src="/images/chicken_biryani.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Rice and pulao</span>
     <button class="heart" type="button" data-save="chicken_biryani" aria-pressed="false" aria-label="Save Karachi chicken biryani"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Sindh</span>
-    <h3><a class="card-link" href="recipes/chicken_biryani.html">Karachi chicken biryani</a></h3>
+    <h3><a class="card-link" href="/recipes/chicken_biryani.html">Karachi chicken biryani</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr 30</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span></span>
   </div>
-</article><article class="card" data-id="beef_biryani" data-cat="rice" data-veg="0" data-mins="150" data-cols="eid" data-text="beef biryani karachi rice and pulao 1 kg boneless beef, cubed 4 cups sella basmati, soaked 3 onions, sliced and fried 4 tomatoes 1½ cups yogurt 3 tbsp ginger-garlic paste 4 tbsp biryani masala 1 tsp kewra water saffron milk, mint, coriander, green chillies 2/3 cup oil or ghee">
-  <div class="media"><img src="images/beef_biryani.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Rice and pulao</span>
+</article><article class="card" data-id="beef_biryani" data-cat="rice" data-veg="0" data-mins="150" data-cols="eid" data-text="beef biryani karachi rice and pulao 1 kg boneless beef, cubed 4 cups sella basmati, soaked 3 onions, sliced and fried 4 tomatoes 1½ cups yogurt 3 tbsp ginger-garlic paste 4 tbsp biryani masala 1 tsp kewra water saffron milk, mint, coriander, green chillies 2/3 cup oil or ghee beef biryani 1 kg boneless beef, cubed 4 cups sella basmati, soaked 3 onions, sliced and fried 4 tomatoes 1½ cups yogurt 3 tbsp ginger-garlic paste 4 tbsp biryani masala 1 tsp kewra water saffron milk, mint, coriander, green chillies 2/3 cup oil or ghee">
+  <div class="media"><img src="/images/beef_biryani.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Rice and pulao</span>
     <button class="heart" type="button" data-save="beef_biryani" aria-pressed="false" aria-label="Save Beef biryani"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Karachi</span>
-    <h3><a class="card-link" href="recipes/beef_biryani.html">Beef biryani</a></h3>
+    <h3><a class="card-link" href="/recipes/beef_biryani.html">Beef biryani</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>2 hrs 30</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span></span>
   </div>
-</article><article class="card" data-id="kabli_pulao" data-cat="rice" data-veg="0" data-mins="120" data-cols="winter" data-text="kabuli pulao khyber pakhtunkhwa rice and pulao 1 kg lamb or beef on the bone 3 cups sella basmati, soaked 2 onions, sliced 2 carrots, cut into matchsticks 1/2 cup raisins 1/4 cup slivered almonds 2 tsp cumin seeds 1 tsp garam masala 1 tbsp sugar 1/2 cup oil, salt to taste">
-  <div class="media"><img src="images/kabli_pulao.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Rice and pulao</span>
+</article><article class="card" data-id="kabli_pulao" data-cat="rice" data-veg="0" data-mins="120" data-cols="winter" data-text="kabuli pulao khyber pakhtunkhwa rice and pulao 1 kg lamb or beef on the bone 3 cups sella basmati, soaked 2 onions, sliced 2 carrots, cut into matchsticks 1/2 cup raisins 1/4 cup slivered almonds 2 tsp cumin seeds 1 tsp garam masala 1 tbsp sugar 1/2 cup oil, salt to taste kabuli pulao 1 kg lamb or beef on the bone 3 cups sella basmati, soaked 2 onions, sliced 2 carrots, cut into matchsticks 1/2 cup raisins 1/4 cup slivered almonds 2 tsp cumin seeds 1 tsp garam masala 1 tbsp sugar 1/2 cup oil, salt to taste">
+  <div class="media"><img src="/images/kabli_pulao.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Rice and pulao</span>
     <button class="heart" type="button" data-save="kabli_pulao" aria-pressed="false" aria-label="Save Kabuli pulao"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Khyber Pakhtunkhwa</span>
-    <h3><a class="card-link" href="recipes/kabli_pulao.html">Kabuli pulao</a></h3>
+    <h3><a class="card-link" href="/recipes/kabli_pulao.html">Kabuli pulao</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>2 hrs</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span></span>
   </div>
-</article><article class="card" data-id="chicken_pulao" data-cat="rice" data-veg="0" data-mins="75" data-cols="winter" data-text="yakhni chicken pulao punjab rice and pulao 750 g chicken on the bone 3 cups basmati, soaked 1 onion, sliced potli: 1 tbsp coriander seeds, 1 tsp fennel, 4 cloves garlic, 1 inch ginger whole spices: cumin, cloves, cardamom, peppercorns, bay leaf 1/2 cup yogurt 4 tbsp ghee, salt">
-  <div class="media"><img src="images/chicken_pulao.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Rice and pulao</span>
+</article><article class="card" data-id="chicken_pulao" data-cat="rice" data-veg="0" data-mins="75" data-cols="winter" data-text="yakhni chicken pulao punjab rice and pulao 750 g chicken on the bone 3 cups basmati, soaked 1 onion, sliced potli: 1 tbsp coriander seeds, 1 tsp fennel, 4 cloves garlic, 1 inch ginger whole spices: cumin, cloves, cardamom, peppercorns, bay leaf 1/2 cup yogurt 4 tbsp ghee, salt yakhni chicken pulao 750 g chicken on the bone 3 cups basmati, soaked 1 onion, sliced potli: 1 tbsp coriander seeds, 1 tsp fennel, 4 cloves garlic, 1 inch ginger whole spices: cumin, cloves, cardamom, peppercorns, bay leaf 1/2 cup yogurt 4 tbsp ghee, salt">
+  <div class="media"><img src="/images/chicken_pulao.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Rice and pulao</span>
     <button class="heart" type="button" data-save="chicken_pulao" aria-pressed="false" aria-label="Save Yakhni chicken pulao"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Punjab</span>
-    <h3><a class="card-link" href="recipes/chicken_pulao.html">Yakhni chicken pulao</a></h3>
+    <h3><a class="card-link" href="/recipes/chicken_pulao.html">Yakhni chicken pulao</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr 15</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span></span>
   </div>
-</article><article class="card" data-id="matar_pulao" data-cat="rice" data-veg="1" data-mins="45" data-cols="" data-text="matar pulao punjab rice and pulao 2 cups basmati, soaked 30 minutes 1½ cups peas 1 onion, sliced 1 tsp cumin seeds whole spices: 4 cloves, 2 cardamom, 1 bay leaf, small cinnamon stick 1 green chilli, slit 3 cups water 3 tbsp ghee, salt to taste">
-  <div class="media"><img src="images/matar_pulao.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Rice and pulao</span>
+</article><article class="card" data-id="matar_pulao" data-cat="rice" data-veg="1" data-mins="45" data-cols="" data-text="matar pulao punjab rice and pulao 2 cups basmati, soaked 30 minutes 1½ cups peas 1 onion, sliced 1 tsp cumin seeds whole spices: 4 cloves, 2 cardamom, 1 bay leaf, small cinnamon stick 1 green chilli, slit 3 cups water 3 tbsp ghee, salt to taste matar pulao 2 cups basmati, soaked 30 minutes 1½ cups peas 1 onion, sliced 1 tsp cumin seeds whole spices: 4 cloves, 2 cardamom, 1 bay leaf, small cinnamon stick 1 green chilli, slit 3 cups water 3 tbsp ghee, salt to taste">
+  <div class="media"><img src="/images/matar_pulao.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Rice and pulao</span>
     <button class="heart" type="button" data-save="matar_pulao" aria-pressed="false" aria-label="Save Matar pulao"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Punjab</span>
-    <h3><a class="card-link" href="recipes/matar_pulao.html">Matar pulao</a></h3>
+    <h3><a class="card-link" href="/recipes/matar_pulao.html">Matar pulao</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>45 min</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="chicken_karahi" data-cat="chicken" data-veg="0" data-mins="45" data-cols="" data-text="lahori chicken karahi punjab chicken 1 kg chicken, small pieces 6 tomatoes, halved 1/2 cup oil 1 tbsp ginger-garlic paste 1 tsp crushed red chilli 1 tsp cumin seeds, crushed 1 tsp coriander seeds, crushed 1 tsp black pepper 4 green chillies ginger matchsticks and fresh coriander to finish">
-  <div class="media"><img src="images/chicken_karahi.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Chicken</span>
+</article><article class="card" data-id="chicken_karahi" data-cat="chicken" data-veg="0" data-mins="45" data-cols="" data-text="lahori chicken karahi punjab chicken 1 kg chicken, small pieces 6 tomatoes, halved 1/2 cup oil 1 tbsp ginger-garlic paste 1 tsp crushed red chilli 1 tsp cumin seeds, crushed 1 tsp coriander seeds, crushed 1 tsp black pepper 4 green chillies ginger matchsticks and fresh coriander to finish lahori chicken karahi 1 kg chicken, small pieces 6 tomatoes, halved 1/2 cup oil 1 tbsp ginger-garlic paste 1 tsp crushed red chilli 1 tsp cumin seeds, crushed 1 tsp coriander seeds, crushed 1 tsp black pepper 4 green chillies ginger matchsticks and fresh coriander to finish">
+  <div class="media"><img src="/images/chicken_karahi.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Chicken</span>
     <button class="heart" type="button" data-save="chicken_karahi" aria-pressed="false" aria-label="Save Lahori chicken karahi"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Punjab</span>
-    <h3><a class="card-link" href="recipes/chicken_karahi.html">Lahori chicken karahi</a></h3>
+    <h3><a class="card-link" href="/recipes/chicken_karahi.html">Lahori chicken karahi</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>45 min</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span></span>
   </div>
-</article><article class="card" data-id="shinwari_karahi" data-cat="chicken" data-veg="0" data-mins="40" data-cols="eid" data-text="shinwari chicken karahi khyber pakhtunkhwa chicken 1 kg chicken, small bone-in pieces 1/2 cup ghee or animal fat (charbi), or oil 5 to 6 medium tomatoes, halved 1 tbsp ginger-garlic paste 1½ tsp salt 1½ tsp coarsely crushed black pepper 6 green chillies, halved 2 inch ginger, cut into matchsticks fresh coriander and lemon to serve">
-  <div class="media"><img src="images/shinwari_karahi.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Chicken</span>
+</article><article class="card" data-id="shinwari_karahi" data-cat="chicken" data-veg="0" data-mins="40" data-cols="eid" data-text="shinwari chicken karahi khyber pakhtunkhwa chicken 1 kg chicken, small bone-in pieces 1/2 cup ghee or animal fat (charbi), or oil 5 to 6 medium tomatoes, halved 1 tbsp ginger-garlic paste 1½ tsp salt 1½ tsp coarsely crushed black pepper 6 green chillies, halved 2 inch ginger, cut into matchsticks fresh coriander and lemon to serve shinwari chicken karahi 1 kg chicken, small bone-in pieces 1/2 cup ghee or animal fat (charbi), or oil 5 to 6 medium tomatoes, halved 1 tbsp ginger-garlic paste 1½ tsp salt 1½ tsp coarsely crushed black pepper 6 green chillies, halved 2 inch ginger, cut into matchsticks fresh coriander and lemon to serve">
+  <div class="media"><img src="/images/shinwari_karahi.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Chicken</span>
     <button class="heart" type="button" data-save="shinwari_karahi" aria-pressed="false" aria-label="Save Shinwari chicken karahi"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Khyber Pakhtunkhwa</span>
-    <h3><a class="card-link" href="recipes/shinwari_karahi.html">Shinwari chicken karahi</a></h3>
+    <h3><a class="card-link" href="/recipes/shinwari_karahi.html">Shinwari chicken karahi</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>40 min</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span></span>
   </div>
-</article><article class="card" data-id="chicken_qorma" data-cat="chicken" data-veg="0" data-mins="60" data-cols="eid" data-text="shahi chicken qorma karachi chicken 1 kg chicken, bone-in pieces 3 medium onions, thinly sliced 3/4 cup oil or ghee 1 cup yogurt, whisked 1 tbsp ginger-garlic paste 1½ tsp red chilli powder 2 tsp coriander powder 1/2 tsp turmeric whole spices: 2 bay leaves, 6 cloves, 4 green cardamom, 1 black cardamom, 1 cinnamon stick 10 to 12 almonds, soaked and ground to a paste 1 tsp garam masala a few drops of kewra water salt to taste slivered almonds, ginger matchsticks and coriander to garnish">
-  <div class="media"><img src="images/chicken_qorma.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Chicken</span>
+</article><article class="card" data-id="chicken_qorma" data-cat="chicken" data-veg="0" data-mins="60" data-cols="eid" data-text="shahi chicken qorma karachi chicken 1 kg chicken, bone-in pieces 3 medium onions, thinly sliced 3/4 cup oil or ghee 1 cup yogurt, whisked 1 tbsp ginger-garlic paste 1½ tsp red chilli powder 2 tsp coriander powder 1/2 tsp turmeric whole spices: 2 bay leaves, 6 cloves, 4 green cardamom, 1 black cardamom, 1 cinnamon stick 10 to 12 almonds, soaked and ground to a paste 1 tsp garam masala a few drops of kewra water salt to taste slivered almonds, ginger matchsticks and coriander to garnish shahi chicken qorma 1 kg chicken, bone-in pieces 3 medium onions, thinly sliced 3/4 cup oil or ghee 1 cup yogurt, whisked 1 tbsp ginger-garlic paste 1½ tsp red chilli powder 2 tsp coriander powder 1/2 tsp turmeric whole spices: 2 bay leaves, 6 cloves, 4 green cardamom, 1 black cardamom, 1 cinnamon stick 10 to 12 almonds, soaked and ground to a paste 1 tsp garam masala a few drops of kewra water salt to taste slivered almonds, ginger matchsticks and coriander to garnish">
+  <div class="media"><img src="/images/chicken_qorma.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Chicken</span>
     <button class="heart" type="button" data-save="chicken_qorma" aria-pressed="false" aria-label="Save Shahi chicken qorma"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Karachi</span>
-    <h3><a class="card-link" href="recipes/chicken_qorma.html">Shahi chicken qorma</a></h3>
+    <h3><a class="card-link" href="/recipes/chicken_qorma.html">Shahi chicken qorma</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span></span>
   </div>
-</article><article class="card" data-id="chicken_handi" data-cat="chicken" data-veg="0" data-mins="50" data-cols="eid" data-text="chicken handi punjab chicken 750 g boneless chicken 2 onions, sliced 3 tomatoes, chopped 1 cup yogurt 1/2 cup cream 1 tbsp ginger-garlic paste 1 tsp red chilli powder, 1/2 tsp turmeric 1 tsp garam masala 1 tbsp kasuri methi 1/3 cup oil, salt to taste">
-  <div class="media"><img src="images/chicken_handi.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Chicken</span>
+</article><article class="card" data-id="chicken_handi" data-cat="chicken" data-veg="0" data-mins="50" data-cols="eid" data-text="chicken handi punjab chicken 750 g boneless chicken 2 onions, sliced 3 tomatoes, chopped 1 cup yogurt 1/2 cup cream 1 tbsp ginger-garlic paste 1 tsp red chilli powder, 1/2 tsp turmeric 1 tsp garam masala 1 tbsp kasuri methi 1/3 cup oil, salt to taste chicken handi 750 g boneless chicken 2 onions, sliced 3 tomatoes, chopped 1 cup yogurt 1/2 cup cream 1 tbsp ginger-garlic paste 1 tsp red chilli powder, 1/2 tsp turmeric 1 tsp garam masala 1 tbsp kasuri methi 1/3 cup oil, salt to taste">
+  <div class="media"><img src="/images/chicken_handi.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Chicken</span>
     <button class="heart" type="button" data-save="chicken_handi" aria-pressed="false" aria-label="Save Chicken handi"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Punjab</span>
-    <h3><a class="card-link" href="recipes/chicken_handi.html">Chicken handi</a></h3>
+    <h3><a class="card-link" href="/recipes/chicken_handi.html">Chicken handi</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>50 min</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span></span>
   </div>
-</article><article class="card" data-id="chicken_tikka" data-cat="chicken" data-veg="0" data-mins="40" data-cols="ramadan" data-text="chicken tikka punjab chicken 1 kg chicken leg pieces, deeply scored 1/2 cup thick yogurt 2 tbsp lemon juice 1 tbsp ginger-garlic paste 2 tsp kashmiri chilli powder 1 tsp each cumin and coriander powder 1/2 tsp garam masala 2 tbsp oil, salt to taste 1 piece of charcoal, for smoking">
-  <div class="media"><img src="images/chicken_tikka.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Chicken</span>
+</article><article class="card" data-id="chicken_tikka" data-cat="chicken" data-veg="0" data-mins="40" data-cols="ramadan" data-text="chicken tikka punjab chicken 1 kg chicken leg pieces, deeply scored 1/2 cup thick yogurt 2 tbsp lemon juice 1 tbsp ginger-garlic paste 2 tsp kashmiri chilli powder 1 tsp each cumin and coriander powder 1/2 tsp garam masala 2 tbsp oil, salt to taste 1 piece of charcoal, for smoking chicken tikka 1 kg chicken leg pieces, deeply scored 1/2 cup thick yogurt 2 tbsp lemon juice 1 tbsp ginger-garlic paste 2 tsp kashmiri chilli powder 1 tsp each cumin and coriander powder 1/2 tsp garam masala 2 tbsp oil, salt to taste 1 piece of charcoal, for smoking">
+  <div class="media"><img src="/images/chicken_tikka.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Chicken</span>
     <button class="heart" type="button" data-save="chicken_tikka" aria-pressed="false" aria-label="Save Chicken tikka"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Punjab</span>
-    <h3><a class="card-link" href="recipes/chicken_tikka.html">Chicken tikka</a></h3>
+    <h3><a class="card-link" href="/recipes/chicken_tikka.html">Chicken tikka</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>40 min + marinating</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span></span>
   </div>
-</article><article class="card" data-id="chicken_broast" data-cat="chicken" data-veg="0" data-mins="60" data-cols="eid" data-text="full chicken broast lahore chicken 1 whole chicken (1.2 to 1.4 kg), skin on, cut into quarters marinade: 3 tbsp lemon juice, 1 tbsp ginger-garlic paste, 2 tsp red chilli powder, 1 tsp white pepper, 1 tsp black pepper, 1/2 tsp turmeric, 1 tsp salt, 2 tbsp vinegar coating: 1½ cups all-purpose flour, 1/2 cup cornflour, 1 tsp each salt, red chilli and white pepper, 1/2 tsp baking powder 1 egg beaten with 1/2 cup cold milk oil for deep frying to serve: fries, garlic mayo, ketchup, onion rings and lemon">
-  <div class="media"><img src="images/chicken_broast.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Chicken</span>
+</article><article class="card" data-id="chicken_broast" data-cat="chicken" data-veg="0" data-mins="60" data-cols="eid" data-text="full chicken broast lahore chicken 1 whole chicken (1.2 to 1.4 kg), skin on, cut into quarters marinade: 3 tbsp lemon juice, 1 tbsp ginger-garlic paste, 2 tsp red chilli powder, 1 tsp white pepper, 1 tsp black pepper, 1/2 tsp turmeric, 1 tsp salt, 2 tbsp vinegar coating: 1½ cups all-purpose flour, 1/2 cup cornflour, 1 tsp each salt, red chilli and white pepper, 1/2 tsp baking powder 1 egg beaten with 1/2 cup cold milk oil for deep frying to serve: fries, garlic mayo, ketchup, onion rings and lemon full chicken broast 1 whole chicken (1.2 to 1.4 kg), skin on, cut into quarters marinade: 3 tbsp lemon juice, 1 tbsp ginger-garlic paste, 2 tsp red chilli powder, 1 tsp white pepper, 1 tsp black pepper, 1/2 tsp turmeric, 1 tsp salt, 2 tbsp vinegar coating: 1½ cups all-purpose flour, 1/2 cup cornflour, 1 tsp each salt, red chilli and white pepper, 1/2 tsp baking powder 1 egg beaten with 1/2 cup cold milk oil for deep frying to serve: fries, garlic mayo, ketchup, onion rings and lemon">
+  <div class="media"><img src="/images/chicken_broast.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Chicken</span>
     <button class="heart" type="button" data-save="chicken_broast" aria-pressed="false" aria-label="Save Full chicken broast"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Lahore</span>
-    <h3><a class="card-link" href="recipes/chicken_broast.html">Full chicken broast</a></h3>
+    <h3><a class="card-link" href="/recipes/chicken_broast.html">Full chicken broast</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr + marinating</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span></span>
   </div>
-</article><article class="card" data-id="beef_nihari" data-cat="beef" data-veg="0" data-mins="360" data-cols="ramadan winter" data-text="royal beef nihari karachi beef 1.5 kg beef shank (nalli) with bones 1/2 cup ghee 2 onions, sliced 2 tbsp ginger-garlic paste 4 tbsp nihari masala 1/2 cup atta (whole-wheat flour) 10 cups water, salt to taste to serve: ginger matchsticks, green chillies, lemon, coriander, fried onions">
-  <div class="media"><img src="images/beef_nihari.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Beef</span>
+</article><article class="card" data-id="beef_nihari" data-cat="beef" data-veg="0" data-mins="360" data-cols="ramadan winter" data-text="royal beef nihari karachi beef 1.5 kg beef shank (nalli) with bones 1/2 cup ghee 2 onions, sliced 2 tbsp ginger-garlic paste 4 tbsp nihari masala 1/2 cup atta (whole-wheat flour) 10 cups water, salt to taste to serve: ginger matchsticks, green chillies, lemon, coriander, fried onions royal beef nihari 1.5 kg beef shank (nalli) with bones 1/2 cup ghee 2 onions, sliced 2 tbsp ginger-garlic paste 4 tbsp nihari masala 1/2 cup atta (whole-wheat flour) 10 cups water, salt to taste to serve: ginger matchsticks, green chillies, lemon, coriander, fried onions">
+  <div class="media"><img src="/images/beef_nihari.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Beef</span>
     <button class="heart" type="button" data-save="beef_nihari" aria-pressed="false" aria-label="Save Royal beef nihari"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Karachi</span>
-    <h3><a class="card-link" href="recipes/beef_nihari.html">Royal beef nihari</a></h3>
+    <h3><a class="card-link" href="/recipes/beef_nihari.html">Royal beef nihari</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>6 hrs</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span></span>
   </div>
-</article><article class="card" data-id="beef_haleem" data-cat="daal" data-veg="0" data-mins="300" data-cols="ramadan winter" data-text="karachi beef haleem karachi daals 750 g boneless beef 1 cup cracked wheat (daliya), soaked overnight 1/2 cup chana daal 1/4 cup each masoor, moong and urad daal 1/4 cup barley 2 onions, sliced 2 tbsp ginger-garlic paste 2 tsp red chilli, 1 tsp turmeric, 2 tsp garam masala 1/2 cup ghee, salt to taste to serve: fried onions, ginger, green chilli, lemon, chaat masala">
-  <div class="media"><img src="images/beef_haleem.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Daals</span>
+</article><article class="card" data-id="beef_haleem" data-cat="daal" data-veg="0" data-mins="300" data-cols="ramadan winter" data-text="karachi beef haleem karachi daals 750 g boneless beef 1 cup cracked wheat (daliya), soaked overnight 1/2 cup chana daal 1/4 cup each masoor, moong and urad daal 1/4 cup barley 2 onions, sliced 2 tbsp ginger-garlic paste 2 tsp red chilli, 1 tsp turmeric, 2 tsp garam masala 1/2 cup ghee, salt to taste to serve: fried onions, ginger, green chilli, lemon, chaat masala karachi beef haleem 750 g boneless beef 1 cup cracked wheat (daliya), soaked overnight 1/2 cup chana daal 1/4 cup each masoor, moong and urad daal 1/4 cup barley 2 onions, sliced 2 tbsp ginger-garlic paste 2 tsp red chilli, 1 tsp turmeric, 2 tsp garam masala 1/2 cup ghee, salt to taste to serve: fried onions, ginger, green chilli, lemon, chaat masala">
+  <div class="media"><img src="/images/beef_haleem.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Daals</span>
     <button class="heart" type="button" data-save="beef_haleem" aria-pressed="false" aria-label="Save Karachi beef haleem"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Karachi</span>
-    <h3><a class="card-link" href="recipes/beef_haleem.html">Karachi beef haleem</a></h3>
+    <h3><a class="card-link" href="/recipes/beef_haleem.html">Karachi beef haleem</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>5 hrs</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Slow</span></span>
   </div>
-</article><article class="card" data-id="beef_karahi" data-cat="beef" data-veg="0" data-mins="60" data-cols="eid" data-text="peshawari beef karahi khyber pakhtunkhwa beef 1 kg beef with some fat, small cubes 5 tomatoes, halved 1/3 cup animal fat or ghee 1 tbsp ginger, julienned 1 tsp black pepper, crushed 4 green chillies salt coriander to finish">
-  <div class="media"><img src="images/beef_karahi.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Beef</span>
+</article><article class="card" data-id="beef_karahi" data-cat="beef" data-veg="0" data-mins="60" data-cols="eid" data-text="peshawari beef karahi khyber pakhtunkhwa beef 1 kg beef with some fat, small cubes 5 tomatoes, halved 1/3 cup animal fat or ghee 1 tbsp ginger, julienned 1 tsp black pepper, crushed 4 green chillies salt coriander to finish peshawari beef karahi 1 kg beef with some fat, small cubes 5 tomatoes, halved 1/3 cup animal fat or ghee 1 tbsp ginger, julienned 1 tsp black pepper, crushed 4 green chillies salt coriander to finish">
+  <div class="media"><img src="/images/beef_karahi.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Beef</span>
     <button class="heart" type="button" data-save="beef_karahi" aria-pressed="false" aria-label="Save Peshawari beef karahi"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Khyber Pakhtunkhwa</span>
-    <h3><a class="card-link" href="recipes/beef_karahi.html">Peshawari beef karahi</a></h3>
+    <h3><a class="card-link" href="/recipes/beef_karahi.html">Peshawari beef karahi</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span></span>
   </div>
-</article><article class="card" data-id="dumba_karahi" data-cat="mutton" data-veg="0" data-mins="75" data-cols="eid winter" data-text="shinwari dumba karahi khyber pakhtunkhwa mutton and lamb 1 kg dumba (lamb) on the bone, small pieces 1/3 cup dumba fat (charbi) or ghee 5 to 6 medium tomatoes, halved 1 tbsp ginger-garlic paste 1½ tsp salt 1½ tsp coarsely crushed black pepper 6 green chillies, halved 2 inch ginger, cut into matchsticks fresh coriander, lemon and naan to serve">
-  <div class="media"><img src="images/dumba_karahi.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Mutton and lamb</span>
+</article><article class="card" data-id="dumba_karahi" data-cat="mutton" data-veg="0" data-mins="75" data-cols="eid winter" data-text="shinwari dumba karahi khyber pakhtunkhwa mutton and lamb 1 kg dumba (lamb) on the bone, small pieces 1/3 cup dumba fat (charbi) or ghee 5 to 6 medium tomatoes, halved 1 tbsp ginger-garlic paste 1½ tsp salt 1½ tsp coarsely crushed black pepper 6 green chillies, halved 2 inch ginger, cut into matchsticks fresh coriander, lemon and naan to serve shinwari dumba karahi 1 kg dumba (lamb) on the bone, small pieces 1/3 cup dumba fat (charbi) or ghee 5 to 6 medium tomatoes, halved 1 tbsp ginger-garlic paste 1½ tsp salt 1½ tsp coarsely crushed black pepper 6 green chillies, halved 2 inch ginger, cut into matchsticks fresh coriander, lemon and naan to serve">
+  <div class="media"><img src="/images/dumba_karahi.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Mutton and lamb</span>
     <button class="heart" type="button" data-save="dumba_karahi" aria-pressed="false" aria-label="Save Shinwari dumba karahi"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Khyber Pakhtunkhwa</span>
-    <h3><a class="card-link" href="recipes/dumba_karahi.html">Shinwari dumba karahi</a></h3>
+    <h3><a class="card-link" href="/recipes/dumba_karahi.html">Shinwari dumba karahi</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr 15</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span></span>
   </div>
-</article><article class="card" data-id="roghni_naan" data-cat="bread" data-veg="1" data-mins="120" data-cols="eid" data-text="roghni naan punjab breads 3 cups all-purpose flour 1 tsp instant yeast 1 tsp sugar, 1 tsp salt 1/2 cup warm milk 1/4 cup yogurt 2 tbsp oil warm water as needed 1 egg beaten with 1 tbsp milk sesame and nigella seeds, butter to finish">
-  <div class="media"><img src="images/roghni_naan.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Breads</span>
+</article><article class="card" data-id="roghni_naan" data-cat="bread" data-veg="1" data-mins="120" data-cols="eid" data-text="roghni naan punjab breads 3 cups all-purpose flour 1 tsp instant yeast 1 tsp sugar, 1 tsp salt 1/2 cup warm milk 1/4 cup yogurt 2 tbsp oil warm water as needed 1 egg beaten with 1 tbsp milk sesame and nigella seeds, butter to finish roghni naan 3 cups all-purpose flour 1 tsp instant yeast 1 tsp sugar, 1 tsp salt 1/2 cup warm milk 1/4 cup yogurt 2 tbsp oil warm water as needed 1 egg beaten with 1 tbsp milk sesame and nigella seeds, butter to finish">
+  <div class="media"><img src="/images/roghni_naan.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Breads</span>
     <button class="heart" type="button" data-save="roghni_naan" aria-pressed="false" aria-label="Save Roghni naan"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Punjab</span>
-    <h3><a class="card-link" href="recipes/roghni_naan.html">Roghni naan</a></h3>
+    <h3><a class="card-link" href="/recipes/roghni_naan.html">Roghni naan</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>2 hrs incl. rising</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="balochi_kaak" data-cat="bread" data-veg="1" data-mins="90" data-cols="winter" data-text="balochi-style tandoori kaak balochistan breads 3 cups all-purpose flour (maida) 1 tsp instant yeast 1 tsp sugar 1 tsp salt 2 tbsp vegetable oil or melted ghee 3/4 to 1 cup lukewarm water, as needed 2 tbsp plain yogurt 1 tbsp sesame seeds 1 tsp kalonji (nigella seeds) melted butter or ghee for brushing">
-  <div class="media"><img src="images/balochi_kaak.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Breads</span>
+</article><article class="card" data-id="balochi_kaak" data-cat="bread" data-veg="1" data-mins="90" data-cols="winter" data-text="balochi-style tandoori kaak balochistan breads 3 cups all-purpose flour (maida) 1 tsp instant yeast 1 tsp sugar 1 tsp salt 2 tbsp vegetable oil or melted ghee 3/4 to 1 cup lukewarm water, as needed 2 tbsp plain yogurt 1 tbsp sesame seeds 1 tsp kalonji (nigella seeds) melted butter or ghee for brushing balochi-style tandoori kaak 3 cups all-purpose flour (maida) 1 tsp instant yeast 1 tsp sugar 1 tsp salt 2 tbsp vegetable oil or melted ghee 3/4 to 1 cup lukewarm water, as needed 2 tbsp plain yogurt 1 tbsp sesame seeds 1 tsp kalonji (nigella seeds) melted butter or ghee for brushing">
+  <div class="media"><img src="/images/balochi_kaak.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Breads</span>
     <button class="heart" type="button" data-save="balochi_kaak" aria-pressed="false" aria-label="Save Balochi-style tandoori kaak"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Balochistan</span>
-    <h3><a class="card-link" href="recipes/balochi_kaak.html">Balochi-style tandoori kaak</a></h3>
+    <h3><a class="card-link" href="/recipes/balochi_kaak.html">Balochi-style tandoori kaak</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr 30</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="paratha" data-cat="bread" data-veg="1" data-mins="40" data-cols="winter" data-text="lachha paratha punjab breads 2 cups atta 1/2 tsp salt water to knead 1/4 cup ghee dry flour for dusting">
-  <div class="media"><img src="images/paratha.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Breads</span>
+</article><article class="card" data-id="paratha" data-cat="bread" data-veg="1" data-mins="40" data-cols="winter" data-text="lachha paratha punjab breads 2 cups atta 1/2 tsp salt water to knead 1/4 cup ghee dry flour for dusting lachha paratha 2 cups atta 1/2 tsp salt water to knead 1/4 cup ghee dry flour for dusting">
+  <div class="media"><img src="/images/paratha.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Breads</span>
     <button class="heart" type="button" data-save="paratha" aria-pressed="false" aria-label="Save Lachha paratha"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Punjab</span>
-    <h3><a class="card-link" href="recipes/paratha.html">Lachha paratha</a></h3>
+    <h3><a class="card-link" href="/recipes/paratha.html">Lachha paratha</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>40 min</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="chapati" data-cat="bread" data-veg="1" data-mins="30" data-cols="" data-text="pakistani tawa roti homestyle breads 2 cups atta 3/4 cup warm water, roughly pinch of salt ghee for brushing (optional)">
-  <div class="media"><img src="images/chapati.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Breads</span>
+</article><article class="card" data-id="chapati" data-cat="bread" data-veg="1" data-mins="30" data-cols="" data-text="pakistani tawa roti homestyle breads 2 cups atta 3/4 cup warm water, roughly pinch of salt ghee for brushing (optional) pakistani tawa roti 2 cups atta 3/4 cup warm water, roughly pinch of salt ghee for brushing (optional)">
+  <div class="media"><img src="/images/chapati.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Breads</span>
     <button class="heart" type="button" data-save="chapati" aria-pressed="false" aria-label="Save Pakistani tawa roti"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Homestyle</span>
-    <h3><a class="card-link" href="recipes/chapati.html">Pakistani tawa roti</a></h3>
+    <h3><a class="card-link" href="/recipes/chapati.html">Pakistani tawa roti</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>30 min</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="daal_chana" data-cat="daal" data-veg="1" data-mins="60" data-cols="winter" data-text="daal chana punjab daals 1 cup chana daal, soaked 1 hour 1 onion, chopped 2 tomatoes, chopped 1 tsp ginger-garlic paste 1/2 tsp turmeric, 1 tsp red chilli salt to taste tarka: 3 tbsp ghee, 1 tsp cumin, 3 dried red chillies, 4 garlic cloves sliced">
-  <div class="media"><img src="images/daal_chana.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Daals</span>
+</article><article class="card" data-id="daal_chana" data-cat="daal" data-veg="1" data-mins="60" data-cols="winter" data-text="daal chana punjab daals 1 cup chana daal, soaked 1 hour 1 onion, chopped 2 tomatoes, chopped 1 tsp ginger-garlic paste 1/2 tsp turmeric, 1 tsp red chilli salt to taste tarka: 3 tbsp ghee, 1 tsp cumin, 3 dried red chillies, 4 garlic cloves sliced daal chana 1 cup chana daal, soaked 1 hour 1 onion, chopped 2 tomatoes, chopped 1 tsp ginger-garlic paste 1/2 tsp turmeric, 1 tsp red chilli salt to taste tarka: 3 tbsp ghee, 1 tsp cumin, 3 dried red chillies, 4 garlic cloves sliced">
+  <div class="media"><img src="/images/daal_chana.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Daals</span>
     <button class="heart" type="button" data-save="daal_chana" aria-pressed="false" aria-label="Save Daal chana"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Punjab</span>
-    <h3><a class="card-link" href="recipes/daal_chana.html">Daal chana</a></h3>
+    <h3><a class="card-link" href="/recipes/daal_chana.html">Daal chana</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="daal_masoor" data-cat="daal" data-veg="1" data-mins="30" data-cols="" data-text="daal masoor homestyle daals 1 cup red lentils, washed 3 cups water 1 tomato, chopped 1/2 tsp turmeric, 1 tsp red chilli salt to taste tarka: 2 tbsp ghee, 1 tsp cumin, 3 garlic cloves, 2 dried red chillies fresh coriander">
-  <div class="media"><img src="images/daal_masoor.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Daals</span>
+</article><article class="card" data-id="daal_masoor" data-cat="daal" data-veg="1" data-mins="30" data-cols="" data-text="daal masoor homestyle daals 1 cup red lentils, washed 3 cups water 1 tomato, chopped 1/2 tsp turmeric, 1 tsp red chilli salt to taste tarka: 2 tbsp ghee, 1 tsp cumin, 3 garlic cloves, 2 dried red chillies fresh coriander daal masoor 1 cup red lentils, washed 3 cups water 1 tomato, chopped 1/2 tsp turmeric, 1 tsp red chilli salt to taste tarka: 2 tbsp ghee, 1 tsp cumin, 3 garlic cloves, 2 dried red chillies fresh coriander">
+  <div class="media"><img src="/images/daal_masoor.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Daals</span>
     <button class="heart" type="button" data-save="daal_masoor" aria-pressed="false" aria-label="Save Daal masoor"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Homestyle</span>
-    <h3><a class="card-link" href="recipes/daal_masoor.html">Daal masoor</a></h3>
+    <h3><a class="card-link" href="/recipes/daal_masoor.html">Daal masoor</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>30 min</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="daal_moong" data-cat="daal" data-veg="1" data-mins="35" data-cols="" data-text="moong daal homestyle daals 1 cup split moong daal, washed 3½ cups water 1/2 tsp turmeric 1 tomato, chopped 1 green chilli salt tarka: 2 tbsp ghee, 1 tsp cumin, pinch of hing, 2 garlic cloves">
-  <div class="media"><img src="images/daal_moong.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Daals</span>
+</article><article class="card" data-id="daal_moong" data-cat="daal" data-veg="1" data-mins="35" data-cols="" data-text="moong daal homestyle daals 1 cup split moong daal, washed 3½ cups water 1/2 tsp turmeric 1 tomato, chopped 1 green chilli salt tarka: 2 tbsp ghee, 1 tsp cumin, pinch of hing, 2 garlic cloves moong daal 1 cup split moong daal, washed 3½ cups water 1/2 tsp turmeric 1 tomato, chopped 1 green chilli salt tarka: 2 tbsp ghee, 1 tsp cumin, pinch of hing, 2 garlic cloves">
+  <div class="media"><img src="/images/daal_moong.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Daals</span>
     <button class="heart" type="button" data-save="daal_moong" aria-pressed="false" aria-label="Save Moong daal"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Homestyle</span>
-    <h3><a class="card-link" href="recipes/daal_moong.html">Moong daal</a></h3>
+    <h3><a class="card-link" href="/recipes/daal_moong.html">Moong daal</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>35 min</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="chana_chaat" data-cat="street" data-veg="1" data-mins="20" data-cols="ramadan" data-text="chana chaat karachi street food 2 cups boiled chickpeas (1 can, drained) 1 boiled potato, cubed 1 small red onion, finely sliced 1 tomato, diced 1/2 cucumber, diced 3 tbsp imli (tamarind) chutney 2 tbsp green chutney 1 tsp chaat masala, 1/2 tsp roasted cumin, 1/2 tsp red chilli juice of 1/2 lemon, salt to taste a handful of papdi (crisp wafers) and sev fresh coriander">
-  <div class="media"><img src="images/chana_chaat.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Street food</span>
+</article><article class="card" data-id="chana_chaat" data-cat="street" data-veg="1" data-mins="20" data-cols="ramadan" data-text="chana chaat karachi street food 2 cups boiled chickpeas (1 can, drained) 1 boiled potato, cubed 1 small red onion, finely sliced 1 tomato, diced 1/2 cucumber, diced 3 tbsp imli (tamarind) chutney 2 tbsp green chutney 1 tsp chaat masala, 1/2 tsp roasted cumin, 1/2 tsp red chilli juice of 1/2 lemon, salt to taste a handful of papdi (crisp wafers) and sev fresh coriander chana chaat 2 cups boiled chickpeas (1 can, drained) 1 boiled potato, cubed 1 small red onion, finely sliced 1 tomato, diced 1/2 cucumber, diced 3 tbsp imli (tamarind) chutney 2 tbsp green chutney 1 tsp chaat masala, 1/2 tsp roasted cumin, 1/2 tsp red chilli juice of 1/2 lemon, salt to taste a handful of papdi (crisp wafers) and sev fresh coriander">
+  <div class="media"><img src="/images/chana_chaat.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Street food</span>
     <button class="heart" type="button" data-save="chana_chaat" aria-pressed="false" aria-label="Save Chana chaat"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Karachi</span>
-    <h3><a class="card-link" href="recipes/chana_chaat.html">Chana chaat</a></h3>
+    <h3><a class="card-link" href="/recipes/chana_chaat.html">Chana chaat</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>20 min</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="golgappay" data-cat="street" data-veg="1" data-mins="40" data-cols="ramadan eid" data-text="golgappay lahore street food 30 golgappa puris (shop-bought or homemade) 1 cup boiled chickpeas 2 boiled potatoes, finely diced 1 small onion, finely chopped imli water: 1/2 cup tamarind pulp, 4 cups chilled water, 1 tsp roasted cumin, 1 tsp chaat masala, 1 tsp black salt, a handful of mint, 2 green chillies, sugar to taste imli chutney and green chutney to serve sev and fresh coriander to garnish">
-  <div class="media"><img src="images/golgappay.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Street food</span>
+</article><article class="card" data-id="golgappay" data-cat="street" data-veg="1" data-mins="40" data-cols="ramadan eid" data-text="golgappay lahore street food 30 golgappa puris (shop-bought or homemade) 1 cup boiled chickpeas 2 boiled potatoes, finely diced 1 small onion, finely chopped imli water: 1/2 cup tamarind pulp, 4 cups chilled water, 1 tsp roasted cumin, 1 tsp chaat masala, 1 tsp black salt, a handful of mint, 2 green chillies, sugar to taste imli chutney and green chutney to serve sev and fresh coriander to garnish golgappay 30 golgappa puris (shop-bought or homemade) 1 cup boiled chickpeas 2 boiled potatoes, finely diced 1 small onion, finely chopped imli water: 1/2 cup tamarind pulp, 4 cups chilled water, 1 tsp roasted cumin, 1 tsp chaat masala, 1 tsp black salt, a handful of mint, 2 green chillies, sugar to taste imli chutney and green chutney to serve sev and fresh coriander to garnish">
+  <div class="media"><img src="/images/golgappay.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Street food</span>
     <button class="heart" type="button" data-save="golgappay" aria-pressed="false" aria-label="Save Golgappay"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Lahore</span>
-    <h3><a class="card-link" href="recipes/golgappay.html">Golgappay</a></h3>
+    <h3><a class="card-link" href="/recipes/golgappay.html">Golgappay</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>40 min</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="pakora" data-cat="street" data-veg="1" data-mins="35" data-cols="ramadan quick" data-text="mix vegetable pakora onion, potato and spinach fritters street food 2 medium onions, thinly sliced 1 medium potato, cut into thin matchsticks 1 cup spinach (palak), finely shredded 2 to 3 green chillies, finely chopped 2 tbsp fresh coriander, chopped 1 cup besan (gram flour) 2 tbsp rice flour or cornflour 1 tsp crushed red chilli 1 tsp coriander seeds, crushed 1/2 tsp ajwain (carom seeds) 1/2 tsp cumin seeds 1/4 tsp turmeric 1 tsp salt, or to taste 3 to 4 tbsp water, only if needed oil for deep frying chaat masala, green chutney and imli chutney to serve">
-  <div class="media"><img src="images/pakora.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Street food</span>
+</article><article class="card" data-id="pakora" data-cat="street" data-veg="1" data-mins="35" data-cols="ramadan quick" data-text="mix vegetable pakora onion, potato and spinach fritters street food 2 medium onions, thinly sliced 1 medium potato, cut into thin matchsticks 1 cup spinach (palak), finely shredded 2 to 3 green chillies, finely chopped 2 tbsp fresh coriander, chopped 1 cup besan (gram flour) 2 tbsp rice flour or cornflour 1 tsp crushed red chilli 1 tsp coriander seeds, crushed 1/2 tsp ajwain (carom seeds) 1/2 tsp cumin seeds 1/4 tsp turmeric 1 tsp salt, or to taste 3 to 4 tbsp water, only if needed oil for deep frying chaat masala, green chutney and imli chutney to serve mix vegetable pakora 2 medium onions, thinly sliced 1 medium potato, cut into thin matchsticks 1 cup spinach (palak), finely shredded 2 to 3 green chillies, finely chopped 2 tbsp fresh coriander, chopped 1 cup besan (gram flour) 2 tbsp rice flour or cornflour 1 tsp crushed red chilli 1 tsp coriander seeds, crushed 1/2 tsp ajwain (carom seeds) 1/2 tsp cumin seeds 1/4 tsp turmeric 1 tsp salt, or to taste 3 to 4 tbsp water, only if needed oil for deep frying chaat masala, green chutney and imli chutney to serve">
+  <div class="media"><img src="/images/pakora.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Street food</span>
     <button class="heart" type="button" data-save="pakora" aria-pressed="false" aria-label="Save Mix vegetable pakora"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Onion, potato and spinach fritters</span>
-    <h3><a class="card-link" href="recipes/pakora.html">Mix vegetable pakora</a></h3>
+    <h3><a class="card-link" href="/recipes/pakora.html">Mix vegetable pakora</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>35 min</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="aloo_pakora" data-cat="street" data-veg="1" data-mins="30" data-cols="ramadan quick" data-text="crispy aloo pakora potato fritters street food 3 medium potatoes, sliced 3 mm thick 1 cup besan (gram flour) 2 tbsp rice flour, for extra crunch 1 tsp red chilli powder 1/2 tsp turmeric 1 tsp crushed coriander seeds 1/2 tsp ajwain (carom seeds) 1/2 tsp chaat masala, plus extra to sprinkle 2 tbsp fresh coriander, finely chopped 1 green chilli, finely chopped salt to taste 3/4 cup cold water, roughly oil for deep frying green chutney and imli chutney to serve">
-  <div class="media"><img src="images/aloo_pakora.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Street food</span>
+</article><article class="card" data-id="aloo_pakora" data-cat="street" data-veg="1" data-mins="30" data-cols="ramadan quick" data-text="crispy aloo pakora potato fritters street food 3 medium potatoes, sliced 3 mm thick 1 cup besan (gram flour) 2 tbsp rice flour, for extra crunch 1 tsp red chilli powder 1/2 tsp turmeric 1 tsp crushed coriander seeds 1/2 tsp ajwain (carom seeds) 1/2 tsp chaat masala, plus extra to sprinkle 2 tbsp fresh coriander, finely chopped 1 green chilli, finely chopped salt to taste 3/4 cup cold water, roughly oil for deep frying green chutney and imli chutney to serve crispy aloo pakora 3 medium potatoes, sliced 3 mm thick 1 cup besan (gram flour) 2 tbsp rice flour, for extra crunch 1 tsp red chilli powder 1/2 tsp turmeric 1 tsp crushed coriander seeds 1/2 tsp ajwain (carom seeds) 1/2 tsp chaat masala, plus extra to sprinkle 2 tbsp fresh coriander, finely chopped 1 green chilli, finely chopped salt to taste 3/4 cup cold water, roughly oil for deep frying green chutney and imli chutney to serve">
+  <div class="media"><img src="/images/aloo_pakora.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Street food</span>
     <button class="heart" type="button" data-save="aloo_pakora" aria-pressed="false" aria-label="Save Crispy aloo pakora"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Potato fritters</span>
-    <h3><a class="card-link" href="recipes/aloo_pakora.html">Crispy aloo pakora</a></h3>
+    <h3><a class="card-link" href="/recipes/aloo_pakora.html">Crispy aloo pakora</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>30 min</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="lal_lobia" data-cat="daal" data-veg="1" data-mins="60" data-cols="winter" data-text="lal lobia masala red kidney bean curry daals 1½ cups dried red kidney beans (lal lobia), soaked overnight, or 2 cans, drained 1/3 cup oil 2 onions, finely chopped 3 tomatoes, chopped 1 tbsp ginger-garlic paste 1 tsp cumin seeds 1½ tsp red chilli powder 2 tsp coriander powder 1/2 tsp turmeric 1 tsp garam masala salt to taste green chillies, ginger matchsticks and coriander to garnish">
-  <div class="media"><img src="images/lal_lobia.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Daals</span>
+</article><article class="card" data-id="lal_lobia" data-cat="daal" data-veg="1" data-mins="60" data-cols="winter" data-text="lal lobia masala red kidney bean curry daals 1½ cups dried red kidney beans (lal lobia), soaked overnight, or 2 cans, drained 1/3 cup oil 2 onions, finely chopped 3 tomatoes, chopped 1 tbsp ginger-garlic paste 1 tsp cumin seeds 1½ tsp red chilli powder 2 tsp coriander powder 1/2 tsp turmeric 1 tsp garam masala salt to taste green chillies, ginger matchsticks and coriander to garnish lal lobia masala 1½ cups dried red kidney beans (lal lobia), soaked overnight, or 2 cans, drained 1/3 cup oil 2 onions, finely chopped 3 tomatoes, chopped 1 tbsp ginger-garlic paste 1 tsp cumin seeds 1½ tsp red chilli powder 2 tsp coriander powder 1/2 tsp turmeric 1 tsp garam masala salt to taste green chillies, ginger matchsticks and coriander to garnish">
+  <div class="media"><img src="/images/lal_lobia.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Daals</span>
     <button class="heart" type="button" data-save="lal_lobia" aria-pressed="false" aria-label="Save Lal lobia masala"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Red kidney bean curry</span>
-    <h3><a class="card-link" href="recipes/lal_lobia.html">Lal lobia masala</a></h3>
+    <h3><a class="card-link" href="/recipes/lal_lobia.html">Lal lobia masala</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr + soaking</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="gulab_jamun" data-cat="dessert" data-veg="1" data-mins="60" data-cols="eid" data-text="gulab jamun all of pakistan desserts 1 cup milk powder 3 tbsp all-purpose flour 1/4 tsp baking powder 1 tbsp ghee 1 egg (or 4 to 5 tbsp milk) syrup: 1½ cups sugar, 1½ cups water, 4 cardamom pods, 1 tsp rosewater oil for frying">
-  <div class="media"><img src="images/gulab_jamun.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Desserts</span>
+</article><article class="card" data-id="gulab_jamun" data-cat="dessert" data-veg="1" data-mins="60" data-cols="eid" data-text="gulab jamun all of pakistan desserts 1 cup milk powder 3 tbsp all-purpose flour 1/4 tsp baking powder 1 tbsp ghee 1 egg (or 4 to 5 tbsp milk) syrup: 1½ cups sugar, 1½ cups water, 4 cardamom pods, 1 tsp rosewater oil for frying gulab jamun 1 cup milk powder 3 tbsp all-purpose flour 1/4 tsp baking powder 1 tbsp ghee 1 egg (or 4 to 5 tbsp milk) syrup: 1½ cups sugar, 1½ cups water, 4 cardamom pods, 1 tsp rosewater oil for frying">
+  <div class="media"><img src="/images/gulab_jamun.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Desserts</span>
     <button class="heart" type="button" data-save="gulab_jamun" aria-pressed="false" aria-label="Save Gulab jamun"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">All of Pakistan</span>
-    <h3><a class="card-link" href="recipes/gulab_jamun.html">Gulab jamun</a></h3>
+    <h3><a class="card-link" href="/recipes/gulab_jamun.html">Gulab jamun</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="rasmalai" data-cat="dessert" data-veg="1" data-mins="90" data-cols="eid" data-text="rasmalai all of pakistan desserts 2 litres full-cream milk (for chenna) 3 tbsp lemon juice 1 litre milk for the rabri 1/2 cup sugar saffron, 4 cardamom pods pistachios and almonds, sliced">
-  <div class="media"><img src="images/rasmalai.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Desserts</span>
+</article><article class="card" data-id="rasmalai" data-cat="dessert" data-veg="1" data-mins="90" data-cols="eid" data-text="rasmalai all of pakistan desserts 2 litres full-cream milk (for chenna) 3 tbsp lemon juice 1 litre milk for the rabri 1/2 cup sugar saffron, 4 cardamom pods pistachios and almonds, sliced rasmalai 2 litres full-cream milk (for chenna) 3 tbsp lemon juice 1 litre milk for the rabri 1/2 cup sugar saffron, 4 cardamom pods pistachios and almonds, sliced">
+  <div class="media"><img src="/images/rasmalai.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Desserts</span>
     <button class="heart" type="button" data-save="rasmalai" aria-pressed="false" aria-label="Save Rasmalai"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">All of Pakistan</span>
-    <h3><a class="card-link" href="recipes/rasmalai.html">Rasmalai</a></h3>
+    <h3><a class="card-link" href="/recipes/rasmalai.html">Rasmalai</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr 30</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="zarda" data-cat="dessert" data-veg="1" data-mins="60" data-cols="eid" data-text="shahi zarda sweet saffron rice desserts 2 cups basmati rice, soaked 30 minutes 1¼ cups sugar 1/3 cup ghee 4 green cardamom, 4 cloves a pinch of saffron soaked in 2 tbsp warm milk food colours: yellow (or orange), red and green, a few drops each 1/2 cup khoya (optional) 1/4 cup glacé cherries 1/4 cup raisins 1/4 cup almonds and pistachios, slivered 1 tsp kewra water edible silver leaf (warq) to decorate">
-  <div class="media"><img src="images/zarda.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Desserts</span>
+</article><article class="card" data-id="zarda" data-cat="dessert" data-veg="1" data-mins="60" data-cols="eid" data-text="shahi zarda sweet saffron rice desserts 2 cups basmati rice, soaked 30 minutes 1¼ cups sugar 1/3 cup ghee 4 green cardamom, 4 cloves a pinch of saffron soaked in 2 tbsp warm milk food colours: yellow (or orange), red and green, a few drops each 1/2 cup khoya (optional) 1/4 cup glacé cherries 1/4 cup raisins 1/4 cup almonds and pistachios, slivered 1 tsp kewra water edible silver leaf (warq) to decorate shahi zarda 2 cups basmati rice, soaked 30 minutes 1¼ cups sugar 1/3 cup ghee 4 green cardamom, 4 cloves a pinch of saffron soaked in 2 tbsp warm milk food colours: yellow (or orange), red and green, a few drops each 1/2 cup khoya (optional) 1/4 cup glacé cherries 1/4 cup raisins 1/4 cup almonds and pistachios, slivered 1 tsp kewra water edible silver leaf (warq) to decorate">
+  <div class="media"><img src="/images/zarda.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Desserts</span>
     <button class="heart" type="button" data-save="zarda" aria-pressed="false" aria-label="Save Shahi zarda"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Sweet saffron rice</span>
-    <h3><a class="card-link" href="recipes/zarda.html">Shahi zarda</a></h3>
+    <h3><a class="card-link" href="/recipes/zarda.html">Shahi zarda</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="fruit_custard" data-cat="dessert" data-veg="1" data-mins="25" data-cols="eid quick" data-text="fruit trifle custard creamy vanilla custard with fresh fruit desserts 1 litre full-cream milk 4 tbsp vanilla custard powder 1/2 cup sugar, or to taste 1/4 tsp cardamom powder (optional) 2 bananas, sliced 1 mango, diced 1 cup strawberries, quartered 2 kiwis, peeled and diced 1/2 cup red or green grapes, halved 1/2 cup pomegranate seeds 2 tbsp each almonds and pistachios, slivered">
-  <div class="media"><img src="images/fruit_custard.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Desserts</span>
+</article><article class="card" data-id="fruit_custard" data-cat="dessert" data-veg="1" data-mins="25" data-cols="eid quick" data-text="fruit trifle custard creamy vanilla custard with fresh fruit desserts 1 litre full-cream milk 4 tbsp vanilla custard powder 1/2 cup sugar, or to taste 1/4 tsp cardamom powder (optional) 2 bananas, sliced 1 mango, diced 1 cup strawberries, quartered 2 kiwis, peeled and diced 1/2 cup red or green grapes, halved 1/2 cup pomegranate seeds 2 tbsp each almonds and pistachios, slivered fruit trifle custard 1 litre full-cream milk 4 tbsp vanilla custard powder 1/2 cup sugar, or to taste 1/4 tsp cardamom powder (optional) 2 bananas, sliced 1 mango, diced 1 cup strawberries, quartered 2 kiwis, peeled and diced 1/2 cup red or green grapes, halved 1/2 cup pomegranate seeds 2 tbsp each almonds and pistachios, slivered">
+  <div class="media"><img src="/images/fruit_custard.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Desserts</span>
     <button class="heart" type="button" data-save="fruit_custard" aria-pressed="false" aria-label="Save Fruit trifle custard"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Creamy vanilla custard with fresh fruit</span>
-    <h3><a class="card-link" href="recipes/fruit_custard.html">Fruit trifle custard</a></h3>
+    <h3><a class="card-link" href="/recipes/fruit_custard.html">Fruit trifle custard</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>25 min + chilling</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="kheer" data-cat="dessert" data-veg="1" data-mins="75" data-cols="eid" data-text="rice kheer all of pakistan desserts 1/4 cup basmati, soaked 1 hour 1 litre full-cream milk 1/2 cup sugar 4 cardamom pods, crushed 2 tbsp each almonds and pistachios, sliced a few drops of kewra water">
-  <div class="media"><img src="images/kheer.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Desserts</span>
+</article><article class="card" data-id="kheer" data-cat="dessert" data-veg="1" data-mins="75" data-cols="eid" data-text="rice kheer all of pakistan desserts 1/4 cup basmati, soaked 1 hour 1 litre full-cream milk 1/2 cup sugar 4 cardamom pods, crushed 2 tbsp each almonds and pistachios, sliced a few drops of kewra water rice kheer 1/4 cup basmati, soaked 1 hour 1 litre full-cream milk 1/2 cup sugar 4 cardamom pods, crushed 2 tbsp each almonds and pistachios, sliced a few drops of kewra water">
+  <div class="media"><img src="/images/kheer.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Desserts</span>
     <button class="heart" type="button" data-save="kheer" aria-pressed="false" aria-label="Save Rice kheer"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">All of Pakistan</span>
-    <h3><a class="card-link" href="recipes/kheer.html">Rice kheer</a></h3>
+    <h3><a class="card-link" href="/recipes/kheer.html">Rice kheer</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr 15</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="gajar_halwa" data-cat="dessert" data-veg="1" data-mins="90" data-cols="winter" data-text="gajar ka halwa punjab desserts 1 kg red carrots, grated 1 litre milk 3/4 cup sugar 1/4 cup ghee 1/2 cup khoya 5 cardamom pods, crushed almonds and pistachios">
-  <div class="media"><img src="images/gajar_halwa.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Desserts</span>
+</article><article class="card" data-id="gajar_halwa" data-cat="dessert" data-veg="1" data-mins="90" data-cols="winter" data-text="gajar ka halwa punjab desserts 1 kg red carrots, grated 1 litre milk 3/4 cup sugar 1/4 cup ghee 1/2 cup khoya 5 cardamom pods, crushed almonds and pistachios gajar ka halwa 1 kg red carrots, grated 1 litre milk 3/4 cup sugar 1/4 cup ghee 1/2 cup khoya 5 cardamom pods, crushed almonds and pistachios">
+  <div class="media"><img src="/images/gajar_halwa.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Desserts</span>
     <button class="heart" type="button" data-save="gajar_halwa" aria-pressed="false" aria-label="Save Gajar ka halwa"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Punjab</span>
-    <h3><a class="card-link" href="recipes/gajar_halwa.html">Gajar ka halwa</a></h3>
+    <h3><a class="card-link" href="/recipes/gajar_halwa.html">Gajar ka halwa</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr 30</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="sheer_khurma" data-cat="dessert" data-veg="1" data-mins="40" data-cols="eid" data-text="sheer khurma eid morning desserts 1 litre milk 1/2 cup fine vermicelli (seviyan) 1/3 cup sugar 6 dates, chopped 2 tbsp ghee almonds, pistachios, cashews and raisins 4 cardamom pods">
-  <div class="media"><img src="images/sheer_khurma.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Desserts</span>
+</article><article class="card" data-id="sheer_khurma" data-cat="dessert" data-veg="1" data-mins="40" data-cols="eid" data-text="sheer khurma eid morning desserts 1 litre milk 1/2 cup fine vermicelli (seviyan) 1/3 cup sugar 6 dates, chopped 2 tbsp ghee almonds, pistachios, cashews and raisins 4 cardamom pods sheer khurma 1 litre milk 1/2 cup fine vermicelli (seviyan) 1/3 cup sugar 6 dates, chopped 2 tbsp ghee almonds, pistachios, cashews and raisins 4 cardamom pods">
+  <div class="media"><img src="/images/sheer_khurma.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Desserts</span>
     <button class="heart" type="button" data-save="sheer_khurma" aria-pressed="false" aria-label="Save Sheer khurma"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Eid morning</span>
-    <h3><a class="card-link" href="recipes/sheer_khurma.html">Sheer khurma</a></h3>
+    <h3><a class="card-link" href="/recipes/sheer_khurma.html">Sheer khurma</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>40 min</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="raita" data-cat="sides" data-veg="1" data-mins="10" data-cols="ramadan" data-text="zeera raita all of pakistan sides 2 cups yogurt 1 small onion, finely chopped 1 tomato, chopped 1/2 cucumber, chopped 1 tsp roasted cumin, crushed salt, mint and a pinch of chilli">
-  <div class="media"><img src="images/raita.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Sides</span>
+</article><article class="card" data-id="raita" data-cat="sides" data-veg="1" data-mins="10" data-cols="ramadan" data-text="zeera raita all of pakistan sides 2 cups yogurt 1 small onion, finely chopped 1 tomato, chopped 1/2 cucumber, chopped 1 tsp roasted cumin, crushed salt, mint and a pinch of chilli zeera raita 2 cups yogurt 1 small onion, finely chopped 1 tomato, chopped 1/2 cucumber, chopped 1 tsp roasted cumin, crushed salt, mint and a pinch of chilli">
+  <div class="media"><img src="/images/raita.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Sides</span>
     <button class="heart" type="button" data-save="raita" aria-pressed="false" aria-label="Save Zeera raita"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">All of Pakistan</span>
-    <h3><a class="card-link" href="recipes/raita.html">Zeera raita</a></h3>
+    <h3><a class="card-link" href="/recipes/raita.html">Zeera raita</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>10 min</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="green_chutney" data-cat="sides" data-veg="1" data-mins="10" data-cols="ramadan" data-text="mint, coriander and tomato chutney podina, sabz dhaniya aur tamatar ki chutney sides 1 cup fresh mint leaves (podina), packed 1 cup fresh coriander (sabz dhaniya), with tender stems 1 medium tomato, roughly chopped 3 to 4 green chillies, to taste 1 small garlic clove (optional) 1/2 tsp cumin seeds juice of 1/2 lemon salt to taste 2 to 3 tbsp cold water">
-  <div class="media"><img src="images/green_chutney.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Sides</span>
+</article><article class="card" data-id="green_chutney" data-cat="sides" data-veg="1" data-mins="10" data-cols="ramadan" data-text="mint, coriander and tomato chutney podina, sabz dhaniya aur tamatar ki chutney sides 1 cup fresh mint leaves (podina), packed 1 cup fresh coriander (sabz dhaniya), with tender stems 1 medium tomato, roughly chopped 3 to 4 green chillies, to taste 1 small garlic clove (optional) 1/2 tsp cumin seeds juice of 1/2 lemon salt to taste 2 to 3 tbsp cold water mint, coriander and tomato chutney 1 cup fresh mint leaves (podina), packed 1 cup fresh coriander (sabz dhaniya), with tender stems 1 medium tomato, roughly chopped 3 to 4 green chillies, to taste 1 small garlic clove (optional) 1/2 tsp cumin seeds juice of 1/2 lemon salt to taste 2 to 3 tbsp cold water">
+  <div class="media"><img src="/images/green_chutney.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Sides</span>
     <button class="heart" type="button" data-save="green_chutney" aria-pressed="false" aria-label="Save Mint, coriander and tomato chutney"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Podina, sabz dhaniya aur tamatar ki chutney</span>
-    <h3><a class="card-link" href="recipes/green_chutney.html">Mint, coriander and tomato chutney</a></h3>
+    <h3><a class="card-link" href="/recipes/green_chutney.html">Mint, coriander and tomato chutney</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>10 min</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="aam_achar" data-cat="sides" data-veg="1" data-mins="60" data-cols="winter" data-text="mix aam ka achar raw mango, carrot and green chilli pickle sides 1 kg raw green mangoes (keri), washed and dried 2 carrots, cut into batons 8 to 10 green chillies, slit 1½ cups mustard oil 3 tbsp salt 1 tsp turmeric 2 tbsp red chilli powder (or crushed red chilli) 2 tbsp fennel seeds (saunf), lightly crushed 1 tbsp fenugreek seeds (methi dana), lightly crushed 1 tbsp nigella seeds (kalonji) 2 tbsp yellow mustard seeds, coarsely crushed 1 tsp coriander seeds, crushed 2 tbsp vinegar">
-  <div class="media"><img src="images/aam_achar.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Sides</span>
+</article><article class="card" data-id="aam_achar" data-cat="sides" data-veg="1" data-mins="60" data-cols="winter" data-text="mix aam ka achar raw mango, carrot and green chilli pickle sides 1 kg raw green mangoes (keri), washed and dried 2 carrots, cut into batons 8 to 10 green chillies, slit 1½ cups mustard oil 3 tbsp salt 1 tsp turmeric 2 tbsp red chilli powder (or crushed red chilli) 2 tbsp fennel seeds (saunf), lightly crushed 1 tbsp fenugreek seeds (methi dana), lightly crushed 1 tbsp nigella seeds (kalonji) 2 tbsp yellow mustard seeds, coarsely crushed 1 tsp coriander seeds, crushed 2 tbsp vinegar mix aam ka achar 1 kg raw green mangoes (keri), washed and dried 2 carrots, cut into batons 8 to 10 green chillies, slit 1½ cups mustard oil 3 tbsp salt 1 tsp turmeric 2 tbsp red chilli powder (or crushed red chilli) 2 tbsp fennel seeds (saunf), lightly crushed 1 tbsp fenugreek seeds (methi dana), lightly crushed 1 tbsp nigella seeds (kalonji) 2 tbsp yellow mustard seeds, coarsely crushed 1 tsp coriander seeds, crushed 2 tbsp vinegar">
+  <div class="media"><img src="/images/aam_achar.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Sides</span>
     <button class="heart" type="button" data-save="aam_achar" aria-pressed="false" aria-label="Save Mix aam ka achar"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Raw mango, carrot and green chilli pickle</span>
-    <h3><a class="card-link" href="recipes/aam_achar.html">Mix aam ka achar</a></h3>
+    <h3><a class="card-link" href="/recipes/aam_achar.html">Mix aam ka achar</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>1 hr + 1 week</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Medium</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
-</article><article class="card" data-id="achar" data-cat="sides" data-veg="1" data-mins="40" data-cols="winter" data-text="mixed vegetable achar punjab sides 500 g mixed carrots, cauliflower and green chillies 1 cup mustard oil 2 tbsp crushed mustard seeds 1 tbsp fennel, 1 tsp fenugreek, 1 tsp nigella 2 tbsp red chilli powder, 1 tsp turmeric 1/3 cup vinegar salt">
-  <div class="media"><img src="images/achar.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Sides</span>
+</article><article class="card" data-id="achar" data-cat="sides" data-veg="1" data-mins="40" data-cols="winter" data-text="mixed vegetable achar punjab sides 500 g mixed carrots, cauliflower and green chillies 1 cup mustard oil 2 tbsp crushed mustard seeds 1 tbsp fennel, 1 tsp fenugreek, 1 tsp nigella 2 tbsp red chilli powder, 1 tsp turmeric 1/3 cup vinegar salt mixed vegetable achar 500 g mixed carrots, cauliflower and green chillies 1 cup mustard oil 2 tbsp crushed mustard seeds 1 tbsp fennel, 1 tsp fenugreek, 1 tsp nigella 2 tbsp red chilli powder, 1 tsp turmeric 1/3 cup vinegar salt">
+  <div class="media"><img src="/images/achar.jpg" alt="" loading="lazy"><div class="steam" aria-hidden="true"><i></i><i></i><i></i></div><span class="tag">Sides</span>
     <button class="heart" type="button" data-save="achar" aria-pressed="false" aria-label="Save Mixed vegetable achar"><svg aria-hidden="true"><use href="#i-heart"/></svg></button></div>
   <div class="card-body">
     <span class="region">Punjab</span>
-    <h3><a class="card-link" href="recipes/achar.html">Mixed vegetable achar</a></h3>
+    <h3><a class="card-link" href="/recipes/achar.html">Mixed vegetable achar</a></h3>
     <span class="facts"><span><svg aria-hidden="true"><use href="#i-clock"/></svg>40 min + 3 days</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>Easy</span><span><svg aria-hidden="true"><use href="#i-leaf"/></svg>Veg</span></span>
   </div>
 </article></div>
@@ -411,14 +430,14 @@
     </div>
   </section>
   <aside class="side" aria-label="Recipe shortcuts">
-    <a class="special" id="special" href="recipes/chicken_biryani.html">
-      <img id="spImg" src="images/chicken_biryani.jpg" alt="Karachi chicken biryani">
+    <a class="special" id="special" href="/recipes/chicken_biryani.html">
+      <img id="spImg" src="/images/chicken_biryani.jpg" alt="Karachi chicken biryani">
       <div class="steam" aria-hidden="true"><i></i><i></i><i></i></div>
       <span class="lbl">Today's special</span>
       <span class="sb"><span><h4 id="spName">Karachi chicken biryani</h4><p id="spSub">1 hr 30 · Sindh</p></span><span class="arrow-dot"><svg aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
     </a>
     <div class="box"><h3>Quick filters</h3><ul class="qf"><li><button type="button" data-qf="cat:rice" data-go="rice" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="#i-rice"/></svg><span>Rice and pulao</span><span class="n">5</span><svg class="c" aria-hidden="true"><use href="#i-chev"/></svg></button></li><li><button type="button" data-qf="cat:chicken" data-go="chicken" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="#i-drum"/></svg><span>Chicken</span><span class="n">6</span><svg class="c" aria-hidden="true"><use href="#i-chev"/></svg></button></li><li><button type="button" data-qf="cat:beef" data-go="beef" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="#i-meat"/></svg><span>Beef</span><span class="n">2</span><svg class="c" aria-hidden="true"><use href="#i-chev"/></svg></button></li><li><button type="button" data-qf="cat:mutton" data-go="mutton" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="#i-meat"/></svg><span>Mutton and lamb</span><span class="n">1</span><svg class="c" aria-hidden="true"><use href="#i-chev"/></svg></button></li><li><button type="button" data-qf="cat:bread" data-go="bread" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="#i-bread"/></svg><span>Breads</span><span class="n">4</span><svg class="c" aria-hidden="true"><use href="#i-chev"/></svg></button></li><li><button type="button" data-qf="cat:daal" data-go="daal" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="#i-bowl"/></svg><span>Daals</span><span class="n">5</span><svg class="c" aria-hidden="true"><use href="#i-chev"/></svg></button></li><li><button type="button" data-qf="cat:street" data-go="street" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="#i-bowl"/></svg><span>Street food</span><span class="n">4</span><svg class="c" aria-hidden="true"><use href="#i-chev"/></svg></button></li><li><button type="button" data-qf="cat:dessert" data-go="dessert" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="#i-sweet"/></svg><span>Desserts</span><span class="n">7</span><svg class="c" aria-hidden="true"><use href="#i-chev"/></svg></button></li><li><button type="button" data-qf="cat:sides" data-go="sides" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="#i-leaf"/></svg><span>Sides</span><span class="n">4</span><svg class="c" aria-hidden="true"><use href="#i-chev"/></svg></button></li><li><button type="button" data-qf="veg" data-go="veg" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="#i-leaf"/></svg><span>Vegetarian</span><span class="n">24</span><svg class="c" aria-hidden="true"><use href="#i-chev"/></svg></button></li><li><button type="button" data-qf="quick" data-go="quick" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg><span>45 minutes or less</span><span class="n">17</span><svg class="c" aria-hidden="true"><use href="#i-chev"/></svg></button></li><li><button type="button" data-qf="saved" data-go="saved" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg><span>Saved recipes</span><span class="n" data-saved-n>0</span><svg class="c" aria-hidden="true"><use href="#i-chev"/></svg></button></li></ul></div>
-    <div class="box"><h3>Collections</h3><div class="cols"><button class="col" type="button" data-col="ramadan" data-go="col-ramadan" aria-pressed="false"><img src="images/beef_haleem.jpg" alt="" loading="lazy"><span><b>Ramadan specials</b><small>9 recipes</small></span><svg aria-hidden="true"><use href="#i-chev"/></svg></button><button class="col" type="button" data-col="eid" data-go="col-eid" aria-pressed="false"><img src="images/sheer_khurma.jpg" alt="" loading="lazy"><span><b>Eid table</b><small>16 recipes</small></span><svg aria-hidden="true"><use href="#i-chev"/></svg></button><button class="col" type="button" data-col="winter" data-go="col-winter" aria-pressed="false"><img src="images/gajar_halwa.jpg" alt="" loading="lazy"><span><b>Winter warmers</b><small>12 recipes</small></span><svg aria-hidden="true"><use href="#i-chev"/></svg></button><button class="col" type="button" data-col="quick" data-go="col-quick" aria-pressed="false"><img src="images/daal_masoor.jpg" alt="" loading="lazy"><span><b>Quick and easy</b><small>17 recipes</small></span><svg aria-hidden="true"><use href="#i-chev"/></svg></button></div></div>
+    <div class="box"><h3>Collections</h3><div class="cols"><button class="col" type="button" data-col="ramadan" data-go="col-ramadan" aria-pressed="false"><img src="/images/beef_haleem.jpg" alt="" loading="lazy"><span><b>Ramadan specials</b><small>9 recipes</small></span><svg aria-hidden="true"><use href="#i-chev"/></svg></button><button class="col" type="button" data-col="eid" data-go="col-eid" aria-pressed="false"><img src="/images/sheer_khurma.jpg" alt="" loading="lazy"><span><b>Eid table</b><small>16 recipes</small></span><svg aria-hidden="true"><use href="#i-chev"/></svg></button><button class="col" type="button" data-col="winter" data-go="col-winter" aria-pressed="false"><img src="/images/gajar_halwa.jpg" alt="" loading="lazy"><span><b>Winter warmers</b><small>12 recipes</small></span><svg aria-hidden="true"><use href="#i-chev"/></svg></button><button class="col" type="button" data-col="quick" data-go="col-quick" aria-pressed="false"><img src="/images/daal_masoor.jpg" alt="" loading="lazy"><span><b>Quick and easy</b><small>17 recipes</small></span><svg aria-hidden="true"><use href="#i-chev"/></svg></button></div></div>
     <div class="box"><h3>Popular searches</h3><div class="tags"><button type="button" data-go="search-biryani">Biryani</button><button type="button" data-go="search-karahi">Karahi</button><button type="button" data-go="search-nihari">Nihari</button><button type="button" data-go="search-haleem">Haleem</button><button type="button" data-go="search-chaat">Chaat</button><button type="button" data-go="search-pakora">Pakora</button><button type="button" data-go="search-pulao">Pulao</button><button type="button" data-go="search-qorma">Qorma</button><button type="button" data-go="search-zarda">Zarda</button><button type="button" data-go="search-kheer">Kheer</button></div></div>
     <div class="side-news">
       <p class="eyebrow">The Sunday letter</p>
@@ -485,20 +504,20 @@
 <footer>
   <div class="wrap">
     <div class="foot-top">
-      <a class="brand" href="index.html" aria-label="Tasty Pakistan by Fatma, home"><svg aria-hidden="true"><use href="#logo"/></svg><span><b>Tasty Pakistan</b><small>by Fatma</small></span></a>
+      <a class="brand" href="/" aria-label="Tasty Pakistan by Fatma, Home"><svg aria-hidden="true"><use href="#logo"/></svg><span><b>Tasty Pakistan</b><small>by Fatma</small></span></a>
       <p>Recipes, stories and weekly inspiration from the Pakistani home kitchen.</p>
       <a class="btn btn-gold" href="#subscribe">Get the Sunday letter <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="foot">
-      <div><h4>Recipes</h4><ul><li><a href="recipes.html#rice">Rice and pulao</a></li><li><a href="recipes.html#chicken">Chicken</a></li><li><a href="recipes.html#beef">Beef</a></li><li><a href="recipes.html#mutton">Mutton and lamb</a></li><li><a href="recipes.html#bread">Breads</a></li><li><a href="recipes.html#daal">Daals</a></li><li><a href="recipes.html#street">Street food</a></li><li><a href="recipes.html#dessert">Desserts</a></li><li><a href="recipes.html#sides">Sides</a></li></ul></div>
-      <div><h4>Collections</h4><ul><li><a href="recipes.html#col-ramadan">Ramadan specials</a></li><li><a href="recipes.html#col-eid">Eid table</a></li><li><a href="recipes.html#col-winter">Winter warmers</a></li><li><a href="recipes.html#col-quick">Quick and easy</a></li><li><a href="recipes.html#veg">Vegetarian</a></li></ul></div>
-      <div><h4>Read</h4><ul><li><a href="journal.html">Journal</a></li><li><a href="spices.html">Spice guide</a></li><li><a href="story.html">Fatma's story</a></li><li><a href="#subscribe">Sunday letter</a></li></ul></div>
-      <div><h4>Talk</h4><ul><li><a href="ask.html">Ask Fatma</a></li><li><a href="ask.html#request">Recipe requests</a></li><li><a href="ask.html#collab">Collaborations</a></li></ul></div>
+      <div><h4>Recipes</h4><ul><li><a href="/recipes.html#rice">Rice and pulao</a></li><li><a href="/recipes.html#chicken">Chicken</a></li><li><a href="/recipes.html#beef">Beef</a></li><li><a href="/recipes.html#mutton">Mutton and lamb</a></li><li><a href="/recipes.html#bread">Breads</a></li><li><a href="/recipes.html#daal">Daals</a></li><li><a href="/recipes.html#street">Street food</a></li><li><a href="/recipes.html#dessert">Desserts</a></li><li><a href="/recipes.html#sides">Sides</a></li></ul></div>
+      <div><h4>Collections</h4><ul><li><a href="/recipes.html#col-ramadan">Ramadan specials</a></li><li><a href="/recipes.html#col-eid">Eid table</a></li><li><a href="/recipes.html#col-winter">Winter warmers</a></li><li><a href="/recipes.html#col-quick">Quick and easy</a></li><li><a href="/recipes.html#veg">Vegetarian</a></li></ul></div>
+      <div><h4>Read</h4><ul><li><a href="/journal.html">Journal</a></li><li><a href="/spices.html">Spice guide</a></li><li><a href="/story.html">Fatma's story</a></li><li><a href="#subscribe">Sunday letter</a></li></ul></div>
+      <div><h4>Talk</h4><ul><li><a href="/ask.html">Ask Fatma</a></li><li><a href="/ask.html#request">Recipe requests</a></li><li><a href="/ask.html#collab">Collaborations</a></li></ul></div>
     </div>
-    <div class="copyline"><span>© 2026 Tasty Pakistan by Fatma</span><span>Made with ghee and patience</span></div>
+    <div class="copyline"><span>© 2026 Tasty Pakistan by Fatma</span><span class="foot-langs"><a href="/recipes.html" hreflang="en" lang="en" aria-current=true>English</a><a href="/da/recipes.html" hreflang="da" lang="da">Dansk</a><a href="/ur/recipes.html" hreflang="ur" lang="ur">اردو</a></span><span>Made with ghee and patience</span></div>
   </div>
 </footer>
-<script src="assets/data.js"></script>
-<script src="assets/site.js"></script>
+<script src="/assets/data.js"></script>
+<script src="/assets/site.js"></script>
 </body>
 </html>
