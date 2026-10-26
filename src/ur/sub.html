@@ -1,0 +1,48 @@
+<section class="sub" id="subscribe" aria-labelledby="sub-title">
+  <div class="wrap sub-grid">
+    <div>
+      <p class="eyebrow" style="color:var(--gold)">اتوار کا دسترخوان</p>
+      <h2 id="sub-title">مزیدار کھانوں کے آئیڈیاز، <em>ہر اتوار</em></h2>
+      <p class="copy">فاطمہ کے کچن سے ہفتے میں ایک خط۔ بالکل مفت، اور جب چاہیں بند کر سکتے ہیں۔</p>
+      <ul class="perks">
+        <li><span class="num">1</span><div><b>پورے ہفتے کا کھانا</b><span>پانچ دن کے کھانے جن میں ایک جیسا سامان استعمال ہو، تاکہ کچھ ضائع نہ ہو۔</span></div></li>
+        <li><span class="num">2</span><div><b>ایک خاص ڈش</b><span>چھٹی کے دن کی ایسی ترکیب جس پر مہمان بلانے کو دل چاہے۔</span></div></li>
+        <li><span class="num">3</span><div><b>سودا سلف کی فہرست</b><span>پورے ہفتے کا سامان ایک ہی فہرست میں۔</span></div></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <form id="subForm" novalidate>
+        <h3>دسترخوان پر تشریف لائیں</h3>
+        <p class="hint">بتائیں آپ کو کیا زیادہ پسند ہے۔</p>
+        <div class="field">
+          <span class="legend" id="lg-int">آپ کی پسند</span>
+          <div class="opts" role="group" aria-labelledby="lg-int">
+            <label class="opt"><input type="checkbox" name="int" value="روزمرہ کے کھانے" checked><span>روزمرہ کے کھانے</span></label>
+            <label class="opt"><input type="checkbox" name="int" value="بریانی اور چاول"><span>بریانی اور چاول</span></label>
+            <label class="opt"><input type="checkbox" name="int" value="باربی کیو اور کڑاہی"><span>باربی کیو اور کڑاہی</span></label>
+            <label class="opt"><input type="checkbox" name="int" value="میٹھے اور مٹھائیاں"><span>میٹھے اور مٹھائیاں</span></label>
+            <label class="opt"><input type="checkbox" name="int" value="رمضان اور عید"><span>رمضان اور عید</span></label>
+            <label class="opt"><input type="checkbox" name="int" value="سبزی والے کھانے"><span>سبزی والے کھانے</span></label>
+          </div>
+        </div>
+        <div class="field">
+          <span class="legend" id="lg-fr">کتنی بار</span>
+          <div class="opts" role="radiogroup" aria-labelledby="lg-fr">
+            <label class="opt"><input type="radio" name="freq" value="weekly" checked><span>ہر اتوار</span></label>
+            <label class="opt"><input type="radio" name="freq" value="fortnightly"><span>ہر دوسرے اتوار</span></label>
+          </div>
+        </div>
+        <div class="field"><label for="sName">نام</label><input id="sName" placeholder="عائشہ" autocomplete="given-name"></div>
+        <div class="field"><label for="sEmail">ای میل</label><input id="sEmail" type="email" placeholder="ayesha@example.com" autocomplete="email" dir="ltr"><span class="err" id="sErr" aria-live="polite"></span></div>
+        <button class="btn btn-gold" type="submit">سبسکرائب کریں <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <p class="fine">کوئی فضول ای میل نہیں۔ ہفتے میں ایک خط، اور ایک کلک میں بند۔</p>
+      </form>
+      <div class="done" id="subDone" hidden>
+        <div class="seal2"><svg width="34" height="34" aria-hidden="true"><use href="#i-check"/></svg></div>
+        <h3 style="color:var(--ivory)">دسترخوان پر خوش آمدید</h3>
+        <p id="subMsg" style="color:#E2D2CF"></p>
+        <button class="btn btn-line" type="button" id="subAgain" style="margin-top:22px;width:auto">پسند تبدیل کریں</button>
+      </div>
+    </div>
+  </div>
+</section>

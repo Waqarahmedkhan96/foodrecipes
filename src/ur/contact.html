@@ -1,0 +1,37 @@
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow">سوالات اور فرمائشیں</p>
+      <h2 id="contact-title">فاطمہ کو لکھیں</h2>
+      <p class="copy">کسی ترکیب میں الجھ گئے ہیں، گھر کا کوئی ذائقہ یاد آ رہا ہے، یا ساتھ کام کرنا چاہتے ہیں؟ ہمیں پیغام بھیجیں۔</p>
+      <div class="faq">
+        <details><summary>کیا چکن کی جگہ مٹن ڈال سکتے ہیں؟</summary><p>جی ہاں، زیادہ تر سالنوں اور پلاؤ میں۔ مٹن گلنے میں تقریباً دگنا وقت لیتا ہے، اس لیے اسے پہلے ڈالیں اور دیگچی ڈھک کر رکھیں۔</p></details>
+        <details><summary>سیلا باسمتی کہاں سے ملے گا؟</summary><p>کسی بھی جنرل اسٹور یا کریانے کی دکان سے۔ سیلا چاول دم میں ٹوٹتا نہیں، اسی لیے پاکستان میں بریانی اور پلاؤ کے لیے یہی پسند کیا جاتا ہے۔</p></details>
+        <details><summary>کیا آپ ترکیبوں کی فرمائش لیتی ہیں؟</summary><p>بالکل۔ فارم میں ”ترکیب کی فرمائش“ منتخب کریں۔ جن کھانوں کی سب سے زیادہ فرمائش ہوتی ہے، وہ اتوار کے خط میں آتے ہیں۔</p></details>
+        <details><summary>کیا پریشر ککر استعمال کر سکتے ہیں؟</summary><p>جی ہاں، نہاری، حلیم، لوبیا اور زیادہ تر گوشت کے سالنوں کے لیے۔ جہاں فائدہ ہو، وہاں ترکیب میں پریشر ککر کا وقت بھی لکھا ہے۔</p></details>
+        <details><summary>ترکیبیں کتنی تیز ہوتی ہیں؟</summary><p>گھر والی درمیانی مرچ۔ بچوں کے لیے لال مرچ آدھی کر دیں، اور تیز پسند ہو تو آخر میں ہری مرچیں بڑھا دیں۔</p></details>
+      </div>
+    </div>
+    <div class="panel">
+      <form id="askForm" novalidate>
+        <h3>سوال بھیجیں</h3>
+        <p class="hint">فاطمہ ہر پیغام خود پڑھتی ہیں۔</p>
+        <div class="row2">
+          <div class="field"><label for="aName">نام</label><input id="aName" placeholder="آپ کا نام" autocomplete="name"><span class="err" id="aNameErr" aria-live="polite"></span></div>
+          <div class="field"><label for="aEmail">ای میل</label><input id="aEmail" type="email" placeholder="you@example.com" autocomplete="email" dir="ltr"><span class="err" id="aEmailErr" aria-live="polite"></span></div>
+        </div>
+        <div class="field"><label for="aTopic">موضوع</label>
+          <select id="aTopic"><option value="question">کسی ترکیب کے بارے میں سوال</option><option value="request">ترکیب کی فرمائش</option><option value="collab">اشتراک یا میڈیا</option><option value="other">کچھ اور</option></select>
+        </div>
+        <div class="field"><label for="aMsg">پیغام</label><textarea id="aMsg" placeholder="میری نہاری بہت پتلی بن گئی۔ مجھ سے کیا غلطی ہوئی؟"></textarea><span class="err" id="aMsgErr" aria-live="polite"></span></div>
+        <button class="btn btn-green" type="submit">بھیجیں <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </form>
+      <div class="done" id="askDone" hidden>
+        <div class="seal2" style="color:var(--green);border-color:var(--green)"><svg width="34" height="34" aria-hidden="true"><use href="#i-check"/></svg></div>
+        <h3 style="color:var(--maroon)">پیغام مل گیا</h3>
+        <p id="askMsg" style="color:var(--muted)"></p>
+        <button class="btn btn-line ink" type="button" id="askAgain" style="margin-top:22px;width:auto">ایک اور بھیجیں</button>
+      </div>
+    </div>
+  </div>
+</section>

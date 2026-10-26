@@ -1,0 +1,37 @@
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow">Spørgsmål og ønsker</p>
+      <h2 id="contact-title">Skriv til Fatma</h2>
+      <p class="copy">Er du gået i stå i en opskrift, savner du en ret, du husker hjemmefra, eller vil du gerne samarbejde? Send en besked.</p>
+      <div class="faq">
+        <details><summary>Kan jeg bruge lam i stedet for kylling?</summary><p>Ja, i de fleste karryretter og pulaoer. Lam skal have cirka dobbelt så lang tid, så kom det i gryden tidligere, og hold låget på.</p></details>
+        <details><summary>Hvor kan jeg købe sella basmati?</summary><p>I de fleste indvandrerbutikker og asiatiske supermarkeder. Sella-ris er forkogte og holder formen under dum, og derfor er det dem, man bruger til biryani og pulao i Pakistan.</p></details>
+        <details><summary>Kan jeg ønske en opskrift?</summary><p>Altid. Vælg »Ønske til en opskrift« i formularen. De mest ønskede retter kommer med i søndagsbrevet.</p></details>
+        <details><summary>Kan jeg bruge trykkoger?</summary><p>Ja, til nihari, haleem, lobia og de fleste kødretter. Hvor det giver mening, står tiden i trykkoger i opskriften.</p></details>
+        <details><summary>Hvor stærk er maden?</summary><p>Mellemstærk, som man laver den derhjemme. Halvér den røde chili til børn, eller kom ekstra grøn chili i til sidst, hvis du kan lide det stærkt.</p></details>
+      </div>
+    </div>
+    <div class="panel">
+      <form id="askForm" novalidate>
+        <h3>Send en besked</h3>
+        <p class="hint">Fatma læser alle beskeder.</p>
+        <div class="row2">
+          <div class="field"><label for="aName">Navn</label><input id="aName" placeholder="Dit navn" autocomplete="name"><span class="err" id="aNameErr" aria-live="polite"></span></div>
+          <div class="field"><label for="aEmail">E-mail</label><input id="aEmail" type="email" placeholder="dig@eksempel.dk" autocomplete="email"><span class="err" id="aEmailErr" aria-live="polite"></span></div>
+        </div>
+        <div class="field"><label for="aTopic">Emne</label>
+          <select id="aTopic"><option value="question">Spørgsmål til en opskrift</option><option value="request">Ønske til en opskrift</option><option value="collab">Samarbejde eller presse</option><option value="other">Noget andet</option></select>
+        </div>
+        <div class="field"><label for="aMsg">Besked</label><textarea id="aMsg" placeholder="Min nihari blev alt for tynd. Hvad gjorde jeg forkert?"></textarea><span class="err" id="aMsgErr" aria-live="polite"></span></div>
+        <button class="btn btn-green" type="submit">Send besked <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </form>
+      <div class="done" id="askDone" hidden>
+        <div class="seal2" style="color:var(--green);border-color:var(--green)"><svg width="34" height="34" aria-hidden="true"><use href="#i-check"/></svg></div>
+        <h3 style="color:var(--maroon)">Tak for din besked</h3>
+        <p id="askMsg" style="color:var(--muted)"></p>
+        <button class="btn btn-line ink" type="button" id="askAgain" style="margin-top:22px;width:auto">Send en til</button>
+      </div>
+    </div>
+  </div>
+</section>

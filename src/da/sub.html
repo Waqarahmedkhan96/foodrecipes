@@ -1,0 +1,48 @@
+<section class="sub" id="subscribe" aria-labelledby="sub-title">
+  <div class="wrap sub-grid">
+    <div>
+      <p class="eyebrow" style="color:var(--gold)">Søndagens dastarkhwan</p>
+      <h2 id="sub-title">Lækre madidéer <em>hver søndag</em></h2>
+      <p class="copy">Ét brev om ugen fra Fatmas køkken. Det er gratis, og du kan altid framelde dig igen.</p>
+      <ul class="perks">
+        <li><span class="num">1</span><div><b>En uges aftensmad</b><span>Fem hverdagsretter, der deler ingredienser, så intet går til spilde.</span></div></li>
+        <li><span class="num">2</span><div><b>Én festret</b><span>En weekendopskrift, der er værd at invitere gæster til.</span></div></li>
+        <li><span class="num">3</span><div><b>Indkøbslisten</b><span>Alt til hele ugen på én liste, sorteret efter hvor du finder det i butikken.</span></div></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <form id="subForm" novalidate>
+        <h3>Sæt dig til bords</h3>
+        <p class="hint">Vælg, hvad du gerne vil have mere af.</p>
+        <div class="field">
+          <span class="legend" id="lg-int">Dine favoritter</span>
+          <div class="opts" role="group" aria-labelledby="lg-int">
+            <label class="opt"><input type="checkbox" name="int" value="hverdagsmad" checked><span>Hverdagsmad</span></label>
+            <label class="opt"><input type="checkbox" name="int" value="biryani og ris"><span>Biryani og ris</span></label>
+            <label class="opt"><input type="checkbox" name="int" value="grill og karahi"><span>Grill og karahi</span></label>
+            <label class="opt"><input type="checkbox" name="int" value="desserter og mithai"><span>Desserter og mithai</span></label>
+            <label class="opt"><input type="checkbox" name="int" value="ramadan og eid"><span>Ramadan og eid</span></label>
+            <label class="opt"><input type="checkbox" name="int" value="vegetarisk"><span>Vegetarisk</span></label>
+          </div>
+        </div>
+        <div class="field">
+          <span class="legend" id="lg-fr">Hvor tit</span>
+          <div class="opts" role="radiogroup" aria-labelledby="lg-fr">
+            <label class="opt"><input type="radio" name="freq" value="weekly" checked><span>Hver søndag</span></label>
+            <label class="opt"><input type="radio" name="freq" value="fortnightly"><span>Hver anden søndag</span></label>
+          </div>
+        </div>
+        <div class="field"><label for="sName">Fornavn</label><input id="sName" placeholder="Sara" autocomplete="given-name"></div>
+        <div class="field"><label for="sEmail">E-mail</label><input id="sEmail" type="email" placeholder="sara@eksempel.dk" autocomplete="email"><span class="err" id="sErr" aria-live="polite"></span></div>
+        <button class="btn btn-gold" type="submit">Tilmeld <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <p class="fine">Ingen spam. Én mail om ugen, og ét klik for at framelde.</p>
+      </form>
+      <div class="done" id="subDone" hidden>
+        <div class="seal2"><svg width="34" height="34" aria-hidden="true"><use href="#i-check"/></svg></div>
+        <h3 style="color:var(--ivory)">Velkommen til bords</h3>
+        <p id="subMsg" style="color:#E2D2CF"></p>
+        <button class="btn btn-line" type="button" id="subAgain" style="margin-top:22px;width:auto">Skift indstillinger</button>
+      </div>
+    </div>
+  </div>
+</section>
