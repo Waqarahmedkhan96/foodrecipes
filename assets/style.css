@@ -767,3 +767,13 @@ html[lang="ur"] .arch-badge{font-size:21px;line-height:1.6}
   .lang-btn .flag{width:30px;height:30px}
 }
 
+/* Phones and tablets: language lives only in the burger menu, with smaller flags */
+@media (max-width:1180px){
+  .bar-actions .lang{display:none}
+  .m-lang-opt .flag{width:34px;height:34px}
+  header.site.open nav.links a.m-lang-opt{font-size:12px;gap:5px;min-width:56px}
+  header.site.open nav.links .m-lang{padding:14px 14px 12px;border-radius:20px}
+  .m-lang-h{margin-bottom:10px}
+  .m-lang-h span:first-child{font-size:11px}
+  .m-lang-h span:last-child{font-size:13px}
+}
