@@ -197,8 +197,9 @@
    "name_err": "Enter your name.",
    "email_err2": "Enter a valid email address.",
    "msg_err": "Write a little more so Fatma can help.",
-   "ask_thanks": "Thank you, {name}. Your {topic} is with Fatma.",
-   "list_sep": ", "
+   "ask_thanks": "Thank you, {name}. Your email app has opened with your message to Fatma. Press send there to deliver it.",
+   "list_sep": ", ",
+   "mail_to": "fbrr11@yahoo.com"
   },
   "fatma": "Fatma",
   "fatma_full": "Fatma Bibi",
@@ -399,8 +400,9 @@
    "name_err": "Skriv dit navn.",
    "email_err2": "Skriv en gyldig e-mailadresse.",
    "msg_err": "Skriv lidt mere, så Fatma kan hjælpe.",
-   "ask_thanks": "Tak, {name}. Fatma har fået din besked om: {topic}.",
-   "list_sep": ", "
+   "ask_thanks": "Tak, {name}. Dit mailprogram er åbnet med din besked til Fatma. Tryk på send dér for at sende den.",
+   "list_sep": ", ",
+   "mail_to": "fbrr11@yahoo.com"
   },
   "fatma": "Fatma",
   "map_time": {
@@ -671,8 +673,9 @@
    "name_err": "اپنا نام لکھیں۔",
    "email_err2": "درست ای میل لکھیں۔",
    "msg_err": "تھوڑا اور تفصیل سے لکھیں تاکہ فاطمہ آپ کی مدد کر سکیں۔",
-   "ask_thanks": "شکریہ {name}! آپ کا پیغام (”{topic}“) فاطمہ تک پہنچ گیا ہے۔",
-   "list_sep": "، "
+   "ask_thanks": "شکریہ {name}! آپ کی ای میل ایپ فاطمہ کے لیے آپ کے پیغام کے ساتھ کھل گئی ہے۔ پیغام بھیجنے کے لیے وہاں ”سینڈ“ دبائیں۔",
+   "list_sep": "، ",
+   "mail_to": "fbrr11@yahoo.com"
   },
   "fatma": "فاطمہ",
   "map_time": {

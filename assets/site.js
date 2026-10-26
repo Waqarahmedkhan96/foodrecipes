@@ -302,7 +302,10 @@
       $("#aEmailErr").textContent = emailOk(m) ? "" : tr("email_err2");
       $("#aMsgErr").textContent = t.length >= 10 ? "" : tr("msg_err");
       if (!n || !emailOk(m) || t.length < 10) { (!n ? $("#aName") : !emailOk(m) ? $("#aEmail") : $("#aMsg")).focus(); return; }
-      const topic = $("#aTopic"); $("#askMsg").textContent = tr("ask_thanks", { name: n, topic: low(topic.options[topic.selectedIndex].text) });
+      const topic = $("#aTopic"), topicText = topic.options[topic.selectedIndex].text;
+      const mail = "mailto:" + (U.mail_to || "fbrr11@yahoo.com") + "?subject=" + encodeURIComponent(topicText + " · " + n) + "&body=" + encodeURIComponent(t + "\n\n" + n + "\n" + m);
+      location.href = mail;
+      $("#askMsg").textContent = tr("ask_thanks", { name: n, topic: low(topicText) });
       ask.hidden = true; $("#askDone").hidden = false;
     });
     ["aName", "aEmail", "aMsg"].forEach(id => $("#" + id).addEventListener("input", () => { $("#" + id + "Err").textContent = ""; }));
