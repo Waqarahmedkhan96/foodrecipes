@@ -1,0 +1,161 @@
+{
+ "mango_cheesecake": {
+  "slug": "mango_cheesecake",
+  "images": {
+   "bowl": "anim/mc_bowl.jpg",
+   "pour": "anim/mc_pouring.jpg",
+   "layers": "anim/mc_layers.jpg",
+   "backdrop": "anim/mc_backdrop.jpg"
+  },
+  "items": [
+   {
+    "img": "anim/mc_cream_cheese.png",
+    "en": "Cream cheese",
+    "da": "Flødeost",
+    "ur": "کریم چیز"
+   },
+   {
+    "img": "anim/mc_sugar.png",
+    "en": "Sugar",
+    "da": "Sukker",
+    "ur": "چینی"
+   },
+   {
+    "img": "anim/mc_eggs.png",
+    "en": "Eggs",
+    "da": "Æg",
+    "ur": "انڈے"
+   },
+   {
+    "img": "anim/mc_cream.png",
+    "en": "Crème fraîche",
+    "da": "Cremefraiche",
+    "ur": "کریم فریش"
+   },
+   {
+    "img": "anim/mc_mango_puree.png",
+    "en": "Mango pulp",
+    "da": "Mangopuré",
+    "ur": "آم کا گودا"
+   },
+   {
+    "img": "anim/mc_biscuits.png",
+    "en": "Digestives",
+    "da": "Digestivekiks",
+    "ur": "ڈائجسٹو بسکٹ"
+   },
+   {
+    "img": "anim/mc_butter.png",
+    "en": "Butter",
+    "da": "Smør",
+    "ur": "مکھن"
+   },
+   {
+    "img": "anim/mc_mango.png",
+    "en": "Fresh mango",
+    "da": "Frisk mango",
+    "ur": "تازہ آم"
+   },
+   {
+    "img": "anim/mc_pistachio.png",
+    "en": "Pistachios",
+    "da": "Pistacienødder",
+    "ur": "پستے"
+   }
+  ],
+  "steps": {
+   "en": [
+    [
+     "The ingredients",
+     "Cream cheese, crème fraîche and eggs for the filling, biscuits and butter for the base, and ripe mango to crown it."
+    ],
+    [
+     "Mix and pour",
+     "Everything is beaten gently until silky, then poured over the crisp biscuit base."
+    ],
+    [
+     "Layer by layer",
+     "Baked low and slow, then crowned with a glossy mango layer, fresh mango and pistachios."
+    ],
+    [
+     "Ready to slice",
+     "Chilled overnight, released from the tin and cut into the first creamy slice."
+    ]
+   ],
+   "da": [
+    [
+     "Ingredienserne",
+     "Flødeost, cremefraiche og æg til fyldet, kiks og smør til bunden og moden mango på toppen."
+    ],
+    [
+     "Rør og hæld",
+     "Det hele piskes forsigtigt, til det er silkeblødt, og hældes over den sprøde kiksebund."
+    ],
+    [
+     "Lag på lag",
+     "Bagt ved lav varme og kronet med et blankt lag mango, frisk mango og pistacienødder."
+    ],
+    [
+     "Klar til at skære",
+     "Kølet natten over, taget ud af formen og skåret i det første cremede stykke."
+    ]
+   ],
+   "ur": [
+    [
+     "اجزاء",
+     "فلنگ کے لیے کریم چیز، کریم فریش اور انڈے، بیس کے لیے بسکٹ اور مکھن، اور اوپر سجانے کے لیے پکا ہوا آم۔"
+    ],
+    [
+     "ملائیں اور ڈالیں",
+     "سب کچھ ہلکے ہاتھ سے ریشمی ہونے تک پھینٹا جاتا ہے، پھر کرکری بسکٹ بیس پر ڈال دیا جاتا ہے۔"
+    ],
+    [
+     "تہہ در تہہ",
+     "ہلکی آنچ پر بیک کیا جاتا ہے، پھر اوپر چمکدار آم کی تہہ، تازہ آم اور پستے سجائے جاتے ہیں۔"
+    ],
+    [
+     "کاٹنے کے لیے تیار",
+     "رات بھر ٹھنڈا کیا، سانچے سے نکالا اور پہلا کریمی ٹکڑا کاٹا۔"
+    ]
+   ]
+  },
+  "text": {
+   "en": {
+    "button": "Watch it come together",
+    "title": "Mango cheesecake: from bowl to cake",
+    "eyebrow": "From bowl to cake",
+    "h1": "Watch the mango cheesecake <em>come together</em>",
+    "sub": "Scroll slowly and see the ingredients become Fatma's mango cheesecake, step by step.",
+    "skip": "Skip to the recipe",
+    "cta": "Go to the full recipe",
+    "desc": "A step-by-step visual story of Fatma's mango cheesecake, from the ingredients in the bowl to the first creamy slice.",
+    "back_h": "Ready to bake it yourself?",
+    "back_p": "The full ingredient list, exact amounts and every step are on the recipe page."
+   },
+   "da": {
+    "button": "Se kagen blive til",
+    "title": "Mango-cheesecake: fra skål til kage",
+    "eyebrow": "Fra skål til kage",
+    "h1": "Se mango-cheesecaken <em>blive til</em>",
+    "sub": "Rul langsomt, og se ingredienserne blive til Fatmas mango-cheesecake trin for trin.",
+    "skip": "Spring til opskriften",
+    "cta": "Gå til den fulde opskrift",
+    "desc": "En billedfortælling om Fatmas mango-cheesecake, fra ingredienserne i skålen til det første cremede stykke.",
+    "back_h": "Klar til at bage den selv?",
+    "back_p": "Den fulde ingrediensliste, de præcise mål og alle trin finder du på opskriftssiden."
+   },
+   "ur": {
+    "button": "دیکھیں کیسے بنتا ہے",
+    "title": "مینگو چیز کیک: پیالے سے کیک تک",
+    "eyebrow": "پیالے سے کیک تک",
+    "h1": "دیکھیں مینگو چیز کیک <em>کیسے بنتا ہے</em>",
+    "sub": "آہستہ آہستہ اسکرول کریں اور دیکھیں کہ اجزاء کیسے قدم بہ قدم فاطمہ کا مینگو چیز کیک بنتے ہیں۔",
+    "skip": "سیدھا ترکیب پر جائیں",
+    "cta": "پوری ترکیب دیکھیں",
+    "desc": "فاطمہ کے مینگو چیز کیک کی تصویری کہانی، پیالے میں اجزاء سے لے کر پہلے کریمی ٹکڑے تک۔",
+    "back_h": "خود بنانے کے لیے تیار ہیں؟",
+    "back_p": "اجزاء کی پوری فہرست، صحیح مقدار اور ہر قدم ترکیب والے صفحے پر موجود ہے۔"
+   }
+  }
+ }
+}
