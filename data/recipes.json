@@ -62,6 +62,20 @@
    "icon": "i-leaf",
    "img": "raita",
    "desc": "Raitas and achars that finish the table."
+  },
+  {
+   "id": "breakfast",
+   "name": "Breakfast",
+   "icon": "i-pancake",
+   "img": "banana_oat_pancakes",
+   "desc": "Pancakes and slow weekend mornings, from banana oat stacks to cheesy pancakes."
+  },
+  {
+   "id": "cakes",
+   "name": "Cakes and bakes",
+   "icon": "i-cake",
+   "img": "mango_cheesecake",
+   "desc": "Danish cakes, tarts and cookies from Fatma's kitchen, all made without alcohol."
   }
  ],
  "collections": [
@@ -1347,6 +1361,468 @@
     "Pack into a clean jar and leave 3 days before eating."
    ],
    "tip": "Every spoon going into the jar must be completely dry, or the achar will spoil."
+  },
+  {
+   "id": "banana_oat_pancakes",
+   "cat": "breakfast",
+   "name": "Banana oat pancakes",
+   "region": "Homestyle",
+   "time": "25 min",
+   "mins": 25,
+   "level": "Easy",
+   "serves": "4",
+   "veg": true,
+   "cols": [],
+   "intro": "Soft, wholesome pancakes made from porridge oats and ripe bananas, finished with walnuts, honey and a dusting of cinnamon.",
+   "ing": [
+    "1 cup porridge oats (rolled oats)",
+    "2 ripe bananas",
+    "2 eggs",
+    "1/2 cup milk",
+    "1 tsp baking powder",
+    "1/2 tsp ground cinnamon",
+    "Pinch of salt",
+    "1 tbsp honey (optional)",
+    "Butter or oil for the pan",
+    "To serve: sliced banana, chopped walnuts, honey and a little cinnamon"
+   ],
+   "steps": [
+    "Blend the oats in a blender until they look like coarse flour.",
+    "Add the bananas, eggs, milk, baking powder, cinnamon, salt and honey, and blend until smooth.",
+    "Leave the batter to rest for 10 minutes so the oats soak up the liquid and it thickens.",
+    "Heat a non-stick pan on medium-low and brush it with a little butter. Pour in about 1/4 cup of batter per pancake.",
+    "Cook for 2 to 3 minutes until bubbles appear and the edges look set, then flip and cook for 1 to 2 minutes more.",
+    "Stack the pancakes and top with banana, walnuts, a drizzle of honey and a pinch of cinnamon."
+   ],
+   "tip": "Keep the heat at medium-low. Oats and banana brown quickly, so they need gentle heat to cook through. The riper the bananas, the sweeter the pancakes."
+  },
+  {
+   "id": "mozzarella_pancakes",
+   "cat": "breakfast",
+   "name": "Mozzarella cheese pancakes",
+   "region": "Homestyle",
+   "time": "30 min",
+   "mins": 30,
+   "level": "Easy",
+   "serves": "4",
+   "veg": true,
+   "cols": [],
+   "intro": "Fluffy flour pancakes with a melting mozzarella centre, finished the Pakistani way with saffron honey, almonds and pistachios.",
+   "ing": [
+    "1½ cups all-purpose flour",
+    "2 tbsp sugar",
+    "2 tsp baking powder",
+    "1/4 tsp salt",
+    "1/4 tsp ground cardamom",
+    "1¼ cups milk",
+    "1 egg",
+    "2 tbsp melted butter, plus extra for the pan",
+    "1½ cups grated mozzarella",
+    "Saffron honey: 3 tbsp honey warmed with a pinch of saffron",
+    "Sliced almonds and chopped pistachios to finish"
+   ],
+   "steps": [
+    "Whisk the flour, sugar, baking powder, salt and cardamom in a bowl.",
+    "In another bowl, whisk the milk, egg and melted butter. Pour into the flour and stir until just combined; a few lumps are fine. Rest for 5 minutes.",
+    "Heat a buttered pan on medium-low. Pour in about 1/3 cup of batter, scatter 2 to 3 tbsp of mozzarella over the middle, then cover the cheese with another 2 tbsp of batter.",
+    "Cook for 2 to 3 minutes until bubbles appear and the edges are set. Flip carefully, cover the pan with a lid and cook for 2 minutes more so the cheese melts.",
+    "Stack the pancakes, drizzle with saffron honey and scatter over the almonds and pistachios. Serve straight away, while the cheese still stretches."
+   ],
+   "tip": "Use low-moisture mozzarella from a block and grate it yourself. Fresh mozzarella balls release water and make the pancakes soggy. A lid and low heat melt the cheese before the outside gets too dark."
+  },
+  {
+   "id": "classic_pancakes",
+   "cat": "breakfast",
+   "name": "Classic pancakes",
+   "region": "Homestyle",
+   "time": "20 min",
+   "mins": 20,
+   "level": "Easy",
+   "serves": "4",
+   "veg": true,
+   "cols": [],
+   "intro": "Simple, fluffy pancakes with golden, lacy edges. The easy weekend breakfast everyone at home asks for.",
+   "ing": [
+    "1½ cups all-purpose flour",
+    "2 tbsp sugar",
+    "2 tsp baking powder",
+    "1/2 tsp salt",
+    "1¼ cups milk",
+    "1 egg",
+    "3 tbsp melted butter, plus extra for the pan",
+    "2 tsp vanilla sugar",
+    "To serve: honey or syrup, butter and fresh fruit"
+   ],
+   "steps": [
+    "Whisk the flour, sugar, baking powder and salt in a large bowl.",
+    "Whisk the milk, egg, melted butter and vanilla sugar in a jug.",
+    "Pour the wet ingredients into the dry ones and stir until just combined. Leave the batter to rest for 5 minutes.",
+    "Heat a frying pan on medium and add a little butter. Pour in about 1/4 cup of batter per pancake.",
+    "Cook for about 2 minutes, until bubbles form on top and the edges look dry. Flip and cook for 1 minute more until golden.",
+    "Keep the pancakes warm under a clean tea towel while you cook the rest, and serve with honey, butter and fruit."
+   ],
+   "tip": "Don't overmix: a few lumps keep the pancakes light. A thin film of butter in the pan gives them that golden, lacy pattern."
+  },
+  {
+   "id": "samosa",
+   "cat": "street",
+   "name": "Aloo samosa",
+   "region": "All of Pakistan",
+   "time": "1 hr 15",
+   "mins": 75,
+   "level": "Medium",
+   "serves": "12 pieces",
+   "veg": true,
+   "cols": [
+    "ramadan"
+   ],
+   "intro": "Crisp, blistered pastry folded around spiced potatoes and peas. The iftar favourite, best with green chutney, imli and a cup of chai.",
+   "ing": [
+    "2 cups all-purpose flour",
+    "1/2 tsp ajwain (carom seeds)",
+    "1/2 tsp salt",
+    "4 tbsp oil or ghee for the dough",
+    "About 1/2 cup cold water",
+    "4 medium potatoes, boiled, peeled and diced",
+    "1/2 cup peas",
+    "2 tbsp oil for the filling",
+    "1 tsp cumin seeds and 1 tsp crushed coriander seeds",
+    "1 inch ginger, finely chopped, and 2 green chillies, chopped",
+    "1 tsp red chilli powder, 1/2 tsp turmeric, 1/2 tsp garam masala",
+    "1 tsp chaat masala and 1 tsp crushed anardana (dried pomegranate seeds)",
+    "Salt to taste and 2 tbsp chopped fresh coriander",
+    "Oil for deep frying",
+    "Green chutney, imli chutney and chai to serve"
+   ],
+   "steps": [
+    "Mix the flour, ajwain and salt. Rub in the oil with your fingertips until the flour holds together when you press it in your fist (moyan).",
+    "Add cold water a little at a time and knead into a stiff, smooth dough. Cover and rest for 30 minutes.",
+    "For the filling, heat the oil and crackle the cumin and coriander seeds. Add the ginger, chillies and peas and cook for 2 minutes, then stir in the spices, potatoes and salt. Mash lightly, add the anardana and fresh coriander, and leave to cool completely.",
+    "Divide the dough into 6 balls. Roll each into a thin oval and cut it in half. Fold each half into a cone, sealing the straight edge with a little water.",
+    "Fill each cone with the potato mixture, then pleat and press the top edge firmly to seal.",
+    "Heat the oil on low (about 140°C). Fry the samosas slowly for 10 to 12 minutes, turning, until small bubbles cover the crust. Turn the heat to medium for the last 2 minutes to colour them golden.",
+    "Drain on a rack and serve hot with green chutney, imli chutney and chai."
+   ],
+   "tip": "Fry slowly on low heat. In hot oil the crust browns before it crisps and stays soft inside. A stiff dough with plenty of oil rubbed in gives the blistered, crunchy crust."
+  },
+  {
+   "id": "samosa_chaat",
+   "cat": "street",
+   "name": "Samosa chaat",
+   "region": "Karachi",
+   "time": "40 min",
+   "mins": 40,
+   "level": "Easy",
+   "serves": "4",
+   "veg": true,
+   "cols": [
+    "ramadan"
+   ],
+   "intro": "Crushed samosas under warm, spiced chickpeas, cool yogurt, sweet-sour imli and green chutney, finished with onion, coriander and chaat masala.",
+   "ing": [
+    "4 samosas, homemade or shop-bought",
+    "2 cups boiled chickpeas (1 can) and 1 cup of their liquid or water",
+    "1 tbsp oil and 1/2 tsp cumin seeds",
+    "1/2 tsp red chilli powder, 1 tsp chana masala, 1 tsp chaat masala",
+    "Salt to taste",
+    "1 cup chilled yogurt, whisked with a pinch of salt and sugar",
+    "3 tbsp imli (tamarind) chutney",
+    "3 tbsp green chutney",
+    "1 small red onion, thinly sliced",
+    "Fresh coriander, red chilli powder and chaat masala to finish"
+   ],
+   "steps": [
+    "Heat the oil and crackle the cumin. Add the chickpeas with their liquid, the chilli, chana masala, chaat masala and salt. Simmer for 10 minutes, mashing a few chickpeas to make a loose gravy.",
+    "Warm the samosas in a 180°C oven for 10 minutes so they are crisp again.",
+    "Break the samosas roughly onto a serving plate and spoon the hot chickpeas over them.",
+    "Drizzle over the yogurt, imli chutney and green chutney.",
+    "Top with onion and coriander, sprinkle with red chilli and chaat masala, and serve at once."
+   ],
+   "tip": "Put it together just before eating, because the samosas soften within minutes. Cold yogurt over hot chana is the best part."
+  },
+  {
+   "id": "fruit_chaat_cream",
+   "cat": "street",
+   "name": "Cream fruit chaat",
+   "region": "All of Pakistan",
+   "time": "20 min",
+   "mins": 20,
+   "level": "Easy",
+   "serves": "6",
+   "veg": true,
+   "cols": [
+    "ramadan"
+   ],
+   "intro": "Fresh apple, banana, grapes, strawberries and mango folded into sweet whipped cream with cardamom, topped with pomegranate, almonds and pistachios. A cool iftar favourite.",
+   "ing": [
+    "2 apples, diced, skin on",
+    "2 bananas, sliced",
+    "1 cup green and red grapes, halved",
+    "1 cup strawberries, quartered",
+    "1 cup mango or pineapple, diced",
+    "1/2 cup pomegranate seeds",
+    "1 tbsp lemon juice",
+    "1 cup chilled whipping cream",
+    "3 tbsp condensed milk, or 2 tbsp sugar",
+    "1/4 tsp ground cardamom",
+    "2 tbsp each sliced almonds and chopped pistachios",
+    "A pinch of chaat masala or cinnamon to finish (optional)"
+   ],
+   "steps": [
+    "Wash and dry the fruit well, then cut it into bite-sized pieces. Toss the apples and bananas with the lemon juice so they don't brown.",
+    "Whip the cold cream with the condensed milk and cardamom to soft peaks.",
+    "Gently fold all the fruit into the cream, keeping a few pomegranate seeds for the top.",
+    "Chill for 30 minutes.",
+    "Just before serving, scatter over the pomegranate, almonds and pistachios and a light pinch of chaat masala or cinnamon."
+   ],
+   "tip": "Dry the fruit properly after washing, because any water thins the cream. If you are making it ahead, add the bananas just before serving."
+  },
+  {
+   "id": "drommekage",
+   "cat": "cakes",
+   "name": "Drømmekage (Danish dream cake)",
+   "region": "Danish kitchen",
+   "time": "45 min",
+   "mins": 45,
+   "level": "Easy",
+   "serves": "20 pieces",
+   "veg": true,
+   "cols": [],
+   "intro": "Denmark's best-loved tray bake: a light, fluffy sponge under a bubbling layer of brown sugar, butter, coconut and chopped walnuts, finished under a hot oven until it caramelises.",
+   "ing": [
+    "3 eggs",
+    "300 g sugar",
+    "2 tsp vanilla sugar",
+    "250 g plain flour",
+    "2 tsp baking powder",
+    "50 g butter, melted",
+    "200 ml milk",
+    "Topping: 125 g butter",
+    "Topping: 250 g light brown sugar",
+    "Topping: 75 g desiccated coconut and 50 g walnuts, finely chopped",
+    "Topping: 100 ml milk"
+   ],
+   "steps": [
+    "Heat the oven to 200°C and line a 25 x 35 cm tin with baking paper.",
+    "Whisk the eggs, sugar and vanilla sugar for 5 minutes until pale and airy.",
+    "Mix the flour and baking powder and sift it into the eggs. Fold in gently with the melted butter and milk.",
+    "Pour into the tin and bake on the middle shelf for about 20 minutes, until golden and a skewer comes out clean.",
+    "Meanwhile, melt the butter for the topping in a pan, add the brown sugar, coconut, walnuts and milk, and let it bubble for 1 minute.",
+    "Spread the topping evenly over the hot cake, turn the oven up to 225°C and bake for 5 minutes more, until it bubbles and caramelises. Cool in the tin and cut into squares."
+   ],
+   "tip": "Don't skip whisking the eggs and sugar properly. All the lightness in the sponge comes from that air, because there is very little butter in the batter."
+  },
+  {
+   "id": "citronkage",
+   "cat": "cakes",
+   "name": "Danish lemon cake (citronkage)",
+   "region": "Danish kitchen",
+   "time": "1 hr 15",
+   "mins": 75,
+   "level": "Easy",
+   "serves": "10 slices",
+   "veg": true,
+   "cols": [],
+   "intro": "A soft, buttery lemon cake as Danes bake it for afternoon coffee, crowned with a thick layer of glossy, homemade lemon curd.",
+   "ing": [
+    "200 g soft butter",
+    "200 g sugar",
+    "4 eggs",
+    "200 g plain flour",
+    "1½ tsp baking powder",
+    "Finely grated zest of 2 lemons",
+    "3 tbsp lemon juice",
+    "Lemon curd: 3 eggs",
+    "Lemon curd: 100 g sugar",
+    "Lemon curd: zest of 1 lemon and 100 ml lemon juice (about 2 lemons)",
+    "Lemon curd: 75 g butter, in cubes"
+   ],
+   "steps": [
+    "Heat the oven to 175°C and grease and line a 24 cm springform tin.",
+    "Beat the butter and sugar until pale and fluffy. Beat in the eggs one at a time.",
+    "Mix the flour and baking powder and fold it in with the lemon zest and juice.",
+    "Spread the batter in the tin and bake for 40 to 45 minutes, until golden and a skewer comes out clean. Leave to cool completely.",
+    "For the curd, whisk the eggs, sugar, lemon zest and juice in a small pan. Heat gently, whisking all the time, until it thickens like custard. Do not let it boil.",
+    "Take it off the heat and whisk in the butter. Cool the curd, then spread it thickly over the cold cake and chill for 30 minutes before slicing."
+   ],
+   "tip": "Cook the curd on low heat and keep whisking. If it gets too hot, the eggs scramble; if that happens, push it through a sieve and it will still be smooth."
+  },
+  {
+   "id": "tiramisu_cake",
+   "cat": "cakes",
+   "name": "Tiramisu cake (alcohol-free)",
+   "region": "Danish kitchen",
+   "time": "30 min + chilling",
+   "mins": 30,
+   "level": "Easy",
+   "serves": "8",
+   "veg": true,
+   "cols": [],
+   "intro": "Layers of coffee-soaked ladyfingers and light mascarpone cream under a thick dusting of cocoa. Made without any alcohol and without raw eggs.",
+   "ing": [
+    "200 g ladyfingers (savoiardi)",
+    "300 ml strong coffee, cooled, with 1 tbsp sugar stirred in",
+    "250 g mascarpone",
+    "300 ml cold whipping cream",
+    "75 g icing sugar",
+    "2 tsp vanilla sugar",
+    "Cocoa powder for dusting",
+    "50 g dark chocolate, chopped"
+   ],
+   "steps": [
+    "Beat the mascarpone, icing sugar and vanilla sugar until smooth.",
+    "Whip the cream to soft peaks and fold it gently into the mascarpone.",
+    "Dip half the ladyfingers quickly in the coffee, one second on each side, and lay them in a 20 x 30 cm dish.",
+    "Spread half the cream over the biscuits. Repeat with the rest of the ladyfingers and cream.",
+    "Cover and chill for at least 6 hours, or overnight, so the layers set.",
+    "Just before serving, dust generously with cocoa and scatter over the chopped chocolate."
+   ],
+   "tip": "Dip the ladyfingers quickly. They keep soaking up coffee in the fridge, and if they are too wet the cake collapses when you cut it."
+  },
+  {
+   "id": "mango_cheesecake",
+   "cat": "cakes",
+   "name": "Mango cheesecake",
+   "region": "Danish kitchen",
+   "time": "1 hr 30 + chilling",
+   "mins": 90,
+   "level": "Medium",
+   "serves": "12 slices",
+   "veg": true,
+   "cols": [
+    "eid"
+   ],
+   "intro": "A creamy baked cheesecake on a crisp biscuit base, topped with a glossy mango layer, fresh mango and pistachios. A Danish bake with a Pakistani mango heart.",
+   "ing": [
+    "200 g digestive biscuits",
+    "75 g butter, melted",
+    "600 g full-fat cream cheese, at room temperature",
+    "150 g sugar",
+    "3 eggs",
+    "200 ml crème fraîche (18%)",
+    "2 tsp vanilla sugar",
+    "2 tbsp cornflour",
+    "1 tbsp lemon juice",
+    "Mango topping: 250 ml mango pulp (Sindhri or Alphonso, tinned is fine)",
+    "Mango topping: 2 tbsp sugar, 1 tbsp cornflour and a pinch of ground cardamom",
+    "1 ripe mango, diced, and 2 tbsp chopped pistachios to finish"
+   ],
+   "steps": [
+    "Heat the oven to 160°C. Crush the biscuits finely, mix with the melted butter and press into the base of a 24 cm springform tin. Chill while you make the filling.",
+    "Beat the cream cheese and sugar until smooth. Beat in the eggs one at a time, then the crème fraîche, vanilla sugar, cornflour and lemon juice. Don't overbeat.",
+    "Pour onto the base and bake for 50 to 55 minutes, until the edges are set but the centre still wobbles slightly.",
+    "Turn off the oven, open the door a little and let the cheesecake cool inside for 1 hour. Then chill for at least 6 hours, or overnight.",
+    "For the topping, whisk the mango pulp, sugar, cornflour and cardamom in a pan and simmer for 2 minutes until glossy and thick. Cool completely.",
+    "Spread the mango over the cold cheesecake, top with diced mango and pistachios, and release the tin just before serving."
+   ],
+   "tip": "Cool the cheesecake slowly in the oven. A sudden change in temperature is what makes the top crack."
+  },
+  {
+   "id": "baertaerte",
+   "cat": "cakes",
+   "name": "Mixed berry tart (bærtærte)",
+   "region": "Danish kitchen",
+   "time": "1 hr 30",
+   "mins": 90,
+   "level": "Medium",
+   "serves": "10 slices",
+   "veg": true,
+   "cols": [],
+   "intro": "A crisp, buttery Danish shortcrust filled with vanilla cream and piled high with strawberries, raspberries, blueberries and blackberries in a shiny glaze. Summer on a plate.",
+   "ing": [
+    "Pastry: 200 g plain flour",
+    "Pastry: 100 g cold butter, in cubes",
+    "Pastry: 50 g icing sugar",
+    "Pastry: 1 egg yolk and 1 to 2 tbsp cold water",
+    "Vanilla cream: 300 ml milk",
+    "Vanilla cream: 3 egg yolks",
+    "Vanilla cream: 50 g sugar and 2 tbsp cornflour",
+    "Vanilla cream: 1 vanilla pod, or 2 tsp vanilla sugar",
+    "500 g mixed berries: strawberries, raspberries, blueberries and blackberries",
+    "3 tbsp redcurrant jelly for the glaze"
+   ],
+   "steps": [
+    "Rub the flour, butter and icing sugar together until it looks like breadcrumbs. Add the egg yolk and just enough water to bring the dough together. Wrap and chill for 30 minutes.",
+    "Roll out the pastry and line a 24 to 26 cm tart tin. Prick the base, line with baking paper and baking beans, and bake at 200°C for 15 minutes. Remove the paper and bake 5 to 8 minutes more until golden. Cool.",
+    "For the vanilla cream, heat the milk with the split vanilla pod. Whisk the egg yolks, sugar and cornflour, pour on the hot milk while whisking, then return to the pan and cook gently, stirring, until thick. Cool with cling film pressed on the surface.",
+    "Spread the cold vanilla cream in the tart case.",
+    "Arrange the berries on top, halving the larger strawberries.",
+    "Warm the redcurrant jelly until runny and brush it over the berries. Chill for 30 minutes before serving."
+   ],
+   "tip": "Fill the tart as close to serving time as you can. The pastry stays crisp for a few hours, but it softens if it sits with the cream overnight."
+  },
+  {
+   "id": "gulerodskage",
+   "cat": "cakes",
+   "name": "Danish carrot cake (gulerodskage)",
+   "region": "Danish kitchen",
+   "time": "1 hr 15",
+   "mins": 75,
+   "level": "Easy",
+   "serves": "12 slices",
+   "veg": true,
+   "cols": [
+    "winter"
+   ],
+   "intro": "A moist, warmly spiced carrot cake with walnuts and raisins, layered and covered with tangy cream cheese frosting, the Danish café favourite.",
+   "ing": [
+    "3 eggs",
+    "250 g light brown sugar",
+    "200 ml neutral oil",
+    "250 g plain flour",
+    "2 tsp baking powder and 1 tsp bicarbonate of soda",
+    "2 tsp ground cinnamon, ½ tsp ground ginger and ¼ tsp ground cardamom",
+    "½ tsp salt",
+    "300 g carrots, finely grated",
+    "75 g walnuts, chopped, plus extra to decorate",
+    "50 g raisins",
+    "Frosting: 300 g cold cream cheese",
+    "Frosting: 75 g soft butter",
+    "Frosting: 150 g icing sugar, 2 tsp vanilla sugar and 1 tsp lemon juice"
+   ],
+   "steps": [
+    "Heat the oven to 175°C and line two 20 cm round tins.",
+    "Whisk the eggs and brown sugar until light, then whisk in the oil.",
+    "Mix the flour, baking powder, bicarbonate, spices and salt, and fold them into the eggs.",
+    "Fold in the carrots, walnuts and raisins. Divide between the tins and bake for 30 to 35 minutes, until a skewer comes out clean. Cool completely.",
+    "For the frosting, beat the soft butter with the icing sugar and vanilla sugar, then beat in the cold cream cheese and lemon juice just until smooth.",
+    "Sandwich the cakes with a third of the frosting, cover the top and sides with the rest, and decorate with walnuts and a little grated carrot."
+   ],
+   "tip": "Use the cream cheese straight from the fridge and beat it only briefly. Overbeaten cream cheese turns runny and the frosting won't hold."
+  },
+  {
+   "id": "chocolate_chip_cookies",
+   "cat": "cakes",
+   "name": "Chocolate chip cookies",
+   "region": "Danish kitchen",
+   "time": "30 min + chilling",
+   "mins": 30,
+   "level": "Easy",
+   "serves": "12 pieces",
+   "veg": true,
+   "cols": [],
+   "intro": "Big, chewy cookies with crisp golden edges, melting chunks of dark chocolate and a pinch of flaky salt on top. Best with a glass of cold milk or a cup of chai.",
+   "ing": [
+    "175 g soft butter",
+    "150 g light brown sugar",
+    "75 g sugar",
+    "1 egg",
+    "2 tsp vanilla sugar",
+    "275 g plain flour",
+    "1 tsp bicarbonate of soda",
+    "½ tsp salt",
+    "200 g dark chocolate, roughly chopped",
+    "Flaky sea salt to finish"
+   ],
+   "steps": [
+    "Beat the butter, brown sugar and sugar until creamy, then beat in the egg and vanilla sugar.",
+    "Mix the flour, bicarbonate and salt, and stir them in until just combined. Fold in the chopped chocolate.",
+    "Cover and chill the dough for at least 1 hour, or overnight for even better flavour.",
+    "Heat the oven to 180°C. Roll the dough into 12 large balls and place them well apart on two lined baking trays.",
+    "Bake for 10 to 12 minutes, until the edges are golden but the centres still look soft.",
+    "Sprinkle with flaky salt and leave on the tray for 10 minutes before moving to a rack."
+   ],
+   "tip": "Take them out while the middle still looks underbaked. They firm up as they cool, and that's what keeps them chewy."
   }
  ]
 }
