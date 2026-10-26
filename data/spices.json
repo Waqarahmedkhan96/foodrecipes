@@ -1,0 +1,283 @@
+{
+ "spices": [
+  {
+   "slug": "haldi-turmeric",
+   "urdu": "Haldi",
+   "english": "Turmeric",
+   "latin": "Curcuma longa",
+   "img": "spice_haldi",
+   "title": "Haldi (Turmeric): History, Uses in Pakistani Cooking and Health Benefits",
+   "meta": "What is haldi? Learn where turmeric comes from, why Pakistani cooks add it to almost every salan, how to use it, and what science says about curcumin.",
+   "lead": "Haldi is the golden thread of Pakistani cooking. A pinch goes into almost every salan, daal and yakhni, giving colour, an earthy warmth and a scent that means home.",
+   "sections": [
+    ["What is haldi?", "Haldi is the dried and ground rhizome (underground stem) of Curcuma longa, a plant in the ginger family. The fresh root looks like ginger with bright orange flesh. Its colour comes from curcumin, part of a group of natural compounds called curcuminoids, which are also the focus of most research into turmeric."],
+    ["A spice older than history books", "Turmeric has been part of South Asian cooking for thousands of years. Archaeologists from Washington State University studied cooking residues from the Indus Valley sites of Farmana and Harappa and found evidence that curries made with turmeric, ginger and garlic were eaten in the Indus civilisation, the same land where Pakistan stands today. It also has a long place in Ayurvedic, Unani, Chinese and Thai traditional medicine, where it was used for indigestion, joint pain and skin care."],
+    ["Why we use it in Pakistani cooking", "Haldi goes in early, usually with the onions or tomatoes during bhunai, because its raw taste needs a minute in hot oil to mellow. It gives daal its sunny yellow, colours biryani masala and yakhni, and is the base of many marinades. It is also part of shaadi traditions: the mayun or ubtan ceremony uses a haldi paste on the bride's skin before the wedding."],
+    ["How to use it well", "Use a light hand: ¼ to ½ teaspoon is enough for a family-sized pot, and too much tastes bitter and medicinal. Always cook it in oil for at least 30 seconds. Store ground haldi in an airtight jar away from light, and replace it once the colour fades. Haldi stains, so wipe counters and wooden spoons quickly."],
+    ["What science says about turmeric", "The US National Center for Complementary and Integrative Health (NCCIH) says there isn't yet enough evidence to say turmeric or curcumin is definitely beneficial for any health condition. The most promising early research is for knee osteoarthritis pain, and some studies suggest possible benefits for fatty liver and for mouth soreness during cancer treatment, but higher-quality studies are needed. Curcumin is poorly absorbed on its own. A small 1998 study found that taking it with piperine, the compound in black pepper, increased absorption by about 2,000% in volunteers, which is one reason haldi and kali mirch so often meet in the same pot."],
+    ["Safety", "Turmeric in food amounts is considered safe for most people. Supplements are different: NCCIH reports cases of liver injury with highly absorbable curcumin products, and they may not be safe during pregnancy. If you take medicines or plan to use turmeric supplements, speak to your doctor first."]
+   ],
+   "faq": [
+    ["Is haldi the same as turmeric?", "Yes. Haldi is the Urdu and Hindi name for turmeric, the ground root of the Curcuma longa plant."],
+    ["Why is black pepper added with haldi?", "Piperine in black pepper helps the body absorb curcumin. One study found absorption rose by about 2,000% when the two were taken together."],
+    ["How much haldi should I use in a curry?", "About ¼ to ½ teaspoon for a curry that serves four. More can make the dish taste bitter."]
+   ],
+   "recipes": ["daal_masoor", "chicken_biryani", "beef_haleem"],
+   "sources": [
+    ["NCCIH: Turmeric, usefulness and safety", "https://www.nccih.nih.gov/health/turmeric"],
+    ["Shoba et al. (1998), Influence of piperine on the pharmacokinetics of curcumin", "https://pubmed.ncbi.nlm.nih.gov/9619120/"],
+    ["Harappa.com: Curries in the Indus civilisation", "https://www.harappa.com/node/3594"]
+   ]
+  },
+  {
+   "slug": "zeera-cumin",
+   "urdu": "Zeera",
+   "english": "Cumin",
+   "latin": "Cuminum cyminum",
+   "img": "spice_zeera",
+   "title": "Zeera (Cumin Seeds): History, Uses in Pakistani Food and Health Benefits",
+   "meta": "Everything about zeera: where cumin comes from, why it starts so many Pakistani dishes, how to roast it, and what recent research says about its health effects.",
+   "lead": "The crackle of zeera in hot ghee is the first sound of countless Pakistani meals, from the tarka on daal to the base of pulao.",
+   "sections": [
+    ["What is zeera?", "Zeera is the dried seed of Cuminum cyminum, a small flowering plant in the parsley family. The seeds are long and ridged, with a warm, earthy, slightly bitter flavour that comes mainly from an aromatic compound called cuminaldehyde."],
+    ["A spice that travelled with civilisation", "Cumin probably began in Central or South-western Asia or the eastern Mediterranean. Wild cumin seeds have been found at Atlit-Yam, a submerged settlement on the Israeli coast dated to around 6000 BC, and cumin seeds have been excavated in Syria from the second millennium BC. Ancient Egyptians used it as a spice and in mummification. Today the subcontinent grows most of the world's cumin."],
+    ["Why we use it in Pakistani cooking", "Whole zeera is fried first, in ghee or oil, to release its oils: this is the start of matar pulao, yakhni and many sabzis. It is the heart of the tarka poured over daal. Roasted and ground, it seasons raita, chaat and lassi. Together with dhaniya it forms the backbone of garam masala and almost every curry blend."],
+    ["How to use it well", "Fry whole seeds until they darken one shade and smell nutty, about 20 to 30 seconds; burnt zeera turns bitter. For bhuna zeera, dry-roast seeds in a pan until fragrant, cool, then crush. Ground cumin loses its aroma within months, so buy whole seeds and grind small batches."],
+    ["What science says about cumin", "A 2025 meta-analysis in Frontiers in Nutrition combined nine small randomised trials (531 adults with metabolic disorders). Cumin supplements were linked with lower fasting blood sugar and triglycerides, higher HDL (good) cholesterol and smaller waist size. The authors rated most of this evidence as low certainty, all the trials were done in one country, and they called for larger, better studies. Cumin in food is a delicious habit, not a treatment."],
+    ["Safety", "Cumin is safe in normal cooking amounts. Concentrated supplements and oils are not the same as cooking with the seed, so check with a doctor before using them, especially if you are pregnant or take diabetes medicine."]
+   ],
+   "faq": [
+    ["Is zeera the same as jeera?", "Yes. Zeera and jeera are both names for cumin seeds. Kala zeera (black cumin) is a different, smaller seed with a sweeter, smokier taste."],
+    ["What is bhuna zeera?", "Cumin seeds dry-roasted in a pan and then crushed. It is used in raita, chaat and drinks."],
+    ["Does cumin help digestion?", "It is traditionally used for digestion, and early studies are interesting, but there isn't strong evidence yet. Enjoy it as a flavour."]
+   ],
+   "recipes": ["daal_masoor", "raita", "matar_pulao"],
+   "sources": [
+    ["Frontiers in Nutrition (2025): Cumin and metabolic syndrome, systematic review and meta-analysis", "https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2025.1618108/full"],
+    ["Wikipedia: Cumin", "https://en.wikipedia.org/wiki/Cumin"]
+   ]
+  },
+  {
+   "slug": "dhaniya-coriander",
+   "urdu": "Dhaniya",
+   "english": "Coriander",
+   "latin": "Coriandrum sativum",
+   "img": "spice_dhaniya",
+   "title": "Dhaniya (Coriander Seeds and Leaves): History, Uses and Benefits",
+   "meta": "Learn about dhaniya: the coriander seeds and fresh leaves in every Pakistani kitchen, their ancient history, how to use them, and what research says.",
+   "lead": "Dhaniya lives two lives in a Pakistani kitchen: the round, citrusy seeds ground into almost every masala, and the fresh green leaves scattered over the finished dish.",
+   "sections": [
+    ["What is dhaniya?", "Dhaniya comes from Coriandrum sativum, a plant in the same family as carrots and parsley. The dried seeds (sabut dhaniya) are warm and slightly lemony. The fresh leaves (hara dhaniya, also called cilantro) are bright and grassy. Ground seeds are called pisa dhaniya."],
+    ["An ancient herb", "Coriander is native to the Middle East and Mediterranean. Seeds were found in the tomb of the Egyptian king Ramesses II, it is mentioned in the Ebers Papyrus from about 1550 BC, and it was grown in Persia around 3,000 years ago. The Romans carried it across Europe, while traders brought it east to the subcontinent long ago."],
+    ["Why we use it in Pakistani cooking", "Ground dhaniya thickens and rounds out curries, balancing chilli heat. Coarsely crushed seeds give Lahori karahi its crunch. Whole seeds go into the potli for yakhni and into achar. Fresh hara dhaniya finishes nearly every salan, biryani and chaat, and is blended into green chutney."],
+    ["How to use it well", "Toast whole seeds in a dry pan until fragrant, then crush for the freshest flavour. Add ground dhaniya with other powdered spices and cook it in oil. Store fresh leaves wrapped in a damp paper towel in the fridge, or stand the stems in water like flowers."],
+    ["What science says about coriander", "Coriander has a long traditional use for indigestion and loss of appetite, and Germany's Commission E approved the seed for these complaints. Other claimed benefits, such as lowering blood sugar or cholesterol, come mainly from traditional use and early laboratory research, and haven't been confirmed in good human trials yet."],
+    ["Safety", "Coriander is safe in food amounts. Some people are allergic to it. A few people find that fresh coriander leaves taste like soap, which is linked to their genes, not to the herb being off."]
+   ],
+   "faq": [
+    ["Are coriander and cilantro the same plant?", "Yes. Cilantro usually means the fresh leaves and coriander the dried seeds, but both come from Coriandrum sativum."],
+    ["Why does my karahi use crushed coriander seeds?", "Coarsely crushed seeds give bursts of citrusy flavour and texture that ground powder can't."],
+    ["Can I freeze fresh dhaniya?", "Yes. Chop it, pack into an ice-cube tray with a little water or oil, and freeze. Use it in cooking rather than as a garnish."]
+   ],
+   "recipes": ["chicken_karahi", "green_chutney", "chicken_pulao"],
+   "sources": [
+    ["McCormick Science Institute: Coriander", "https://www.mccormickscienceinstitute.com/resources/culinary-spices/herbs-spices/coriander"]
+   ]
+  },
+  {
+   "slug": "lal-mirch-red-chilli",
+   "urdu": "Lal mirch",
+   "english": "Red chilli",
+   "latin": "Capsicum annuum",
+   "img": "spice_lal_mirch",
+   "title": "Lal Mirch (Red Chilli): History, Uses in Pakistani Food and Health Benefits",
+   "meta": "Where did lal mirch come from, and how did chilli become the soul of Pakistani food? History, cooking tips, capsaicin and what the research says.",
+   "lead": "It's hard to imagine Pakistani food without lal mirch. Yet the chilli is a newcomer: it reached the subcontinent only about 500 years ago.",
+   "sections": [
+    ["What is lal mirch?", "Lal mirch is the dried, ripe fruit of the Capsicum plant, used whole (sabut lal mirch), crushed (kuti lal mirch) or as powder. Its heat comes from capsaicin. Kashmiri chilli is milder and brighter in colour, while hotter varieties bring more fire than colour."],
+    ["A traveller from the Americas", "Chillies were domesticated in the Americas thousands of years ago. They most likely arrived in South Asia with Portuguese traders in the 16th century, landing in places like Goa before spreading through local trade. Before chilli, heat in subcontinental cooking came from black pepper and long pepper. Today Pakistan grows large chilli crops, especially in Sindh."],
+    ["Why we use it in Pakistani cooking", "Red chilli powder gives salan its colour and heat. Whole dried chillies crackle in the tarka over daal and in the oil for achar. Crushed chilli seasons karahi, kebabs and pakoras, and green chillies (hari mirch) add fresh heat at the end."],
+    ["How to use it well", "Cook chilli powder in oil with a splash of water or tomato so it doesn't scorch. For colour without much heat, use Kashmiri chilli. If a dish is too hot, add yogurt, cream, a pinch of sugar or lemon, and serve with raita."],
+    ["What science says about chilli", "A large Harvard-led study of nearly 500,000 adults in China, published in the BMJ in 2015, found that people who ate spicy food almost every day had a 14% lower risk of dying during the study than those who ate it less than once a week. This was an observational study, so it shows a link, not proof that chilli itself caused the difference. Capsaicin is also used in creams for some kinds of pain."],
+    ["Safety", "Chilli can trigger heartburn and stomach discomfort in some people. Wash your hands after handling chillies and keep them away from your eyes."]
+   ],
+   "faq": [
+    ["When did chillies come to Pakistan?", "Most likely in the 16th century, brought by Portuguese traders to the subcontinent's coast."],
+    ["What makes Kashmiri chilli different?", "It is milder with a deep red colour, so it adds colour without too much heat."],
+    ["How do I cool down a dish that's too spicy?", "Stir in yogurt, cream or a little sugar, add lemon juice, or serve it with raita and plain rice."]
+   ],
+   "recipes": ["chicken_karahi", "achar", "aloo_pakora"],
+   "sources": [
+    ["Harvard Health: Spicy foods associated with longer life", "https://www.health.harvard.edu/nutrition/spicy-foods-associated-with-longer-life-harvard-researchers-find"],
+    ["Wikipedia: Chili pepper", "https://en.wikipedia.org/wiki/Chili_pepper"]
+   ]
+  },
+  {
+   "slug": "kali-mirch-black-pepper",
+   "urdu": "Kali mirch",
+   "english": "Black pepper",
+   "latin": "Piper nigrum",
+   "img": "spice_kali_mirch",
+   "title": "Kali Mirch (Black Pepper): History, Uses and Health Benefits",
+   "meta": "The king of spices: learn black pepper's history in the spice trade, how Pakistani cooks use kali mirch, and how piperine helps the body absorb turmeric.",
+   "lead": "Long before the chilli arrived, kali mirch was the heat of the subcontinent. It was so valuable that it was once called black gold.",
+   "sections": [
+    ["What is kali mirch?", "Kali mirch is the dried berry of Piper nigrum, a climbing vine native to South Asia's Malabar coast and Western Ghats. Black peppercorns are picked unripe, briefly cooked and dried until wrinkled and dark. White pepper is the seed with its outer skin removed. Its bite comes from piperine."],
+    ["The spice that built empires", "Peppercorns were found in the nostrils of the Egyptian pharaoh Ramesses II, placed there during mummification after his death in 1213 BC. Rome bought so much pepper from India that the writer Pliny the Elder complained about the drain on the empire's gold. The search for pepper and other spices helped drive the age of sea exploration."],
+    ["Why we use it in Pakistani cooking", "Whole peppercorns are one of the khada masala (whole spices) in pulao, biryani and yakhni. Freshly crushed pepper is the main seasoning in Peshawari and Shinwari karahi, where powdered spices are skipped. It is also part of garam masala and chaat masala."],
+    ["How to use it well", "Crush or grind peppercorns just before using: ground pepper loses its aroma quickly. Add coarse pepper near the end of cooking for the strongest flavour."],
+    ["What science says about black pepper", "Piperine is best known for helping the body absorb other compounds. In a 1998 study, taking 20 mg of piperine with 2 g of curcumin raised curcumin absorption in human volunteers by about 2,000%. This is why haldi and kali mirch are a classic pair. Other claimed benefits of pepper come mostly from laboratory research and need human studies."],
+    ["Safety", "Pepper is safe in food amounts. Piperine can change how the body absorbs some medicines, so talk to your doctor before taking piperine or black pepper supplements."]
+   ],
+   "faq": [
+    ["What is the difference between black and white pepper?", "Black pepper is the whole dried unripe berry. White pepper is the seed with the outer skin removed, giving a milder, earthier taste."],
+    ["Why is it called the king of spices?", "For centuries it was one of the most traded and valuable spices in the world."],
+    ["Does black pepper help turmeric?", "Yes. Piperine increased curcumin absorption by about 2,000% in a human study."]
+   ],
+   "recipes": ["beef_karahi", "shinwari_karahi", "dumba_karahi"],
+   "sources": [
+    ["Wikipedia: Black pepper", "https://en.wikipedia.org/wiki/Black_pepper"],
+    ["Shoba et al. (1998), Influence of piperine on the pharmacokinetics of curcumin", "https://pubmed.ncbi.nlm.nih.gov/9619120/"]
+   ]
+  },
+  {
+   "slug": "elaichi-cardamom",
+   "urdu": "Elaichi",
+   "english": "Green cardamom",
+   "latin": "Elettaria cardamomum",
+   "img": "spice_elaichi",
+   "title": "Elaichi (Green Cardamom): The Queen of Spices, History, Uses and Benefits",
+   "meta": "Discover elaichi, the queen of spices: its ancient history, how it flavours Pakistani chai, kheer and biryani, and what research says about cardamom.",
+   "lead": "Open a jar of elaichi and the whole kitchen smells of celebrations: doodh patti chai, kheer, sheer khurma and a pot of biryani on dum.",
+   "sections": [
+    ["What is elaichi?", "Green elaichi is the seed pod of Elettaria cardamomum, a plant in the ginger family. Inside each papery pod are small black seeds full of fragrant oils. Its botanical name comes from the Tamil word elettari. Badi elaichi (black cardamom) is a different, larger, smoky pod from a related plant."],
+    ["The queen of spices", "Cardamom is native to southern India and is now grown mainly in India and Guatemala. It was prized in the ancient world: Greeks and Romans used it in perfumes and imported it from India, and a Babylonian king reportedly grew it in his garden around the 8th century BC. Its high price is why it is often called the queen of spices, next to pepper the king."],
+    ["Why we use it in Pakistani cooking", "Whole pods go into the oil for biryani, pulao and qorma, and into the pan for doodh patti chai. Ground seeds perfume kheer, sheer khurma, zarda, gulab jamun syrup and mithai. A pod chewed after a meal freshens the breath."],
+    ["How to use it well", "Lightly crush pods before adding them so the seeds release their oils. For desserts, grind the seeds and discard the husks. Buy whole green pods; ground cardamom fades fast."],
+    ["What science says about cardamom", "Cardamom has a long traditional use for digestion and breath. Modern research on its health effects is still early and mostly small studies, so there aren't confirmed health benefits yet."],
+    ["Safety", "Cardamom is safe in normal food amounts. As with any spice, check with a doctor before taking concentrated supplements."]
+   ],
+   "faq": [
+    ["What's the difference between green and black elaichi?", "Green elaichi is sweet and floral for chai and desserts. Black (badi) elaichi is large and smoky, used in biryani, pulao and garam masala."],
+    ["Why is cardamom so expensive?", "The pods are picked by hand as they ripen, and the plant grows only in particular tropical conditions."],
+    ["Can I use ground cardamom instead of pods?", "Yes. About ¼ teaspoon ground equals 3 to 4 pods, but the flavour is weaker."]
+   ],
+   "recipes": ["kheer", "sheer_khurma", "zarda"],
+   "sources": [
+    ["McCormick Science Institute: Cardamom", "https://www.mccormickscienceinstitute.com/resources/culinary-spices/herbs-spices/cardamom"]
+   ]
+  },
+  {
+   "slug": "dalchini-cinnamon",
+   "urdu": "Dalchini",
+   "english": "Cinnamon",
+   "latin": "Cinnamomum verum and Cinnamomum cassia",
+   "img": "spice_dalchini",
+   "title": "Dalchini (Cinnamon): Ceylon vs Cassia, History, Uses and Benefits",
+   "meta": "What is dalchini? Learn the difference between Ceylon and cassia cinnamon, its history, how it's used in pulao and biryani, and what research says.",
+   "lead": "A single stick of dalchini in hot ghee gives pulao and biryani their warm, sweet fragrance.",
+   "sections": [
+    ["What is dalchini?", "Dalchini is the dried inner bark of cinnamon trees. There are two main types. Ceylon or true cinnamon (Cinnamomum verum) comes mainly from Sri Lanka and has thin, papery layers. Cassia (Cinnamomum cassia), grown mostly in China and South-east Asia, is thicker, harder and stronger. Most dalchini sold in Pakistani markets is cassia."],
+    ["A spice of pharaohs and empires", "Cinnamon reached ancient Egypt by around 2000 BC, where it was used in embalming. The Dutch and then the British fought for control of Sri Lanka's cinnamon trade. Today China, Vietnam, Indonesia and Sri Lanka produce almost all the world's cinnamon."],
+    ["Why we use it in Pakistani cooking", "Dalchini is one of the khada masala fried at the start of pulao, biryani, qorma and yakhni. It is part of garam masala and adds warmth to chai and some desserts."],
+    ["How to use it well", "One 2 to 3 cm piece is enough for a family pot. Fry it with the other whole spices until fragrant, and remove it before serving if you prefer."],
+    ["What science says about cinnamon", "Cinnamon has been studied a lot for blood sugar, but NCCIH says it is still unclear whether cinnamon supplements help with diabetes or weight loss, because studies are hard to compare and higher-quality research is needed."],
+    ["Safety: know your cinnamon", "Cassia contains much more coumarin than Ceylon cinnamon. Coumarin can harm the liver in high amounts. Normal cooking amounts are not a concern for most people, but if you use cinnamon every day in large amounts, or have liver disease, choose Ceylon cinnamon and talk to your doctor before taking supplements."]
+   ],
+   "faq": [
+    ["How can I tell Ceylon from cassia cinnamon?", "Ceylon sticks are made of many thin, papery layers rolled like a cigar. Cassia is a single thick, hard, darker curl."],
+    ["Is cinnamon good for diabetes?", "The evidence is unclear. Don't replace any diabetes treatment with cinnamon."],
+    ["Should I remove dalchini before serving?", "It's not harmful to eat, but most people pick it out because the bark is woody."]
+   ],
+   "recipes": ["chicken_pulao", "kabli_pulao", "chicken_qorma"],
+   "sources": [
+    ["NCCIH: Cinnamon", "https://www.nccih.nih.gov/health/cinnamon"],
+    ["Wikipedia: Cinnamon", "https://en.wikipedia.org/wiki/Cinnamon"]
+   ]
+  },
+  {
+   "slug": "laung-cloves",
+   "urdu": "Laung",
+   "english": "Cloves",
+   "latin": "Syzygium aromaticum",
+   "img": "spice_laung",
+   "title": "Laung (Cloves): History, Uses in Pakistani Cooking and Health Facts",
+   "meta": "Learn about laung: the clove bud from the Spice Islands, how it flavours biryani and pulao, the role of eugenol, and important safety facts about clove oil.",
+   "lead": "Small, dark and powerful, a few laung are enough to scent a whole pot of pulao.",
+   "sections": [
+    ["What is laung?", "Laung are the dried flower buds of Syzygium aromaticum, a tree native to the Maluku Islands of Indonesia, the original Spice Islands. Their strong, sweet and slightly numbing taste comes from eugenol, which makes up most of clove oil."],
+    ["From the Spice Islands to the world", "Cloves once grew on only a few islands, yet they travelled astonishingly far. Archaeologists found cloves in a house in Terqa, Syria, dated to around 1720 BC, and they reached Rome by the first century AD. The fight to control the clove trade shaped colonial history in South-east Asia."],
+    ["Why we use it in Pakistani cooking", "Laung is part of the khada masala in biryani, pulao, yakhni and qorma, and of garam masala."],
+    ["How to use it well", "Use 3 to 6 cloves for a family pot. Fry them in oil until they swell slightly. Too many make food taste medicinal and numb the tongue."],
+    ["What science says about cloves", "Eugenol may have anti-inflammatory and antibacterial effects, and clove oil has a long use as a home remedy for toothache. Cleveland Clinic notes that there isn't enough scientific evidence to support cloves for medical purposes, and many studies are in the laboratory or in animals."],
+    ["Safety", "Whole cloves in cooking are safe for most people. Clove oil is very different: it can irritate the gums and skin, and swallowing even small amounts can seriously harm children, so keep it out of their reach. Eugenol can affect blood clotting, so people on blood thinners or planning surgery should speak to a doctor before using clove products."]
+   ],
+   "faq": [
+    ["Are cloves the same as laung?", "Yes. Laung is the Urdu name for cloves."],
+    ["Does clove help toothache?", "It is a traditional remedy and may numb the gums briefly, but see a dentist for tooth pain. Never give clove oil to children."],
+    ["How many cloves go in a biryani?", "Usually 4 to 6 for a pot that serves six."]
+   ],
+   "recipes": ["beef_biryani", "chicken_pulao", "matar_pulao"],
+   "sources": [
+    ["Cleveland Clinic: Benefits of cloves", "https://health.clevelandclinic.org/benefits-of-cloves"],
+    ["Wikipedia: Clove", "https://en.wikipedia.org/wiki/Clove"]
+   ]
+  },
+  {
+   "slug": "adrak-ginger",
+   "urdu": "Adrak",
+   "english": "Ginger",
+   "latin": "Zingiber officinale",
+   "img": "spice_adrak",
+   "title": "Adrak (Ginger): History, Uses in Pakistani Cooking and Health Benefits",
+   "meta": "All about adrak: why ginger-garlic paste starts so many Pakistani curries, its ancient history, and what research says about ginger and nausea.",
+   "lead": "Adrak lehsan ka paste is the first step of so many Pakistani recipes that most kitchens keep a jar ready in the fridge.",
+   "sections": [
+    ["What is adrak?", "Adrak is the fresh rhizome (underground stem) of Zingiber officinale. Dried and ground, it is called sonth. Its warm, peppery bite comes from compounds called gingerols, which turn into gentler shogaols when ginger is dried or cooked."],
+    ["An ancient root", "Ginger is native to warm parts of Asia and has been used in food and folk medicine for thousands of years. Researchers studying Indus Valley sites such as Farmana and Harappa found evidence of curries made with ginger, garlic and turmeric."],
+    ["Why we use it in Pakistani cooking", "Ginger-garlic paste is fried after the onions in most salan, karahi, qorma and biryani. Fine matchsticks of fresh adrak garnish karahi, nihari and haleem. Ginger also goes into chai on cold days and into the marinade for tikka."],
+    ["How to use it well", "Peel ginger with the edge of a spoon. Make paste with equal parts ginger and garlic and a little oil and salt; it keeps a week in the fridge or months frozen in ice-cube trays. Fry the paste until the raw smell goes, about a minute."],
+    ["What science says about ginger", "According to NCCIH, research suggests ginger may help with nausea and vomiting in pregnancy, and ginger supplements might reduce the severity of menstrual cramps. It's uncertain whether it helps with nausea from chemotherapy or surgery, and most studies haven't found it helpful for motion sickness. Many ginger studies are small or of low quality."],
+    ["Safety", "Ginger in food is safe for most people. Large amounts can cause heartburn or stomach upset. Ginger can interact with some medicines, so check with a doctor before taking supplements, especially if you are pregnant."]
+   ],
+   "faq": [
+    ["Can I use dried ginger instead of fresh?", "Yes, but it tastes different. Use about ¼ teaspoon ground ginger for each tablespoon of fresh."],
+    ["Is ginger good for nausea?", "Research suggests it may help nausea in pregnancy, but ask your doctor before using supplements."],
+    ["How do I store ginger-garlic paste?", "In a clean, airtight jar in the fridge for up to a week, or frozen in ice-cube trays for several months."]
+   ],
+   "recipes": ["chicken_karahi", "beef_nihari", "chicken_tikka"],
+   "sources": [
+    ["NCCIH: Ginger", "https://www.nccih.nih.gov/health/ginger"],
+    ["Harappa.com: Curries in the Indus civilisation", "https://www.harappa.com/node/3594"]
+   ]
+  },
+  {
+   "slug": "lehsan-garlic",
+   "urdu": "Lehsan",
+   "english": "Garlic",
+   "latin": "Allium sativum",
+   "img": "spice_lehsan",
+   "title": "Lehsan (Garlic): History, Uses in Pakistani Food and Health Benefits",
+   "meta": "Learn about lehsan: garlic's ancient history, how Pakistani cooks use it in tarka and masala, and what science says about garlic, cholesterol and blood pressure.",
+   "lead": "Golden slivers of lehsan sizzling in ghee make a plain bowl of daal irresistible.",
+   "sections": [
+    ["What is lehsan?", "Lehsan is the bulb of Allium sativum, a relative of onions and leeks. When garlic is crushed or chopped, it forms allicin, the compound behind its sharp smell. Cooking mellows it into something sweet and nutty."],
+    ["A spice as old as cooking", "Garlic has been grown and eaten for thousands of years. Ancient writings from Egypt, Greece and India describe its use as food and medicine, and researchers have found evidence of garlic in Indus Valley cooking."],
+    ["Why we use it in Pakistani cooking", "Garlic is half of the ginger-garlic paste that starts most curries. Sliced garlic fried in ghee is the classic tarka for daal chana and daal masoor. It also goes into marinades, achar and chutneys."],
+    ["How to use it well", "Fry sliced garlic on medium heat until just golden, because burnt garlic turns bitter. For the strongest flavour, crush garlic and leave it for a few minutes before cooking. Store whole bulbs in a cool, dry, airy place, not the fridge."],
+    ["What science says about garlic", "NCCIH says cholesterol is the best-studied use: garlic supplements may lower total and LDL cholesterol a little in people with high cholesterol. Limited evidence suggests supplements may modestly lower blood pressure in people with high blood pressure and blood sugar in people with diabetes. There's very little research on garlic and colds."],
+    ["Safety", "Garlic in food is safe for most people, apart from garlic breath. Garlic supplements may increase the risk of bleeding, so tell your doctor if you take them, especially with blood thinners or aspirin or before surgery. Never put raw garlic on the skin, as it can cause burns."]
+   ],
+   "faq": [
+    ["Does garlic lower blood pressure?", "Supplements may lower it slightly in people with high blood pressure, but they don't replace prescribed treatment."],
+    ["Why does my fried garlic taste bitter?", "It was cooked too hot or too long. Take it off the heat as soon as it turns light gold."],
+    ["How do I get rid of garlic breath?", "Chewing fresh mint, parsley or a cardamom pod after the meal helps."]
+   ],
+   "recipes": ["daal_chana", "daal_masoor", "chicken_karahi"],
+   "sources": [
+    ["NCCIH: Garlic", "https://www.nccih.nih.gov/health/garlic"],
+    ["Harappa.com: Curries in the Indus civilisation", "https://www.harappa.com/node/3594"]
+   ]
+  }
+ ]
+}
