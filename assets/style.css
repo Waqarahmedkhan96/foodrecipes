@@ -737,3 +737,33 @@ nav.links a,.dd-btn,.brand span{white-space:nowrap}
 @media (max-width:1500px) and (min-width:1181px){nav.links{gap:16px}nav.links a,.dd-btn{letter-spacing:.08em}.bar{gap:12px}}
 @media (max-width:1300px) and (min-width:1181px){.bar-actions .sub-btn{display:none}}
 @media (max-width:1320px){.rail-btn.prev{left:-8px}.rail-btn.next{right:-8px}[dir="rtl"] .rail-btn.prev{left:auto;right:-8px}[dir="rtl"] .rail-btn.next{right:auto;left:-8px}}
+
+/* Story sign-off and name badge */
+.story .body .regards{font-family:var(--display);font-style:italic;font-size:19px;color:var(--muted);margin-top:4px}
+html[lang="ur"] .story .body .regards{font-style:normal}
+.arch-badge{padding:12px;font-size:26px;line-height:1.05}
+html[lang="ur"] .arch-badge{font-size:21px;line-height:1.6}
+
+/* Language block inside the phone menu */
+.m-lang{display:none}
+@media (max-width:1180px){
+  header.site.open nav.links .m-lang{display:block;width:100%;margin-top:14px;padding:18px 16px 16px;border-radius:24px;background:linear-gradient(160deg,#4A1C25 0%,#2F0F16 70%,#260B12 100%);box-shadow:0 0 0 1px rgba(195,161,107,.4)}
+  .m-lang-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+  .m-lang-h span:first-child{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+  .m-lang-h span:last-child{font-size:15px;color:rgba(241,234,220,.75)}
+  .m-lang-row{display:flex;gap:10px;flex-wrap:wrap}
+  header.site.open nav.links a.m-lang-opt{display:flex;flex-direction:column;align-items:center;gap:6px;padding:0;font-size:13px;letter-spacing:0;text-transform:none;color:rgba(241,234,220,.8);min-width:64px}
+  nav.links a.m-lang-opt::after{display:none}
+  .m-lang-opt .flag{width:48px;height:48px;box-shadow:0 0 0 2px rgba(195,161,107,.35),0 2px 6px rgba(0,0,0,.35)}
+  .m-lang-opt[aria-current] .flag{box-shadow:0 0 0 2px var(--maroon),0 0 0 4px var(--gold),0 2px 8px rgba(0,0,0,.4)}
+  nav.links a.m-lang-opt[aria-current]{color:var(--gold-hi);font-weight:600}
+  .m-lang-opt[lang="ur"] span:last-child{font-family:"Noto Nastaliq Urdu",var(--body);font-size:14px}
+  html[lang="ur"] .m-lang-h span:first-child{text-transform:none;font-size:15px}
+}
+/* Small language icon in the phone header */
+@media (max-width:640px){
+  .lang-btn{width:40px;height:40px;padding:0;justify-content:center;gap:0}
+  .lang-btn b,.lang-btn .car{display:none}
+  .lang-btn .flag{width:30px;height:30px}
+}
+
