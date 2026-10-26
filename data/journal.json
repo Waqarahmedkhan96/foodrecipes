@@ -1,0 +1,65 @@
+{
+ "posts": [
+  {
+   "slug": "slow-art-of-ghotna",
+   "tag": "Technique",
+   "title": "The slow art of ghotna",
+   "img": "beef_haleem",
+   "read": "6 min read",
+   "summary": "Why haleem is beaten for an hour, and how to get those long, silky strands without a wooden ghotna.",
+   "lead": "Every Ramadan, someone in the family stands over the haleem pot with a wooden ghotna and beats it until their arms ache. That hour of work is what turns wheat, lentils and beef into something silky.",
+   "related": ["beef_haleem", "beef_nihari", "daal_chana"],
+   "body": [
+    ["h", "Why we beat haleem"],
+    ["p", "Haleem starts as two separate pots: soft wheat and lentils in one, falling-apart beef in the other. Stirred together, they are just a thick stew. Beaten together, the meat fibres pull apart and wrap around the grains until the whole pot stretches into long strands when you lift the spoon. That stretch is the sign of a well-made haleem."],
+    ["p", "The ghotna is a heavy wooden masher with a rounded head. Working it in a steady push-and-twist rhythm crushes the grains without turning them to paste, and it shreds the beef into threads rather than mince."],
+    ["h", "Without a ghotna"],
+    ["p", "Start with a potato masher for the first fifteen minutes to break everything down. Then switch to a strong balloon whisk and beat in circles, scraping the bottom of the pot so nothing catches. Keep the heat at its lowest and add a splash of hot water whenever it tightens up."],
+    ["p", "Avoid a stick blender. It is fast, but it purees the meat and you lose the strands completely."],
+    ["callout", "Fatma's tip", "Beat in turns. Put on a long playlist, hand the masher round the kitchen, and the hour goes quickly."],
+    ["h", "Finishing at the table"],
+    ["p", "Haleem is only half finished in the pot. The rest happens at the table: a heap of crisp fried onions, ginger matchsticks, green chillies, chaat masala, mint and a squeeze of lemon, so everyone builds their own bowl."]
+   ]
+  },
+  {
+   "slug": "eid-morning-table",
+   "tag": "Celebrations",
+   "title": "An Eid morning table",
+   "img": "sheer_khurma",
+   "read": "8 min read",
+   "summary": "Sheer khurma before prayers, kebabs by noon. A menu plan for hosting twelve without missing the day.",
+   "lead": "Eid morning has its own order. Sheer khurma before prayers, guests by mid-morning and a full table by lunch. With a little planning, the cook gets to enjoy the day too.",
+   "related": ["sheer_khurma", "chicken_qorma", "zarda", "fruit_custard"],
+   "body": [
+    ["h", "Two days before"],
+    ["p", "Make anything that improves with time. Chicken qorma tastes deeper on the second day, and gulab jamun want a long soak in syrup. Chop and fry a big batch of onions and keep them in an airtight jar for garnishing everything from qorma to zarda."],
+    ["h", "The night before"],
+    ["p", "Cook the fruit custard and chill it, but keep the fruit aside. Colour and parboil the rice for zarda so it only needs steaming in the morning. Set the table, iron the dastarkhwan and lay out the serving bowls with a note on each so helpers know what goes where."],
+    ["h", "Eid morning"],
+    ["p", "Warm the sheer khurma first so it is ready when the family returns from prayers. While guests arrive, steam the zarda, warm the qorma gently and fold the fruit into the custard just before it goes on the table."],
+    ["callout", "Fatma's tip", "Keep one hob free all day for chai. On Eid, the kettle never stops."],
+    ["h", "A menu for twelve"],
+    ["p", "Sheer khurma to start, then shahi chicken qorma with naan, a beef or chicken biryani, raita and green chutney. For something sweet, zarda and fruit custard. It looks generous, but most of it is made ahead."]
+   ]
+  },
+  {
+   "slug": "coal-smoke-trick",
+   "tag": "Pantry",
+   "title": "The coal smoke trick",
+   "img": "chicken_tikka",
+   "read": "4 min read",
+   "summary": "The dhuanr method that gives home-cooked tikka and daal the taste of a roadside dhaba, with one piece of charcoal.",
+   "lead": "That smoky flavour you taste in dhaba-style tikka and daal doesn't need a tandoor. It comes from one piece of glowing charcoal and three minutes under a lid. In Urdu this is called dhuanr.",
+   "related": ["chicken_tikka", "daal_masoor", "daal_chana"],
+   "body": [
+    ["h", "What you need"],
+    ["p", "A single lump of natural charcoal, a small steel bowl or a piece of foil folded into a cup, a teaspoon of ghee or oil and a pot with a tight lid."],
+    ["h", "How to do it"],
+    ["p", "Hold the charcoal over a gas flame with tongs until it glows red all over, about four minutes. Place the steel bowl in the centre of the finished dish, set the coal inside and pour the ghee over it. As soon as it starts to smoke, cover the pot tightly and leave it for two to three minutes. Lift the lid, remove the bowl and serve."],
+    ["callout", "Fatma's tip", "Do this with the window open and the extractor on, and never leave glowing charcoal unattended. Let it cool completely in water before throwing it away."],
+    ["h", "Where it works best"],
+    ["p", "Chicken tikka, seekh kebab mince, daal masoor and chana daal all take smoke beautifully. Delicate dishes like kheer or yakhni pulao are better left without it."]
+   ]
+  }
+ ]
+}
