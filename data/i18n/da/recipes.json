@@ -1,0 +1,916 @@
+{
+ "categories": {
+  "rice": {
+   "name": "Ris og pulao",
+   "desc": "Biryani på dum og milde pulaoer – lagt i lag og dampet i ro og mag."
+  },
+  "chicken": {
+   "name": "Kylling",
+   "desc": "Karahi, handi og tikka fra madgaderne i Lahore."
+  },
+  "beef": {
+   "name": "Oksekød",
+   "desc": "Nihari, der simrer natten over, haleem og langtidskogt karahi."
+  },
+  "mutton": {
+   "name": "Lam",
+   "desc": "Dumba karahi, langtidsstegt lam og retterne fra det nordvestlige Pakistan."
+  },
+  "bread": {
+   "name": "Brød",
+   "desc": "Naan, paratha og den daglige roti, der passer til alt."
+  },
+  "daal": {
+   "name": "Daal",
+   "desc": "Trøstende linser med en sydende tarka på toppen."
+  },
+  "street": {
+   "name": "Street food",
+   "desc": "Syrlig, sprød chaat og snacks fra Pakistans madgader."
+  },
+  "dessert": {
+   "name": "Desserter",
+   "desc": "Mithai, kheer og de søde sager til hver eid."
+  },
+  "sides": {
+   "name": "Tilbehør",
+   "desc": "Raita og achar, der gør bordet komplet."
+  }
+ },
+ "collections": {
+  "ramadan": {
+   "name": "Ramadan",
+   "desc": "Favoritter til iftar og sehri – fra haleem til tikka."
+  },
+  "eid": {
+   "name": "Eid-bordet",
+   "desc": "Sheer khurma, biryani og det søde til eid."
+  },
+  "winter": {
+   "name": "Til kolde aftener",
+   "desc": "Langsom, mættende mad, når det er mørkt og koldt udenfor."
+  },
+  "quick": {
+   "name": "Hurtigt og nemt",
+   "desc": "På bordet på højst 45 minutter."
+  }
+ },
+ "recipes": {
+  "chicken_biryani": {
+   "name": "Kyllingebiryani fra Karachi",
+   "intro": "Lag på lag, duftende og med masser af varme – og med de kartofler og tørrede blommer, der gør den til Karachis egen.",
+   "ing": [
+    "750 g kylling med ben, skåret i karrystykker",
+    "600 g sella basmatiris, udblødt i 30 minutter",
+    "2 store løg i tynde skiver",
+    "3 tomater, hakket",
+    "2½ dl yoghurt, pisket",
+    "2 spsk ingefær-hvidløgspasta",
+    "3 spsk biryani masala",
+    "2 kartofler, halveret",
+    "6 tørrede blommer (aloo bukhara)",
+    "4 grønne chilier og en håndfuld af både mynte og frisk koriander",
+    "1 knivspids safran udblødt i 3 spsk lun mælk",
+    "1 dl olie eller ghee samt hele krydderier: laurbærblad, nelliker, kardemomme og kanel"
+   ],
+   "steps": [
+    "Steg løgene i olien, til de er dybt gyldne. Tag halvdelen op til lagene.",
+    "Kom ingefær-hvidløgspasta og kylling i, og brun i 5 minutter. Rør tomater, yoghurt, masala, kartofler og blommer i. Læg låg på, og lad det koge i 25 minutter, til olien lægger sig ovenpå.",
+    "Kog risene i godt saltet vand med de hele krydderier, til de er tre fjerdedele møre, og hæld vandet fra.",
+    "Læg halvdelen af risene i gryden, så al kyllingen, mynte, koriander, chili og de stegte løg og til sidst resten af risene. Dryp safranmælken over.",
+    "Luk låget tæt, og lad biryanien dampe ved laveste varme (dum) i 20 minutter. Lad den hvile 5 minutter, og vend forsigtigt fra siderne."
+   ],
+   "tip": "Salt risvandet, til det smager som havet. Risene tager kun en lille del af saltet til sig."
+  },
+  "beef_biryani": {
+   "name": "Oksebiryani",
+   "intro": "Dyb, kødfuld og festlig. Det er den biryani, der dukker op til hvert eneste store familiebryllup.",
+   "ing": [
+    "1 kg oksekød uden ben, i tern",
+    "800 g sella basmatiris, udblødt",
+    "3 løg i skiver, stegt gyldne",
+    "4 tomater",
+    "3½ dl yoghurt",
+    "3 spsk ingefær-hvidløgspasta",
+    "4 spsk biryani masala",
+    "1 tsk kewravand",
+    "Safranmælk, mynte, frisk koriander og grønne chilier",
+    "1½ dl olie eller ghee"
+   ],
+   "steps": [
+    "Mariner kødet i yoghurt, ingefær-hvidløgspasta og masala i 2 timer.",
+    "Kog det under låg med halvdelen af de stegte løg og tomaterne, til det er mørt – cirka 75 minutter.",
+    "Forkog risene i saltet vand med hele krydderier.",
+    "Læg ris og kød i lag med krydderurter, stegte løg, safran og kewravand.",
+    "Luk tæt, og lad det dampe ved svag varme i 25 minutter."
+   ],
+   "tip": "Kødet skal være helt mørt, før det kommer i lagene. Det bliver ikke mørere under dum."
+  },
+  "kabli_pulao": {
+   "name": "Kabuli pulao",
+   "intro": "Peshawars milde, gyldne pulao: kødet koger sin egen bouillon, og på toppen ligger blanke gulerødder og rosiner.",
+   "ing": [
+    "1 kg lam eller oksekød med ben",
+    "600 g sella basmatiris, udblødt",
+    "2 løg i skiver",
+    "2 gulerødder i tynde stave",
+    "1 dl rosiner",
+    "½ dl mandelsplitter",
+    "2 tsk hele spidskommen",
+    "1 tsk garam masala",
+    "1 spsk sukker",
+    "1 dl olie og salt efter smag"
+   ],
+   "steps": [
+    "Brun løgene dybt i olien. Kom kødet i, og brun det godt.",
+    "Tilsæt 2 l vand, spidskommen, garam masala og salt. Lad det simre under låg i cirka en time, til kødet er mørt.",
+    "Svits gulerødderne med sukkeret i en anden pande, til de er blanke, og tilsæt rosiner og mandler, til rosinerne puster sig op.",
+    "Mål 11 dl af bouillonen op, og hæld den tilbage til kødet. Bring i kog, tilsæt de afdryppede ris, og kog, til vandet er sunket under risene.",
+    "Fordel gulerødder og rosiner ovenpå, læg låget tæt på, og lad det dampe ved svag varme i 20 minutter."
+   ],
+   "tip": "Steg løgene mørkere, end du tror, de skal være. Det er derfra, pulaoens gyldne farve kommer."
+  },
+  "chicken_pulao": {
+   "name": "Yakhni-pulao med kylling",
+   "intro": "Ris kogt i en duftende kyllingebouillon med hele krydderier. Mild, trøstende og helt uden dikkedarer.",
+   "ing": [
+    "750 g kylling med ben",
+    "600 g basmatiris, udblødt",
+    "1 løg i skiver",
+    "Krydderipose (potli): 1 spsk korianderfrø, 1 tsk fennikelfrø, 4 fed hvidløg og 3 cm ingefær",
+    "Hele krydderier: spidskommen, nelliker, kardemomme, sorte peberkorn og laurbærblad",
+    "1 dl yoghurt",
+    "4 spsk ghee og salt"
+   ],
+   "steps": [
+    "Lad kyllingen simre med krydderiposen i 1½ l vand i 35 minutter, så du får en yakhni (bouillon).",
+    "Steg løget gyldent i ghee med de hele krydderier, og kom kyllingestykkerne og yoghurten i.",
+    "Hæld 11 dl siet yakhni i, og bring det i kog.",
+    "Tilsæt risene, og kog, til vandet er sunket under risene. Lad dem derefter dampe under låg ved svag varme i 15 minutter."
+   ],
+   "tip": "Bind krydderierne ind i et stykke gaze, så bouillonen forbliver klar og risene hvide."
+  },
+  "matar_pulao": {
+   "name": "Matar pulao med ærter",
+   "intro": "Hverdagens pulao: søde ærter, hele krydderier og ris, hvor hvert korn ligger for sig.",
+   "ing": [
+    "400 g basmatiris, udblødt i 30 minutter",
+    "250 g ærter (gerne frosne)",
+    "1 løg i skiver",
+    "1 tsk hele spidskommen",
+    "Hele krydderier: 4 nelliker, 2 kardemommer, 1 laurbærblad og et lille stykke kanel",
+    "1 grøn chili, flækket",
+    "7 dl vand",
+    "3 spsk ghee og salt efter smag"
+   ],
+   "steps": [
+    "Steg løget gyldent i ghee sammen med spidskommen og de hele krydderier.",
+    "Kom ærter, chili og salt i, og rør rundt i 2 minutter.",
+    "Hæld vandet i, bring det i kraftig kog, og tilsæt de afdryppede ris.",
+    "Kog ved høj varme, til vandet er sunket under risenes overflade. Læg låg på, og lad det dampe ved svag varme i 15 minutter."
+   ],
+   "tip": "Lad låget blive på i alle 15 minutter. Hver gang du kigger, slipper dampen ud."
+  },
+  "chicken_karahi": {
+   "name": "Lahori karahi med kylling",
+   "intro": "Ingen løg og intet vand – bare tomater, en rasende flamme og duften af en madgade i Lahore ved midnat.",
+   "ing": [
+    "1 kg kylling i små stykker",
+    "6 tomater, halveret",
+    "1 dl olie",
+    "1 spsk ingefær-hvidløgspasta",
+    "1 tsk knuste chiliflager",
+    "1 tsk spidskommen, groft knust",
+    "1 tsk korianderfrø, groft knust",
+    "1 tsk sort peber",
+    "4 grønne chilier",
+    "Ingefærstave og frisk koriander til pynt"
+   ],
+   "steps": [
+    "Varm olien op i en karahi (eller en stor wok), til den dirrer. Brun kyllingen ved høj varme, til den er hvid hele vejen rundt, og tilsæt ingefær-hvidløgspastaen.",
+    "Læg tomaterne ovenpå med skindsiden op, og læg låg på i 5 minutter. Træk skindet af, og mos tomaterne ud i gryden.",
+    "Tilsæt de knuste krydderier og salt, og bliv ved med at røre ved høj varme (bhunai) i cirka 15 minutter, til olien skiller sig ud.",
+    "Afslut med grønne chilier, sort peber, ingefær og koriander."
+   ],
+   "tip": "Hold varmen høj hele vejen. Karahi skal have voldsom varme og intet vand."
+  },
+  "shinwari_karahi": {
+   "name": "Shinwari karahi med kylling",
+   "intro": "Klassikeren fra landevejen ved Peshawar og Shinwari-stammen: kylling brunet i fedt med salt og tomater og afsluttet med sort peber, grøn chili og ingefær. Ingen krydderipulver, ingen løg – kun smag.",
+   "ing": [
+    "1 kg kylling i små stykker med ben",
+    "1 dl ghee, dyrefedt (charbi) eller olie",
+    "5-6 mellemstore tomater, halveret",
+    "1 spsk ingefær-hvidløgspasta",
+    "1½ tsk salt",
+    "1½ tsk groftknust sort peber",
+    "6 grønne chilier, halveret",
+    "5 cm ingefær i tynde stave",
+    "Frisk koriander og citron til servering"
+   ],
+   "steps": [
+    "Varm ghee op i en tung karahi ved høj varme, til den er meget varm. Kom kylling og salt i, og brun i 6-8 minutter, til kødet er gyldent på alle sider.",
+    "Rør ingefær-hvidløgspastaen i et minut, og læg så tomaterne ovenpå med skindsiden op. Læg låg på, og lad det koge i 5 minutter.",
+    "Træk tomatskindet af med en tang, og mos tomaterne ud i gryden.",
+    "Kog uden låg ved høj varme i 10-12 minutter, mens du rører og skraber, til tomaterne er smeltet til en blank sauce, og fedtet skiller sig ud.",
+    "Tilsæt sort peber og grønne chilier, kog 2 minutter mere, og afslut med ingefær og koriander. Servér direkte fra gryden med naan og citron."
+   ],
+   "tip": "Magien ligger i fedtet og flammen. Hold varmen høj, og kom hverken vand eller krydderipulver i."
+  },
+  "chicken_qorma": {
+   "name": "Shahi qorma med kylling",
+   "intro": "Midtpunktet ved ethvert pakistansk bryllup og enhver eid-middag: kylling langtidskogt i yoghurt, brunede løg og hele krydderier, rundet af med mandelpasta og kewra.",
+   "ing": [
+    "1 kg kylling i stykker med ben",
+    "3 mellemstore løg i tynde skiver",
+    "2 dl olie eller ghee",
+    "2½ dl yoghurt, pisket",
+    "1 spsk ingefær-hvidløgspasta",
+    "1½ tsk chilipulver",
+    "2 tsk stødt koriander",
+    "½ tsk gurkemeje",
+    "Hele krydderier: 2 laurbærblade, 6 nelliker, 4 grønne kardemommer, 1 sort kardemomme og 1 kanelstang",
+    "10-12 mandler, udblødt og blendet til en pasta",
+    "1 tsk garam masala",
+    "Et par dråber kewravand",
+    "Salt efter smag",
+    "Mandelsplitter, ingefærstave og frisk koriander til pynt"
+   ],
+   "steps": [
+    "Steg løgene i olien, til de er dybt gyldenbrune. Tag dem op, lad dem køle af, og knus eller blend dem med en sjat yoghurt til en jævn pasta af brunede løg.",
+    "Lad de hele krydderier knitre i den samme olie i 30 sekunder. Kom kylling og ingefær-hvidløgspasta i, og brun i 5 minutter.",
+    "Rør yoghurten sammen med chili, koriander, gurkemeje og salt. Hæld det i gryden, og kog ved middel varme under omrøring, til olien begynder at skille sig ud.",
+    "Rør løgpastaen og mandelpastaen i sammen med 2½ dl vand. Læg låg på, og lad det simre ved svag varme i 20 minutter, til kyllingen er mør.",
+    "Drys garam masala og kewravand over, læg låg på i 5 minutter ved laveste varme (dum), og pynt med mandler, ingefær og koriander. Servér med naan eller sheermal."
+   ],
+   "tip": "Det er de brunede løg, der gør qormaen. Steg dem langsomt til en jævn, dyb guldfarve – brænder de på, bliver saucen bitter."
+  },
+  "chicken_handi": {
+   "name": "Chicken handi",
+   "intro": "Cremet, mild og duftende af tørrede bukkehornsblade – kogt og serveret i lerpotten.",
+   "ing": [
+    "750 g kylling uden ben",
+    "2 løg i skiver",
+    "3 tomater, hakket",
+    "2½ dl yoghurt",
+    "1 dl piskefløde",
+    "1 spsk ingefær-hvidløgspasta",
+    "1 tsk chilipulver og ½ tsk gurkemeje",
+    "1 tsk garam masala",
+    "1 spsk kasuri methi (tørrede bukkehornsblade)",
+    "¾ dl olie og salt efter smag"
+   ],
+   "steps": [
+    "Steg løgene lysegyldne, og tilsæt ingefær-hvidløgspasta og kylling.",
+    "Kom tomater, chili, gurkemeje og salt i, og lad det koge ind i 10 minutter.",
+    "Rør yoghurten i, og kog, til olien skiller sig ud.",
+    "Skru ned for varmen, tilsæt fløde, garam masala og knust kasuri methi, og lad det simre i 5 minutter."
+   ],
+   "tip": "Gnid kasuri methi mellem håndfladerne, når du kommer det i. Det vækker de æteriske olier."
+  },
+  "chicken_tikka": {
+   "name": "Chicken tikka",
+   "intro": "Sværtet i kanten, mør indeni og røget med et enkelt stykke trækul.",
+   "ing": [
+    "1 kg kyllingelår, skåret dybe snit i",
+    "1 dl tyk yoghurt (fx græsk)",
+    "2 spsk citronsaft",
+    "1 spsk ingefær-hvidløgspasta",
+    "2 tsk kashmirisk chilipulver",
+    "1 tsk stødt spidskommen og 1 tsk stødt koriander",
+    "½ tsk garam masala",
+    "2 spsk olie og salt efter smag",
+    "1 stykke trækul til rygning"
+   ],
+   "steps": [
+    "Bland det hele undtagen trækullet, og lad kyllingen marinere i mindst 4 timer – helst natten over.",
+    "Steg i ovnen ved 230 °C i 25-30 minutter, og vend én gang undervejs – eller grill over kul.",
+    "Varm trækullet, til det gløder, sæt det i en lille stålskål midt i fadet, dryp med olie, og læg låg på i 3 minutter.",
+    "Servér med citron, løgringe og grøn chutney."
+   ],
+   "tip": "Skær snittene helt ind til benet, så marinaden trænger hele vejen igennem."
+  },
+  "chicken_broast": {
+   "name": "Hel chicken broast",
+   "intro": "Pakistans yndlingsfriterede kylling: en hel kylling marineret i citron og krydderier, dampet mør og derefter friteret til en dyb, knasende sprød skorpe. Serveres med pommes frites, hvidløgsmayo og ketchup.",
+   "ing": [
+    "1 hel kylling (1,2-1,4 kg) med skind, delt i fire",
+    "Marinade: 3 spsk citronsaft, 1 spsk ingefær-hvidløgspasta, 2 tsk chilipulver, 1 tsk hvid peber, 1 tsk sort peber, ½ tsk gurkemeje, 1 tsk salt og 2 spsk eddike",
+    "Paneringsmel: 200 g hvedemel, 60 g majsstivelse, 1 tsk af hver salt, chili og hvid peber samt ½ tsk bagepulver",
+    "1 æg pisket sammen med 1 dl kold mælk",
+    "Olie til friturestegning",
+    "Til servering: pommes frites, hvidløgsmayo, ketchup, løgringe og citron"
+   ],
+   "steps": [
+    "Skær dybe snit i kyllingen, gnid marinaden godt ind, og lad den stå i køleskabet i mindst 4 timer – helst natten over.",
+    "Damp stykkerne over kogende vand i 20 minutter, til de lige netop er gennemstegte, og lad dem køle af og tørre i 10 minutter.",
+    "Bland paneringsmelet. Dyp hvert stykke i æggemælken, og tryk det godt ned i melet. Gentag én gang til, hvis du vil have en ekstra sprød skorpe.",
+    "Varm olien op til 170 °C, og frituresteg to stykker ad gangen i 6-8 minutter, mens du vender dem, til de er dybt gyldne.",
+    "Lad dem dryppe af på en rist, drys med chili og salt, og servér dem varme med pommes frites og dip."
+   ],
+   "tip": "Restauranterne trykfriterer broast i specielle friturer. Frituresteg aldrig i en trykkoger derhjemme – når du damper kyllingen først, får du det samme saftige kød helt sikkert."
+  },
+  "beef_nihari": {
+   "name": "Royal nihari med oksekød",
+   "intro": "Okseskank, der har simret natten over til en blank, krydret gryderet. Gøres færdig ved bordet med ingefær, chili og citron.",
+   "ing": [
+    "1,5 kg okseskank (nalli) med ben",
+    "1 dl ghee",
+    "2 løg i skiver",
+    "2 spsk ingefær-hvidløgspasta",
+    "4 spsk nihari masala",
+    "60 g atta (fuldkornshvedemel)",
+    "2½ l vand og salt efter smag",
+    "Til servering: ingefærstave, grønne chilier, citron, frisk koriander og stegte løg"
+   ],
+   "steps": [
+    "Steg løgene gyldne i ghee, og tag halvdelen op til pynt.",
+    "Kom kød og ingefær-hvidløgspasta i, og brun kødet på alle sider. Rør masalaen i i 2 minutter.",
+    "Hæld vandet i, bring det i kog, og lad det simre under låg ved laveste varme i 5-6 timer (eller 90 minutter i trykkoger).",
+    "Pisk atta ud i 2½ dl vand, og hæld det langsomt i under omrøring. Lad det simre i 20 minutter, til retten er blank og silkeblød.",
+    "Lav tarkaen: varm 2 spsk ghee op med en knivspids masala og chili, hæld det over retten, og pynt."
+   ],
+   "tip": "Sæt den over aftenen før. Nihari var altid noget, man spiste til morgenmad ved daggry."
+  },
+  "beef_haleem": {
+   "name": "Haleem med oksekød fra Karachi",
+   "intro": "Hvede, fem slags linser og oksekød, langtidskogt og pisket sammen, til det trækker lange, silkebløde tråde – og toppet med sprøde stegte løg, ingefær, grøn chili og citron. Karachis ramadan-favorit.",
+   "ing": [
+    "750 g oksekød uden ben",
+    "180 g knækket hvede (daliya), udblødt natten over",
+    "100 g chana daal",
+    "50 g af hver masoor, moong og urad daal",
+    "50 g perlebyg",
+    "2 løg i skiver",
+    "2 spsk ingefær-hvidløgspasta",
+    "2 tsk chilipulver, 1 tsk gurkemeje og 2 tsk garam masala",
+    "1 dl ghee og salt efter smag",
+    "Til servering: stegte løg, ingefær, grøn chili, citron og chaat masala"
+   ],
+   "steps": [
+    "Kog hvede, byg og linser med gurkemeje i rigeligt vand, til det hele er meget mørt – cirka 90 minutter.",
+    "Kog kødet for sig med løg, ingefær-hvidløgspasta, krydderier og vand i cirka 2 timer, til det falder fra hinanden.",
+    "Hæld de to gryder sammen, og pisk med en ghotna af træ eller et piskeris ved svag varme i 30-45 minutter, til massen trækker tråde.",
+    "Servér med alt tilbehøret ved siden af."
+   ],
+   "tip": "En kartoffelmoser og derefter et piskeris giver dig næsten de samme tråde som en ghotna."
+  },
+  "beef_karahi": {
+   "name": "Peshawari karahi med oksekød",
+   "intro": "Som i Namak Mandi: oksekød, tomater, salt og fedt, kogt hårdt og hurtigt. Enkelt og storslået.",
+   "ing": [
+    "1 kg oksekød med lidt fedt, i små tern",
+    "5 tomater, halveret",
+    "¾ dl dyrefedt eller ghee",
+    "1 spsk ingefær i tynde stave",
+    "1 tsk sort peber, knust",
+    "4 grønne chilier",
+    "Salt",
+    "Frisk koriander til pynt"
+   ],
+   "steps": [
+    "Brun kødet i meget varmt fedt med salt.",
+    "Tilsæt 2½ dl vand, læg låg på, og kog, til kødet er mørt – cirka 40 minutter.",
+    "Kom tomaterne i, træk skindet af, efterhånden som de bliver bløde, og mos dem.",
+    "Kog ved høj varme, til fedtet skiller sig ud, og afslut med peber, ingefær og chili."
+   ],
+   "tip": "Peshawari karahi bruger næsten ingen krydderier. Smagen kommer fra godt oksekød og tålmodighed."
+  },
+  "dumba_karahi": {
+   "name": "Shinwari dumba karahi med lam",
+   "intro": "Stoltheden fra Namak Mandi i Peshawar: dumba (fedthalelam) med ben, brunet i sit eget fedt med salt og tomater og afsluttet med sort peber, grøn chili og ingefær. Enkelt, fyldigt og uforglemmeligt.",
+   "ing": [
+    "1 kg lam (dumba) med ben, i små stykker",
+    "¾ dl lammefedt (charbi) eller ghee",
+    "5-6 mellemstore tomater, halveret",
+    "1 spsk ingefær-hvidløgspasta",
+    "1½ tsk salt",
+    "1½ tsk groftknust sort peber",
+    "6 grønne chilier, halveret",
+    "5 cm ingefær i tynde stave",
+    "Frisk koriander, citron og naan til servering"
+   ],
+   "steps": [
+    "Smelt lammefedtet i en tung karahi ved høj varme, til det er smeltet ud og syder.",
+    "Kom lam og salt i, og brun kraftigt i 8-10 minutter, til kødet er brunet på alle sider.",
+    "Rør ingefær-hvidløgspastaen i, tilsæt 2½ dl vand, læg låg på, og kog ved middel varme i 35-40 minutter, til kødet er mørt.",
+    "Læg tomaterne ovenpå, læg låg på i 5 minutter, træk skindet af, og mos dem ud i gryden.",
+    "Kog uden låg ved høj varme under omrøring, til tomaterne er smeltet sammen med fedtet, og olien skiller sig ud – cirka 10 minutter.",
+    "Afslut med sort peber, grønne chilier, ingefær og koriander. Servér rygende varm direkte fra gryden."
+   ],
+   "tip": "Shinwari karahi bruger ingen krydderipulver. Godt lammekød, dets eget fedt, salt og en voldsom flamme er alt, hvad den behøver."
+  },
+  "roghni_naan": {
+   "name": "Roghni naan",
+   "intro": "Blød naan med mælk i dejen, penslet med æg og drysset med sesam og nigellafrø.",
+   "ing": [
+    "375 g hvedemel",
+    "1 tsk tørgær",
+    "1 tsk sukker og 1 tsk salt",
+    "1 dl lun mælk",
+    "½ dl yoghurt",
+    "2 spsk olie",
+    "Lunkent vand efter behov",
+    "1 æg pisket med 1 spsk mælk",
+    "Sesamfrø, nigellafrø og smør til at slutte af med"
+   ],
+   "steps": [
+    "Ælt mel, gær, sukker, salt, mælk, yoghurt og olie til en blød dej i 8 minutter, og tilsæt vand efter behov.",
+    "Dæk dejen til, og lad den hæve i en time.",
+    "Del den i 6 stykker, tryk hvert stykke ud til en oval, og lav fordybninger med fingerspidserne.",
+    "Pensl med æg, og drys frøene over.",
+    "Bag på en meget varm bagesten ved 250 °C i 6-8 minutter, og pensl med smør."
+   ],
+   "tip": "Ingen bagesten? Bag dem på en varm tawa eller pande, og hold dem derefter over gasblusset, så de får bobler."
+  },
+  "balochi_kaak": {
+   "name": "Tandoori kaak i balochisk stil",
+   "intro": "Inspireret af de rustikke brød fra Balochistan: et gyldent fladbrød med frø, en flot brunet skorpe og en blød midte. Frisk fra ovnen passer det perfekt til karry, chutney og en varm kop chai.",
+   "ing": [
+    "375 g hvedemel (maida)",
+    "1 tsk tørgær",
+    "1 tsk sukker",
+    "1 tsk salt",
+    "2 spsk neutral olie eller smeltet ghee",
+    "2-2½ dl lunkent vand efter behov",
+    "2 spsk naturel yoghurt",
+    "1 spsk sesamfrø",
+    "1 tsk nigellafrø (kalonji)",
+    "Smeltet smør eller ghee til pensling"
+   ],
+   "steps": [
+    "Lav dejen: Bland mel, gær, sukker og salt. Tilsæt yoghurt, olie og så meget lunkent vand, at du får en blød dej. Ælt i 8-10 minutter, til den er glat.",
+    "Lad den hæve: Dæk dejen til, og lad den hvile et lunt sted i 45-60 minutter, til den er tydeligt hævet.",
+    "Form brødene: Del dejen i 2-3 stykker. Tryk dem ud til tykke runde brød, tryk let på midten, og skær et pynteligt mønster i overfladen. Drys med sesam og kalonji.",
+    "Bag dem gyldne: Forvarm ovnen til 230 °C. Bag brødene på en forvarmet bageplade eller pizzasten i 12-18 minutter afhængigt af tykkelsen, til de er gennembagte og gyldenbrune.",
+    "Gør dem færdige: Pensl let med smeltet ghee, og servér dem lune med chai, yoghurt, chutney eller din yndlingskarry."
+   ],
+   "tip": "Traditionel balochisk kaak bliver bagt rundt om ophedede sten eller over åben ild, og metoden varierer fra sted til sted. Denne ovnbagte udgave genskaber brødet med frø på billedet – ikke den stenbagte original."
+  },
+  "paratha": {
+   "name": "Lachha paratha",
+   "intro": "Flaget, lagdelt og sprød – rullet op af en plisseret dej med ghee.",
+   "ing": [
+    "250 g atta (fuldkornshvedemel)",
+    "½ tsk salt",
+    "Vand til at ælte med",
+    "½ dl ghee",
+    "Mel til at drysse med"
+   ],
+   "steps": [
+    "Ælt en blød dej, og lad den hvile i 20 minutter.",
+    "Rul en tynd cirkel ud, smør den med ghee, og drys med mel.",
+    "Fold den i plisséer som en papirvifte, rul strimlen op til en snegl, og lad den hvile i 10 minutter.",
+    "Rul den forsigtigt ud, og steg den på en varm tawa med ghee, til den er sprød på begge sider.",
+    "Klap den let sammen mellem håndfladerne, så lagene folder sig ud."
+   ],
+   "tip": "Det er hvilen efter rulningen, der forhindrer lagene i at klæbe sammen."
+  },
+  "chapati": {
+   "name": "Pakistansk tawa-roti",
+   "intro": "Bløde, oppustede fuldkornsroti. Brødet på ethvert pakistansk middagsbord.",
+   "ing": [
+    "250 g atta (fuldkornshvedemel)",
+    "Ca. 2 dl lunkent vand",
+    "1 knivspids salt",
+    "Ghee til pensling (kan undlades)"
+   ],
+   "steps": [
+    "Ælt atta og vand til en blød dej, og lad den hvile i 20 minutter.",
+    "Rul tynde cirkler ud med et let drys mel.",
+    "Bag dem på en varm tawa eller pande, til der kommer bobler, vend dem, og tryk let på kanterne, så de puster sig op.",
+    "Pensl med ghee, og hold dem varme i et viskestykke."
+   ],
+   "tip": "Jo blødere dej, jo blødere roti. Dejen skal føles som en øreflip."
+  },
+  "daal_chana": {
+   "name": "Daal chana",
+   "intro": "Flækkede kikærter kogt bløde, men hele, og afsluttet med en sydende hvidløgstarka.",
+   "ing": [
+    "200 g chana daal, udblødt 1 time",
+    "1 løg, hakket",
+    "2 tomater, hakket",
+    "1 tsk ingefær-hvidløgspasta",
+    "½ tsk gurkemeje og 1 tsk chilipulver",
+    "Salt efter smag",
+    "Tarka: 3 spsk ghee, 1 tsk hele spidskommen, 3 tørrede røde chilier og 4 fed hvidløg i skiver"
+   ],
+   "steps": [
+    "Kog linserne med gurkemeje, til de er bløde, men stadig holder formen – cirka 40 minutter.",
+    "Steg løget, tilsæt ingefær-hvidløgspasta, tomater, chili og salt, og lad det koge ind.",
+    "Bland det med linserne, og lad det simre i 10 minutter.",
+    "Varm ghee op, lad spidskommen, chili og hvidløg knitre, og hæld det over daalen."
+   ],
+   "tip": "Hæld tarkaen over ved bordet, så alle kan høre den syde."
+  },
+  "daal_masoor": {
+   "name": "Daal masoor",
+   "intro": "Daalen med røde linser, som laves i alle pakistanske hjem – klar på en halv time.",
+   "ing": [
+    "200 g røde linser, skyllet",
+    "7 dl vand",
+    "1 tomat, hakket",
+    "½ tsk gurkemeje og 1 tsk chilipulver",
+    "Salt efter smag",
+    "Tarka: 2 spsk ghee, 1 tsk hele spidskommen, 3 fed hvidløg og 2 tørrede røde chilier",
+    "Frisk koriander"
+   ],
+   "steps": [
+    "Kog linserne med vand, tomat, gurkemeje, chili og salt i 20 minutter.",
+    "Pisk, til daalen er jævn, og tilsæt en sjat vand, hvis den er for tyk.",
+    "Lav tarkaen, og hæld den over. Drys med koriander."
+   ],
+   "tip": "Servér med kogte ris, lidt achar og et løg i skiver."
+  },
+  "daal_moong": {
+   "name": "Moong daal",
+   "intro": "Gul, mild og hurtig. Det er den daal, mødre laver, når nogen trænger til at blive passet på.",
+   "ing": [
+    "200 g flækkede mungbønner (moong daal), skyllet",
+    "8 dl vand",
+    "½ tsk gurkemeje",
+    "1 tomat, hakket",
+    "1 grøn chili",
+    "Salt",
+    "Tarka: 2 spsk ghee, 1 tsk hele spidskommen, 1 knivspids asafoetida (hing) og 2 fed hvidløg"
+   ],
+   "steps": [
+    "Lad daalen simre med gurkemeje, tomat, chili og salt i 25 minutter, til den er blød.",
+    "Pisk let, så den bliver cremet, men stadig har lidt struktur.",
+    "Hæld tarkaen over, og drys med koriander."
+   ],
+   "tip": "Et skvæt citron til sidst frisker hele gryden op."
+  },
+  "chana_chaat": {
+   "name": "Chana chaat",
+   "intro": "Kikærter vendt med løg, tomat, agurk, syrlig tamarind og grøn chutney og toppet med sprøde papdi og sev. Smagen af ethvert iftar-bord.",
+   "ing": [
+    "1 dåse kikærter (ca. 240 g afdryppet)",
+    "1 kogt kartoffel i tern",
+    "1 lille rødløg i tynde skiver",
+    "1 tomat i tern",
+    "½ agurk i tern",
+    "3 spsk tamarindchutney (imli)",
+    "2 spsk grøn chutney",
+    "1 tsk chaat masala, ½ tsk ristet stødt spidskommen og ½ tsk chilipulver",
+    "Saft af ½ citron og salt efter smag",
+    "En håndfuld papdi (sprøde kiks) og sev (sprøde kikærtenudler)",
+    "Frisk koriander"
+   ],
+   "steps": [
+    "Vend kikærter og kartoffel med chaat masala, spidskommen, chili, salt og citronsaft.",
+    "Vend løg, tomat og agurk i.",
+    "Kom tamarindchutney og grøn chutney over med en ske uden at røre helt rundt.",
+    "Top med knuste papdi, sev og koriander, og servér med det samme."
+   ],
+   "tip": "Kom papdi og sev på i allersidste øjeblik, så de forbliver sprøde."
+  },
+  "golgappay": {
+   "name": "Golgappay",
+   "intro": "Sprøde, hule puri fyldt med krydrede kikærter og kartofler og fyldt helt op med syrligt tamarindvand. Det hele skal i munden på én gang.",
+   "ing": [
+    "30 golgappa-puri (købte eller hjemmelavede)",
+    "1 dåse kikærter, afdryppet",
+    "2 kogte kartofler i små tern",
+    "1 lille løg, finthakket",
+    "Tamarindvand: 1 dl tamarindpasta, 1 l iskoldt vand, 1 tsk ristet stødt spidskommen, 1 tsk chaat masala, 1 tsk sort salt (kala namak), en håndfuld mynte, 2 grønne chilier og sukker efter smag",
+    "Tamarindchutney og grøn chutney til servering",
+    "Sev og frisk koriander til pynt"
+   ],
+   "steps": [
+    "Blend mynte og chili med lidt vand, og bland det med tamarindpasta, iskoldt vand, spidskommen, chaat masala, sort salt og sukker. Stil det på køl i mindst en time.",
+    "Bland kikærter, kartoffel og løg med en knivspids chaat masala og salt.",
+    "Lige før servering prikker du et lille hul i toppen af hver puri med tommelfingeren.",
+    "Fyld hver puri med en skefuld kikærteblanding og lidt tamarindchutney.",
+    "Dyp den i tamarindvandet, drys med sev, og spis den med det samme."
+   ],
+   "tip": "Hold tamarindvandet iskoldt, og fyld først puri'erne, når I er klar til at spise – ellers bliver de bløde."
+  },
+  "pakora": {
+   "name": "Pakora med blandede grøntsager",
+   "intro": "Kniplingsagtige, sprøde fritter af løg, kartoffel, spinat og grøn chili, bundet sammen af krydret kikærtemel. Smagen af iftar under ramadanen og regnvejrseftermiddage – bedst varme med grøn chutney, tamarind og en kop chai.",
+   "ing": [
+    "2 mellemstore løg i tynde skiver",
+    "1 mellemstor kartoffel i tynde stave",
+    "1 god håndfuld spinat (palak), fint snittet",
+    "2-3 grønne chilier, finthakket",
+    "2 spsk frisk koriander, hakket",
+    "125 g kikærtemel (besan)",
+    "2 spsk rismel eller majsstivelse",
+    "1 tsk knuste chiliflager",
+    "1 tsk korianderfrø, knust",
+    "½ tsk ajwain",
+    "½ tsk hele spidskommen",
+    "¼ tsk gurkemeje",
+    "1 tsk salt eller efter smag",
+    "3-4 spsk vand, kun hvis det er nødvendigt",
+    "Olie til friturestegning",
+    "Chaat masala, grøn chutney og tamarindchutney til servering"
+   ],
+   "steps": [
+    "Kom løg, kartoffel, spinat, grønne chilier og koriander i en skål med saltet. Klem det hele godt sammen med hænderne, og lad det stå i 10 minutter, så grøntsagerne afgiver væde.",
+    "Tilsæt kikærtemel, rismel, chiliflager, knust koriander, ajwain, spidskommen og gurkemeje. Bland det til en tyk, klistret masse, der lige netop dækker grøntsagerne. Kom kun en skefuld vand i, hvis den er for tør – det skal ikke være en tynd dej.",
+    "Varm olien op ved middel varme. Test med en lille klat: Den skal syde og stige op til overfladen uden at blive brun med det samme.",
+    "Kom små, løse klumper af massen i olien med fingrene, og lad dem være ujævne, så kanterne bliver kniplingsagtige. Kom ikke for mange i ad gangen.",
+    "Lad dem sætte sig i et minut, vend dem, og frituresteg i 4-5 minutter, til de er dybt gyldne og sprøde hele vejen rundt.",
+    "Lad dem dryppe af på en rist, drys med chaat masala, og servér dem varme med grøn chutney, tamarind og chai."
+   ],
+   "tip": "Lad grøntsagernes egen væde binde massen. Jo mindre vand du kommer i, jo sprødere og mindre fedtede bliver pakoraerne."
+  },
+  "aloo_pakora": {
+   "name": "Sprøde aloo pakora",
+   "intro": "Tynde kartoffelskiver dyppet i en krydret dej af kikærtemel og friteret, til de er gyldne og knasende. Iftar-favoritten og den perfekte snack på en regnvejrsdag – varme med grøn chutney og tamarind.",
+   "ing": [
+    "3 mellemstore kartofler i 3 mm tynde skiver",
+    "125 g kikærtemel (besan)",
+    "2 spsk rismel for ekstra sprødhed",
+    "1 tsk chilipulver",
+    "½ tsk gurkemeje",
+    "1 tsk knuste korianderfrø",
+    "½ tsk ajwain",
+    "½ tsk chaat masala plus ekstra til at drysse med",
+    "2 spsk frisk koriander, finthakket",
+    "1 grøn chili, finthakket",
+    "Salt efter smag",
+    "Ca. 2 dl koldt vand",
+    "Olie til friturestegning",
+    "Grøn chutney og tamarindchutney til servering"
+   ],
+   "steps": [
+    "Læg kartoffelskiverne i koldt vand i 10 minutter, hæld vandet fra, og dup dem helt tørre.",
+    "Pisk kikærtemel, rismel, krydderier, koriander, grøn chili og salt sammen med så meget koldt vand, at du får en jævn dej, der dækker bagsiden af en ske.",
+    "Varm olien op til 175 °C. Dyp hver skive i dejen, lad det overskydende dryppe af, og læg den forsigtigt i olien.",
+    "Frituresteg dem lidt ad gangen i 4-5 minutter, og vend dem én gang, til de er dybt gyldne og sprøde.",
+    "Lad dem dryppe af på en rist, drys med chaat masala, og servér dem varme med grøn chutney og tamarind."
+   ],
+   "tip": "Hold skiverne tynde og tørre, og kom ikke for mange i ad gangen. For mange på én gang sænker olietemperaturen, og så bliver pakoraerne bløde."
+  },
+  "lal_lobia": {
+   "name": "Lal lobia masala",
+   "intro": "Kidneybønner, der simrer i en dyb, krydret masala af løg og tomat, til de er cremede og fyldige. Mættende, trøstende og perfekt med ris eller roti.",
+   "ing": [
+    "300 g tørrede kidneybønner (lal lobia), udblødt natten over, eller 2 dåser, afdryppet",
+    "¾ dl olie",
+    "2 løg, finthakket",
+    "3 tomater, hakket",
+    "1 spsk ingefær-hvidløgspasta",
+    "1 tsk hele spidskommen",
+    "1½ tsk chilipulver",
+    "2 tsk stødt koriander",
+    "½ tsk gurkemeje",
+    "1 tsk garam masala",
+    "Salt efter smag",
+    "Grønne chilier, ingefærstave og frisk koriander til pynt"
+   ],
+   "steps": [
+    "Hæld vandet fra de udblødte bønner, dæk dem med frisk vand, og kog dem kraftigt i 10 minutter. Lad dem derefter simre i 45-60 minutter (eller 15-20 minutter i trykkoger), til de er møre. Gem kogevandet.",
+    "Varm olien op, lad spidskommen knitre, og steg løgene gyldenbrune.",
+    "Tilsæt ingefær-hvidløgspasta og derefter tomater, chili, koriander, gurkemeje og salt. Steg under omrøring (bhunai), til tomaterne er kogt ud, og olien skiller sig ud.",
+    "Kom bønnerne i med 3½ dl af kogevandet. Lad det simre i 15 minutter, og mos nogle af bønnerne mod gryden, så saucen bliver tykkere.",
+    "Rør garam masala i, og pynt med grønne chilier, ingefær og koriander. Servér med ris eller roti."
+   ],
+   "tip": "Tørrede kidneybønner skal koge kraftigt i mindst 10 minutter, før de simrer videre. Kog dem aldrig fra rå i en slowcooker."
+  },
+  "gulab_jamun": {
+   "name": "Gulab jamun",
+   "intro": "Små mælkeboller, friteret langsomt til de er dybt brune, og trukket i sirup med kardemomme og rosenvand.",
+   "ing": [
+    "100 g mælkepulver",
+    "3 spsk hvedemel",
+    "¼ tsk bagepulver",
+    "1 spsk ghee",
+    "1 æg (eller 4-5 spsk mælk)",
+    "Sirup: 300 g sukker, 3½ dl vand, 4 kardemommekapsler og 1 tsk rosenvand",
+    "Olie til friturestegning"
+   ],
+   "steps": [
+    "Lad sukker og vand simre i 8 minutter, tilsæt kardemomme og rosenvand, og hold siruppen varm.",
+    "Bland de tørre ingredienser med ghee og æg til en blød dej uden at ælte for hårdt.",
+    "Rul den til glatte kugler uden revner.",
+    "Frituresteg dem ved svag varme, mens du vender dem, til de er dybt brune – cirka 8 minutter.",
+    "Læg dem i den varme sirup, og lad dem trække i en time."
+   ],
+   "tip": "Er olien for varm, bliver de brune udenpå og rå indeni. Lav varme og god tid."
+  },
+  "rasmalai": {
+   "name": "Rasmalai",
+   "intro": "Bløde ostebøffer, der trækker i iskold mælk med safran og kardemomme. Let, elegant og festligt.",
+   "ing": [
+    "2 l sødmælk (til chenna)",
+    "3 spsk citronsaft",
+    "1 l mælk til rabri",
+    "100 g sukker",
+    "Safran og 4 kardemommekapsler",
+    "Pistacienødder og mandler i skiver"
+   ],
+   "steps": [
+    "Kog 2 l mælk op, få den til at skille med citronsaften, si osten (chenna) fra, og skyl den. Lad den hænge og dryppe af i 30 minutter.",
+    "Ælt den, til den er glat, og form 12 små flade boller.",
+    "Kog bollerne under låg i en let sukkerlage i 12 minutter.",
+    "Kog 1 l mælk ind med en tredjedel sammen med sukker, safran og kardemomme.",
+    "Klem bollerne forsigtigt, læg dem i mælken, og stil dem på køl natten over."
+   ],
+   "tip": "Ælt chennaen, til din håndflade føles fedtet. Så er den klar."
+  },
+  "zarda": {
+   "name": "Shahi zarda",
+   "intro": "Juvelen på ethvert pakistansk bryllups- og eid-bord: duftende basmatiris i rød, gul, grøn og hvid, dampet med ghee, safran og kardemomme og kronet med kirsebær, rosiner, mandler, pistacienødder og sølvblad.",
+   "ing": [
+    "400 g basmatiris, udblødt i 30 minutter",
+    "250 g sukker",
+    "¾ dl ghee",
+    "4 grønne kardemommer og 4 nelliker",
+    "1 knivspids safran udblødt i 2 spsk lun mælk",
+    "Frugtfarve: gul (eller orange), rød og grøn – et par dråber af hver",
+    "100 g khoya (inddampet mælk) – kan undlades",
+    "50 g kandiserede kirsebær",
+    "½ dl rosiner",
+    "½ dl mandler og pistacienødder i splitter",
+    "1 tsk kewravand",
+    "Spiseligt sølvblad (warq) til pynt"
+   ],
+   "steps": [
+    "Kog risene i rigeligt vand, til de er tre fjerdedele møre, og lad dem dryppe godt af.",
+    "Del risene i fire portioner. Rør gul, rød og grøn farve i de tre, og lad den sidste være hvid.",
+    "Varm ghee op i en tykbundet gryde, lad kardemomme og nelliker knitre, og tilsæt sukkeret med ½ dl vand. Rør, til det er smeltet til en let sirup.",
+    "Læg forsigtigt alle fire farver ris i gryden, og tilsæt khoya, rosiner, nødder og halvdelen af kirsebærrene. Vend én gang – meget let – så farverne holder sig adskilt.",
+    "Dryp safranmælk og kewravand over, læg låget tæt på, og lad det dampe ved laveste varme (dum) i 15-20 minutter, til siruppen er suget op.",
+    "Læg risene op på et fad, og pynt med resten af kirsebærrene, nødderne og sølvbladet."
+   ],
+   "tip": "Vend de farvede ris med en let hånd, ellers bliver det hele én mudret farve. Lange, adskilte korn er tegnet på en god zarda."
+  },
+  "fruit_custard": {
+   "name": "Frugtcustard",
+   "intro": "Desserten på ethvert pakistansk dawat- og eid-bord: kold, silkeblød vaniljecreme vendt med frisk banan, mango, jordbær, kiwi og vindruer og drysset med granatæble, mandler og pistacienødder.",
+   "ing": [
+    "1 l sødmælk",
+    "4 spsk vaniljecremepulver (custard powder)",
+    "100 g sukker eller efter smag",
+    "¼ tsk stødt kardemomme – kan undlades",
+    "2 bananer i skiver",
+    "1 mango i tern",
+    "150 g jordbær i kvarte",
+    "2 kiwier, skrællet og skåret i tern",
+    "100 g røde eller grønne vindruer, halveret",
+    "1 dl granatæblekerner",
+    "2 spsk af både mandler og pistacienødder i splitter"
+   ],
+   "steps": [
+    "Rør cremepulveret helt klumpfrit ud i 1 dl af den kolde mælk.",
+    "Bring resten af mælken i kog med sukkeret, og skru ned for varmen.",
+    "Hæld cremeblandingen i i en tynd stråle under konstant omrøring, og kog i 3-4 minutter, til cremen er tyk og blank. Rør kardemommen i.",
+    "Læg husholdningsfilm direkte på overfladen, så der ikke dannes skind. Lad cremen køle af til stuetemperatur, og stil den på køl i mindst 2 timer.",
+    "Lige før servering pisker du cremen glat og vender bananer, mango, jordbær, kiwi og vindruer i.",
+    "Top med granatæblekerner, mandler og pistacienødder, og servér den kold."
+   ],
+   "tip": "Kom først frugten i, når du er klar til at servere. Bananerne bliver brune, og frugtsaften gør cremen tynd, hvis den står for længe."
+  },
+  "kheer": {
+   "name": "Kheer med ris",
+   "intro": "Langtidskogt risengrød med kardemomme, mandler og et strejf af kewra.",
+   "ing": [
+    "50 g basmatiris, udblødt 1 time",
+    "1 l sødmælk",
+    "100 g sukker",
+    "4 kardemommekapsler, knust",
+    "2 spsk af både mandler og pistacienødder i skiver",
+    "Et par dråber kewravand"
+   ],
+   "steps": [
+    "Knus de udblødte ris let.",
+    "Bring mælken i kog, tilsæt risene, og lad det simre ved svag varme i 45 minutter under jævnlig omrøring, til grøden er tyk.",
+    "Tilsæt sukker og kardemomme, og kog 10 minutter mere.",
+    "Rør nødder og kewravand i, og stil kheeren på køl før servering."
+   ],
+   "tip": "Servér den i små lerskåle (kunnay). De suger lidt af væden, så toppen sætter sig."
+  },
+  "gajar_halwa": {
+   "name": "Gajar ka halwa",
+   "intro": "Vinterens røde gulerødder kogt ind i mælk og ghee, til de er syltetøjsagtige og fyldige.",
+   "ing": [
+    "1 kg gulerødder (gerne røde vintergulerødder), revet",
+    "1 l mælk",
+    "150 g sukker",
+    "½ dl ghee",
+    "100 g khoya (inddampet mælk)",
+    "5 kardemommekapsler, knust",
+    "Mandler og pistacienødder"
+   ],
+   "steps": [
+    "Kog gulerødderne i mælken under omrøring, til al mælken er kogt ind – cirka 50 minutter.",
+    "Tilsæt ghee, og steg i 10 minutter.",
+    "Tilsæt sukkeret, og kog, til det er smeltet og suget op.",
+    "Rør khoya og kardemomme i, og drys med nødder."
+   ],
+   "tip": "Kig efter de dybrøde vintergulerødder. Almindelige orange gulerødder smager fint, men farven bliver ikke den samme."
+  },
+  "sheer_khurma": {
+   "name": "Sheer khurma",
+   "intro": "Vermicelli, mælk og dadler. Det første, der bliver serveret om morgenen på Eid ul-Fitr.",
+   "ing": [
+    "1 l mælk",
+    "50 g fine vermicellinudler (seviyan)",
+    "70 g sukker",
+    "6 dadler, hakket",
+    "2 spsk ghee",
+    "Mandler, pistacienødder, cashewnødder og rosiner",
+    "4 kardemommekapsler"
+   ],
+   "steps": [
+    "Steg vermicellinudlerne gyldne i ghee.",
+    "Kog mælken med kardemomme i 10 minutter.",
+    "Tilsæt nudler, sukker og dadler, og lad det simre i 10 minutter.",
+    "Steg nødder og rosiner i lidt ghee, og rør dem i. Servér lun eller kold."
+   ],
+   "tip": "Den bliver tykkere, når den køler af. Spæd op med lun mælk, før du serverer for gæster."
+  },
+  "raita": {
+   "name": "Zeera raita",
+   "intro": "Kølig yoghurt med ristet spidskommen – den faste makker til enhver biryani.",
+   "ing": [
+    "5 dl yoghurt",
+    "1 lille løg, finthakket",
+    "1 tomat, hakket",
+    "½ agurk, hakket",
+    "1 tsk ristede spidskommenfrø, knust",
+    "Salt, mynte og en knivspids chili"
+   ],
+   "steps": [
+    "Pisk yoghurten glat med en sjat vand.",
+    "Vend løg, tomat og agurk i.",
+    "Smag til med salt og spidskommen, og pynt med mynte og chili."
+   ],
+   "tip": "Rist selv spidskommenfrøene på en tør pande. Duften er halvdelen af raitaen."
+  },
+  "green_chutney": {
+   "name": "Chutney med mynte, koriander og tomat",
+   "intro": "En frisk, stærk og syrlig pakistansk grøn chutney med mynte, frisk koriander, tomat, grøn chili og salt. Perfekt til daal chawal, biryani, pakora, samosa, kebab og hjemmebagt roti.",
+   "ing": [
+    "1 stort bundt frisk mynte (podina), ca. 30 g blade",
+    "1 stort bundt frisk koriander (sabz dhaniya) med de møre stilke",
+    "1 mellemstor tomat, groft hakket",
+    "3-4 grønne chilier efter smag",
+    "1 lille fed hvidløg – kan undlades",
+    "½ tsk hele spidskommen",
+    "Saft af ½ citron",
+    "Salt efter smag",
+    "2-3 spsk iskoldt vand"
+   ],
+   "steps": [
+    "Skyl mynte og koriander grundigt, og ryst dem tørre. Pluk myntebladene af stilkene.",
+    "Kom krydderurter, grønne chilier, hvidløg, spidskommen, salt og citronsaft i en blender med en sjat koldt vand.",
+    "Blend i korte stød, til det er groft, tilsæt halvdelen af tomaten, og blend et par stød mere.",
+    "Hak resten af tomaten fint, og rør den i for struktur. Smag til med salt, chili og citron."
+   ],
+   "tip": "Brug iskoldt vand og korte stød, så knivene ikke varmer krydderurterne op. Så holder chutneyen sin klare grønne farve længere."
+  },
+  "aam_achar": {
+   "name": "Blandet mango-achar",
+   "intro": "Sommerens pickles i ethvert pakistansk hjem: sur grøn mango, sød gulerod og brændende grøn chili i sennepsolie med fennikel, bukkehorn og kalonji. En skefuld forvandler almindelig daal chawal til et festmåltid.",
+   "ing": [
+    "1 kg grønne, umodne mangoer (keri), vasket og tørret",
+    "2 gulerødder i stave",
+    "8-10 grønne chilier, flækket",
+    "3½ dl sennepsolie",
+    "3 spsk salt",
+    "1 tsk gurkemeje",
+    "2 spsk chilipulver (eller knuste chiliflager)",
+    "2 spsk fennikelfrø (saunf), let knust",
+    "1 spsk bukkehornsfrø (methi dana), let knust",
+    "1 spsk nigellafrø (kalonji)",
+    "2 spsk gule sennepsfrø, groft knust",
+    "1 tsk korianderfrø, knust",
+    "2 spsk eddike"
+   ],
+   "steps": [
+    "Skær mangoerne i stykker med skrællen på, og kassér den bløde kerne. Vend dem med gulerødder, chilier, 2 spsk salt og gurkemeje.",
+    "Bred dem ud på et rent viskestykke, og lad dem tørre i solen – eller i ovnen ved meget lav varme – i 4-6 timer, til overfladen føles tør.",
+    "Varm sennepsolien op, til den lige akkurat ryger, og lad den køle af, til den er lun.",
+    "Bland alle krydderierne og resten af saltet i den lune olie, og vend grøntsagerne og eddiken i, så det hele er dækket.",
+    "Pak det tæt i et rent og helt tørt glas, og hæld resten af olien over, så grøntsagerne er dækket.",
+    "Stil glasset et solrigt sted, og ryst det én gang om dagen. Den er klar efter cirka en uge og kan holde sig i månedsvis."
+   ],
+   "tip": "Alle skeer, glas og klude skal være helt tørre. Én eneste dråbe vand kan ødelægge achar'en, og olien skal altid stå over grøntsagerne."
+  },
+  "achar": {
+   "name": "Achar med blandede grøntsager",
+   "intro": "Syrlig, olieret og brændende stærk. En skefuld forvandler almindelig daal chawal til et festmåltid.",
+   "ing": [
+    "500 g gulerødder, blomkål og grønne chilier blandet",
+    "2½ dl sennepsolie",
+    "2 spsk knuste sennepsfrø",
+    "1 spsk fennikelfrø, 1 tsk bukkehornsfrø og 1 tsk nigellafrø",
+    "2 spsk chilipulver og 1 tsk gurkemeje",
+    "¾ dl eddike",
+    "Salt"
+   ],
+   "steps": [
+    "Skær grøntsagerne ud, salt dem, og lad dem tørre i solen eller i ovnen ved lav varme i et par timer.",
+    "Varm sennepsolien op, til den ryger, og lad den køle lidt af.",
+    "Rør krydderierne i den lune olie, og tilsæt derefter grøntsager og eddike.",
+    "Pak det i et rent glas, og lad det stå i 3 dage, før du spiser af det."
+   ],
+   "tip": "Hver ske, der kommer i glasset, skal være helt tør – ellers bliver achar'en dårlig."
+  }
+ }
+}
