@@ -3,11 +3,16 @@
   "use strict";
   const $ = (s, c) => (c || document).querySelector(s);
   const $$ = (s, c) => [...(c || document).querySelectorAll(s)];
-  const TP = window.TP || { categories: [], collections: [], recipes: [] };
-  const ROOT = document.body.dataset.root || "";
+  const TP = window.TP || { categories: [], collections: [], recipes: [], ui: {} };
+  const U = TP.ui || {};
+  const tr = (k, o) => String(U[k] || k).replace(/\{(\w+)\}/g, (m, n) => (o && n in o ? o[n] : m));
+  const plural = (k, n, o) => tr(k + (n === 1 ? "_one" : "_other"), Object.assign({ n }, o));
+  const low = s => (U.lower ? s.toLowerCase() : s);
+  const ROOT = document.body.dataset.root || "/";
+  const RTL = document.documentElement.dir === "rtl";
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-  const img = id => ROOT + "images/" + id + ".jpg";
+  const img = id => "/images/" + id + ".jpg";
   const catOf = id => TP.categories.find(c => c.id === id);
   const colOf = id => TP.collections.find(c => c.id === id);
   const byId = id => TP.recipes.find(r => r.id === id);
@@ -32,11 +37,11 @@
     persist(); syncSaved();
     b.classList.remove("pop"); void b.offsetWidth; b.classList.add("pop");
     const lbl = b.querySelector("[data-save-label]");
-    if (lbl) lbl.textContent = saved.has(id) ? "Saved" : "Save recipe";
+    if (lbl) lbl.textContent = saved.has(id) ? tr("saved") : tr("save_recipe");
     if (window.__tpFilter) window.__tpFilter();
   });
   syncSaved();
-  $$("[data-save-label]").forEach(l => { const b = l.closest("[data-save]"); if (b && saved.has(b.dataset.save)) l.textContent = "Saved"; });
+  $$("[data-save-label]").forEach(l => { const b = l.closest("[data-save]"); if (b && saved.has(b.dataset.save)) l.textContent = tr("saved"); });
 
   /* ---------- Header, menu, dropdown ---------- */
   const hdr = $("#hdr");
@@ -47,17 +52,33 @@
     const btn = $(".dd-btn", dd);
     const set = o => { dd.classList.toggle("open", o); btn.setAttribute("aria-expanded", String(o)); };
     btn.addEventListener("click", e => { e.stopPropagation(); set(!dd.classList.contains("open")); });
-    const wide = () => matchMedia("(min-width:1061px)").matches;
+    const wide = () => matchMedia("(min-width:1181px)").matches;
     dd.addEventListener("mouseenter", () => wide() && set(true));
     dd.addEventListener("mouseleave", () => wide() && set(false));
     document.addEventListener("click", e => { if (!dd.contains(e.target)) set(false); });
     document.addEventListener("keydown", e => { if (e.key === "Escape") set(false); });
   }
 
+  /* ---------- Language menu ---------- */
+  const lang = $("#lang");
+  if (lang) {
+    const btn = $(".lang-btn", lang);
+    const set = o => { lang.classList.toggle("open", o); btn.setAttribute("aria-expanded", String(o)); };
+    btn.addEventListener("click", e => { e.stopPropagation(); set(!lang.classList.contains("open")); });
+    document.addEventListener("click", e => { if (!lang.contains(e.target)) set(false); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && lang.classList.contains("open")) { set(false); btn.focus(); } });
+  }
+  /* Keep the current filter (for example #chicken) when switching language */
+  $$("a[hreflang]").forEach(a => a.addEventListener("click", () => {
+    try { localStorage.setItem("tp_lang", a.getAttribute("hreflang")); } catch (e) {}
+    const h = location.hash;
+    if (h && h.length > 1 && !a.href.includes("#")) a.href += h;
+  }));
+
   /* ---------- Search forms go to the recipes page ---------- */
   $$("form[data-search]").forEach(f => f.addEventListener("submit", e => {
     e.preventDefault();
-    const q = $("input", f).value.trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    const q = $("input", f).value.trim().toLowerCase().replace(/[^\p{L}\p{N}]+/gu, "-").replace(/^-|-$/g, "");
     location.href = ROOT + "recipes.html#" + (q ? "search-" + q : "all");
   }));
 
@@ -100,8 +121,9 @@
   /* ---------- Category rail arrows ---------- */
   const rail = $("#rail");
   if (rail) {
-    $("#railPrev").addEventListener("click", () => rail.scrollBy({ left: -380, behavior: reduce ? "auto" : "smooth" }));
-    $("#railNext").addEventListener("click", () => rail.scrollBy({ left: 380, behavior: reduce ? "auto" : "smooth" }));
+    const dirn = RTL ? -1 : 1;
+    $("#railPrev").addEventListener("click", () => rail.scrollBy({ left: -380 * dirn, behavior: reduce ? "auto" : "smooth" }));
+    $("#railNext").addEventListener("click", () => rail.scrollBy({ left: 380 * dirn, behavior: reduce ? "auto" : "smooth" }));
   }
 
   /* ---------- Home: featured slider ---------- */
@@ -114,11 +136,11 @@
       const im = $("#fImg");
       $("#f-title").textContent = r.name;
       $("#fBlurb").textContent = r.intro;
-      $("#fEyebrow").textContent = "Featured recipe · " + r.region;
+      $("#fEyebrow").textContent = tr("featured") + " · " + r.region;
       $("#fMeta").innerHTML = `<span><svg aria-hidden="true"><use href="#i-clock"/></svg>${esc(r.time)}</span><span><svg aria-hidden="true"><use href="#i-chef"/></svg>${esc(r.level)}</span><span><svg aria-hidden="true"><use href="#i-users"/></svg>${esc(r.serves)}</span>`;
       $("#fOpen").href = ROOT + "recipes/" + r.id + ".html";
       $("#fCat").href = ROOT + "recipes.html#" + r.cat;
-      $("#fCat").textContent = "More " + catOf(r.cat).name.toLowerCase();
+      $("#fCat").textContent = tr("more_x", { name: low(catOf(r.cat).name) });
       im.style.opacity = 0;
       setTimeout(() => { im.src = img(ids[n].img || r.id); im.alt = r.name; im.style.opacity = 1; }, reduce ? 0 : 250);
       $$(".thumb").forEach((t, j) => t.setAttribute("aria-pressed", String(j === n)));
@@ -154,11 +176,11 @@
       if (qInput) qInput.value = state.q;
     }
     function banner() {
-      if (state.special === "saved") return { e: "Your collection", t: "Saved recipes", d: "Recipes you've saved with the heart. They stay in this browser.", i: "hero_biryani" };
-      if (state.special === "veg") return { e: "Quick filter", t: "Vegetarian", d: "Daals, breads, rice and sweets without meat.", i: "daal_masoor" };
-      if (state.special === "quick") return { e: "Quick filter", t: "45 minutes or less", d: "Weeknight recipes for busy evenings.", i: "matar_pulao" };
-      if (state.special.startsWith("col:")) { const c = colOf(state.special.slice(4)); return { e: "Collection", t: c.name, d: c.desc, i: c.img }; }
-      if (state.cat !== "all") { const c = catOf(state.cat); return { e: "Category", t: c.name + " recipes", d: c.desc, i: c.img }; }
+      if (state.special === "saved") return { e: tr("b_saved_e"), t: tr("b_saved_t"), d: tr("b_saved_d"), i: "hero_biryani" };
+      if (state.special === "veg") return { e: tr("b_quick_e"), t: tr("b_veg_t"), d: tr("b_veg_d"), i: "daal_masoor" };
+      if (state.special === "quick") return { e: tr("b_quick_e"), t: tr("b_quick_t"), d: tr("b_quick_d"), i: "matar_pulao" };
+      if (state.special.startsWith("col:")) { const c = colOf(state.special.slice(4)); return { e: tr("b_col_e"), t: c.name, d: c.desc, i: c.img }; }
+      if (state.cat !== "all") { const c = catOf(state.cat); return { e: tr("b_cat_e"), t: tr("b_cat_t", { name: c.name }), d: c.desc, i: c.img }; }
       return null;
     }
     function apply() {
@@ -175,10 +197,10 @@
         c.hidden = !ok; if (ok) n++;
       });
       const b = banner(), host = $("#catBanner");
-      host.innerHTML = b ? `<div class="cat-banner"><img src="${img(b.i)}" alt=""><div class="cb-body"><div><p class="eyebrow" style="color:var(--gold)">${esc(b.e)}</p><h3>${esc(b.t)}</h3><p class="d">${esc(b.d)}</p></div><a class="btn btn-line" href="#all"><svg aria-hidden="true"><use href="#i-left"/></svg>All recipes</a></div></div>` : "";
-      $("#count").textContent = state.q ? `${n} result${n === 1 ? "" : "s"} for “${state.q}”` : `${n} recipe${n === 1 ? "" : "s"}`;
+      host.innerHTML = b ? `<div class="cat-banner"><img src="${img(b.i)}" alt=""><div class="cb-body"><div><p class="eyebrow" style="color:var(--gold)">${esc(b.e)}</p><h3>${esc(b.t)}</h3><p class="d">${esc(b.d)}</p></div><a class="btn btn-line" href="#all"><svg aria-hidden="true"><use href="#i-left"/></svg>${esc(tr("all_recipes"))}</a></div></div>` : "";
+      $("#count").textContent = state.q ? plural("n_results", n, { q: state.q }) : plural("n_recipes", n);
       $("#empty").hidden = n > 0;
-      $("#empty").textContent = state.special === "saved" ? "Nothing saved yet. Tap the heart on any recipe to keep it here." : "No recipes match. Try another dish, or ask Fatma for it.";
+      $("#empty").textContent = state.special === "saved" ? tr("empty_saved") : tr("empty");
       $$(".chip").forEach(c => c.setAttribute("aria-pressed", String(!state.special && !state.q && c.dataset.chip === state.cat)));
       $$("[data-qf]").forEach(b => { const k = b.dataset.qf; b.setAttribute("aria-pressed", String(k.startsWith("cat:") ? (!state.special && state.cat === k.slice(4)) : state.special === k)); });
       $$("[data-col]").forEach(b => b.setAttribute("aria-pressed", String(state.special === "col:" + b.dataset.col)));
@@ -222,7 +244,7 @@
       if (v >= 10) return String(Math.round(v));
       return (whole ? whole : "") + part || "0"; };
     const NUM = "(\\d+\\s?[½¼¾]|\\d*[½¼¾]|\\d+\\/\\d+|\\d+(?:\\.\\d+)?)";
-    const RE = new RegExp("^" + NUM + "(\\s*(?:to|-|–)\\s*" + NUM + ")?");
+    const RE = new RegExp("^" + NUM + "(\\s*(?:to|til|سے|-|–)\\s*" + NUM + ")?");
     const lines = $$(".checklist [data-ing]");
     lines.forEach(l => l.dataset.orig = l.textContent);
     function render() {
@@ -232,7 +254,7 @@
         const o = l.dataset.orig, m = o.match(RE);
         if (!m || f === 1) { l.innerHTML = m ? `<span class="q">${esc(m[0])}</span>${esc(o.slice(m[0].length))}` : esc(o); return; }
         let q = fmt(num(m[1].replace(/\s/g, "")) * f);
-        if (m[3]) q += " to " + fmt(num(m[3]) * f);
+        if (m[3]) q += (serv.dataset.to || " to ") + fmt(num(m[3]) * f);
         l.innerHTML = `<span class="q">${esc(q)}</span>${esc(o.slice(m[0].length))}`;
       });
     }
@@ -251,8 +273,8 @@
     mini.addEventListener("submit", e => {
       e.preventDefault();
       const v = $("#miniEmail").value.trim();
-      if (!emailOk(v)) { $("#miniErr").textContent = "Enter an email address like name@example.com."; $("#miniEmail").focus(); return; }
-      mini.outerHTML = `<p class="mini-ok">You're on the list. The next letter arrives Sunday.</p>`;
+      if (!emailOk(v)) { $("#miniErr").textContent = tr("email_err"); $("#miniEmail").focus(); return; }
+      mini.outerHTML = `<p class="mini-ok">${esc(tr("mini_ok"))}</p>`;
       $("#miniErr").textContent = "";
     });
     $("#miniEmail").addEventListener("input", () => { $("#miniErr").textContent = ""; });
@@ -262,10 +284,10 @@
     sub.addEventListener("submit", e => {
       e.preventDefault();
       const email = $("#sEmail").value.trim(), name = $("#sName").value.trim();
-      if (!emailOk(email)) { $("#sErr").textContent = "Enter an email address like name@example.com."; $("#sEmail").focus(); return; }
+      if (!emailOk(email)) { $("#sErr").textContent = tr("email_err"); $("#sEmail").focus(); return; }
       const ints = $$('input[name="int"]:checked').map(i => i.value);
-      const freq = $('input[name="freq"]:checked').value === "weekly" ? "every Sunday" : "every other Sunday";
-      $("#subMsg").textContent = `${name ? name + ", your" : "Your"} letter arrives ${freq}` + (ints.length ? `, with more ${ints.join(", ").toLowerCase()}.` : ".");
+      const freq = tr($('input[name="freq"]:checked').value === "weekly" ? "freq_weekly" : "freq_fortnightly");
+      $("#subMsg").textContent = tr(name ? "sub_named" : "sub_plain", { name, freq }) + (ints.length ? tr("sub_more", { ints: low(ints.join(U.list_sep || ", ")) }) : tr("sub_end"));
       sub.hidden = true; $("#subDone").hidden = false;
     });
     $("#sEmail").addEventListener("input", () => { $("#sErr").textContent = ""; });
@@ -276,17 +298,16 @@
     ask.addEventListener("submit", e => {
       e.preventDefault();
       const n = $("#aName").value.trim(), m = $("#aEmail").value.trim(), t = $("#aMsg").value.trim();
-      $("#aNameErr").textContent = n ? "" : "Enter your name.";
-      $("#aEmailErr").textContent = emailOk(m) ? "" : "Enter a valid email address.";
-      $("#aMsgErr").textContent = t.length >= 10 ? "" : "Write a little more so Fatma can help.";
+      $("#aNameErr").textContent = n ? "" : tr("name_err");
+      $("#aEmailErr").textContent = emailOk(m) ? "" : tr("email_err2");
+      $("#aMsgErr").textContent = t.length >= 10 ? "" : tr("msg_err");
       if (!n || !emailOk(m) || t.length < 10) { (!n ? $("#aName") : !emailOk(m) ? $("#aEmail") : $("#aMsg")).focus(); return; }
-      $("#askMsg").textContent = `Thank you, ${n}. Your ${$("#aTopic").value.toLowerCase()} is with Fatma.`;
+      const topic = $("#aTopic"); $("#askMsg").textContent = tr("ask_thanks", { name: n, topic: low(topic.options[topic.selectedIndex].text) });
       ask.hidden = true; $("#askDone").hidden = false;
     });
     ["aName", "aEmail", "aMsg"].forEach(id => $("#" + id).addEventListener("input", () => { $("#" + id + "Err").textContent = ""; }));
     $("#askAgain").addEventListener("click", () => { ask.reset(); $("#askDone").hidden = true; ask.hidden = false; });
     const want = decodeURIComponent(location.hash.slice(1));
-    if (want === "request") $("#aTopic").value = "Recipe request";
-    if (want === "collab") $("#aTopic").value = "Collaboration or press";
+    if (want === "request" || want === "collab") $("#aTopic").value = want;
   }
 })();
