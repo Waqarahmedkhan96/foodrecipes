@@ -284,23 +284,19 @@ def footer(path):
     R = L.root
     cats = "".join(f'<li><a href="{R}recipes.html#{c["id"]}">{e(c["name"])}</a></li>' for c in L.cats)
     cols = "".join(f'<li><a href="{R}recipes.html#col-{c["id"]}">{e(c["name"])}</a></li>' for c in L.cols)
-    langs = "".join(
-        f'<a href="/{LANGS[k]["prefix"]}{"" if path == "index.html" else path}" hreflang="{k}" lang="{k}"{" aria-current=true" if k == L.id else ""}>{e(LANGS[k]["native"])}</a>'
-        for k in ORDER)
     return f'''<footer>
   <div class="wrap">
     <div class="foot-top">
       <a class="brand" href="{R}" aria-label="{SITE}, {e(t("home"))}"><svg aria-hidden="true"><use href="#logo"/></svg><span><b>Tasty Pakistan</b><small>by Fatma</small></span></a>
       <p>{t("foot_tagline")}</p>
-      <a class="btn btn-gold" href="#subscribe">{t("get_letter")} {ico("i-arrow")}</a>
     </div>
     <div class="foot">
       <div><h4>{t("recipes")}</h4><ul>{cats}</ul></div>
       <div><h4>{t("collections")}</h4><ul>{cols}<li><a href="{R}recipes.html#veg">{t("vegetarian")}</a></li></ul></div>
       <div><h4>{t("read")}</h4><ul><li><a href="{R}journal.html">{t("journal")}</a></li><li><a href="{R}spices.html">{t("spice_guide")}</a></li><li><a href="{R}story.html">{t("fatmas_story")}</a></li><li><a href="#subscribe">{t("sunday_letter")}</a></li></ul></div>
-      <div><h4>{t("talk")}</h4><ul><li><a href="{R}ask.html">{t("ask_fatma")}</a></li><li><a href="{R}ask.html#request">{t("recipe_requests")}</a></li><li><a href="{R}ask.html#collab">{t("collaborations")}</a></li><li><a href="mailto:{CONTACT_EMAIL}" dir="ltr">{CONTACT_EMAIL}</a></li></ul></div>
+      <div><h4>{t("talk")}</h4><ul><li><a href="{R}ask.html">{t("ask_fatma")}</a></li><li><a href="{R}ask.html#request">{t("recipe_requests")}</a></li><li><a href="{R}ask.html#collab">{t("collaborations")}</a></li></ul></div>
     </div>
-    <div class="copyline"><span>© {SITE} · {t("since_2009")}</span><span class="foot-langs">{langs}</span><span>{t("made_with")}</span></div>
+    <div class="copyline"><span class="since">© <bdi dir="ltr">{SITE}</bdi> · {t("since_2009")}</span><span>{t("made_with")}</span></div>
     <p class="credit">{t("credit")} <a href="https://www.linkedin.com/in/waqar-ahmed-khan-2ab2781b5/" target="_blank" rel="noopener" dir="ltr">Waqar Ahmed Khan</a></p>
   </div>
 </footer>'''
