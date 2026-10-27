@@ -300,7 +300,8 @@ def footer(path):
       <div><h4>{t("read")}</h4><ul><li><a href="{R}journal.html">{t("journal")}</a></li><li><a href="{R}spices.html">{t("spice_guide")}</a></li><li><a href="{R}story.html">{t("fatmas_story")}</a></li><li><a href="#subscribe">{t("sunday_letter")}</a></li></ul></div>
       <div><h4>{t("talk")}</h4><ul><li><a href="{R}ask.html">{t("ask_fatma")}</a></li><li><a href="{R}ask.html#request">{t("recipe_requests")}</a></li><li><a href="{R}ask.html#collab">{t("collaborations")}</a></li><li><a href="mailto:{CONTACT_EMAIL}" dir="ltr">{CONTACT_EMAIL}</a></li></ul></div>
     </div>
-    <div class="copyline"><span>© 2009–2026 {SITE}</span><span class="foot-langs">{langs}</span><span>{t("made_with")}</span></div>
+    <div class="copyline"><span>© {SITE} · {t("since_2009")}</span><span class="foot-langs">{langs}</span><span>{t("made_with")}</span></div>
+    <p class="credit">{t("credit")} <a href="https://www.linkedin.com/in/waqar-ahmed-khan-2ab2781b5/" target="_blank" rel="noopener" dir="ltr">Waqar Ahmed Khan</a></p>
   </div>
 </footer>'''
 

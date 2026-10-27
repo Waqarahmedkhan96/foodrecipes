@@ -782,3 +782,6 @@ html[lang="ur"] .arch-badge{font-size:21px;line-height:1.6}
 .foot a[href^="mailto:"]{word-break:break-all}
 .contact-mail{margin-top:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 18px;border-radius:16px;background:var(--ivory-2);box-shadow:0 0 0 1px var(--line);color:var(--muted);font-size:15px}
 .contact-mail a{color:var(--green);font-weight:500}
+.credit{margin-top:14px;text-align:center;font-size:12px;letter-spacing:.04em;color:#9FB0A4}
+.credit a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(195,161,107,.4)}
+.credit a:hover{border-bottom-color:var(--gold)}

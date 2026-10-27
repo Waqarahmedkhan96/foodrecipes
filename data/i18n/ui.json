@@ -203,7 +203,9 @@
   },
   "fatma": "Fatma",
   "fatma_full": "Fatma Bibi",
-  "fatma_alt": "Fatma Bibi, smiling, in a green headscarf"
+  "fatma_alt": "Fatma Bibi, smiling, in a green headscarf",
+  "since_2009": "Since 2009",
+  "credit": "Designed and developed by"
  },
  "da": {
   "home": "Forside",
@@ -476,7 +478,9 @@
   "serves": "Antal",
   "level": "Niveau",
   "fatma_full": "Fatma Bibi",
-  "fatma_alt": "Fatma Bibi, smilende, i et grønt tørklæde"
+  "fatma_alt": "Fatma Bibi, smilende, i et grønt tørklæde",
+  "since_2009": "Siden 2009",
+  "credit": "Designet og udviklet af"
  },
  "ur": {
   "home": "صفحۂ اول",
@@ -749,6 +753,8 @@
   "serves": "مقدار",
   "level": "مشکل",
   "fatma_full": "فاطمہ بی بی",
-  "fatma_alt": "سبز دوپٹے میں مسکراتی ہوئی فاطمہ بی بی"
+  "fatma_alt": "سبز دوپٹے میں مسکراتی ہوئی فاطمہ بی بی",
+  "since_2009": "2009 سے",
+  "credit": "ڈیزائن اور تیاری:"
  }
 }
